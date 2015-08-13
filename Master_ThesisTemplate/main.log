@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  13 AUG 2015 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  13 AUG 2015 15:29
 entering extended mode
 **main.tex
 
@@ -677,7 +677,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 43.
-<styles/informat.png, id=45, 355.3275pt x 355.3275pt>
+<styles/informat.png, id=53, 355.3275pt x 355.3275pt>
 File: styles/informat.png Graphic file (type png)
 
 <use styles/informat.png>
@@ -831,7 +831,10 @@ e\chapters/BackgroundInformation.tex [3
 
 ]
 chapter 2.
-) [5] [6
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 5.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)) [5] [6
 
 ]
 part II.
@@ -864,15 +867,15 @@ e\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 59C5A11429EB6E8EBB78F2B3376B18F1;606.
+(rerunfilecheck)             Checksum: E6902BCBA6235934E41AFF77BD025570;730.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 9524 strings out of 493921
- 148079 string characters out of 3144876
+ 9554 strings out of 493921
+ 148536 string characters out of 3144876
  290573 words of memory out of 3000000
- 12551 multiletter control sequences out of 15000+200000
- 22515 words of font info for 58 fonts, out of 3000000 for 9000
+ 12574 multiletter control sequences out of 15000+200000
+ 23069 words of font info for 60 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,10n,66p,933b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
@@ -880,9 +883,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (27 pages, 99430 bytes).
+Output written on main.pdf (27 pages, 103230 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

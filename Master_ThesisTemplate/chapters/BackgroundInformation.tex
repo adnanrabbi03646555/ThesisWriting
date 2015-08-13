@@ -1,2 +1,16 @@
 \chapter{Background Information}
-\label{state of the art}
+\section{Sanitization}
+Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience.Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Some basic purpose of sanitization are given below:
+\begin{itemize}
+	\item To identify the set of parameters and global variables which must be sanitized before calling functions.
+	\item It is acceptable to first pass the untrusted user input through a trusted sanitization function.	
+	\item Any user input data must flow through a sanitization function before it flows into a SQL query.
+	\item Confidential data needs to be cleansed to avoid information leaks.
+	\item Most paths that go from a source to a sink pass through a sanitizer.
+	\item Developers typically define a small number of sanitization functions or use ones supplied in libraries.
+\end{itemize}
+
+\section{Declassification}
+Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system.\\
+To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_1_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
+

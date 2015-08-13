@@ -5,7 +5,9 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{part.1}% 5
 \BOOKMARK [1][-]{section.1.1}{Latex Introduction}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Background Information}{part.1}% 7
-\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 8
-\BOOKMARK [-1][]{part*.9}{Appendix}{}% 9
-\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 10
-\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 11
+\BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Declassification}{chapter.2}% 9
+\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 10
+\BOOKMARK [-1][]{part*.9}{Appendix}{}% 11
+\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 12
+\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 13
