@@ -1,0 +1,60 @@
+\chapter{Related Work}
+The detection of information flow errors [31] can be
+addressed with dynamic analysis techniques [2], [16], [48],
+static analysis techniques [17], [41], [51], [58], [60] (similar
+to our approach with respect to static analysis of code and
+tracking of data information flow) and hybrid techniques which
+combine static and dynamic approaches [38]. Also, extended
+static checking [10] (ESC) is a promising research area which
+tries to cope with the shortage of not having certain program
+run-time information.
+The static code analysis techniques need to know which
+parts of the code are: sinks, sources and which variables
+should be tagged. A solution for tagging these elements in
+source code is based on a pre-annotated library which contains
+all the needed annotations attached to function declarations.
+Leino [27] reports about the annotation burden as being very
+time consuming and disliked by some programming teams.
+There are many annotation languages proposed until now for
+extending the C type system [9], [13], [29], [30], [57] to be
+used during run-time as a new language run-time for PHP and
+Python [61] to annotate function interfaces [13], [29], [57], to
+annotate models in order to detect information flow bugs [24]
+to annotate source code files [46], [47], [56] or to annotate
+control flows [13], [15], [29]. The studies rely on manually
+written annotations while our annotation language is integrated
+into two editors which are be used to annotate UML state
+charts and C code by selecting annotations from a list and
+without the need to memorize a new annotation language.
+The following annotation languages have made significant
+impact: Microsoft\'s SAL annotations [29] helped to detect
+more than 1000 potential security vulnerabilities in Windows
+code [3]. In addition, several other annotation languages including FlowCaml [50], Jif [7], Fable [55], AURA [22] and
+FINE [54] express information flow related concerns. Recently
+taint modes integrated in programming languages as Camlbased FlowCaml [52], Ada-based SPARK Examiner [5] and the scripting. However, none of these annotation and programming languages have support for introducing information flow
+restrictions in both models and the source code.
+Splint [14], Flawfinder [59] and Cqual [49] are used to
+detect information flow bugs in source code and come with
+comprehensive user manuals describing how the annotation
+language can be used in order to annotate source code.
+iFlow [24] is used for detecting information flow bugs in
+models and is based on modeling dynamic behavior of the
+application using UML sequence diagrams and translating
+them into code by analyzing it with JOANA [25]. In comparison with our approach these tools do not use the same
+annotation language for annotating UML models and code.
+Thus, a user has to learn to use two annotation languages
+which can be perceived to be a high burden in some scenarios.
+UMLSec [23] is a model-driven approach that allows the
+development of secure applications with UML. Compared with
+our approach, UMLSec does neither include automatic code
+generation nor the annotations can be used for automated
+constraints checking. Heldal et al. [18], [19] introduced an
+UML profile that incorporates a decentralized label model [40]
+into the UML. It allows the annotation of UML artifacts with
+Jif [42] labels in order to generate Jif code from the UML
+model automatically. However, the Jif-style annotation already
+proved to be non-trivial on the code level [45], while [19]
+notes that the actual automatic Jif code generation is still future
+work. These approaches can not be used to annotate both UML
+models and code. Moreover, these approaches lack of tools for
+automated checking of previously imposed constraints.

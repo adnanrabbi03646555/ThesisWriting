@@ -1,0 +1,18 @@
+\chapter{ Challenges and Annotation Language Extension}
+\section{Challenges and Idea}
+Previous annotation language grammer has been extended more
+to detect implicit and explicit information flow bugs in UML
+state charts and C code. The purpose of the same annotation language
+can be used to add information flow constraints to UML state
+charts and code in order to detect information flow errors.\\
+
+The challenge was addressed by extending the annotation language containing textual annotations which can be used to annotate source code and UML state charts which are backward compatible.The single-line annotations have the same as previous consisting start tag "//@" and the multi-line annotations have the start tag "/*@" and the end tag "@*/" .\\
+
+Some challenges throughout the approach are- converting textual
+comments into annotations objects, introducing syntactically
+correct annotations into files, how to use the same annotation
+language in order to annotate UML state charts and source
+code, dealing with scattered annotations and attaching annotations to the right function declaration or variable.
+
+\section{Annotation Language Tags}
+
