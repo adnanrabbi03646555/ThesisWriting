@@ -8,14 +8,21 @@
 \BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.2}{Declassification}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Authentication}{chapter.2}% 10
-\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 11
-\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 12
-\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 15
-\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 16
-\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 17
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{part.2}% 18
-\BOOKMARK [-1][]{part*.9}{Appendix}{}% 19
-\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 20
-\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 21
+\BOOKMARK [1][-]{section.2.4}{Detecting Information Flow Errors During Design:}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Detecting Information Flow Errors During Coding:}{chapter.2}% 12
+\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 13
+\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 14
+\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Language Implementation Process}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 18
+\BOOKMARK [1][-]{section.4.1}{The Grammar of Annotation Language:}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{UML State Chart Editor:}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Source Code Editor:}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{C Code Generator:}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 23
+\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 24
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{part.2}% 25
+\BOOKMARK [-1][]{part*.9}{Appendix}{}% 26
+\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 27
+\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 28

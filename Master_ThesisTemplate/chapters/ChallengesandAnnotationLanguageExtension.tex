@@ -12,7 +12,14 @@ Some challenges throughout the approach are- converting textual
 comments into annotations objects, introducing syntactically
 correct annotations into files, how to use the same annotation
 language in order to annotate UML state charts and source
-code, dealing with scattered annotations and attaching annotations to the right function declaration or variable.
+code, dealing with scattered annotations and attaching annotations to the right function declaration or variable.\\
+
+The xText based grammar is used to parse the whole C/C++ language. The C/C++ source code file extensions (.h, .hh, .hhh, .hxx, .c, .cpp) and UML state chart annotation box (graphical boxes
+which can be attached to different parts of a UML state chart diagram) can be annotated with policy language restrictions. The obtained CORE model (a one to one mapping from xText grammar to the ECORE grammar representation) that can be reused for integrating the policy language into an UML state chart editor. Treating the annotation tags as EObjects created new possibilities for annotating
+UML models.The policy language grammar has about 400 LOC with code comments included. Source code generation is also supported by using
+xTend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation that can easily be used for annotating models and source files.
 
 \section{Annotation Language Tags}
 
+
+\section{Language Implementation Process}

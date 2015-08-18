@@ -1,1 +1,24 @@
 \chapter{Implementation}
+\section{The Grammar of Annotation Language:}
+
+\section{UML State Chart Editor:}
+UML state chart editor has been extended based on the open source Yakindu SCT [21]framework. The existing language grammar with
+annotation language grammar has extended in order to support new set
+of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.
+
+\section{Source Code Editor:}
+The source code editor has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line.Editor suggestions work only if the whole file is parsed without errors.
+
+\section{C Code Generator:}
+C code generator has extended based on Eclipse EMF and xTend which is used to generate the state chart execution code containing the previously added security annotations from UML state charts. The code generator outputs two files per UML state chart (one .c and one
+.h file). Generated annotations can reside in both header file
+and source code file. Previously annotated UML state chart
+states are converted to either C function calls or C variables
+declarations, both have been previously annotated. We use
+the available state chart execution flow functionality which is
+responsible for traversing the UML state chart during state
+chart simulation. The UML state chart will be traversed by the code generation algorithm and code is generated based on
+the mentioned state chart execution flow. The generated code
+will contain at least one bad path (contains a true positive) and
+a good path (contains no bug) per UML state chart if those
+paths were previously modeled inside the UML state chart.
