@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  17 AUG 2015 18:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  27 AUG 2015 16:52
 entering extended mode
 **main.tex
 
@@ -824,32 +824,57 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              deprecated \float@addtolist interface .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--25
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 [3
 
-])
+]
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+)
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/BackgroundInformation.tex [4]
 chapter 2.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 8.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [5
 
-]) [6]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+) [6]
 part II.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
@@ -937,21 +962,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 9629 strings out of 493921
- 150769 string characters out of 3144876
+ 9633 strings out of 493921
+ 150861 string characters out of 3144876
  293573 words of memory out of 3000000
- 12609 multiletter control sequences out of 15000+200000
+ 12611 multiletter control sequences out of 15000+200000
  23069 words of font info for 60 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,10n,66p,933b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,11n,66p,1140b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (37 pages, 134245 bytes).
+Output written on main.pdf (37 pages, 142139 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

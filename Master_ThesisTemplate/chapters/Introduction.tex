@@ -1,39 +1,22 @@
 \chapter{Introduction}
 \label{chapter:Introduction}
+Information flow vulnerabilities detection in code and UML state charts is not well known. It is particularly one of the
+challenging issue. Actually there is no common annotation language for annotating UML state charts and source code with
+information flow security constraints such that errors can be detected also when code is not available. Also there are
+no automated checking tools which can reuse the annotated constraints in early stages of software development phase to check
+for information flow errors. It is important to specify security constraints as early as possible in the software
+development phase in order to avoid later costly repairs or exploitable vulnerabilities.\\
 
-The detection of information flow vulnerabilities uses dynamic analysis techniques , static analysis techniques and hybrid techniques which combine static and dynamic approaches. The static techniques need to know when to use  sanitization , declassification and authentication functions.
-A solution for tagging sanitization, declassification and authentication in source code is based on libraries which contain all needed annotations attached to function declarations. This approach plays an important role mainly for static analysis bug detection techniques where the information available during program run-time is not available nor the interaction with the environment can be fully simulated.
-Extended Static Checking (ESC) is a promising research area which tries to cope with the shortage of not having the program run-time information. During extended static analysis additional information is provided to the static analysis process. This information can be used to define trust boundaries and tag variables. Textual annotations are usually manually added by the user in source code. At the same time annotations can be automatically generated and inserted into source code . ESC can be used to eliminate bugs in a late stage of the software project when code development is finished. Tagging and checking for information exposure bugs during the design phase would eliminate the potential of implementing software bugs which can only be removed very costly after wards. Thus security concerns should be enforced into source code right after the conceptual phase of the project.
-The paper presents five challenges concerning ESC. The last challenge reports of the annotation as being a very time consuming burden and is therefore disliked by some programming
-teams. The authors argue about the fact that annotations can cover design decisions and enhance the quality of source code. We argue that annotations are necessary in order to do ESC and the user needs a kind of assistance tool that helps selecting the suited annotation based on the current context. Thus the annotation burden needed for learning and applying the language should be reduced. At the same time adding annotations to reusable code libraries reduces even more the annotation burden since libraries can be reused, shared and changed by software development
-teams.\\
+A solution for tagging sanitization, declassification and authentication in source code is based on libraries which contain all needed annotations attached to function declarations. This approach plays an important role mainly for static analysis bug detection techniques where the information available during program run-time. Detection of information flow vulnerabilities uses dynamic analysis techniques , static analysis techniques and hybrid techniques which combine static and dynamic approaches. The static techniques need to know when to use  sanitization , declassification and authentication functions. Data sanitization has been studied in the context of architectures for high assurance systems, language-based information flow controls and privacy-preserving data publication \cite{ref_1_gehani2011f}. A global policy of noninterference which ensures that high-security data will not be observable on low-security channels. Because noninterference is typically
+too strong a property, most programs use some form of declassification to selectively leak high security  information\cite{ref_2_hicks2006trusted}.Declassification is often expressed as an operation within a given
+program. Authentication is the way through which the users gets access to a system. In this research main focus are these three types of functionalities which are sanitization, declassification and authentication errors in UML state charts. \\
 
-Information flow errors in UML models
-and code are introduced by software designers or programmers
-who are sometimes blind with respect to the fact that they
-are trained to focus point-wise (one code line and one data flow
-at a time). This is why it is important to develop techniques
-and tools which can detect this type of errors before they
-materialize in production code.Information flow vulnerabilities are hard to detect because static code analysis techniques need previous knowledge about what should be considered a security issue. Code annotations which are added mainly during software development [6] can be used to provide additional knowledge regarding security
-issues. On the other hand code annotations can increase the
-number of source code lines by 10% [27]. In order to detect
-information flow vulnerabilities software artifacts have to be
-annotated with annotations attached to public data, private data and to system trust boundaries. Next, annotated artifacts have
-to be made tractable by tools which can use the annotations
-and check if information flow constraints hold or not based on
-information propagation techniques.\\
+It is important to develop techniques and tools which can detect information flow type of errors before software developers or programmers develop their production code. Information flow errors in UML models and code are introduced by software developers or programmers who are sometimes unaware or blind while developing software. This type of vulnerabilities are hard to detect because static code analysis techniques need previous knowledge about what should be considered a security issue. Code annotations which are added mainly during software development [6] can be used to provide additional knowledge regarding security issues. On the other hand code annotations can increase the number of source code lines by 10\%. In order to detect information flow vulnerabilities software artifacts have to be annotated with annotations attached to public data, private data and to system trust boundaries. Next, annotated artifacts have to be made tractable by tools which can use the annotations and check if information flow constraints hold or not based on information propagation techniques.\\
 
-The detection of information flow vulnerabilities in code
-and UML state charts is not well addressed and is particularly
-challenging. Foremost, there is no common annotation language for annotating UML state charts and source code with
-information flow security constraints such that errors can be
-detected also when code is not available. Second, there are
-no automated checking tools which can reuse the annotated
-constraints in early stages of software development to check
-for information flow errors. We think that it is important to
-specify security constraints as early as possible in the software
-development process in order to avoid later costly repairs or
-exploitable vulnerabilities.
+Static Checking is a promising research area which tries to cope with the shortage of not having the program run-time information. During extended static analysis additional information is provided to the static analysis process. This information can be used to define trust boundaries and tag variables. Textual annotations are usually manually added by the user in source code. At the same time annotations can be automatically generated and inserted into source code . Static Checking can be used to eliminate bugs in a late stage of the software project when code development is finished. Tagging and checking for information exposure bugs during the design phase would eliminate the potential of implementing software bugs which can only be removed very costly after wards. Thus security concerns should be enforced into source code right after the conceptual phase of the project. \\
+
+It can be said that annotations can cover design decisions and enhance the quality of source code. Annotations are necessary in order to do Static Checking and the user needs a kind of assistance tool that helps selecting the suited annotation based on the current context.At the same time adding annotations to reusable code libraries reduces even more the annotation burden since libraries can be reused, shared and changed by software development teams.\\
+
  
 \section{Latex Introduction}
 There is no need for a latex introduction since there is plenty of literature out there.

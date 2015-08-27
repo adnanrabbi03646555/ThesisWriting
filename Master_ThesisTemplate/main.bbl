@@ -1,6 +1,19 @@
 \begin{thebibliography}{1}
 
-\bibitem{ref_1_sabelfeld2009declassification}
+\bibitem{ref_1_gehani2011f}
+Ashish Gehani, David Hanz, John Rushby, Grit Denker, and Rance DeLong.
+\newblock On the (f) utility of untrusted data sanitization.
+\newblock In {\em MILITARY COMMUNICATIONS CONFERENCE, 2011-MILCOM 2011}, pages
+  1261--1266. IEEE, 2011.
+
+\bibitem{ref_2_hicks2006trusted}
+Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.
+\newblock Trusted declassification:: high-level policy for a security-typed
+  language.
+\newblock In {\em Proceedings of the 2006 workshop on Programming languages and
+  analysis for security}, pages 65--74. ACM, 2006.
+
+\bibitem{ref_3_sabelfeld2009declassification}
 Andrei Sabelfeld and David Sands.
 \newblock Declassification: Dimensions and principles.
 \newblock {\em Journal of Computer Security}, 17(5):517--548, 2009.

@@ -1,6 +1,9 @@
 \chapter{Background Information}
+
 \section{Sanitization}
-Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience.Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Some basic purpose of sanitization are given below:
+Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience.Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulneribility analysis has mostly focused on identifying cases which web application directly uses external input for critical operations. It is suggested that always use proper sanitization method to validate external input values from the user for any application. \\
+
+Some basic purpose of sanitization are given below:
 \begin{itemize}
 	\item To identify the set of parameters and global variables which must be sanitized before calling functions.
 	\item It is acceptable to first pass the untrusted user input through a trusted sanitization function.	
@@ -11,8 +14,9 @@ Sanitization is the process of removing sensitive information from a document or
 \end{itemize}
 
 \section{Declassification}
-Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system.\\
-To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_1_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
+Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system. Practical security-typed languages support some form of declassification through which high-security information is allowed to flow to a low-security system or observer.\\
+
+To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_3_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
 
 \section{Authentication}
 Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, User verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then is the requset granted.\\
