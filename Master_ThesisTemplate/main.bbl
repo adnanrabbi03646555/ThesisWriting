@@ -13,6 +13,12 @@ Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.
 \newblock In {\em Proceedings of the 2006 workshop on Programming languages and
   analysis for security}, pages 65--74. ACM, 2006.
 
+\bibitem{ref_4_myers2000protecting}
+Andrew~C Myers and Barbara Liskov.
+\newblock Protecting privacy using the decentralized label model.
+\newblock {\em ACM Transactions on Software Engineering and Methodology
+  (TOSEM)}, 9(4):410--442, 2000.
+
 \bibitem{ref_3_sabelfeld2009declassification}
 Andrei Sabelfeld and David Sands.
 \newblock Declassification: Dimensions and principles.

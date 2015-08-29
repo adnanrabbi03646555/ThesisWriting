@@ -1,5 +1,33 @@
 \chapter{Implementation}
+
+
 \section{The Grammar of Annotation Language:}
+\begin{lstlisting}
+	
+	/**
+	* @FunctionAnnotation :used for function annotations
+	*/ 
+	FunctionAnnotation returns FunctionAnnotation:
+	{FunctionAnnotation}( 
+	result += '@return' (' ')? (level=('H'|'L'))? ('\n' | '\r')?
+	);
+	
+	/**
+	* @SingleLineAnnotation :used for adding single line annotations
+	*/ 
+	SingleLineAnnotation returns SingleLineAnnotation:
+	{SingleLineAnnotation}(
+	result+= '//@ @parameter 'parameter=ID(securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?	 
+	);
+		
+	/**
+	* @FunctionType :annotaions types for functions
+	*/ 
+	enum FunctionType: declassification 
+	| sanitization
+	| authentication
+	
+\end{lstlisting}
 
 \section{UML State Chart Editor:}
 UML state chart editor has been extended based on the open source Yakindu SCT [21]framework. The existing language grammar with
@@ -22,3 +50,5 @@ the mentioned state chart execution flow. The generated code
 will contain at least one bad path (contains a true positive) and
 a good path (contains no bug) per UML state chart if those
 paths were previously modeled inside the UML state chart.
+
+\section{View Buggy Path in Sequence Diagram}
