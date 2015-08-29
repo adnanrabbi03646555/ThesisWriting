@@ -1,9 +1,14 @@
 \chapter{Implementation}
 
+\section{Complete Workflow of the System:}
+
+
+
 
 \section{The Grammar of Annotation Language:}
+
+As per requirements previous annotation language grammar which is written in xtext language has been extended. Extra annotation have included like "@return", "True", "False", "sanitization", "declassification", "authentication". Some the code snippet of extended xtext grammar is given below.
 \begin{lstlisting}
-	
 	/**
 	* @FunctionAnnotation :used for function annotations
 	*/ 
@@ -52,3 +57,10 @@ a good path (contains no bug) per UML state chart if those
 paths were previously modeled inside the UML state chart.
 
 \section{View Buggy Path in Sequence Diagram}
+Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated.
+now it easier to trace the buggy path by viewing generated sequence diagram. One sample example of the buggy path is given in figure 4.1.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{styles/Error_trace_path.jpg}
+	\caption{Error trace path in sequence diagram}
+\end{figure}
