@@ -44,7 +44,7 @@ One familiar use of authentication and authorization is access control. A comput
 \end{itemize}
 
 \section{ Detecting Information Flow Errors During Design:}
-If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities.
+If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure 2.1 left side picture depicted that it has three functions. Among then func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics{styles/FunctionCallMissing.png}

@@ -3,28 +3,27 @@
 \BOOKMARK [0][-]{section*.4}{Outline of the Thesis}{}% 3
 \BOOKMARK [-1][]{part.1}{Introduction and Theory}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Introduction}{part.1}% 5
-\BOOKMARK [1][-]{section.1.1}{Latex Introduction}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{Background Information}{part.1}% 7
-\BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{Declassification}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{Authentication}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.4}{Detecting Information Flow Errors During Design:}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.5}{Detecting Information Flow Errors During Coding:}{chapter.2}% 12
-\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 13
-\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 14
-\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.3}{Language Implementation Process}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 18
-\BOOKMARK [1][-]{section.4.1}{Complete Workflow of the System:}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{The Grammar of Annotation Language:}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{UML State Chart Editor:}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.4}{Source Code Editor:}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.5}{C Code Generator:}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.6}{View Buggy Path in Sequence Diagram}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 25
-\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 26
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{part.2}% 27
-\BOOKMARK [-1][]{part*.9}{Appendix}{}% 28
-\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 29
-\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 30
+\BOOKMARK [0][-]{chapter.2}{Background Information}{part.1}% 6
+\BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Declassification}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Authentication}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Detecting Information Flow Errors During Design:}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{Detecting Information Flow Errors During Coding:}{chapter.2}% 11
+\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 12
+\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 13
+\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Language Implementation Process}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 17
+\BOOKMARK [1][-]{section.4.1}{Complete Workflow of the System:}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{The Grammar of Annotation Language:}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{UML State Chart Editor:}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Source Code Editor:}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{C Code Generator:}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.6}{View Buggy Path in Sequence Diagram}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 24
+\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 25
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{part.2}% 26
+\BOOKMARK [-1][]{part*.9}{Appendix}{}% 27
+\BOOKMARK [0][-]{appendix.A}{Detailed Descriptions}{part*.9}% 28
+\BOOKMARK [0][-]{chapter*.10}{Bibliography}{part*.9}% 29
