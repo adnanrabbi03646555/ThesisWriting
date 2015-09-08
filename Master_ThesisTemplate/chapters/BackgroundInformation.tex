@@ -22,6 +22,11 @@ Some basic purpose of sanitization are given below:
 \section{Declassification}
 Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system. Practical security-typed languages support some form of declassification through which high-security information is allowed to flow to a low-security system or observer.\\
 
+United States Federal Trade Commission reveals the damage that is continually caused by electronic information leakage. In protecting sensitive information, including everything from credit card information to military secrets to personal, medical information, there is a highly
+need for software applications with strong, confidentiality guarantees.
+Security-typed languages promise to be a valuable tool in making provably secure software applications. In such languages, each
+data item is labeled with its security policy. In practical security-typed languages support some form of declassification, in which high-security information is permitted to flow to a low-security receiver/observer \\
+
 To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_3_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.\\
 
 Myers and Liskov introduced the decentralized label model \cite{ref_4_myers2000protecting}, describing how labels could be applied
@@ -30,6 +35,32 @@ flow policy compliance in distributed systems. The framework
 includes a declassify function for downgrading data if the
 owners policies allow. The model allows principals to define their own downgrading policies.\\
 
+\subsection{Dimensions of declassification}
+Classification of the basic declassification goals according to four axes: what information is released, who releases information, where in the system information is released and when information can be released.
+
+\begin{itemize}
+   \item What : Selective or Partial information flow policies \cite{ref_5_cohen1977information,ref_6_cohen1978information,ref_7_joshi2000semantic,ref_8_giacobazzi2005adjoining} regulate what
+   information may be released. Partial release guarantees that only a part of a secret is
+   released to a public domain. Partial release can be specified in terms of precisely which
+   parts of the secret are released. This is useful,
+   for example, when partial information about a credit card number or a social security number is used for logging.
+   
+   \item Who : In a computing system it is essential to specify who controls information release .
+   Ignoring the issue of control opens up attacks where the attacker hijacks release
+   mechanisms to launder secret information. Myers and Liskov decentralised label
+   model \cite{ref_9_myers1997decentralized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
+   owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
+   the Jif compiler \cite{ref_11_myers2001jif}.
+   
+   \item Where : In a system information  Where is an important aspect of information release.One can ensure that no other  part can release further information.
+   by delegating particular parts of the system to release information.Declassification
+   via encryption is not harmful as long as the program is, in some sense, noninterfering
+   before and after encryption.  A combination of \enquote{where} and \enquote{who} policies in the presence of encryption has
+   been recently investigated by Hicks et al.\cite{ref_12_hicks2005declassification}
+   
+   \item When : The fourth dimension of declassification is  \enquote{when} information should be released.The work of Giambiagi and Dam [29] focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released.Chong and Myers security policies [9] address when information is released.By annotating variables this is achieved .
+   
+\end{itemize}
 
 \section{Authentication}
 Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, User verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request granted.\\

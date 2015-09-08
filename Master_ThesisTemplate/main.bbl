@@ -1,10 +1,28 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ref_5_cohen1977information}
+Ellis Cohen.
+\newblock Information transmission in computational systems.
+\newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
+  133--139. ACM, 1977.
+
+\bibitem{ref_6_cohen1978information}
+Ellis~S Cohen.
+\newblock Information transmission in sequential programs.
+\newblock pages 297--335, 1978.
 
 \bibitem{ref_1_gehani2011f}
 Ashish Gehani, David Hanz, John Rushby, Grit Denker, and Rance DeLong.
 \newblock On the (f) utility of untrusted data sanitization.
 \newblock In {\em MILITARY COMMUNICATIONS CONFERENCE, 2011-MILCOM 2011}, pages
   1261--1266. IEEE, 2011.
+
+\bibitem{ref_8_giacobazzi2005adjoining}
+Roberto Giacobazzi and Isabella Mastroeni.
+\newblock Adjoining declassification and attack models by abstract
+  interpretation.
+\newblock In {\em Programming Languages and Systems}, pages 295--310. Springer,
+  2005.
 
 \bibitem{ref_2_hicks2006trusted}
 Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.
@@ -13,15 +31,44 @@ Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.
 \newblock In {\em Proceedings of the 2006 workshop on Programming languages and
   analysis for security}, pages 65--74. ACM, 2006.
 
+\bibitem{ref_12_hicks2005declassification}
+Boniface Hicks, David King, and Patrick McDaniel.
+\newblock Declassification with cryptographic functions in a security-typed
+  language.
+\newblock {\em Network and Security Center, Department of Computer Science,
+  Pennsylvania State University, Tech. Rep. NAS-TR-0004-2005}, 2005.
+
+\bibitem{ref_7_joshi2000semantic}
+Rajeev Joshi and K~Rustan~M Leino.
+\newblock A semantic approach to secure information flow.
+\newblock volume~37, pages 113--138. Elsevier, 2000.
+
+\bibitem{ref_10_myers1999jflow}
+Andrew~C Myers.
+\newblock Jflow: Practical mostly-static information flow control.
+\newblock In {\em Proceedings of the 26th ACM SIGPLAN-SIGACT symposium on
+  Principles of programming languages}, pages 228--241. ACM, 1999.
+
+\bibitem{ref_9_myers1997decentralized}
+Andrew~C Myers and Barbara Liskov.
+\newblock {\em A decentralized model for information flow control}, volume~31.
+\newblock ACM, 1997.
+
 \bibitem{ref_4_myers2000protecting}
 Andrew~C Myers and Barbara Liskov.
 \newblock Protecting privacy using the decentralized label model.
-\newblock {\em ACM Transactions on Software Engineering and Methodology
-  (TOSEM)}, 9(4):410--442, 2000.
+\newblock volume~9, pages 410--442. ACM, 2000.
+
+\bibitem{ref_11_myers2001jif}
+Andrew~C Myers, Lantian Zheng, Steve Zdancewic, Stephen Chong, and Nathaniel
+  Nystrom.
+\newblock Jif: Java information flow.
+\newblock {\em Software release. Located at http://www. cs. cornell. edu/jif},
+  2005, 2001.
 
 \bibitem{ref_3_sabelfeld2009declassification}
 Andrei Sabelfeld and David Sands.
 \newblock Declassification: Dimensions and principles.
-\newblock {\em Journal of Computer Security}, 17(5):517--548, 2009.
+\newblock volume~17, pages 517--548. Citeseer, 2009.
 
 \end{thebibliography}
