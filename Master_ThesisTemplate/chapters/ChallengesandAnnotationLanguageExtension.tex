@@ -1,5 +1,56 @@
 \chapter{ Challenges and Annotation Language Extension}
 \section{Challenges and Idea}
+
+To develop the system eclipse xtext, eclipse xtend and static analysis engine named smtcodan(which is developed in Java to detect C and C++ vulneribilities) are used. For building the source code annotation editor eclipse xtext is used. Modeling the source as UML Statechart opensource platform YAKINDU SCT editor is used. Inside YAKINDU sct editor to genrate the .c(c file) and .h(header file) eclipse xtend is used mainly for genrating code files from statechart. Let's see in briefly what is xtext, xtend and how it works.
+
+\begin{itemize}	
+	\item Xtext : Xtext is a framework for development of programming languages and domain specific languages.According to the \enquote{eclipse.org/Xtext}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to your individual needs.
+	Here is an example of Xtext file:
+		\begin{lstlisting}
+		grammar org.xtext.example.mydsl.MyDsl with 
+		org.eclipse.xtext.common.Terminals
+		
+		generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+		
+		Model:
+		messages+=Message*;
+		
+		Message:
+		'Hello' name=ID '!';
+		
+		\end{lstlisting}
+		 
+	This language allows to write down a list of messages. The following would be proper input messages which are allowed to write:
+		\begin{lstlisting}
+			Hello User!
+			Hello World!		
+		\end{lstlisting}
+	
+	\item Xtend : According to the \enquote{eclipse.org/Xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: Everything you write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
+	Here is an example of Xtend file:
+	\begin{lstlisting}
+	package example	
+	import java.util.List		
+	class A {
+	def greetToAll(List<String> names) {
+		for(name: names) {
+			println(name.helloMessage)
+		}
+	}
+		
+	def helloMessage(String name) {
+		'Hello ' + name + '!'
+		}
+	}
+	
+	\end{lstlisting} 
+	   
+Xtend provides type inference, the type of name and the return types of the methods can be inferred from the context. Classes and methods are public by default, fields private. Semicolons are optional.
+	
+The example also shows the method helloMessage called as an extension method, like a feature of its first argument. Extension methods can also be provided by other classes or instances.
+\end{itemize}
+
+
 Previous annotation language grammer has been extended more
 to detect implicit and explicit information flow bugs in UML
 state charts and C code. The purpose of the same annotation language
@@ -14,10 +65,10 @@ correct annotations into files, how to use the same annotation
 language in order to annotate UML state charts and source
 code, dealing with scattered annotations and attaching annotations to the right function declaration or variable.\\
 
-The xText based grammar is used to parse the whole C/C++ language. The C/C++ source code file extensions (.h, .hh, .hhh, .hxx, .c, .cpp) and UML state chart annotation box (graphical boxes
-which can be attached to different parts of a UML state chart diagram) can be annotated with policy language restrictions. The obtained CORE model (a one to one mapping from xText grammar to the ECORE grammar representation) that can be reused for integrating the policy language into an UML state chart editor. Treating the annotation tags as EObjects created new possibilities for annotating
-UML models.The policy language grammar has about 400 LOC with code comments included. Source code generation is also supported by using
-xTend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation that can easily be used for annotating models and source files.
+The eclipse xtext based grammar is used to parse the whole C/C++ language. The C/C++ source code file extensions (.h, .hh, .hhh, .hxx, .c, .cpp) and UML state chart annotation box (graphical boxes
+which can be attached to different parts of a UML state chart diagram) can be annotated with policy language restrictions. The obtained CORE model (a one to one mapping from xtext grammar to the ECORE grammar representation) that can be reused for integrating the policy language into an UML state chart editor. Treating the annotation tags as EObjects created new possibilities for annotating
+UML models.The policy language grammar has about 420 lines of code with code comments included. Source code generation is also supported by using
+eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation as well as source code generator that can easily be used for annotating models and source files.
 
 \section{Annotation Language Tags}
 

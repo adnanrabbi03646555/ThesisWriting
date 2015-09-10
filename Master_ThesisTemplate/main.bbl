@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_13_chong2004security}
+Stephen Chong and Andrew~C Myers.
+\newblock Security policies for downgrading.
+\newblock In {\em Proceedings of the 11th ACM conference on Computer and
+  communications security}, pages 198--209. ACM, 2004.
+
 \bibitem{ref_5_cohen1977information}
 Ellis Cohen.
 \newblock Information transmission in computational systems.
@@ -10,6 +16,11 @@ Ellis Cohen.
 Ellis~S Cohen.
 \newblock Information transmission in sequential programs.
 \newblock pages 297--335, 1978.
+
+\bibitem{ref_14_denning1976lattice}
+Dorothy~E Denning.
+\newblock A lattice model of secure information flow.
+\newblock {\em Communications of the ACM}, 19(5):236--243, 1976.
 
 \bibitem{ref_1_gehani2011f}
 Ashish Gehani, David Hanz, John Rushby, Grit Denker, and Rance DeLong.
@@ -37,6 +48,11 @@ Boniface Hicks, David King, and Patrick McDaniel.
   language.
 \newblock {\em Network and Security Center, Department of Computer Science,
   Pennsylvania State University, Tech. Rep. NAS-TR-0004-2005}, 2005.
+
+\bibitem{ref_15_yakindu:sct}
+itemis AG.
+\newblock {Yakindu SCT Open-Source-Tool },
+  https://code.google.com/a/eclipselabs.org/p/yakindu/.
 
 \bibitem{ref_7_joshi2000semantic}
 Rajeev Joshi and K~Rustan~M Leino.
