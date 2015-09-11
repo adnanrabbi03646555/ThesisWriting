@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  10 SEP 2015 21:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  11 SEP 2015 16:18
 entering extended mode
 **main.tex
 
@@ -226,8 +226,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \minrowclearance=\skip56
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\styles/tumlogo.sty)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+e\styles/tumlogo.sty) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty
+"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen107
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
@@ -267,7 +270,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count99
 \c@MaxMatrixCols=\count100
-\dotsspace@=\muskip10
+\dotsspace@=\muskip11
 \c@parentequation=\count101
 \dspbrk@lvl=\count102
 \tag@help=\toks18
@@ -553,10 +556,6 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count112
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen121
 \Fld@menulength=\count113
@@ -1036,72 +1035,97 @@ e\chapters/Implementation.tex [15] [16 <F:/L2-T2/Thesis/ThesisWriting/GITReposi
 tory/ThesisWriting/Master_ThesisTemplate/styles/Language_Design_Process.png>]
 chapter 4.
 LaTeX Font Info:    External font `yhcmex10' loaded for size
-(Font)              <9> on input line 18.
+(Font)              <9> on input line 8.
 LaTeX Font Info:    External font `yhcmex10' loaded for size
-(Font)              <5> on input line 18.
+(Font)              <5> on input line 8.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
 [17
 
 ]
 Underfull \vbox (badness 5050) has occurred while \output is active []
 
  [18]
-Overfull \hbox (23.16364pt too wide) in paragraph at lines 108--111
-\OT1/ppl/m/n/10.95 UML state chart ed-i-tor has been ex-tended based on the ope
-n source Yakindu SCT [[]]framework.
+Underfull \hbox (badness 10000) in paragraph at lines 127--135
+
  []
 
-<styles/Error_trace_path.jpg, id=393, 363.60844pt x 197.23688pt>
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 136--141
+
+ []
+
+
+Overfull \hbox (39.58862pt too wide) in paragraph at lines 233--236
+[]\OT1/ppl/m/n/10.95 UML state chart ed-i-tor has been ex-tended based on the o
+pen source Yakindu SCT [[]]framework.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+[20] <styles/Error_trace_path.jpg, id=422, 363.60844pt x 197.23688pt>
 File: styles/Error_trace_path.jpg Graphic file (type jpg)
 
 <use styles/Error_trace_path.jpg>
-Package pdftex.def Info: styles/Error_trace_path.jpg used on input line 134.
+Package pdftex.def Info: styles/Error_trace_path.jpg used on input line 259.
 (pdftex.def)             Requested size: 363.60754pt x 197.23637pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Experiments.tex [19] [20 <F:/L2-T2/Thesis/ThesisWriting/GITRepositor
+e\chapters/Experiments.tex [21] [22 <F:/L2-T2/Thesis/ThesisWriting/GITRepositor
 y/ThesisWriting/Master_ThesisTemplate/styles/Error_trace_path.jpg>]
 chapter 5.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/RelatedWork.tex [21
+e\chapters/RelatedWork.tex [23
 
-] [22
+] [24
 
 ]
 chapter 6.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/ConclusionAndFutureWork.tex [23] [24]
+e\chapters/ConclusionAndFutureWork.tex [25] [26]
 chapter 7.
-) [25
+) [27
 
-] [26
+] [28
 
-] [27] [28]
+] [29] [30]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/oneAppendix.tex
 chapter A.
-) [29
+) [31
 
-] [30
+] [32
 
 ]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.bbl
 chapter without number
 
-Overfull \hbox (85.49048pt too wide) in paragraph at lines 53--56
+Overfull \hbox (85.49048pt too wide) in paragraph at lines 59--62
 []\OT1/ppl/m/n/10.95 itemis AG.  Yakindu SCT Open-Source-Tool , https://code.go
 ogle.com/a/eclipselabs.org/p/yakindu/. 
  []
 
-[31
+[33
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
- [32]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
@@ -1113,24 +1137,25 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 12482 strings out of 493921
- 190340 string characters out of 3144876
- 409915 words of memory out of 3000000
- 15311 multiletter control sequences out of 15000+200000
+ 12492 strings out of 493921
+ 190562 string characters out of 3144876
+ 396915 words of memory out of 3000000
+ 15315 multiletter control sequences out of 15000+200000
  29420 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,66p,1575b,1906s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,13n,66p,1575b,1906s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/palatino/uplri8a.pfb>
-Output written on main.pdf (46 pages, 285417 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pa
+latino/uplri8a.pfb>
+Output written on main.pdf (48 pages, 301872 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
  266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

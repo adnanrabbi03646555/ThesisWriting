@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_16_alhumaidan2012state}
+Fahad Alhumaidan et~al.
+\newblock State based static and dynamic formal analysis of uml state diagrams.
+\newblock {\em Journal of Software Engineering and Applications}, 5(07):483,
+  2012.
+
 \bibitem{ref_13_chong2004security}
 Stephen Chong and Andrew~C Myers.
 \newblock Security policies for downgrading.

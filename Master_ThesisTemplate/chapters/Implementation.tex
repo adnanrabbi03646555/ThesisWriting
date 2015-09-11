@@ -2,16 +2,6 @@
 
 \section{Complete Workflow of the System:}
 
-
-
-
-\section{The Grammar of Annotation Language:}
-Figure 4.1 contains in Extended Backus Naur Form (EBNF) notation the grammar of our annotation language. The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.
-Our annotation language grammar has two grammar rules
-\texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. The \texttt{Func\_Decl} and \texttt{Attr\_Definition} rules are
-used to recognize C or C++ function declarations and variable
-declarations.
-
 \begin{figure}[ht!]
 	\begin{tabular}{lll}
 		\footnotesize                       
@@ -38,7 +28,7 @@ declarations.
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@postStep "},    po\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\ \\                                        
 		\footnotesize                       
 		\textit{Func\_Type}          &\footnotesize $::=$        &\footnotesize \textbf{authentication};\\
-		 &\footnotesize $\ \vert $ &\footnotesize \textbf{declassification}; \\
+		&\footnotesize $\ \vert $ &\footnotesize \textbf{declassification}; \\
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitization};     \\
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sink};             \\
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};           \\
@@ -51,13 +41,22 @@ declarations.
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified}
 		\\
 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
-		                       
+		
 	\end{tabular}
 	\caption{Light-weight annotation language grammar excerpt}
 	\label{language grammar}
 \end{figure}
 
+
+\section{The Grammar of Annotation Language:}
+
+The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in figure 4.1 . The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.\\
+ 
+Annotation language grammar has two grammar rules
+\texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. The \texttt{Func\_Decl} and \texttt{Attr\_Definition} rules are used to recognize C or C++ function declarations and variable. The \texttt{Var\_Type} rule is used for variable type which is either for authenticated or declassified or sanitized variable. \texttt{Sec\_Type} rule is used for type of security whether a variable is confidential or not. In \texttt{Func\_Decl} rule the type function is declared. A function can be either one of this like authentication, declassification, sanitization, source or sink.\\
+
 As per requirements previous annotation language grammar which is written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Some part of the code snippet of extended xtext grammar is given below.
+
 \begin{lstlisting}
 	/**
 	* @FunctionAnnotation :used for function annotations
@@ -94,20 +93,146 @@ As per requirements previous annotation language grammar which is written in xte
 	
 	
 	/**
-	* @VariableSituation :annotaions types for function parameters
+	* @Variable Type :annotaions types for function parameters
 	*/ 
 	enum VariableType: declassified 
 	| sanitized
 	| authenticated
-	;
-	
-	
+	;	
 \end{lstlisting}
 
 \section{UML State Chart Editor:}
+
+A set of formal representation of UML statecharts is presented in this section. The state identifier and event are represented as S and Event respectively both as set types. For simple specification, the basic set types are used. In the definition of a transition from one state to another the guard is defined as a Boolean type. According to F Alhumaidan state based static and dynamic formal analysis of UML state diagrams \cite{ref_16_alhumaidan2012state} , a state can have three possible values that are active, passive or null represented as Active, Passive and null respectively. The type of state can be simple, concurrent, non-concurrent, initial or final.
+
+\begin{figure}[ht!]
+	\begin{tabular}{lll}
+		\footnotesize                       
+		\textit{[S, Event]}          &\footnotesize \\
+		
+		\footnotesize
+		\textit{Boolean}            &\footnotesize $::=$         &\footnotesize \textit{True} $\ \vert $ {False};       \\   
+		\footnotesize
+		\textit{Status}            &\footnotesize $::=$         &\footnotesize \textit{Active}
+		 $\ \vert $ {Passive}$\ \vert $ {Null};       \\ 
+		\footnotesize
+		\textit{Type}            &\footnotesize $::=$         &\footnotesize \textit{Simple}
+		 	$\ \vert $ {Concurent}$\ \vert $ {Nonconcurent} $\ \vert $ {Initial}$\ \vert $ {Final};       \\
+		 	 
+		
+	\end{tabular}
+	\caption{UML Statechart Formal Representation}
+	\label{statechart_formal_representation}
+\end{figure}
+In modeling using sets, it's not imposing any restriction upon the number of elements and a high level of
+abstraction is supposed. Further, it's not insist upon any
+effective procedure for deciding whether an arbitrary
+element is a member of the given collection or not. As a
+consequent, sets S and Event are sets over which cannot define any operation of set theory. For example,
+cardinality to know the number of elements in a set cannot
+be defined. Similarly, the subset, union, intersection or
+complement operations over the sets are not defined.\\
+
+The state diagram is a collection of states related by
+certain types of relations. In the definition of a state, state identifier, its type, status and set of regions is required.Region is defined as a power set of sequence of states. The state is represented by a schema which consists of four components described above. All these components are
+encapsulated and put in the Schema State given below.
+The invariants over the schema are defined in the second
+part of schema.\\
+
+\begin{figure}[ht!]
+	\begin{tabular}{lll}
+		\footnotesize                       
+		\textit{State}       \\
+		
+		\footnotesize
+		\textit{name}   $:$    \textit{S}  \\   
+		\footnotesize
+		\textit{type}   $:$    \textit{Type}  \\   
+		\footnotesize
+		\textit{status}   $:$    \textit{Status}      \\
+		\footnotesize
+		\textit{regions} $:$   \textit{seq Regions} \\
+		
+		\footnotesize
+		\textit{regions} $=$   \textit{1} $\ \  $ {type}$=$   \textit{Simple} \\
+		\footnotesize
+		 \textit{\# regions} $=$   \textit{1} $\ \  $ {type}$=$   \textit{Nonconcurrent} \\
+		 \textit{\# regions} $=$   \textit{1} $\ \  $ {type}$=$   \textit{Concurent} \\
+		 
+		
+	\end{tabular}
+	\caption{UML statechart some other formal representation}
+	\label{statechart_formal_representation_part2}
+\end{figure}
+
+\textbf{Invariants:}
+\begin{itemize}
+\item  If there is no region in a state inside the state diagram, then it is a simple state.
+\item  If there is exactly one region in a state then it is termed as non-concurrent composite state.
+\item  If there are two or more regions in a state then it is
+concurrent composite state.
+\end{itemize}
+
+The collection of states is represented by the schema
+States which consists of four variables. The mapping
+substates from State to power set of State describes type
+of a state.
+ \begin{figure}[ht!]
+ 	\begin{tabular}{lll}
+ 		\footnotesize                       
+ 		\textit{States}          \\
+ 		\footnotesize                       
+ 		\textit{start}          
+ 		$:$  \textit{State}\\
+ 		
+ 		\textit{states}          
+ 		$:$  \textit{State}\\
+ 		
+ 		\textit{states}           
+ 		$:$  \textit{State}\\
+ 		\footnotesize
+ 		\textit{substates}            $:$         \textit{State} $\ \  $ {State};       \\   
+ 		\footnotesize
+ 		\textit{target}             $:$         \textit{State}    \\
+ 		 \footnotesize                       
+ 		 \textit{start}           
+ 		 $:$  \textit{states}\\
+ 		  \footnotesize                       
+ 		  \textit{start}          
+ 		  $:$ \textit{target}\\
+ 		   \footnotesize                       
+ 		   \textit{start}           
+ 		   $:$  \textit{dom} $\ \  ${substates}\\
+ 		   
+ 		   \footnotesize                       
+ 		   \textit{states}          \\ 		
+ 		$\ \  $ \textit{s}      $:$     \textit{State} $\ \  $ {s} $\ \  $ \textit{dom} $\ \  ${substates} $\ \  $ {s} $\ \  $ \textit{states}        \\ 
+ 		$\ \  $ \textit{s}      $:$     \textit{State} $\ \  $ {s} $\ \  $ \textit{states} $\ \  $ {s} $\ \  $ \textit{start} $\ \  $ {s} $\ \  $ \textit{target}$\ \  $ {s.typ}\\ 
+ 		$\ \  $ \textit{Simple} $\ \  $ {s} $\ \  $ \textit{dom} $\ \  ${substates}\\
+ 		\footnotesize                       
+ 		\textit{target}  $\ \  $ \textit{states}        \\ 
+ 		\footnotesize                       
+ 		\textit{target}  $\ \  $ \textit{dom} $\ \  ${substates}\\	
+ 	\end{tabular}
+ 	\caption{UML Statechart Formal Representation of Invariants}
+ 	\label{statechart_formal_representation_invariants}
+ 	\end{figure}
+
+\textbf{Invariants:}
+\begin{itemize}
+\item The start state is not in the collection of states.
+\item The start state is not the target state.
+\item The start state does not belong to domain of substates
+mapping that is it has no sub-state.
+\item The set of states is non-empty.
+\item For any state, s, if it is in the states and is not the start or target state and not the simple state then it belongs to domain of sub-states.
+\item The target state does not belong to states.
+\item The target state of the state diagram does not belong to domain of the sub-states.
+\end{itemize}
+
 UML state chart editor has been extended based on the open source Yakindu SCT \cite{ref_15_yakindu:sct}framework. The existing language grammar with
 annotation language grammar has extended in order to support new set
-of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.
+of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.\\
 
 \section{Source Code Editor:}
 The source code editor has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line.Editor suggestions work only if the whole file is parsed without errors.
