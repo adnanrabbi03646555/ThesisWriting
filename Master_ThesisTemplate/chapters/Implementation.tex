@@ -298,43 +298,209 @@ paths were previously modeled inside the UML state chart.
 \begin{algorithm}
 	\caption{C code generator}
 	
-	{\textbf{Input:}} \\
-	{\textbf{Output:}}
+	{\textbf{Input: Statechart}} \\
+	{\textbf{Output: .c and .h files}}
 	\begin{algorithmic}[1]
+	
 		\Function{generateTypesH}{$sc$}\Comment{Where sc - statchart}
 		
-		\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $
-		\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
+			\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $ {Where def - function declaration in xtend}
+			\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
 		\EndFunction
 		
-		\Function {typesHAnnotationContent}{$sc$}\Comment{Where sc - statchart}
-		\State Let $L[1 \ldots {n_1} + 1]$ and $R[1 \ldots {n_2} + 1]$ be new arrays
-		\For{$i = 1$ to ${n_1}$}
-		\State $L[i] = A[p + i - 1]$
-		\EndFor
-		\For{$j = 1$ to ${n_2}$}
-		\State $R[i] = A[q + j]$
-		\EndFor
-		\State $L[{n_1} + 1] =  \infty $
-		\State $R[{n_2} + 1] =  \infty $
-		\State $i = 1$
-		\State $j = 1$
-		\For{$k = p$ to $r$}
-		\If {$L[i] < R[j]$}
-		\State $A[k] = L[i]$
-		\State $i = i + 1$
-		\ElsIf {$L[i] > R[j]$}
-		\State $A[k] = R[j]$
-		\State $j = j + 1$
-		\Else
-		\State $A[k] = - \infty$ \Comment{We mark the duplicates with the largest negative integer}
-		\State $j = j + 1$
-		\EndIf
-		\EndFor
+		\Function {typesHAnnotationContent}{$sc$}		
+			\For{$s : getFileContent(sc).entrySet$}
+				\If {$!s.key.contains('//@ @variable')$}
+					\State $s.key$
+				\ElsIf {$s.value.contains('(')$}
+					\State $ void <s.value>;$
+				\EndIf		
+			\EndFor			
 		\EndFunction
+		
+		\Function {typesCAnnotationContent}{$sc$}
+		
+		\For{$s: getFunctionContent(sc).entrySet$}
+			\If {$(!s.value.contains('authentication') and (!s.value.contains('declassification'))$  \\  
+			$\   \   $   $and(!s.value.contains('sanitization')))$}
+				\State $void <s.value> {}$
+			\EndIf		
+		\EndFor
+			
+		\For{$ region : sc.regions$}
+			\If {$ region.name.equalsIgnoreCase('bad_path()'$}
+			\State $void <region.name>$
+				
+					\For {$s: getBadPathContent(sc).entrySet$}
+					
+						\If {$ s.key.contains('//@ @variable')$} 
+							\State $s.key$
+							\State $s.value$
+						\EndIf
+					
+						\If {$ s.value.contains('(')$} 
+							\State $s.value;$
+							\State $s.value$
+						\EndIf
+					
+					\EndFor 
+			\EndIf
+		
+			\If {$ region.name.equalsIgnoreCase('good_path()')$} 
+			\State $void <region.name>$
+				\For {$s: getGoodPathContent(sc).entrySet$}
+					\If {$s.key.contains('//@ @variable')$} 
+						\State $s.key$						
+					\EndIf
+					\State $s.value;$
+				\EndFor 
+			\EndIf
+				
+		\EndFor
+				
+		\EndFunction
+		
 		
 	\end{algorithmic}
 \end{algorithm}
+
+
+\begin{lstlisting}
+	def HashMap<String, String> getFileContent(Statechart sc) {	
+		var fileContent = <String, String>newHashMap
+		for( region : sc.regions){
+			for(vertex : region.vertices)  {
+				if (!(vertex.name.nullOrEmpty)){
+					for(transition : vertex.incomingTransitions) {
+						fileContent.put(transition.specification,vertex.name)			
+					}							
+		
+				}
+		
+			}     
+		
+		}          
+	return fileContent
+	}
+	
+	def HashMap<String, String> getFunctionContent(Statechart sc) {
+		var functionContent = <String, String>newHashMap	
+		for( region : sc.regions){	
+			for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {	  
+	
+				if ( (vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){						
+					functionContent.put(vertex.name,vertex.name)
+				}
+			}    
+		}          
+		return functionContent
+	}
+	
+	def HashMap<String, String> getBadPathContent(Statechart sc) {
+		var badfunctionContent = <String, String>newHashMap
+		var String newName
+	
+			for( region : sc.regions){
+	
+				if(region.name.equalsIgnoreCase('bad_path()')){
+					for(vertex : region.vertices.filter[eClass.name.contentEquals('State')]){			
+	
+						if(!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
+							for(transition : vertex.incomingTransitions) {
+							badfunctionContent.put(transition.specification,vertex.name)			
+							}							    
+						}
+						if((vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
+							if ( (vertex.name.contains('char '))){
+								newName=vertex.name.replaceAll('char *','')
+								if(newName.contains('*'))	
+									newName=newName.replaceAll('\\*',''		)				
+								badfunctionContent.put(newName,newName)
+								}
+							else
+								badfunctionContent.put(vertex.name,vertex.name)
+						}
+					}
+	
+				}     
+	
+			}          
+		return badfunctionContent
+	}
+	
+	def String getVariableName(Statechart sc){		
+		var String variablename
+			for( region : sc.regions){
+				for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {	 
+	
+					if (!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){						
+						for(transition : vertex.incomingTransitions) {												
+							variablename= vertex.name.replaceAll('char *','')
+							if(variablename.contains('*'))
+							variablename=variablename.replaceAll('\\*','')														
+						}
+					}
+				} 
+	
+			}
+		return variablename
+	}
+	
+	def HashMap<String, String> getGoodPathContent(Statechart sc) {
+		var goodfunctionContent = <String, String>newHashMap	
+		var String newName		
+	
+			for( region : sc.regions){
+					if(region.name.equalsIgnoreCase('good_path()')){
+	
+							val choiceState=0; 
+							val increment=1; 
+	
+							for(vertex : region.vertices.filter[eClass.name.contentEquals('Choice')]){                   	
+									val sum=choiceState+increment;
+									for(transition : vertex.incomingTransitions) {                	
+										System.out.println("*********"+"if\n"+sum);     
+	
+									}         	    
+							}
+	
+							for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {			    
+	
+	
+									for(invertex : vertex.parentRegion.vertices.filter[eClass.name.contentEquals('State')])
+										{
+												if(!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
+														for(transition : vertex.incomingTransitions) {
+																goodfunctionContent.put(transition.specification,vertex.name)
+	
+														}
+												}
+												if((vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
+	
+														if ( (vertex.name.contains('char '))){
+	
+																newName=vertex.name.replaceAll('char *','')	
+																newName=newName.replaceAll('\\*','')					
+																goodfunctionContent.put(newName,newName)
+																}
+																else
+																goodfunctionContent.put(vertex.name,vertex.name)
+																}
+	
+								}
+	
+	
+						} 
+		
+				}    
+	
+			}          
+		return goodfunctionContent
+	}
+	
+
+\end{lstlisting}
+
 
 \section{Three Checkers in Static Analysis Engine}
 Static analysis refers analyzing code without executing it. Generally it is used to find bugs or ensure conformance to coding guidelines. The classic example is a compiler which finds lexical, syntactic and even some semantic mistakes.Static analysis tools should be used when they help maintain code quality. If they're used, they should be integrated into the build process, otherwise they will be ignored.Some characteristics of static analysis tools are:
@@ -347,11 +513,11 @@ Static analysis refers analyzing code without executing it. Generally it is used
 
 For this system static analysis engine \enquote{smtcodan}  has been used. Inside the engine to detect the information flow vulnerabilities required classes like AuthenticationFunctionChecker.java, DeclassificationFunctionChacker.java, SanitizationFunctionChecker.Java, Authentication\_gen.java,\\
 Declassification\_gen.java,
-Sanitization\_gen.java files are included. These files are included inorder to detect authentication, declassification and sanitization function missing bug detection in C code. For these three types of function detection here it has been used as library functions in C programming language. In order to detect the information flow vulnerabilities three models have been included such as Authentication\_gen.java,
+Sanitization\_gen.java files are included. These files are included in order to detect authentication, declassification and sanitization function missing bug detection in C code. For these three types of function detection here it has been used as library functions in C programming language. In order to detect the information flow vulnerabilities three models have been included such as Authentication\_gen.java,
 Declassification\_gen.java,
-Sanitization\_gen.java. In the generated .c file there exist only these three kinds of methods without signature which is given in figure . As they have no method body that's why they are acting as library function in \enquote{smtcodan} static analysis engine. Inside the engine three function signature will act as keyword like authentication, declassification and sanitization function. \\
+Sanitization\_gen.java. In the generated .c file there exist these three kinds of methods without signature which is given in figure . As they have no method body that's why they are acting as library function in \enquote{smtcodan} static analysis engine. Inside the engine three function signature will act as keyword like authentication, declassification and sanitization function. \\
 
-From C code generator generated .c and .h file with annotation should act as input for \enquote{smtcodan} static analysis engine. Engine pareses the code with annotation. For authentication, declassification and sanitization function all makes the high secured variable or confidential variable as low and according to the policy they passes the information from the sender to the receiver in a secured way. While implementing the checkers information flow restriction has followed. If any of the C files are not following the secure information flow then bug should be triggered as either authentication , declassification or sanitization function missing function.
+From C code generator generated .c and .h file with annotation should act as input for \enquote{smtcodan} static analysis engine. Engine parses the code with annotation. The authentication, declassification and sanitization function all makes the high secured variable or confidential variable as low and according to the policy they passes the information from the sender to the receiver in a secured way. While implementing the checkers, information flow restriction has followed. If any of the C files are not following the secure information flow then bug should be triggered as either authentication , declassification or sanitization function missing function.
 
 \section{View Buggy Path in Sequence Diagram}
 Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated.
