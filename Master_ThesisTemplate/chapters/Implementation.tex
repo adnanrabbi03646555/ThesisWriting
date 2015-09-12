@@ -1,105 +1,70 @@
 \chapter{Implementation}
 
-\section{Complete Workflow of the System:}
+\section{Overview of System Architecture:}
 
-\begin{figure}[ht!]
-	\begin{tabular}{lll}
-		\footnotesize                       
-		\textit{Ann\_Lang}           &\footnotesize $::=$         &\footnotesize HeaderModel*;       \\ \\
-		
-		\footnotesize
-		\textit{H\_Model}            &\footnotesize $::=$         &\footnotesize \textit{S\_L\_Anno};       \hfill ;single line comment rule   \\     
-		&\footnotesize $\ \vert $    &\footnotesize \textit{M\_L\_Anno};       \hfill ;multi line comment rule    \\ 
-		&\footnotesize $\ \vert $    &\footnotesize \textit{Func\_Decl};       \hfill ;function declaration rule  \\ 
-		&\footnotesize $\ \vert $    &\footnotesize \textit{Attr\_Def};        \hfill ;variable declaration rule  \\ \\
-		\footnotesize  	
-		\textit{S\_L\_Anno}          &\footnotesize $::=$         &\footnotesize \textbf{"//@ @function "},    Func\_Type,              [\textbf{H} $\ \vert $  \textbf{L}];     \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @parameter "},   p\_Name,  Sec\_Type, Var\_Type,    [\textbf{H} $\ \vert $  \textbf{L}];    \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @variable "},    v\_Name,  Sec\_Type,     [\textbf{H} $\ \vert $  \textbf{L}];    \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @preStep "},     pr\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @postStep "},    po\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\ \\   
-		\footnotesize            
-		\textit{M\_L\_Anno}          &\footnotesize $::=$         &\footnotesize [\textbf{"/*@ "}],  ["* "],  Func\_Ann,  (\textbf{" @*/"}) \\
-		&\footnotesize $\ \vert $    &\footnotesize ("*"), [" "]*, (\textbf{"@*/"});                  \\ \\
-		\footnotesize        
-		\textit{Func\_Ann}           &\footnotesize $::=$         &\footnotesize \textbf{"@function "},    Func\_Type,              [\textbf{H} $\ \vert $  \textbf{L}];     \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@parameter "},   p\_Name,  Sec\_Type, Var\_Type,    [\textbf{H} $\ \vert $  \textbf{L}];    \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@preStep "},     pr\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@postStep "},    po\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\ \\                                        
-		\footnotesize                       
-		\textit{Func\_Type}          &\footnotesize $::=$        &\footnotesize \textbf{authentication};\\
-		&\footnotesize $\ \vert $ &\footnotesize \textbf{declassification}; \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitization};     \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{sink};             \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};           \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{trust\_boundary};  \\ \\
-		\footnotesize                       
-		\textit{Sec\_Type}           &\footnotesize $::=$         &\footnotesize \textbf{confidential}; \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};    \\ \\
-		\footnotesize                       
-		\textit{Var\_Type}           &\footnotesize $::=$         &\footnotesize \textbf{authenticated}; \\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified}
-		\\
-		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
-		
-	\end{tabular}
-	\caption{Light-weight annotation language grammar excerpt}
-	\label{language grammar}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{styles/system_architecture.png}
+	\caption{System Architecture}
 \end{figure}
+
+Figure 4.1 depicts the complete system architecture. First, the source code editor is developed using Eclipse Xtext. By this editor one can easily annotate the source code of C/C++. Even it is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code
+annotation technique has chosen which is easy to extend and backward compatible. Then for modeling purpose Yakindu SCT editor has chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle. Inside the Yakindu SCT editor the annotation language grammar has also included using Eclipse Xtext. So, that user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has extended inside the Yakindu SCT editor using Eclipse Xtend. After modeling the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named smtcodan three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. Then to view the buggy path in sequence diagram a sequence diagram generator has created. That is the end of complete system architecture of this system. 
 
 
 \section{The Grammar of Annotation Language:}
 
 The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in figure 4.1 . The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.\\
  
+ \begin{figure}[ht!]
+ 	\begin{tabular}{lll}
+ 		\footnotesize                       
+ 		\textit{Ann\_Lang}           &\footnotesize $::=$         &\footnotesize HeaderModel*;       \\ \\
+ 		
+ 		\footnotesize
+ 		\textit{H\_Model}            &\footnotesize $::=$         &\footnotesize \textit{S\_L\_Anno};       \hfill ;single line comment rule   \\     
+ 		&\footnotesize $\ \vert $    &\footnotesize \textit{M\_L\_Anno};       \hfill ;multi line comment rule    \\ 
+ 		&\footnotesize $\ \vert $    &\footnotesize \textit{Func\_Decl};       \hfill ;function declaration rule  \\ 
+ 		&\footnotesize $\ \vert $    &\footnotesize \textit{Attr\_Def};        \hfill ;variable declaration rule  \\ \\
+ 		\footnotesize  	
+ 		\textit{S\_L\_Anno}          &\footnotesize $::=$         &\footnotesize \textbf{"//@ @function "},    Func\_Type,              [\textbf{H} $\ \vert $  \textbf{L}];     \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @parameter "},   p\_Name,  Sec\_Type, Var\_Type,    [\textbf{H} $\ \vert $  \textbf{L}];    \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @variable "},    v\_Name,  Sec\_Type,     [\textbf{H} $\ \vert $  \textbf{L}];    \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @preStep "},     pr\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"//@ @postStep "},    po\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\ \\   
+ 		\footnotesize            
+ 		\textit{M\_L\_Anno}          &\footnotesize $::=$         &\footnotesize [\textbf{"/*@ "}],  ["* "],  Func\_Ann,  (\textbf{" @*/"}) \\
+ 		&\footnotesize $\ \vert $    &\footnotesize ("*"), [" "]*, (\textbf{"@*/"});                  \\ \\
+ 		\footnotesize        
+ 		\textit{Func\_Ann}           &\footnotesize $::=$         &\footnotesize \textbf{"@function "},    Func\_Type,              [\textbf{H} $\ \vert $  \textbf{L}];     \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@parameter "},   p\_Name,  Sec\_Type, Var\_Type,    [\textbf{H} $\ \vert $  \textbf{L}];    \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@preStep "},     pr\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{"@postStep "},    po\_s\_Name,             [\textbf{H} $\ \vert $  \textbf{L}];    \\ \\                                        
+ 		\footnotesize                       
+ 		\textit{Func\_Type}          &\footnotesize $::=$        &\footnotesize \textbf{authentication};\\
+ 		&\footnotesize $\ \vert $ &\footnotesize \textbf{declassification}; \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitization};     \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sink};             \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};           \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{trust\_boundary};  \\ \\
+ 		\footnotesize                       
+ 		\textit{Sec\_Type}           &\footnotesize $::=$         &\footnotesize \textbf{confidential}; \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};    \\ \\
+ 		\footnotesize                       
+ 		\textit{Var\_Type}           &\footnotesize $::=$         &\footnotesize \textbf{authenticated}; \\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified}
+ 		\\
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
+ 		
+ 	\end{tabular}
+ 	\caption{Light-weight annotation language grammar excerpt}
+ 	\label{language grammar}
+ \end{figure}
+ 
 Annotation language grammar has two grammar rules
 \texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. The \texttt{Func\_Decl} and \texttt{Attr\_Definition} rules are used to recognize C or C++ function declarations and variable. The \texttt{Var\_Type} rule is used for variable type which is either for authenticated or declassified or sanitized variable. \texttt{Sec\_Type} rule is used for type of security whether a variable is confidential or not. In \texttt{Func\_Decl} rule the type function is declared. A function can be either one of this like authentication, declassification, sanitization, source or sink.\\
 
-As per requirements previous annotation language grammar which is written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Some part of the code snippet of extended xtext grammar is given below.
 
-\begin{lstlisting}
-	/**
-	* @FunctionAnnotation :used for function annotations
-	*/ 
-	FunctionAnnotation returns FunctionAnnotation:
-	{FunctionAnnotation}( 
-	result +=  '@function '   functionType=FunctionType      (' ')?                              (level =('H'|'L'))?     ((name0=ID))? ((nameComment=ID))? ('\n' | '\r')?
-	// supported without space before confidential and sensitive
-	| '@parameter '   parameter=ID (name0=ID)? (securityType=SecurityType)?(' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((name1=ID))? ((nameComment=ID))? ('\n' | '\r')?	
-	;
-	
-	/**
-	* @SingleLineAnnotation :used for adding single line annotations
-	*/ 
-	SingleLineAnnotation returns SingleLineAnnotation:
-	{SingleLineAnnotation}(
-	result+=  '//@ @function '    functionType=FunctionType (' ')?                  (level =('H'|'L'))?  ((name0=ID))? ((nameComment=ID))?  ('\n' | '\r')*
-	// supported without space before confidential and sensitive
-	| '//@ @parameter '   parameter=ID (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((nameComment=ID))?  ('\n' | '\r')?
-	| '//@ @variable '    variable=ID  (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?
-	
-	;
-	
-	/**
-	* @FunctionType :annotaions types for functions
-	*/ 
-	enum FunctionType: declassification 
-	| sanitization
-	| authentication
-	| sink
-	| source
-	| trust_boundary
-	;
-	
-	
-	/**
-	* @Variable Type :annotaions types for function parameters
-	*/ 
-	enum VariableType: declassified 
-	| sanitized
-	| authenticated
-	;	
-\end{lstlisting}
 
 \section{UML State Chart Editor:}
 
@@ -214,7 +179,7 @@ of a state.
  		\footnotesize                       
  		\textit{target}  $\ \  $ \textit{dom} $\ \  ${substates}\\	
  	\end{tabular}
- 	\caption{UML Statechart Formal Representation of Invariants}
+ 	\caption{UML Statechart Formal Representation some parts}
  	\label{statechart_formal_representation_invariants}
  	\end{figure}
 
@@ -234,8 +199,87 @@ UML state chart editor has been extended based on the open source Yakindu SCT \c
 annotation language grammar has extended in order to support new set
 of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.\\
 
+To extend the Yakindu SCT editor here it has been decided to represent the statements like variable declaration, function calling as state and transitions are represent as move from one statement to another. A rectangular box can be attached with transitions where annotation can be written as per requirements. So for the developed system the UML statechart formal representation is as like this: 
+\begin{figure}[ht!]
+	\begin{tabular}{lll}
+	\footnotesize                       
+	\textit{States}          \\
+	\footnotesize                       
+	\textit{start}          
+	$:$  \textit{State}\\
+	
+	\textit{states}          
+	$:$  \textit{State}\\
+	
+	\textit{states}           
+	$:$  \textit{State}\\
+	\footnotesize
+	\textit{substates}            $:$         \textit{State} $\ \  $ {State};       \\   
+	\footnotesize
+	\textit{target}             $:$         \textit{State}    \\
+	\footnotesize                       
+	\textit{start}           
+	$:$  \textit{states}\\
+	\footnotesize                       
+	\textit{start}          
+	$:$ \textit{target}\\
+	\footnotesize                       
+	\textit{transition}          
+	$:$ \textit{annotation*}\\
+	\footnotesize                       
+	\textit{target} $:$ \textit{states}        \\ 	
+	\end{tabular}
+	\caption{UML Statechart Formal Representation for this System}
+	\label{statechart_formal_representation_for _this_system}
+	\end{figure}
 \section{Source Code Editor:}
-The source code editor has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line.Editor suggestions work only if the whole file is parsed without errors.
+The source code editor has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line.Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext.
+
+As per requirements previous annotation language grammar which is written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Some part of the code snippet of extended xtext grammar is given below.
+
+\begin{lstlisting}
+/**
+* @FunctionAnnotation :used for function annotations
+*/ 
+FunctionAnnotation returns FunctionAnnotation:
+{FunctionAnnotation}( 
+result +=  '@function '   functionType=FunctionType      (' ')?                              (level =('H'|'L'))?     ((name0=ID))? ((nameComment=ID))? ('\n' | '\r')?
+// supported without space before confidential and sensitive
+| '@parameter '   parameter=ID (name0=ID)? (securityType=SecurityType)?(' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((name1=ID))? ((nameComment=ID))? ('\n' | '\r')?	
+;
+
+/**
+* @SingleLineAnnotation :used for adding single line annotations
+*/ 
+SingleLineAnnotation returns SingleLineAnnotation:
+{SingleLineAnnotation}(
+result+=  '//@ @function '    functionType=FunctionType (' ')?                  (level =('H'|'L'))?  ((name0=ID))? ((nameComment=ID))?  ('\n' | '\r')*
+// supported without space before confidential and sensitive
+| '//@ @parameter '   parameter=ID (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((nameComment=ID))?  ('\n' | '\r')?
+| '//@ @variable '    variable=ID  (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?
+
+;
+
+/**
+* @FunctionType :annotaions types for functions
+*/ 
+enum FunctionType: declassification 
+| sanitization
+| authentication
+| sink
+| source
+| trust_boundary
+;
+
+
+/**
+* @Variable Type :annotaions types for function parameters
+*/ 
+enum VariableType: declassified 
+| sanitized
+| authenticated
+;	
+\end{lstlisting}
 
 \section{C Code Generator:}
 C code generator has extended based on Eclipse EMF and xTend which is used to generate the state chart execution code containing the previously added security annotations from UML state charts. The code generator outputs two files per UML state chart (one .c and one
@@ -250,6 +294,64 @@ the mentioned state chart execution flow. The generated code
 will contain at least one bad path (contains a true positive) and
 a good path (contains no bug) per UML state chart if those
 paths were previously modeled inside the UML state chart.
+
+\begin{algorithm}
+	\caption{C code generator}
+	
+	{\textbf{Input:}} \\
+	{\textbf{Output:}}
+	\begin{algorithmic}[1]
+		\Function{generateTypesH}{$sc$}\Comment{Where sc - statchart}
+		
+		\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $
+		\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
+		\EndFunction
+		
+		\Function {typesHAnnotationContent}{$sc$}\Comment{Where sc - statchart}
+		\State Let $L[1 \ldots {n_1} + 1]$ and $R[1 \ldots {n_2} + 1]$ be new arrays
+		\For{$i = 1$ to ${n_1}$}
+		\State $L[i] = A[p + i - 1]$
+		\EndFor
+		\For{$j = 1$ to ${n_2}$}
+		\State $R[i] = A[q + j]$
+		\EndFor
+		\State $L[{n_1} + 1] =  \infty $
+		\State $R[{n_2} + 1] =  \infty $
+		\State $i = 1$
+		\State $j = 1$
+		\For{$k = p$ to $r$}
+		\If {$L[i] < R[j]$}
+		\State $A[k] = L[i]$
+		\State $i = i + 1$
+		\ElsIf {$L[i] > R[j]$}
+		\State $A[k] = R[j]$
+		\State $j = j + 1$
+		\Else
+		\State $A[k] = - \infty$ \Comment{We mark the duplicates with the largest negative integer}
+		\State $j = j + 1$
+		\EndIf
+		\EndFor
+		\EndFunction
+		
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Three Checkers in Static Analysis Engine}
+Static analysis refers analyzing code without executing it. Generally it is used to find bugs or ensure conformance to coding guidelines. The classic example is a compiler which finds lexical, syntactic and even some semantic mistakes.Static analysis tools should be used when they help maintain code quality. If they're used, they should be integrated into the build process, otherwise they will be ignored.Some characteristics of static analysis tools are:
+\begin{itemize}	
+	\item Identify anomalies or defects in the code.
+	\item Analyze structures and dependencies.
+	\item Help in code understanding.
+	\item To enforce coding standards.
+\end{itemize}
+
+For this system static analysis engine \enquote{smtcodan}  has been used. Inside the engine to detect the information flow vulnerabilities required classes like AuthenticationFunctionChecker.java, DeclassificationFunctionChacker.java, SanitizationFunctionChecker.Java, Authentication\_gen.java,\\
+Declassification\_gen.java,
+Sanitization\_gen.java files are included. These files are included inorder to detect authentication, declassification and sanitization function missing bug detection in C code. For these three types of function detection here it has been used as library functions in C programming language. In order to detect the information flow vulnerabilities three models have been included such as Authentication\_gen.java,
+Declassification\_gen.java,
+Sanitization\_gen.java. In the generated .c file there exist only these three kinds of methods without signature which is given in figure . As they have no method body that's why they are acting as library function in \enquote{smtcodan} static analysis engine. Inside the engine three function signature will act as keyword like authentication, declassification and sanitization function. \\
+
+From C code generator generated .c and .h file with annotation should act as input for \enquote{smtcodan} static analysis engine. Engine pareses the code with annotation. For authentication, declassification and sanitization function all makes the high secured variable or confidential variable as low and according to the policy they passes the information from the sender to the receiver in a secured way. While implementing the checkers information flow restriction has followed. If any of the C files are not following the secure information flow then bug should be triggered as either authentication , declassification or sanitization function missing function.
 
 \section{View Buggy Path in Sequence Diagram}
 Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated.
