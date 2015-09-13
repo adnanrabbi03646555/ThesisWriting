@@ -294,10 +294,10 @@ the mentioned state chart execution flow. The generated code
 will contain at least one bad path (contains a true positive) and
 a good path (contains no bug) per UML state chart if those
 paths were previously modeled inside the UML state chart.
-
+   
 \begin{algorithm}
-	\caption{C code generator}
-	
+	{\textbf{C Code Generator}}\\
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 	{\textbf{Input: Statechart}} \\
 	{\textbf{Output: .c and .h files}}
 	\begin{algorithmic}[1]
@@ -362,10 +362,11 @@ paths were previously modeled inside the UML state chart.
 		
 		
 	\end{algorithmic}
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \end{algorithm}
 
-
-\begin{lstlisting}
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\begin{lstlisting}[]
 	def HashMap<String, String> getFileContent(Statechart sc) {	
 		var fileContent = <String, String>newHashMap
 		for( region : sc.regions){
@@ -500,7 +501,7 @@ paths were previously modeled inside the UML state chart.
 	
 
 \end{lstlisting}
-
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 
 \section{Three Checkers in Static Analysis Engine}
 Static analysis refers analyzing code without executing it. Generally it is used to find bugs or ensure conformance to coding guidelines. The classic example is a compiler which finds lexical, syntactic and even some semantic mistakes.Static analysis tools should be used when they help maintain code quality. If they're used, they should be integrated into the build process, otherwise they will be ignored.Some characteristics of static analysis tools are:

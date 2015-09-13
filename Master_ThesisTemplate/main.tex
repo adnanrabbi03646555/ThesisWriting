@@ -48,8 +48,12 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage{algorithm}
+\usepackage{algorithmicx}
+%\usepackage{algorithm}
+\usepackage{algcompatible}
 \usepackage{algpseudocode}
+%\usepackage{algpseudocode}
+%\usepackage[compatible]{algpseudocode}
 
 \usepackage{geometry}
 \geometry{
@@ -69,13 +73,13 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\lstset{frame=tb,
+\lstset{
 	language=Java,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
-	basicstyle={\small\ttfamily},
+	basicstyle=\footnotesize,
 	numbers=none,
 	numberstyle=\tiny\color{gray},
 	keywordstyle=\color{blue},
@@ -83,7 +87,8 @@
 	stringstyle=\color{mauve},
 	breaklines=true,
 	breakatwhitespace=true,
-	tabsize=3
+	tabsize=3,
+	captionpos=b 
 }
 
 \begin{document}
