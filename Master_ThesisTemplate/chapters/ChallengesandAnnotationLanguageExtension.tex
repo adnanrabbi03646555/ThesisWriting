@@ -71,7 +71,24 @@ UML models.The policy language grammar has about 420 lines of code with code com
 eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation as well as source code generator that can easily be used for annotating models and source files.
 
 \section{Annotation Language Tags}
+\begin{tabular}{l*{3}{c}r}
+	\hline
+	Annotation Type   & Annotation Tag & Description  \\
+	\hline
+	@function         & sink  		   & uses information \\
+	                  & source         & source provides information	\\
+	                  & authentication & authentication authenticates information	\\
+	                  & declassification& declassification declassifies information	\\
+	                  & sanitization   & sanitization sanitizes information	\\
+	                  & trust\_boundary& trust\_boundary is a trust-boundary\\ \hline
 
+	@parameter        & authenticated H/L & authenticated High/Low tags    \\
+					  & declassified H/L  & declassified High/Low tags    \\
+				      & sanitized H/L     & sanitized High/Low tags    \\ \hline
+	@variable         & confidential H/L & confidential High/Low tags\\
+					  & source H/L & source High/Low tags   \\
+	\hline
+\end{tabular}
 
 \section{Language Implementation Process}
 
