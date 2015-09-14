@@ -6,6 +6,11 @@ Fahad Alhumaidan et~al.
 \newblock {\em Journal of Software Engineering and Applications}, 5(07):483,
   2012.
 
+\bibitem{ref_18_chess2004static}
+Brian Chess and Gary McGraw.
+\newblock Static analysis for security.
+\newblock {\em IEEE Security \& Privacy}, (6):76--79, 2004.
+
 \bibitem{ref_13_chong2004security}
 Stephen Chong and Andrew~C Myers.
 \newblock Security policies for downgrading.
@@ -28,6 +33,18 @@ Dorothy~E Denning.
 \newblock A lattice model of secure information flow.
 \newblock {\em Communications of the ACM}, 19(5):236--243, 1976.
 
+\bibitem{ref_20_xtend}
+Eclipse.
+\newblock {xtend Documentation}.
+\newblock Technical report, Eclipse,
+  http://www.eclipse.org/xtend/documentation/.
+
+\bibitem{ref_17_xtext:grammar}
+Eclipse.
+\newblock {xText Documentation}.
+\newblock Technical report, Eclipse, iTemis,
+  http://www.eclipse.org/Xtext/documentation.html.
+
 \bibitem{ref_1_gehani2011f}
 Ashish Gehani, David Hanz, John Rushby, Grit Denker, and Rance DeLong.
 \newblock On the (f) utility of untrusted data sanitization.
@@ -40,6 +57,12 @@ Roberto Giacobazzi and Isabella Mastroeni.
   interpretation.
 \newblock In {\em Programming Languages and Systems}, pages 295--310. Springer,
   2005.
+
+\bibitem{ref_19_giambiagi2003secure}
+Pablo Giambiagi and Mads Dam.
+\newblock On the secure implementation of security protocols.
+\newblock In {\em Programming Languages and Systems}, pages 144--158. Springer,
+  2003.
 
 \bibitem{ref_2_hicks2006trusted}
 Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.

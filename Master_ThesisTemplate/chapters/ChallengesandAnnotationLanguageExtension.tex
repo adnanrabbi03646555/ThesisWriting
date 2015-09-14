@@ -71,6 +71,17 @@ UML models.The policy language grammar has about 420 lines of code with code com
 eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation as well as source code generator that can easily be used for annotating models and source files.
 
 \section{Annotation Language Tags}
+Table \ref{table:Security_language_annotation_tags} contains in this section: the annotation language
+target types, the annotation tags which can be used in
+combination with the tag @function, the tag
+@parameter can be used to annotate the function parameter as authinticated/declassified/santized H/L and the tag @variable used to annotate the variable of C/C++ code with confiential H/L which are used to tag public and private variables. The tag @variable which can be used only inside single line annotations whereas @parameter is used only in multi line annotations. The tags were
+defined and implemented iteratively based on the work flow
+presented in figure \ref{figure:Language_Design_Process} and by using the eclipse xtext \cite{ref_17_xtext:grammar} language
+definition grammar.\\
+
+For detecting of authentication, declassification and sanitization errors new function tags included like authentication, declassification and sanitization function type. Also for parameter new tag type of parameter included such as authenticated, declassified and sanitized. Still H/L tags for parameter exists in the annotation tags for parameter to define that which type of parameter is this either \enquote{High} or \enquote{Low}. High means that this parameter is highly confidential or secured and low means that this parameter is not highly secured. In table \ref{table:Security_language_annotation_tags} the new tags for annotation language grammar has given. 
+
+\begin{table}
 \begin{tabular}{l*{3}{c}r}
 	\hline
 	Annotation Type   & Annotation Tag & Description  \\
@@ -88,11 +99,15 @@ eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as we
 	@variable         & confidential H/L & confidential High/Low tags\\
 					  & source H/L & source High/Low tags   \\
 	\hline
+	
 \end{tabular}
+\caption{Security language annotation tags}
+\label{table:Security_language_annotation_tags}
+\end{table}
 
 \section{Language Implementation Process}
 
-The process depicted in figure 3.1 was used in order to
+The process depicted in figure \ref{figure:Language_Design_Process} was used in order to
 implement annotation language. Figure 3.1 depicts the
 annotation language implementation process. The process is
 comprised of the following steps: At first, the .xtext file
@@ -102,4 +117,5 @@ artifacts are generated. After editing the .mwe2 file then compile it. The resul
 	\centering
 	\includegraphics{styles/Language_Design_Process.png}
 	\caption{Annotation language design process}
+	\label{figure:Language_Design_Process}
 \end{figure}
