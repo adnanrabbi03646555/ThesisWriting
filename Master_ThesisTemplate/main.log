@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  14 SEP 2015 23:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  14 SEP 2015 23:59
 entering extended mode
 **main.tex
 
@@ -1365,55 +1365,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--29
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 [5
 
 ]
-Overfull \hbox (12.32082pt too wide) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+
+ []
+
+
+Overfull \hbox (12.32082pt too wide) in paragraph at lines 35--36
 []\OT1/ppl/m/n/10.95 To de-clas-sify in-for-ma-tion means low-er-ing the se-cu-
 rity clas-si-fi-ca-tion of se-lected in-for-ma-tion. Sabelfeld
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-[6] <styles/FunctionCallMissing.png, id=298, 454.69875pt x 299.1175pt>
+<styles/FunctionCallMissing.png, id=297, 454.69875pt x 299.1175pt>
 File: styles/FunctionCallMissing.png Graphic file (type png)
 
 <use styles/FunctionCallMissing.png>
-Package pdftex.def Info: styles/FunctionCallMissing.png used on input line 81.
+Package pdftex.def Info: styles/FunctionCallMissing.png used on input line 102.
+
 (pdftex.def)             Requested size: 454.69763pt x 299.11676pt.
- [7 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
-plate/styles/FunctionCallMissing.png>]
-<styles/bug_detection_during_coding.png, id=307, 464.73625pt x 451.6875pt>
+ [7] [8 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_Thesi
+sTemplate/styles/FunctionCallMissing.png>]
+<styles/bug_detection_during_coding.png, id=315, 464.73625pt x 451.6875pt>
 File: styles/bug_detection_during_coding.png Graphic file (type png)
 
 <use styles/bug_detection_during_coding.png>
 Package pdftex.def Info: styles/bug_detection_during_coding.png used on input l
-ine 94.
+ine 116.
 (pdftex.def)             Requested size: 464.7351pt x 451.68639pt.
-) [8] [9 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_Thes
-isTemplate/styles/bug_detection_during_coding.png>] [10
+) [9 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/bug_detection_during_coding.png>] [10
 
 ]
 part II.
@@ -1449,7 +1460,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--81
 
  []
 
-[14] <styles/Language_Design_Process.png, id=377, 468.75125pt x 253.94875pt>
+[14] <styles/Language_Design_Process.png, id=379, 468.75125pt x 253.94875pt>
 File: styles/Language_Design_Process.png Graphic file (type png)
 
 <use styles/Language_Design_Process.png>
@@ -1461,7 +1472,7 @@ Package pdftex.def Info: styles/Language_Design_Process.png used on input line
 e\chapters/Implementation.tex [15] [16 <F:/L2-T2/Thesis/ThesisWriting/GITReposi
 tory/ThesisWriting/Master_ThesisTemplate/styles/Language_Design_Process.png>]
 chapter 4.
-<styles/system_architecture.png, id=387, 334.24875pt x 304.13625pt>
+<styles/system_architecture.png, id=389, 334.24875pt x 304.13625pt>
 File: styles/system_architecture.png Graphic file (type png)
 
 <use styles/system_architecture.png>
@@ -1546,7 +1557,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 530--535
 
  []
 
-<styles/Error_trace_path.jpg, id=630, 363.60844pt x 197.23688pt>
+<styles/Error_trace_path.jpg, id=632, 363.60844pt x 197.23688pt>
 File: styles/Error_trace_path.jpg Graphic file (type jpg)
 
 <use styles/Error_trace_path.jpg>
@@ -1559,7 +1570,7 @@ y/ThesisWriting/Master_ThesisTemplate/styles/Error_trace_path.jpg>] [28
 
 ]
 chapter 5.
-[29] <styles/authentication_scenario.png, id=684, 516.42938pt x 311.66437pt>
+[29] <styles/authentication_scenario.png, id=686, 516.42938pt x 311.66437pt>
 File: styles/authentication_scenario.png Graphic file (type png)
 
 <use styles/authentication_scenario.png>
@@ -1587,7 +1598,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-<styles/declassification_scenario.png, id=693, 433.62pt x 268.00125pt>
+<styles/declassification_scenario.png, id=695, 433.62pt x 268.00125pt>
 File: styles/declassification_scenario.png Graphic file (type png)
 
 <use styles/declassification_scenario.png>
@@ -1609,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-<styles/sanitization_scenario.png, id=702, 413.29407pt x 265.74281pt>
+<styles/sanitization_scenario.png, id=704, 413.29407pt x 265.74281pt>
 File: styles/sanitization_scenario.png Graphic file (type png)
 
 <use styles/sanitization_scenario.png>
@@ -1677,10 +1688,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 24175 strings out of 493921
- 431915 string characters out of 3144876
+ 24177 strings out of 493921
+ 431979 string characters out of 3144876
  626878 words of memory out of 3000000
- 26540 multiletter control sequences out of 15000+200000
+ 26542 multiletter control sequences out of 15000+200000
  29713 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  73i,13n,72p,1575b,1972s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1697,9 +1708,9 @@ type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
 w/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palati
 no/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri
 8a.pfb>
-Output written on main.pdf (58 pages, 492696 bytes).
+Output written on main.pdf (58 pages, 487445 bytes).
 PDF statistics:
- 889 PDF objects out of 1000 (max. 8388607)
+ 891 PDF objects out of 1000 (max. 8388607)
  384 named destinations out of 1000 (max. 500000)
  330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
