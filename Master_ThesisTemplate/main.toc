@@ -31,8 +31,8 @@
 \contentsline {section}{\numberline {5.1}Authentication Scenario:}{29}{section.5.1}
 \contentsline {section}{\numberline {5.2}Declassification Scenario:}{30}{section.5.2}
 \contentsline {section}{\numberline {5.3}Sanitization Scenario:}{31}{section.5.3}
-\contentsline {chapter}{\numberline {6}Related Work}{35}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{37}{chapter.7}
-\contentsline {part}{Appendix}{41}{part*.9}
-\contentsline {chapter}{\numberline {A}Detailed Descriptions}{41}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.10}
+\contentsline {chapter}{\numberline {6}Related Work}{33}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{35}{chapter.7}
+\contentsline {part}{Appendix}{39}{part*.9}
+\contentsline {chapter}{\numberline {A}Detailed Descriptions}{39}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.10}

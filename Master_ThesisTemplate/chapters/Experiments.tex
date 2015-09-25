@@ -1,10 +1,10 @@
 \chapter{Experiments}
 \section{Authentication Scenario:}
 
-In the following Java example the method createDBAccess is used to create a DBAccess object for a database management application.
+To understand the authentication scenario a simple example has chosen. The scenario contains a user account creation inside database to access the contents of the database. In the following Java example the method createUser is used to create a DBAccess object for a database management application.
 
 \begin{lstlisting}
-public DBAccess createAccount(String userName, String userType,
+public DBAccess createUser(String userName, String userType,
  String userPassword) {
 
 		DBAccess access = new DBAccess();
@@ -18,7 +18,7 @@ public DBAccess createAccount(String userName, String userType,
 \end{lstlisting}
 
 However, there is no authentication mechanism to ensure that the user creating this database user account object has the authority to create new user access. Some authentication mechanisms should be used to verify that the user has the authority to create database access objects.
-The following Java code includes a boolean variable and method for authenticating a user. If the user has not been authenticated then the createAccount will not create the database access object.
+The following Java code includes a boolean variable and method for authenticating a user. If the user has not been authenticated then the createUser will not create the database access object.
 
 \begin{lstlisting}
 
@@ -31,7 +31,7 @@ public boolean authenticateUser(String username, String password) {
 ...
 }
 
-public DBAccess createAccount(String userName, String userType,
+public DBAccess createUser(String userName, String userType,
 String userPassword) {
 			DBAccess access = null;
 			
@@ -48,7 +48,8 @@ Now let's model this kind of scenario in UML statechart considering that for C/C
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/authentication_scenario.png}
+%	\includegraphics{styles/authentication_scenario.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/authentication_scenario.png}}
 	\label{authentication_scenario}
 	\caption{Authentication Scenario}
 \end{figure}
@@ -67,7 +68,8 @@ Now let's model this kind of scenario in UML statechart considering that for C/C
  
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/declassification_scenario.png}
+%	\includegraphics{styles/declassification_scenario.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/declassification_scenario.png}}
 	\label{declassification_scenario}
 	\caption{Declassification Scenario}
 \end{figure}
@@ -105,7 +107,9 @@ The previous example was given for PHP language. In C language here it has been 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/sanitization_scenario.png}
+%	\includegraphics{styles/sanitization_scenario.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/sanitization_scenario.png}}
 	\label{sanitization_scenario}
 	\caption{Sanitization Scenario}
 \end{figure}
+

@@ -1,15 +1,40 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_15_yakindu:sct}
+{Yakindu SCT Open-Source-Tool},
+  https://code.google.com/a/eclipselabs.org/p/yakindu/.
+
 \bibitem{ref_16_alhumaidan2012state}
 Fahad Alhumaidan et~al.
 \newblock State based static and dynamic formal analysis of uml state diagrams.
 \newblock {\em Journal of Software Engineering and Applications}, 5(07):483,
   2012.
 
+\bibitem{ref_44_avgerinos:aeg}
+T.~Avgerinos, S.K. Cha, B.~L.~T. Hao, and D.~Brumley.
+\newblock {AEG: Automatic Exploit Generation}.
+\newblock {\em Proceedings of the Network and Distributed System Security
+  Symposium (NDSS 11)}, February 2011.
+
+\bibitem{ref_50_ball:research}
+T.~Ball, B.~Hackett, S.~Lahiri, and S.~Qadeer.
+\newblock {Annotation-based property checking for systems software}.
+\newblock Technical report, Microsoft, May 2008.
+
+\bibitem{ref_31_chapman:enforcing}
+R.~Chapman and A.~Hilton.
+\newblock {Enforcing Security and Safety Models with an Information Flow
+  Analysis Tool}.
+\newblock {\em ACM SIGAda}, 24(4), 2004.
+
 \bibitem{ref_18_chess2004static}
 Brian Chess and Gary McGraw.
 \newblock Static analysis for security.
 \newblock {\em IEEE Security \& Privacy}, (6):76--79, 2004.
+
+\bibitem{ref_48_chong:jif}
+S.~Chong, A.~C. Myers, N.~Nystrom, L.~Zheng, and S.~Zdancewic.
+\newblock {Jif: Java + information flow}, July 2006. Software release.
 
 \bibitem{ref_13_chong2004security}
 Stephen Chong and Andrew~C Myers.
@@ -28,10 +53,20 @@ Ellis~S Cohen.
 \newblock Information transmission in sequential programs.
 \newblock pages 297--335, 1978.
 
+\bibitem{ref_54_condit:dependent}
+J.~Condit, M.~Harren, Z.~R. Anderson, D.~Gay, and G.~C. Necula.
+\newblock {Dependent types for low-level programming}.
+\newblock {\em ESOP}, 2007.
+
 \bibitem{ref_14_denning1976lattice}
 Dorothy~E Denning.
 \newblock A lattice model of secure information flow.
 \newblock {\em Communications of the ACM}, 19(5):236--243, 1976.
+
+\bibitem{ref_35_david:extended}
+D.~L. Detlefs, K.~R.~M. Leino, G.~Nelson, and J.~B. Saxe.
+\newblock {Extended Static Checking }.
+\newblock {\em Compaq SRC Research Report 159}, 1998.
 
 \bibitem{ref_20_xtend}
 Eclipse.
@@ -44,6 +79,25 @@ Eclipse.
 \newblock {xText Documentation}.
 \newblock Technical report, Eclipse, iTemis,
   http://www.eclipse.org/Xtext/documentation.html.
+
+\bibitem{ref_53_evans:static}
+D.~Evans.
+\newblock {Static detection of dynamic memory errors}.
+\newblock {\em PLDI}, 1996.
+
+\bibitem{ref_30_david:splint}
+D.~Evans and D.~Larochelle.
+\newblock {Improving Security Using Extensible Lightweight Static Analysis}.
+\newblock {\em IEEE Software}, Jan/Feb 2002.
+
+\bibitem{ref_52_splint:flow}
+D.~Evans and D.~Larochelle.
+\newblock {Splint - Manual}, http://www.splint.org/manual/html/sec8.html.
+
+\bibitem{ref_43_fenton:memoryless}
+J.~S. Fenton.
+\newblock {Memoryless subsystems}.
+\newblock {\em Computer Journal}, 17(2):143--147, May 1974.
 
 \bibitem{ref_1_gehani2011f}
 Ashish Gehani, David Hanz, John Rushby, Grit Denker, and Rance DeLong.
@@ -64,6 +118,17 @@ Pablo Giambiagi and Mads Dam.
 \newblock In {\em Programming Languages and Systems}, pages 144--158. Springer,
   2003.
 
+\bibitem{ref_25_heldal:bridging}
+R.~Heldal and F.~Hultin.
+\newblock {Bridging model-based and language-based security}.
+\newblock {\em Computer Security - ESORICS 2003}, 2808:235--252, 2003.
+
+\bibitem{ref_23_heldal:supporting}
+R.~Heldal, S.~Schlager, and J.~Bende.
+\newblock {Supporting Confidentiality in UML: A Profile for the Decentralized
+  Label Model}.
+\newblock Technical report, TU Munich Technical Report TUM-I0415, 2004.
+
 \bibitem{ref_2_hicks2006trusted}
 Boniface Hicks, Dave King, Patrick McDaniel, and Michael Hicks.
 \newblock Trusted declassification:: high-level policy for a security-typed
@@ -78,15 +143,72 @@ Boniface Hicks, David King, and Patrick McDaniel.
 \newblock {\em Network and Security Center, Department of Computer Science,
   Pennsylvania State University, Tech. Rep. NAS-TR-0004-2005}, 2005.
 
-\bibitem{ref_15_yakindu:sct}
-itemis AG.
-\newblock {Yakindu SCT Open-Source-Tool },
-  https://code.google.com/a/eclipselabs.org/p/yakindu/.
+\bibitem{ref_46_jia:aura}
+L.~Jia, J.~Vaughan, K.~Mazurak, J.~Zhao, L.~Zarko, J.~Schorr, and S.~Zdancewic.
+\newblock {Aura: A programming language for authorization and audit }.
+\newblock {\em ICFP}, 2008.
 
 \bibitem{ref_7_joshi2000semantic}
 Rajeev Joshi and K~Rustan~M Leino.
 \newblock A semantic approach to secure information flow.
 \newblock volume~37, pages 113--138. Elsevier, 2000.
+
+\bibitem{ref_33_juerjens:secure}
+J.~Juerjens.
+\newblock {\em {Secure systems development with UML}}.
+\newblock Springer Verlag, 2005.
+
+\bibitem{ref_58_iflow:kuzman}
+K.~Katkalov, K.~Stenzel, M.~Borek, and W.~Reif.
+\newblock {Model-Driven Development of Information Flow-Secure Systems with
+  IFlow}.
+\newblock {\em ASE Science Journal}, 2(2), 2013.
+
+\bibitem{ref_27_iflow:kuzman}
+K.~Katkalov, K.~Stenzel, M.~Borek, and W.~Reif.
+\newblock {Model-Driven Development of Information Flow-Secure Systems with
+  IFlow}.
+\newblock {\em ASE Science Journal}, 2(2), 2013.
+
+\bibitem{ref_26_kit:joana}
+KIT.
+\newblock {JOANA (Java Object-sensitive ANAlysis) - Information Flow Control
+  Framework for Java }.
+\newblock {\em KIT}, [online] http://pp.ipd.kit.edu/projects/joana/.
+
+\bibitem{ref_34_leino:10years}
+K.~Rustan~M. Leino.
+\newblock {Extended Static Checking: a Ten-Year Pesrsective}.
+\newblock {\em Proceeding Informatics - 10 Years Back. 10 Years Ahead}, pages
+  157--175, January 2001.
+
+\bibitem{ref_51_microsoft:sal}
+Microsoft.
+\newblock {MSDN run-time library reference - SAL annotations},
+  http://msdn.microsoft.com/en--us/library/ms235402.aspx, 2014.
+
+\bibitem{ref_55_sun:lock}
+Sun Microsystems.
+\newblock {Lock\_Lint - Static data race and ceadlock detection tool for C},
+  http://developers.sun.com/sunstudio/articles/locklint.html.
+
+\bibitem{ref_36_moore:static}
+S.~Moore and S.~Chong.
+\newblock {Static analysis for efficient hybrid information-flow control }.
+\newblock {\em CSF '11 Proceedings of the IEEE 24th Computer Security
+  Foundations Symposium}, pages 146--160, 2011.
+
+\bibitem{ref_40_myers:jflow}
+A.~C. Myers.
+\newblock {JFlow: Practical Mostly-Static Information Flow Control}.
+\newblock {\em Proceedings of the 26th ACM Symposium on Principles of
+  Programming Languages (POPL {\rq}99)}, January 1999.
+
+\bibitem{ref_24_myers:descentrelized}
+A.~C. Myers and B.~Liskov.
+\newblock {A decentralized model for information flow control}.
+\newblock {\em Proceedings of the sixteenth ACM symposium on Operating systems
+  principles, ser. SOSP '97.}, pages 129--142, 1997.
 
 \bibitem{ref_10_myers1999jflow}
 Andrew~C Myers.
@@ -117,9 +239,88 @@ Networkworld.
 \newblock Technical report, Networkworld,
   http://www.networkworld.com/article/2296774/access-control/seven-strong-authentication-methods.html.
 
+\bibitem{ref_22_preibusch2011information}
+S{\"o}ren Preibusch.
+\newblock Information flow control for static enforcement of user-defined
+  privacy policies.
+\newblock In {\em Policies for Distributed Systems and Networks (POLICY), 2011
+  IEEE International Symposium on}, pages 133--136. IEEE, 2011.
+
+\bibitem{ref_59_rosenblum:towards}
+D.~S. Rosemblum.
+\newblock {Towards a Method of Programming with Assertions}.
+\newblock {\em ACM}, (1), January 1992.
+
+\bibitem{ref_60_rosenblum:practical}
+D.~S. Rosenblum.
+\newblock {A practical approach to programming with assertions}.
+\newblock {\em IEEE Transactions on software engineering}, 21, January 1995.
+
 \bibitem{ref_3_sabelfeld2009declassification}
 Andrei Sabelfeld and David Sands.
 \newblock Declassification: Dimensions and principles.
 \newblock volume~17, pages 517--548. Citeseer, 2009.
+
+\bibitem{ref_28_umesh:cqual}
+U.~Shankar and et~al.
+\newblock {Detecting Format-String Vulnerabilities with Type Qualifiers}.
+\newblock {\em 10th USENIX Security Symposium}, August 2001.
+
+\bibitem{ref_49_simonet:flowcaml}
+V.~Simonet.
+\newblock {\em {FlowCaml in a nutshell}}.
+\newblock In G. Hutton, ed. APPSEM-II, 2003.
+
+\bibitem{ref_39_simonet:report}
+V.~Simonet.
+\newblock {The Flow Caml System: documentation and user{\rq}s manual }.
+\newblock Technical report, INRIA, July 2003.
+
+\bibitem{ref_32_simonet:report}
+V.~Simonet.
+\newblock {The Flow Caml System: documentation and user{\rq}s manual }.
+\newblock Technical report, INRIA, July 2003.
+
+\bibitem{ref_45_nikhil:fine}
+N.~Swamy, J.~Chen, and R.~Chugh.
+\newblock {Enforcing Stateful Authorization and Information Flow Policies in
+  FINE }.
+\newblock {\em In proceedings of ESOP 2010: 19th European Symposium on
+  Programming}, March 2010.
+
+\bibitem{ref_47_swamy:fable}
+N.~Swamy, B.~J. Corcoran, and M.~Hicks.
+\newblock {Fable: A language for enforcing user-defined security policies }.
+\newblock {\em In S\&P}, 2008.
+
+\bibitem{ref_61_lintan:acomment}
+L.~Tan, Y.~Zhou, and Y.~Padioleu.
+\newblock {aComment:Mining Annotations from Comments and Code to Detect
+  Interrupt Related Concurency Bugs}.
+\newblock {\em ACM 978-1-4503-0445-0/11/05}, May 2011.
+
+\bibitem{ref_56_torvalds:sparse}
+L.~Torvalds.
+\newblock {Sparse - A sematic parser for C},
+  http://www.kernel.org/pub/software/devel/sparse.
+
+\bibitem{ref_38_volpano:sound}
+D.~Volpano, G.~Smith, and C.~Irvine.
+\newblock {A sound type system for secure flow analysis}.
+\newblock {\em Journal of Computer Security}, 4(3):167--187, 1996.
+
+\bibitem{ref_29_wheeler:flawfinder}
+D.~A. Wheeler.
+\newblock {\em {Flawfinder}}, http://www.dwheeler.com/flawfinder/.
+
+\bibitem{ref_37_xiao:transparent}
+X.~Xiao and et~al.
+\newblock {Transparent Privacy Control via Static Information Flow Analysis }.
+\newblock Technical report, Microsoft, August 2011.
+
+\bibitem{ref_57_alex:improving}
+A.~Yip, X.~Wang, N.~Zeldovich, and M.~F. Kaashoek.
+\newblock {Improving Application Security with Data Flow Assertions}.
+\newblock {\em SOSP'09}, Oct. 2009.
 
 \end{thebibliography}
