@@ -34,5 +34,5 @@
 \contentsline {chapter}{\numberline {6}Related Work}{35}{chapter.6}
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{37}{chapter.7}
 \contentsline {part}{Appendix}{41}{part*.9}
-\contentsline {chapter}{\numberline {A}Detailed Descriptions}{41}{appendix.A}
+\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}
 \contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.10}
