@@ -7,32 +7,32 @@
 \contentsline {chapter}{Outline of the Thesis}{xiii}{section*.4}
 \contentsline {part}{\numberline {I}Introduction and Theory}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}Background Information}{5}{chapter.2}
+\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Sanitization}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Declassification}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Dimensions of declassification}{6}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Authentication}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Detecting Information Flow Errors During Design:}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Detecting Information Flow Errors During Coding:}{8}{section.2.5}
+\contentsline {section}{\numberline {2.4}Detecting Information Flow Errors During Design}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Detecting Information Flow Errors During Coding}{8}{section.2.5}
 \contentsline {part}{\numberline {II}The 2nd Part}{11}{part.2}
 \contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Challenges and Idea}{13}{section.3.1}
 \contentsline {section}{\numberline {3.2}Annotation Language Tags}{14}{section.3.2}
 \contentsline {section}{\numberline {3.3}Language Implementation Process}{15}{section.3.3}
 \contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview of System Architecture:}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Grammar of Annotation Language:}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}UML State Chart Editor:}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}Source Code Editor:}{21}{section.4.4}
-\contentsline {section}{\numberline {4.5}C Code Generator:}{22}{section.4.5}
+\contentsline {section}{\numberline {4.1}Overview of System Architecture}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Grammar of Annotation Language}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}UML State Chart Editor}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Source Code Editor}{21}{section.4.4}
+\contentsline {section}{\numberline {4.5}C Code Generator}{22}{section.4.5}
 \contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{26}{section.4.6}
 \contentsline {section}{\numberline {4.7}View Buggy Path in Sequence Diagram}{26}{section.4.7}
 \contentsline {chapter}{\numberline {5}Experiments}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Authentication Scenario:}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Declassification Scenario:}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}Sanitization Scenario:}{31}{section.5.3}
-\contentsline {chapter}{\numberline {6}Related Work}{33}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{35}{chapter.7}
-\contentsline {part}{Appendix}{39}{part*.9}
-\contentsline {chapter}{\numberline {A}Detailed Descriptions}{39}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.10}
+\contentsline {section}{\numberline {5.1}Authentication Scenario}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Declassification Scenario}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sanitization Scenario}{31}{section.5.3}
+\contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{32}{section.5.4}
+\contentsline {chapter}{\numberline {6}Related Work}{35}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{37}{chapter.7}
+\contentsline {part}{Appendix}{41}{part*.9}
+\contentsline {chapter}{\numberline {A}Detailed Descriptions}{41}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.10}

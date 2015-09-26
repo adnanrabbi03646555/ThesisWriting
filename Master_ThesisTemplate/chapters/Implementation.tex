@@ -1,22 +1,24 @@
 \chapter{Implementation}
 
-\section{Overview of System Architecture:}
+\section{Overview of System Architecture}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics{styles/system_architecture.png}
-	\caption{System Architecture}
+	\caption{System Overview}
 \end{figure}
 
 Figure 4.1 depicts the complete system architecture. First, the source code editor is developed using Eclipse Xtext. By this editor one can easily annotate the source code of C/C++. Even it is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code annotation technique has chosen which is easy to extend and backward compatible. Then for modeling purpose Yakindu SCT editor \cite{ref_15_yakindu:sct} has chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle. Inside the Yakindu SCT editor the annotation language grammar has also included using Eclipse Xtext. So, that user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has extended inside the Yakindu SCT editor using Eclipse Xtend. After modeling the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named \enquote{smtcodan} three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. Then to view the buggy path in sequence diagram a sequence diagram generator has created. That is the end of complete system architecture of this system. 
 
 
-\section{The Grammar of Annotation Language:}
+\section{The Grammar of Annotation Language}
 
-The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in figure 4.1. The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.\\
+The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in Figure \ref{language grammar}. The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.\\
  
  \begin{figure}[ht!]
+ 	\centering
  	\begin{tabular}{lll}
+ 		
  		\footnotesize                       
  		\textit{Ann\_Lang}           &\footnotesize $::=$         &\footnotesize HeaderModel*;       \\ \\
  		
@@ -65,11 +67,12 @@ Annotation language grammar has two grammar rules
 
 
 
-\section{UML State Chart Editor:}
+\section{UML State Chart Editor}
 
 A set of formal representation of UML statecharts is presented in this section. The state identifier and event are represented as S and Event respectively both as set types. For simple specification, the basic set types are used. In the definition of a transition from one state to another the guard is defined as a Boolean type. According to F Alhumaidan state based static and dynamic formal analysis of UML state diagrams \cite{ref_16_alhumaidan2012state} , a state can have three possible values that are active, passive or null represented as Active, Passive and null respectively. The type of state can be simple, concurrent, non-concurrent, initial or final.
 
 \begin{figure}[ht!]
+	\centering
 	\begin{tabular}{lll}
 		\footnotesize                       
 		\textit{[S, Event]}          &\footnotesize \\
@@ -104,6 +107,7 @@ The invariants over the schema are defined in the second
 part of schema.\\
 
 \begin{figure}[ht!]
+	\centering
 	\begin{tabular}{lll}
 		\footnotesize                       
 		\textit{State}       \\
@@ -142,6 +146,7 @@ States which consists of four variables. The mapping
 substates from State to power set of State describes type
 of a state.
  \begin{figure}[ht!]
+ 	\centering
  	\begin{tabular}{lll}
  		\footnotesize                       
  		\textit{States}          \\
@@ -200,6 +205,7 @@ of tags. Furthermore, an annotation proposal filter implemented which was used t
 
 To extend the Yakindu SCT editor here it has been decided to represent the statements like variable declaration, function calling as state and transitions are represent as move from one statement to another. A rectangular box can be attached with transitions where annotation can be written as per requirements. So for the developed system the UML statechart formal representation is as like this: 
 \begin{figure}[ht!]
+	\centering
 	\begin{tabular}{lll}
 	\footnotesize                       
 	\textit{States}          \\
@@ -231,7 +237,7 @@ To extend the Yakindu SCT editor here it has been decided to represent the state
 	\caption{UML Statechart Formal Representation for this System}
 	\label{statechart_formal_representation_for _this_system}
 	\end{figure}
-\section{Source Code Editor:}
+\section{Source Code Editor}
 The source code editor has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line. Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext \cite{ref_17_xtext:grammar}.
 
 As per requirements previous annotation language grammar which is written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Some part of the code snippet of extended xtext grammar is given below.
@@ -280,7 +286,7 @@ enum VariableType: declassified
 ;	
 \end{lstlisting}
 
-\section{C Code Generator:}
+\section{C Code Generator}
 C code generator has extended based on Eclipse EMF and xTend which is used to generate the state chart execution code containing the previously added security annotations from UML state charts. The code generator outputs two files per UML state chart (one .c and one
 .h file). Generated annotations can reside in both header file
 and source code file. Previously annotated UML state chart
@@ -535,10 +541,82 @@ Sanitization\_gen.java. In the generated .c file there exist these three kinds o
 From C code generator generated .c and .h file with annotation should act as input for \enquote{smtcodan} static analysis engine. Engine parses the code with annotation. The authentication, declassification and sanitization function all makes the high secured variable or confidential variable as low and according to the policy they passes the information from the sender to the receiver in a secured way. While implementing the checkers, information flow restriction has followed. If any of the C files are not following the secure information flow then bug should be triggered as either authentication , declassification or sanitization function missing function.
 
 \section{View Buggy Path in Sequence Diagram}
+
 Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated.
-now it easier to trace the buggy path by viewing generated sequence diagram. One sample example of the buggy path is given in figure 4.1.
+now it easier to trace the buggy path by viewing generated sequence diagram.
+
+\begin{algorithm}
+	\caption{Sequence diagram generator}	
+	{\textbf{Input: List of statements and function call}} \\
+	{\textbf{Output: Sequence diagram in a Jframe}}
+	\begin{algorithmic}[1]
+		
+		\Function{generateTypesH}{$sc$}\Comment{Where sc - statchart}
+		
+		\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $ {Where def - function declaration in xtend}
+		\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
+		\EndFunction
+		
+		\Function {typesHAnnotationContent}{$sc$}		
+		\For{$s : getFileContent(sc).entrySet$}
+		\If {$!s.key.contains('//@ @variable')$}
+		\State $s.key$
+		\ElsIf {$s.value.contains('(')$}
+		\State $ void <s.value>;$
+		\EndIf		
+		\EndFor			
+		\EndFunction
+		
+		\Function {typesCAnnotationContent}{$sc$}
+		
+		\For{$s: getFunctionContent(sc).entrySet$}
+		\If {$(!s.value.contains('authentication') and (!s.value.contains('declassification'))$  \\  
+			$\   \   $   $and(!s.value.contains('sanitization')))$}
+		\State $void <s.value> {}$
+		\EndIf		
+		\EndFor
+		
+		\For{$ region : sc.regions$}
+		\If {$ region.name.equalsIgnoreCase('bad_path()'$}
+		\State $void <region.name>$
+		
+		\For {$s: getBadPathContent(sc).entrySet$}
+		
+		\If {$ s.key.contains('//@ @variable')$} 
+		\State $s.key$
+		\State $s.value$
+		\EndIf
+		
+		\If {$ s.value.contains('(')$} 
+		\State $s.value;$
+		\State $s.value$
+		\EndIf
+		
+		\EndFor 
+		\EndIf
+		
+		\If {$ region.name.equalsIgnoreCase('good_path()')$} 
+		\State $void <region.name>$
+		\For {$s: getGoodPathContent(sc).entrySet$}
+		\If {$s.key.contains('//@ @variable')$} 
+		\State $s.key$						
+		\EndIf
+		\State $s.value;$
+		\EndFor 
+		\EndIf
+		
+		\EndFor
+		
+		\EndFunction
+		
+		
+	\end{algorithmic}
+\end{algorithm}
+
+ One sample example of the buggy path is given in figure \ref{Error_trace_path}.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics{styles/Error_trace_path.jpg}
-	\caption{Error trace path in sequence diagram}
+	\label{Error_trace_path}
+	\caption{Error trace path in UML sequence diagram}
 \end{figure}

@@ -118,6 +118,12 @@ Pablo Giambiagi and Mads Dam.
 \newblock In {\em Programming Languages and Systems}, pages 144--158. Springer,
   2003.
 
+\bibitem{ref_41_guarnieri:security}
+M.~Guarnieri, P.~El Khoury, and G.~Serme.
+\newblock {Security vulnerabilities detection and protection using Eclipse}.
+\newblock {\em ECLIPSE-IT 2011, 6th Workshop of the Italian Eclipse Community},
+  September 2011.
+
 \bibitem{ref_25_heldal:bridging}
 R.~Heldal and F.~Hultin.
 \newblock {Bridging model-based and language-based security}.
@@ -255,6 +261,13 @@ D.~S. Rosemblum.
 D.~S. Rosenblum.
 \newblock {A practical approach to programming with assertions}.
 \newblock {\em IEEE Transactions on software engineering}, 21, January 1995.
+
+\bibitem{ref_42_sabelfeld:dynamic}
+A.~Sabelfeld and A.~Russo.
+\newblock {From dynamic to static and back: Riding the roller coaster of
+  information-flow control research}.
+\newblock {\em International Conference on Perspectives of System Informatics},
+  2009.
 
 \bibitem{ref_3_sabelfeld2009declassification}
 Andrei Sabelfeld and David Sands.

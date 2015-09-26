@@ -1,4 +1,4 @@
-\chapter{Background Information}
+\chapter{Literature Review}
 
 \section{Sanitization}
 Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience. Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulneribility analysis has mostly focused on identifying cases which web applications directly uses external input for critical operations. It is suggested that always use proper sanitization method to validate external input values from the user for any application.For example, user inputs must always flow through a sanitizing function before flowing into a SQL query or HTML, to avoid SQL injection or cross-site scripting vulnerabilities.\\
@@ -40,30 +40,30 @@ flow policy compliance in distributed systems. The framework
 includes a declassify function for downgrading data if the
 owners policies allow. The model allows principals to define their own downgrading policies.\\
 
-\subsection{Dimensions of declassification}
+\textbf{Dimensions of declassification:}
 Classification of the basic declassification goals according to four axes: what information is released, who releases information, where in the system information is released and when information can be released.
 
 \begin{itemize}
-   \item What : Selective or Partial information flow policies \cite{ref_5_cohen1977information,ref_6_cohen1978information,ref_7_joshi2000semantic,ref_8_giacobazzi2005adjoining} regulate what
+   \item What: Selective or Partial information flow policies \cite{ref_5_cohen1977information,ref_6_cohen1978information,ref_7_joshi2000semantic,ref_8_giacobazzi2005adjoining} regulate what
    information may be released. Partial release guarantees that only a part of a secret is
    released to a public domain. Partial release can be specified in terms of precisely which
    parts of the secret are released. This is useful,
    for example, when partial information about a credit card number or a social security number is used for logging.
    
-   \item Who : In a computing system it is essential to specify who controls information release .
+   \item Who: In a computing system it is essential to specify who controls information release .
    Ignoring the issue of control opens up attacks where the attacker hijacks release
    mechanisms to launder secret information. Myers and Liskov decentralised label
    model \cite{ref_9_myers1997decentralized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
    owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
    the Jif compiler \cite{ref_11_myers2001jif}.
    
-   \item Where : In a system information  Where is an important aspect of information release.One can ensure that no other  part can release further information.
+   \item Where: In a system information  Where is an important aspect of information release.One can ensure that no other  part can release further information.
    by delegating particular parts of the system to release information.Declassification
    via encryption is not harmful as long as the program is, in some sense, noninterfering
    before and after encryption.  A combination of \enquote{where} and \enquote{who} policies in the presence of encryption has
-   been recently investigated by Hicks et al.\cite{ref_12_hicks2005declassification}
+   been recently investigated by Hicks et al. \cite{ref_12_hicks2005declassification}
    
-   \item When : The fourth dimension of declassification is  \enquote{when} information should be released.The work of Giambiagi and Dam \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released.Chong and Myers security policies \cite{ref_13_chong2004security} address when information is released.By annotating variables this is achieved.
+   \item When: The fourth dimension of declassification is  \enquote{when} information should be released.The work of Giambiagi and Dam \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released.Chong and Myers security policies \cite{ref_13_chong2004security} address when information is released.By annotating variables this is achieved.
    
 \end{itemize}
 
@@ -107,7 +107,7 @@ According to the networkworld \cite{ref_21_networld} now-a-days seven strong aut
 \end{itemize}	
 
 
-\section{ Detecting Information Flow Errors During Design:}
+\section{ Detecting Information Flow Errors During Design}
 If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
@@ -117,7 +117,7 @@ If a step of function call like authentication, sanitization or declassification
 \end{figure}
 
 
-\section{ Detecting Information Flow Errors During Coding:}
+\section{ Detecting Information Flow Errors During Coding}
 
 Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to A lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
 where each of the flows starts with statement variable a and ends with leaving the system. The the variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
