@@ -48,7 +48,9 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage{algorithm}
+%\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algcompatible}
 \usepackage{algpseudocode}
 
 \usepackage{geometry}
@@ -87,6 +89,12 @@
 }
 \usepackage{booktabs}
 \usepackage{multirow}
+\setlength{\parskip}{\baselineskip}%
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{%
+	colorlinks = true,
+	linkcolor  = black
+}
 \begin{document}
 
 	\frontmatter
@@ -111,6 +119,10 @@
 	\input{components/abstract}
 
 	\tableofcontents
+	
+	\listoffigures
+	
+	\listoftables
   
   \input{components/outline}
 
