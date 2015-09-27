@@ -21,6 +21,11 @@ T.~Ball, B.~Hackett, S.~Lahiri, and S.~Qadeer.
 \newblock {Annotation-based property checking for systems software}.
 \newblock Technical report, Microsoft, May 2008.
 
+\bibitem{ref_64_box2000simple}
+Don Box, David Ehnebuske, Gopal Kakivaya, Andrew Layman, Noah Mendelsohn,
+  Henrik~Frystyk Nielsen, Satish Thatte, and Dave Winer.
+\newblock Simple object access protocol (soap) 1.1, 2000.
+
 \bibitem{ref_31_chapman:enforcing}
 R.~Chapman and A.~Hilton.
 \newblock {Enforcing Security and Safety Models with an Information Flow
@@ -42,11 +47,22 @@ Stephen Chong and Andrew~C Myers.
 \newblock In {\em Proceedings of the 11th ACM conference on Computer and
   communications security}, pages 198--209. ACM, 2004.
 
+\bibitem{ref_67_cohen1977information}
+Ellis Cohen.
+\newblock Information transmission in computational systems.
+\newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
+  133--139. ACM, 1977.
+
 \bibitem{ref_5_cohen1977information}
 Ellis Cohen.
 \newblock Information transmission in computational systems.
 \newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
   133--139. ACM, 1977.
+
+\bibitem{ref_68_cohen1978information}
+Ellis~S Cohen.
+\newblock Information transmission in sequential programs.
+\newblock {\em Foundations of Secure Computation}, pages 297--335, 1978.
 
 \bibitem{ref_6_cohen1978information}
 Ellis~S Cohen.
@@ -118,6 +134,17 @@ Pablo Giambiagi and Mads Dam.
 \newblock In {\em Programming Languages and Systems}, pages 144--158. Springer,
   2003.
 
+\bibitem{ref_65_goguen1982security}
+Joseph~A Goguen and Jos{\'e} Meseguer.
+\newblock {\em Security policies and security models}.
+\newblock IEEE, 1982.
+
+\bibitem{ref_66_goguen1984unwinding}
+Joseph~A Goguen and Jos{\'e} Meseguer.
+\newblock Unwinding and inference control.
+\newblock In {\em Security and Privacy, 1984 IEEE Symposium on}, pages 75--75.
+  IEEE, 1984.
+
 \bibitem{ref_41_guarnieri:security}
 M.~Guarnieri, P.~El Khoury, and G.~Serme.
 \newblock {Security vulnerabilities detection and protection using Eclipse}.
@@ -187,6 +214,11 @@ K.~Rustan~M. Leino.
 \newblock {Extended Static Checking: a Ten-Year Pesrsective}.
 \newblock {\em Proceeding Informatics - 10 Years Back. 10 Years Ahead}, pages
   157--175, January 2001.
+
+\bibitem{ref_69_mclean1992proving}
+John McLean.
+\newblock Proving noninterference and functional correctness using traces.
+\newblock Technical report, DTIC Document, 1992.
 
 \bibitem{ref_51_microsoft:sal}
 Microsoft.

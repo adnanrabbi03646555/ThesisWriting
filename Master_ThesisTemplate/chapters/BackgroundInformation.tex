@@ -1,4 +1,79 @@
 \chapter{Literature Review}
+
+Although the difficulty of strongly protecting confidential
+information has been known for some time, the research
+addressing this problem has had relatively little impact on the
+design of commercially available computing systems. These
+systems employ security mechanisms such as access control,
+capabilities, firewalls and antivirus software; it is useful to see
+how the these standard security mechanisms fall short. Access control is an important part of the current
+security infrastructure. For example, a file may be assigned
+access-control permissions that prevent users other than its
+owner from reading the file; more precisely, these permissions
+prevent processes not authorized by the file owner from
+reading the file. However, access control does not control how
+the data is used after it is read from the file. To soundly enforce
+confidentiality using this access-control policy, it is necessary
+to grant the file access privilege only to processes that will
+not improperly transmit or leak the confidential data. But
+these are precisely the processes that obey a much stronger
+information-flow policy. Access-control mechanisms cannot
+identify these processes; therefore, access control, while useful,
+cannot substitute for information-flow control. 
+
+Other common security enforcement mechanisms such as
+firewalls, encryption and antivirus software are useful for protecting
+confidential information. However, these mechanisms
+do not provide end-to-end security. For example, a firewall
+protects confidential information by preventing communication
+with the outside. In practical systems, however, firewalls
+permit some communication in both directions \cite{ref_64_box2000simple};
+whether this communication violates confidentiality lies outside
+the scope of the firewall mechanism. Similarly, encryption
+can be used to secure an information channel so that only
+the communicating endpoints have access to the information.
+However, this encryption provides no assurance that once the
+data is decrypted, the computation at the receiver respects the
+confidentiality of the transmitted data. Antivirus software is
+based on detecting patterns of previously known malicious
+behavior in code and, thus, offers limited protection against
+new attacks.
+
+If a user wishes to keep some data confidential, he or
+she might state a policy stipulating that no data visible
+to other users is affected by confidential data. This policy
+allows programs to manipulate and modify private data, so
+long as visible outputs of those programs do not improperly
+reveal information about the data. A policy of this sort is a
+noninterference policy \cite{ref_65_goguen1982security}, because it states that confidential
+data may not interfere with (affect) public data. An attacker (or unauthorized user) is assumed to be allowed
+to view information that is not confidential (that is public).
+The usual method for showing that noninterference holds is
+to demonstrate that the attacker cannot observe any difference
+between two executions that differ only in their confidential
+input \cite{ref_66_goguen1984unwinding}. Noninterference can be naturally expressed by
+semantic models of program execution. This idea goes back
+to Cohen's early work on strong dependency \cite{ref_67_cohen1977information}, \cite{ref_68_cohen1978information}.
+McLean \cite{ref_69_mclean1992proving} argues for noninterference for programs in the
+context of trace semantics. However, neither work suggests an
+automatic security enforcement mechanism.
+
+The type-checking approach has been implemented
+in the Jif compiler \cite{ref_48_chong:jif,ref_40_myers:jflow}.
+In the type-checking approach, every program expression
+has a security type with two parts: an ordinary type such as int,
+and a label that describes how the value may be used. Unlike
+the labels used by mandatory access-control mechanisms,
+these labels are completely static: they are not computed at
+run time. Because of the way that type checking is carried
+out, a label defines an information-flow policy on the use of
+the labeled data. Security is enforced by type checking; the
+compiler reads a program containing labeled types and in type checking
+the program, ensures that the program cannot contain
+improper information flows at run time. The type system
+in such a language is a security-type system that enforces
+information-flow policies.
+
 This chapter described the basic of sanitization, declassification and authentication mechanism in software and web application. Also here the purpose and requirements of those three functions (sanitization, declassification and authentication) are presented. At last of this chapter the mechanism of detecting information flow errors during design and code also presented.
 
 \section{Sanitization}
