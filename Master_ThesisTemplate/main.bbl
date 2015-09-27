@@ -336,4 +336,10 @@ A.~Yip, X.~Wang, N.~Zeldovich, and M.~F. Kaashoek.
 \newblock {Improving Application Security with Data Flow Assertions}.
 \newblock {\em SOSP'09}, Oct. 2009.
 
+\bibitem{ref_63_yip2009improving}
+Alexander Yip, Xi~Wang, Nickolai Zeldovich, and M~Frans Kaashoek.
+\newblock Improving application security with data flow assertions.
+\newblock In {\em Proceedings of the ACM SIGOPS 22nd symposium on Operating
+  systems principles}, pages 291--304. ACM, 2009.
+
 \end{thebibliography}

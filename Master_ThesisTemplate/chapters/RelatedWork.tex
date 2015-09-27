@@ -9,6 +9,24 @@ to annotate source code files \cite{ref_59_rosenblum:towards}, \cite{ref_60_rose
 control flows \cite{ref_53_evans:static}, \cite{ref_52_splint:flow}, \cite{ref_51_microsoft:sal}.The following annotation languages have made significant impact: Microsoft\'s SAL annotations \cite{ref_51_microsoft:sal} helped to detect more than 1000 potential security vulnerabilities in Windows
 code \cite{ref_50_ball:research}. In addition, several other annotation languages including FlowCaml \cite{ref_49_simonet:flowcaml}, Jif \cite{ref_48_chong:jif}, Fable \cite{ref_47_swamy:fable}, AURA \cite{ref_46_jia:aura} and FINE \cite{ref_45_nikhil:fine} express information flow related concerns.
 
+Saner \cite{ref_61_lintan:acomment}, a novel approach to the evaluation of the sanitization process in web applications. The approach relies on two complementary analysis techniques to identify faulty sanitization procedures. Saner \cite{ref_61_lintan:acomment} introduce a dynamic analysis technique that is
+able to reconstruct the code that is responsible for
+the sanitization of application inputs, and then execute this code on malicious inputs to identify faulty
+sanitization procedures. By applying
+it to real-world applications, identified novel vulnerabilities that stem from incorrect or incomplete sanitization.
+
+A simple idea named trusted declassification \cite{ref_2_hicks2006trusted} in which special declassifier functions are specified as part of the global policy. In particular, individual principals declaratively specify which declassifiers they trust so that all information flows implied by the policy can be reasoned about in absence of a particular program. They formalize their approach for a Java like language and prove a modified form of noninterference which they call noninterference modulo trusted methods. They have implemented their approach as an extension to Jif and provide some of their experience using it to build a secure e-mail client.
+
+Using RESIN \cite{ref_63_yip2009improving}, Web application programmers can prevent a range
+of problems, from SQL injection and cross-site scripting, to inadvertent password disclosure and missing access control checks. Adding
+a RESIN assertion to an application requires few changes to the
+existing application code, and an assertion can reuse existing code
+and data structures. For instance, 23 lines of code detect and prevent
+three previously-unknown missing access control vulnerabilities in
+phpBB, a popular Web forum application. Other assertions comprising tens of lines of code prevent a range of vulnerabilities in Python
+and PHP applications. A prototype of RESIN incurs a 33\% CPU
+overhead running the HotCRP conference management application.
+
 UMLSec \cite{ref_33_juerjens:secure} is a model-driven approach that allows the
 development of secure applications with UML. Compared with
 our approach, UMLSec does neither automatic code

@@ -1,9 +1,35 @@
 \chapter{Conclusion and Future Work}
-A keyword-based annotation language that can be used out of the box for annotating UML state charts and C code in two software development phases by providing two editors for inserting security annotations in order to detect information flow bugs automatically. It's evaluated on some sample programs and showed that this approach is applicable to real life scenarios.\\
+
+A keyword-based annotation language that can be used out of the box for annotating UML state charts and C code in two software development phases by providing two editors for inserting security annotations in order to detect information flow bugs automatically. It's evaluated on some sample programs and showed that this approach is applicable to real life scenarios.\\ 
+
 It's a light-weight annotation language usable for specifying
 information flow security constraints which can be used in the
 design and coding phase in order to detect information flow
 bugs.\\
+
+Another avenue of future work lies in expanding the policy
+language. It is currently very simple, but could be more expressive.
+For example, constraints could be added to indicate negative information flows. Policy analyses could also be used to determine
+whether separation of duties is maintained between two principals.
+When integrity is added to policy language, it could be expanded with robustness constraints.It is a general problem in language based security that there is too little experience with security-typed
+programming to help guide such research as designing the best
+form of declassification. We hope that our implementation of this
+mechanism will help to promote more practical experience
+with declassifiers which will better inform future research.\\
+
+Functions are used to declassify sensitive data because they are trusted to release information. Our work introduces a security-typed language. We annotate functions with security levels. Functions may be annotated with a high security level; this indicates they are trusted and permits them to serve as a safe mechanism for declassification. \\
+
+Web applications perform a lot of critical tasks and
+handle sensitive information. Even though there have been
+a number of research efforts to identify the use of unvalidated input in web applications, little has been done
+to characterize how sanitization is actually performed and
+how effective it is in blocking web-based attacks. In case of desktop applications it is not easy to handle sensitive information. To handle these sensitive information and invalidate insecure input data a good approach to the evaluation of the sanitization process has been developed. Future work will focus on the analysis of type-based validation procedures.  \\
+
+It is a general problem in language based security that there is too little experience with security-typed programming to help guide such research as designing the best
+form of declassification. We hope that our implementation of this research
+mechanism will help to promote more practical experience
+with declassifiers which will better inform future research.\\
+
 In future it can be extended for source code editor as
 a pop-up window based proposal editor used to add/retrieve
 annotation to/from a library. The definition of new language

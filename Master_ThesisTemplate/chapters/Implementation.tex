@@ -543,8 +543,18 @@ From C code generator generated .c and .h file with annotation should act as inp
 
 \section{View Buggy Path in Sequence Diagram}
 
-Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated.
-now it easier to trace the buggy path by viewing generated sequence diagram.
+Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated. Inside the sequence diagram all function calls are included inside rectangular box attached to the head of timeline. To switch one timeline to another a function call required. Like in the figure \ref{Error_trace_path} from function call int main() there is a transition to move from int main() to good\_path(). Above the transition there also exist the function name for which it goes from one function call to another. Here for example to move from int main() to good\_path() there is a transition and above that transition function call good\_path() is attached. This means through calling the good\_path() function buggy path goes into good\_path() function from int main(); Inside the sequence diagram the statements before the function call are attached to the timeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file.Now it is easier to trace the buggy path by viewing generated sequence diagram.
+
+ One sample example of the part of a buggy path is given in figure \ref{Error_trace_path}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{styles/error_trace_path.png}
+	\label{Error_trace_path}
+	\caption{Error trace path in UML sequence diagram}
+\end{figure}
+
+The process of creating sequence diagram using Java programming language is given below. To develop the sequence diagram a separate class is included inside the smtcodan project. The class name is SequenceDiagramGenerator. Inside this class the drawSequenceDiagram function creates the diagram. The function input parameter is a list of IASTNode which is gettable from the smtcodan project packages. To draw the diagram BufferedImage, Graphics2D, JPanel, JFrame  classes were used. At first need to declare object each of these(BufferedImage, Graphics2D, JPanel, JFrame) classes. Then iterating through the list of IASTNodes set all the statements except function call with line number and file name. There is a class which is responsible to draw the visual things of the sequence diagram named MyCanvasDraw. Afterwards need to create an object of this class. This class has a list. The list of this class has to be set with the list of all statements, line number  and file name. Then it will draw the diagram according to the list. To view this diagram need to set the JFrame object and make it visible. Inside the JFrame JScrollpane object also added to make the frame scrollable. For saving the diagram as an image save as option also included. Through the menu bar user can easily save the sequence diagram as an image. By default it will save the image as in .jpg format. But one can easily save this image in other format like .png,.bmp,.jpeg etc.  
+
 
 \begin{algorithm}
 	\caption{Sequence diagram generator}	
@@ -552,72 +562,37 @@ now it easier to trace the buggy path by viewing generated sequence diagram.
 	{\textbf{Output: Sequence diagram in a Jframe}}
 	\begin{algorithmic}[1]
 		
-		\Function{generateTypesH}{$sc$}\Comment{Where sc - statchart}
+		\Function{drawSequenceDiagram}{$ArrayList<IASTNode> statementsList$}
+		    \State $ frame  <- JFrame  $ 
+			\State $ image  <- BufferedImage  $ 
+			\State $ graphics2D  <- Graphics2D  $
+			\State $ topPanel <- JPanel $
+			\State $ mcd <- MyCanvasDraw $
+			\For{$i:statementsList.size()$} 
+				\If {$!statementsList.get(i).getRawSignature().toString().contains("(")$}
+					
+					\State $int j=i;$
+					\If{$j<=statementsList.size()-2$}
+						\State $do$
+						\State $add(line number)$
+						\State $add(file name)$
+						\State $while(!statementsList.get(j).getRawSignature().toString().contains("("))$
+						\State $mcd.buggyPathList.add(allStatements);$ \Comment{Where allStatements - statements with containing line number and file name also}
+					\EndIf				
+				\EndIf		
+				
+			\EndFor
+				\State $set <- JScrollPane(property)$
+				\State $mcd.paint(graphics2D)$
+				\State $topPanel.add(mcd);$	
+				\State $menuBar <- JMenuBar$
+				\State $menuFile <- JMenu $
+				\State $menuFileExit <- JMenuItem$
+				\State $menuSaveAs <- JMenuItem $
+				\State $menuSaveAs.addActionListener <- fileSave and exit$
+				\State $set<-frame (properties=visibility,menubar)$
 		
-		\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $ {Where def - function declaration in xtend}
-		\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
-		\EndFunction
-		
-		\Function {typesHAnnotationContent}{$sc$}		
-		\For{$s : getFileContent(sc).entrySet$}
-		\If {$!s.key.contains('//@ @variable')$}
-		\State $s.key$
-		\ElsIf {$s.value.contains('(')$}
-		\State $ void <s.value>;$
-		\EndIf		
-		\EndFor			
-		\EndFunction
-		
-		\Function {typesCAnnotationContent}{$sc$}
-		
-		\For{$s: getFunctionContent(sc).entrySet$}
-		\If {$(!s.value.contains('authentication') and (!s.value.contains('declassification'))$  \\  
-			$\   \   $   $and(!s.value.contains('sanitization')))$}
-		\State $void <s.value> {}$
-		\EndIf		
-		\EndFor
-		
-		\For{$ region : sc.regions$}
-		\If {$ region.name.equalsIgnoreCase('bad_path()'$}
-		\State $void <region.name>$
-		
-		\For {$s: getBadPathContent(sc).entrySet$}
-		
-		\If {$ s.key.contains('//@ @variable')$} 
-		\State $s.key$
-		\State $s.value$
-		\EndIf
-		
-		\If {$ s.value.contains('(')$} 
-		\State $s.value;$
-		\State $s.value$
-		\EndIf
-		
-		\EndFor 
-		\EndIf
-		
-		\If {$ region.name.equalsIgnoreCase('good_path()')$} 
-		\State $void <region.name>$
-		\For {$s: getGoodPathContent(sc).entrySet$}
-		\If {$s.key.contains('//@ @variable')$} 
-		\State $s.key$						
-		\EndIf
-		\State $s.value;$
-		\EndFor 
-		\EndIf
-		
-		\EndFor
-		
-		\EndFunction
-		
+		\EndFunction		
 		
 	\end{algorithmic}
 \end{algorithm}
-
- One sample example of the buggy path is given in figure \ref{Error_trace_path}.
-\begin{figure}[htbp]
-	\centering
-	\includegraphics{styles/Error_trace_path.jpg}
-	\label{Error_trace_path}
-	\caption{Error trace path in UML sequence diagram}
-\end{figure}
