@@ -193,6 +193,55 @@ According to the networkworld \cite{ref_21_networld} now-a-days seven strong aut
 \item Scratch-off card.
 \end{itemize}	
 
+\section{Static Code Analysis}
+
+Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code.The term is usually applied to the analysis performed by an automated tool, with human analysis being called program understanding, program comprehension, or code review. Software inspections and Software walkthroughs are also used in the latter case. .Static analysis, also called static code analysis, is a method of computer program debugging that is done by examining the code without executing the program. The process provides an understanding of the code structure, and can help to ensure that the code adheres to industry standards. Automated tools can assist programmers and developers in carrying out static analysis. The process of scrutinizing code by visual inspection alone (by looking at a printout, for example), without the assistance of automated tools, is sometimes called program understanding or program comprehension \cite{ref_86_techtarget:techtarget}.
+
+The principal advantage of static analysis is the fact that it can reveal errors that do not manifest themselves until a disaster occurs weeks, months or years after release. Nevertheless, static analysis is only a first step in a comprehensive software quality-control regime. After static analysis has been done, dynamic analysis is often performed in an effort to uncover subtle defects or vulnerabilities. In computer terminology, static means fixed, while dynamic means capable of action and/or change. Dynamic analysis involves the testing and evaluation of a program based on execution. Static and dynamic analysis, considered together, are sometimes referred to as glass-box testing \cite{ref_86_techtarget:techtarget}.
+
+Static code analysis advantages are:
+\begin{itemize}
+	\item It can find weaknesses in the code at the exact location.
+	\item It can be conducted by trained software assurance developers who fully understand the code.
+	\item It allows a quicker turn around for fixes.
+	\item It is relatively fast if automated tools are used.
+	\item Automated tools can scan the entire code base.
+	\item Automated tools can provide mitigation recommendations, reducing the research time.
+	\item It permits weaknesses to be found earlier in the development life cycle, reducing the cost to fix.
+\end{itemize}
+
+According to the GCN \cite{ref_87_gcn:gcn} static code analysis limitations are:
+\begin{itemize}
+	\item It is time consuming if conducted manually.
+	\item Automated tools do not support all programming languages.
+	\item Automated tools produce false positives and false negatives.
+	\item There are not enough trained personnel to thoroughly conduct static code analysis.
+	\item Automated tools can provide a false sense of security that everything is being addressed.
+	\item Automated tools only as good as the rules they are using to scan with.
+	\item It does not find vulnerabilities introduced in the runtime environment.
+\end{itemize}
+
+\section{Information Flow Vulnerabilities}
+
+Securing the data manipulated by computing systems has been a challenge in the past years. Several methods to limit the information disclosure exist today, such as access control lists, firewalls, and cryptography. However, although these methods do impose limits on the information that is released by a system, they provide no guarantees about information propagation. For example, access control lists of file systems prevent unauthorized file access, but they do not control how the data is used afterwards. Similarly, cryptography provides a means to exchange information privately across a non-secure channel, but no guarantees about the confidentiality of the data are given once it is decrypted.
+
+In low level information flow analysis, each variable is usually assigned a security level. The basic model comprises two distinct levels: low and high, meaning, respectively, publicly observable information, and secret information. To ensure confidentiality, flowing information from high to low variables should not be allowed. On the other hand, to ensure integrity, flows to high variables should be restricted.For example, considering two security levels L and H (low and high), if L less equal to H, flows from L to L, from H to H, and L to H would be allowed, while flows from H to L would not \cite{ref_88_smith2007principles}.
+
+A system is secure with respect to confidentiality
+should arise from a rigorous analysis showing that the system
+as a whole enforces the confidentiality policies of its users.
+This analysis must show that information controlled by a confidentiality policy cannot flow to a location where that policy
+is violated. The confidentiality policies we wish to enforce
+are, thus, information-flow policies and the mechanisms that
+enforce them are information-flow controls. Information-flow
+policies are a natural way to apply the well-known systems
+principle of end-to-end design \cite{ref_89_saltzer1984end} to the specification of
+computer security requirements; therefore, we also consider
+them to be specifications of end-to-end security. In a truly
+secure system, these confidentiality policies could be precisely
+expressed and translated into mechanisms that enforce them.
+However, practical methods for controlling information flow
+have eluded researchers for some time.
 
 \section{ Detecting Information Flow Errors During Design}
 If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 

@@ -7,29 +7,31 @@
 \BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{Declassification}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Authentication}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.4}{Detecting Information Flow Errors During Design}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.5}{Detecting Information Flow Errors During Coding}{chapter.2}% 11
-\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 12
-\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 13
-\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{Language Implementation Process}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 17
-\BOOKMARK [1][-]{section.4.1}{Overview of System Architecture}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{The Grammar of Annotation Language}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.3}{UML State Chart Editor}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.4}{Source Code Editor}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.5}{C Code Generator}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.6}{Three Checkers in Static Analysis Engine}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.7}{View Buggy Path in Sequence Diagram}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 25
-\BOOKMARK [1][-]{section.5.1}{Authentication Scenario}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Declassification Scenario}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Sanitization Scenario}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{Checkers in Static Analysis Engine}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 30
-\BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 31
-\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.2}% 32
-\BOOKMARK [-1][]{part*.11}{Appendix}{}% 33
-\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.11}% 34
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{part*.11}% 35
+\BOOKMARK [1][-]{section.2.4}{Static Code Analysis}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{Information Flow Vulnerabilities}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.6}{Detecting Information Flow Errors During Design}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.7}{Detecting Information Flow Errors During Coding}{chapter.2}% 13
+\BOOKMARK [-1][]{part.2}{The 2nd Part}{}% 14
+\BOOKMARK [0][-]{chapter.3}{Challenges and Annotation Language Extension}{part.2}% 15
+\BOOKMARK [1][-]{section.3.1}{Challenges and Idea}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Annotation Language Tags}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Language Implementation Process}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 19
+\BOOKMARK [1][-]{section.4.1}{Overview of System Architecture}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{The Grammar of Annotation Language}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{UML State Chart Editor}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.4}{Source Code Editor}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.5}{C Code Generator}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.6}{Three Checkers in Static Analysis Engine}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.7}{View Buggy Path in Sequence Diagram}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 27
+\BOOKMARK [1][-]{section.5.1}{Authentication Scenario}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Declassification Scenario}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.3}{Sanitization Scenario}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.4}{Checkers in Static Analysis Engine}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 32
+\BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 33
+\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.2}% 34
+\BOOKMARK [-1][]{part*.11}{Appendix}{}% 35
+\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.11}% 36
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{part*.11}% 37

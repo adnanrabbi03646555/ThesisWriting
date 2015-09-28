@@ -1,8 +1,16 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_87_gcn:gcn}
+{GCN}, http://gcn.com/articles/2009/02/09/
+  static-vs-dynamic-code-analysis.aspx.
+
 \bibitem{ref_15_yakindu:sct}
 {Yakindu SCT Open-Source-Tool},
   https://code.google.com/a/eclipselabs.org/p/yakindu/.
+
+\bibitem{ref_86_techtarget:techtarget}
+{Searchwindevelopment Techtarget},
+  http://searchwindevelopment.techtarget.com/definition/ static-analysis.
 
 \bibitem{ref_16_alhumaidan2012state}
 Fahad Alhumaidan et~al.
@@ -402,6 +410,12 @@ Andrei Sabelfeld and David Sands.
 \newblock Declassification: Dimensions and principles.
 \newblock volume~17, pages 517--548. Citeseer, 2009.
 
+\bibitem{ref_89_saltzer1984end}
+Jerome~H Saltzer, David~P Reed, and David~D Clark.
+\newblock End-to-end arguments in system design.
+\newblock {\em ACM Transactions on Computer Systems (TOCS)}, 2(4):277--288,
+  1984.
+
 \bibitem{ref_28_umesh:cqual}
 U.~Shankar and et~al.
 \newblock {Detecting Format-String Vulnerabilities with Type Qualifiers}.
@@ -421,6 +435,11 @@ V.~Simonet.
 V.~Simonet.
 \newblock {The Flow Caml System: documentation and user{\rq}s manual }.
 \newblock Technical report, INRIA, July 2003.
+
+\bibitem{ref_88_smith2007principles}
+Geoffrey Smith.
+\newblock Principles of secure information flow analysis.
+\newblock In {\em Malware Detection}, pages 291--307. Springer, 2007.
 
 \bibitem{ref_45_nikhil:fine}
 N.~Swamy, J.~Chen, and R.~Chugh.
