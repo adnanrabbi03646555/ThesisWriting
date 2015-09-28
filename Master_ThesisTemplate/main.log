@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  28 SEP 2015 16:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  28 SEP 2015 18:09
 entering extended mode
 **main.tex
 
@@ -1618,39 +1618,39 @@ mplate/styles/sanitization_scenario.png>] <styles/bug_detection.pdf, id=846, 61
 File: styles/bug_detection.pdf Graphic file (type pdf)
 
 <use styles/bug_detection.pdf>
-Package pdftex.def Info: styles/bug_detection.pdf used on input line 133.
+Package pdftex.def Info: styles/bug_detection.pdf used on input line 145.
 (pdftex.def)             Requested size: 483.69687pt x 302.2172pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/RelatedWork.tex [42 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
-sisWriting/Master_ThesisTemplate/styles/bug_detection.pdf>]
-chapter 6.
-[43
+e\chapters/RelatedWork.tex [42] [43 <F:/L2-T2/Thesis/ThesisWriting/GITRepositor
+y/ThesisWriting/Master_ThesisTemplate/styles/bug_detection.pdf>] [44
 
 ]
+chapter 6.
+[45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44])
+ [46])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Limitations.tex [45] [46
+e\chapters/Limitations.tex [47] [48
 
 ]
 chapter 7.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/ConclusionAndFutureWork.tex [47] [48
+e\chapters/ConclusionAndFutureWork.tex [49] [50
 
 ]
 chapter 8.
-[49]) [50] [51
+[51]) [52] [53
 
-] [52]
+] [54]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/oneAppendix.tex
 chapter A.
-) [53
+) [55
 
-] [54
+] [56
 
 ]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
@@ -1659,7 +1659,7 @@ chapter without number
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55
+ [57
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 133--137
@@ -1676,10 +1676,10 @@ clipse, iTemis,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
+ [58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [59]
 Underfull \hbox (badness 10000) in paragraph at lines 322--325
 []\OT1/ppl/m/n/10.95 Microsoft.  MSDN run-time li-brary ref-er-ence - SAL an-no
 -ta-tions,
@@ -1706,7 +1706,7 @@ even-strong-authentication-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [60]
 Overfull \hbox (11.83922pt too wide) in paragraph at lines 463--466
 []\OT1/ppl/m/n/10.95 L. Tor-valds.  Sparse - A se-matic parser for C, http://ww
 w.kernel.org/pub/software/devel/sparse. 
@@ -1715,8 +1715,8 @@ w.kernel.org/pub/software/devel/sparse.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59])
-[60]
+ [61])
+[62]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 
@@ -1729,9 +1729,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 24498 strings out of 493921
- 438839 string characters out of 3144876
- 616691 words of memory out of 3000000
+ 24500 strings out of 493921
+ 438853 string characters out of 3144876
+ 617691 words of memory out of 3000000
  26756 multiletter control sequences out of 15000+200000
  30816 words of font info for 81 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1750,9 +1750,9 @@ pe1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatin
 o/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (78 pages, 718374 bytes).
+Output written on main.pdf (80 pages, 721812 bytes).
 PDF statistics:
- 1204 PDF objects out of 1440 (max. 8388607)
- 480 named destinations out of 1000 (max. 500000)
+ 1214 PDF objects out of 1440 (max. 8388607)
+ 482 named destinations out of 1000 (max. 500000)
  359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

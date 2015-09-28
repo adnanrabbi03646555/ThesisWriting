@@ -33,9 +33,9 @@
 \contentsline {section}{\numberline {5.2}Declassification Scenario}{38}{section.5.2}
 \contentsline {section}{\numberline {5.3}Sanitization Scenario}{40}{section.5.3}
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{41}{section.5.4}
-\contentsline {chapter}{\numberline {6}Related Work}{43}{chapter.6}
-\contentsline {chapter}{\numberline {7}Limitations}{47}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{49}{chapter.8}
-\contentsline {part}{Appendix}{53}{part*.11}
-\contentsline {chapter}{\numberline {A}Appendix}{53}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.12}
+\contentsline {chapter}{\numberline {6}Related Work}{45}{chapter.6}
+\contentsline {chapter}{\numberline {7}Limitations}{49}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{51}{chapter.8}
+\contentsline {part}{Appendix}{55}{part*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{55}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.12}
