@@ -11,8 +11,8 @@
 \contentsline {section}{\numberline {2.1}Sanitization}{8}{section.2.1}
 \contentsline {section}{\numberline {2.2}Declassification}{9}{section.2.2}
 \contentsline {section}{\numberline {2.3}Authentication}{10}{section.2.3}
-\contentsline {section}{\numberline {2.4}Detecting Information Flow Errors During Design}{11}{section.2.4}
-\contentsline {section}{\numberline {2.5}Detecting Information Flow Errors During Coding}{11}{section.2.5}
+\contentsline {section}{\numberline {2.4}Detecting Information Flow Errors During Design}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}Detecting Information Flow Errors During Coding}{12}{section.2.5}
 \contentsline {part}{\numberline {II}The 2nd Part}{15}{part.2}
 \contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Challenges and Idea}{17}{section.3.1}
@@ -32,8 +32,8 @@
 \contentsline {section}{\numberline {5.3}Sanitization Scenario}{38}{section.5.3}
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{39}{section.5.4}
 \contentsline {chapter}{\numberline {6}Related Work}{41}{chapter.6}
-\contentsline {chapter}{\numberline {7}Limitations}{43}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{45}{chapter.8}
-\contentsline {part}{Appendix}{49}{part*.11}
-\contentsline {chapter}{\numberline {A}Appendix}{49}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{51}{chapter*.12}
+\contentsline {chapter}{\numberline {7}Limitations}{45}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{47}{chapter.8}
+\contentsline {part}{Appendix}{51}{part*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{51}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.12}

@@ -17,8 +17,8 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces UML Statechart Formal Representation for this System}}{25}{figure.4.6}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Error trace path in UML sequence diagram}}{32}{figure.4.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces UML Statechart Modeling for Authentication Scenario}}{36}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces UML Statechart Modeling for Declassification Scenario}}{37}{figure.5.2}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces UML Statechart Modeling for Authentication Scenario}}{37}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces UML Statechart Modeling for Declassification Scenario}}{38}{figure.5.2}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces UML Statechart Modeling for Sanitization Scenario}}{39}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Bug Reports in Checker}}{40}{figure.5.4}
 \addvspace {10\p@ }
