@@ -44,6 +44,12 @@ Davide Balzarotti, Marco Cova, Vika Felmetsger, Nenad Jovanovic, Engin Kirda,
 \newblock In {\em Security and Privacy, 2008. SP 2008. IEEE Symposium on},
   pages 387--401. IEEE, 2008.
 
+\bibitem{ref_91_bardas2010static}
+Alexandru~G Bardas.
+\newblock Static code analysis.
+\newblock {\em Journal of Information Systems \& Operations Management},
+  4(2):99--107, 2010.
+
 \bibitem{ref_71_barthe2004secure}
 Gilles Barthe, Pedro~R D'Argenio, and Tamara Rezk.
 \newblock Secure information flow by self-composition.
@@ -299,6 +305,13 @@ K.~Rustan~M. Leino.
 Peng Li and Steve Zdancewic.
 \newblock Downgrading policies and relaxed noninterference.
 \newblock In {\em ACM SIGPLAN Notices}, volume~40, pages 158--170. ACM, 2005.
+
+\bibitem{ref_90_liu2008static}
+Yin Liu and Ana Milanova.
+\newblock Static analysis for inference of explicit information flow.
+\newblock In {\em Proceedings of the 8th ACM SIGPLAN-SIGSOFT workshop on
+  Program analysis for software tools and engineering}, pages 50--56. ACM,
+  2008.
 
 \bibitem{ref_85_livshits2003tracking}
 V~Benjamin Livshits and Monica~S Lam.

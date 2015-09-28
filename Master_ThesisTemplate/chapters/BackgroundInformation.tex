@@ -243,6 +243,19 @@ expressed and translated into mechanisms that enforce them.
 However, practical methods for controlling information flow
 have eluded researchers for some time.
 
+Information flow can be classified as explicit (information flow
+that arises explicitly, due to assignment statements), and implicit
+(flow that arises implicitly, due to conditional statements). In \cite{ref_90_liu2008static}, proposed a new general-purpose static analysis for the inference
+of explicit information flow. This analysis is light-weight,works directly on Java programs before program execution, and
+does not require annotations by the programmer. It can be incorporated
+in program understanding and verification tools and help
+verify in a practical manner the confidentiality and integrity of sensitive program data. We believe that our work, although limited in
+the sense that it does not handle implicit flow, is a step forward towards
+the use of static analysis for the purposes of reasoning about
+information flow; it may help advance the use of static analysis in
+tools for understanding and verification of security properties.
+
+
 \section{ Detecting Information Flow Errors During Design}
 If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]

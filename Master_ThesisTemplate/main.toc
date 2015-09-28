@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {2.3}Authentication}{10}{section.2.3}
 \contentsline {section}{\numberline {2.4}Static Code Analysis}{12}{section.2.4}
 \contentsline {section}{\numberline {2.5}Information Flow Vulnerabilities}{13}{section.2.5}
-\contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{13}{section.2.6}
+\contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{14}{section.2.6}
 \contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{14}{section.2.7}
 \contentsline {part}{\numberline {II}The 2nd Part}{17}{part.2}
 \contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{19}{chapter.3}
@@ -26,16 +26,16 @@
 \contentsline {section}{\numberline {4.3}UML State Chart Editor}{24}{section.4.3}
 \contentsline {section}{\numberline {4.4}Source Code Editor}{27}{section.4.4}
 \contentsline {section}{\numberline {4.5}C Code Generator}{28}{section.4.5}
-\contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{32}{section.4.6}
+\contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{33}{section.4.6}
 \contentsline {section}{\numberline {4.7}View Buggy Path in Sequence Diagram}{33}{section.4.7}
 \contentsline {chapter}{\numberline {5}Experiments}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}Authentication Scenario}{37}{section.5.1}
 \contentsline {section}{\numberline {5.2}Declassification Scenario}{38}{section.5.2}
 \contentsline {section}{\numberline {5.3}Sanitization Scenario}{40}{section.5.3}
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{41}{section.5.4}
-\contentsline {chapter}{\numberline {6}Related Work}{45}{chapter.6}
-\contentsline {chapter}{\numberline {7}Limitations}{49}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{51}{chapter.8}
-\contentsline {part}{Appendix}{55}{part*.11}
-\contentsline {chapter}{\numberline {A}Appendix}{55}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.12}
+\contentsline {chapter}{\numberline {6}Related Work}{47}{chapter.6}
+\contentsline {chapter}{\numberline {7}Limitations}{51}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{53}{chapter.8}
+\contentsline {part}{Appendix}{57}{part*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{57}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.12}

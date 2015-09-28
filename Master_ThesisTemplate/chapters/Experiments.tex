@@ -122,6 +122,13 @@ The previous example was given for PHP language. In C language here it has been 
 
 Static Code Analysis (also known as Source Code Analysis) is usually performed as part of a Code Review (also known as white-box testing) and is carried out at the Implementation phase of a Security Development Lifecycle (SDL). Static Code Analysis commonly refers to the running of Static Code Analysis tools that attempt to highlight possible vulnerabilities within 'static' (non-running) source code by using techniques such as Taint Analysis and Data Flow Analysis.
 
+A lot of the defects that are present in a program are not visible to the compiler. Static code analysis is a way to find bugs and reduce the defects in a software application.In the 1970's, Stephan Johnson, then at Bell Laboratories, wrote Lint, a tool to examine C
+source programs that had compiled without errors and to find bugs that had escaped detection.There are many ways to detect and reduce the number of bugs in a program. For instance in Java, JUnit is a very useful tool for writing tests. Overtime research proved that analyzing the code (especially code reviews) is the best way to eliminate bugs. This is not
+always possible because it is very hard to train people and get them together to study and identify problems in programs. Furthermore it is almost impossible to use code inspections on project's complete code base.
+Most errors fall into known categories, as people tend to fall into the same traps repeatedly. Therefore a static analyzer or checker is a program written to analyze other programs for flaws. 
+
+Static code analysis, also commonly called white-box testing, looks at applications in non-runtime environment. This method of security testing has distinct advantages in that it can evaluate both web and non-web applications and through advanced modeling, can detect flaws in the software's inputs and outputs that cannot be seen through dynamic web scanning alone. In the past this technique required source code which is not only unpractical as source code often is unavailable but also insufficient.
+
 Some tools are starting to move into the Integrated Development Environment (IDE). For the types of problems that can be detected during the software development phase itself, this is a powerful phase within the development lifecycle to employ such tools, as it provides immediate feedback to the developer on issues they might be introducing into the code during code development itself. This immediate feedback is very useful as compared to finding vulnerabilities much later in the development cycle.The UK Defense Standard 00-55 requires that Static Code Analysis be used on all safety related software in defense equipment.
 
 \textbf{False Positives:}
@@ -132,13 +139,35 @@ False positive results might be reported when analyzing an application that inte
 \textbf{False Negatives:}
 The use of static code analysis tools can also result in false negative results where vulnerabilities result but the tool does not report them. This might occur if a new vulnerability is discovered in an external component or if the analysis tool has no knowledge of the runtime environment and whether it is configured securely.
 
+Some tools for static code analysis are given below:
+\begin{itemize}
+	\item In .NET programming language: .NET Compiler Platform, CodeIt.Right, CodeRush, FxCop, NDepend, StyleCop etc.
+	\item In case of C, C++: BLAST, Cppcheck, Clang, Coccinelle, Fluctuat etc.  
+	\item For Java: Checkstyle, FindBugs, IntelliJ IDEA, Sonargraph, Soot, Squale etc.
+	\item For JavaScript: JSLint, JSHint. 
+	\item In Objective-C: Clang.
+\end{itemize}
+
+\textbf{Types of Static Code Checkers}: According to the \cite{ref_91_bardas2010static}  static code analyzers come in different flavors, analyzers that work directly on the
+program source code and analyzers that work on the compiled byte code. Each type has its own advantages. When analyzing directly the program code, the source code static analyzer checks directly the source program code written by the programmer. Compilers optimize code, and the resulting byte code might not mirror the source.On the other hand, working on byte code is much faster, which is very important on
+projects that contain for instance more than one hundred thousand lines of code.
+
+Even though each code checker works differently, most of them share some basic traits.Static checkers read the program and build an abstract representation of it that they are using for matching the error patterns they recognize. On the other hand static checkers
+perform some kind of data-flow analysis, trying to infer the possible values that variables might have at certain points in the program. When a program accepts input, there is a possibility that this input can be used to subvert the system. Buffer overflows have been over time hacker's favorite inroad. Nowadays SQL injection seems to have taken the top
+place for program sore spots. Therefore data-flow analysis is very important for vulnerability checking. It is essential to be able to trace the input flow from users through the program. There is no code checker that can ever assure developers that a program is correct. Such guarantees aren't possible.In fact, no code checker is complete or sound. A complete code checker would find all errors, while a sound code checker would report only real errors and no false positives.
+
+The percentage of false to true positives indicates if a code checker is suitable for different programs. It is recommended for developers to examine a checker's behavior in their work before committing to it in the whole project. 
+
+Human fallibility is somewhat predictable, but code checkers cannot take all possible bugs into account. Most of the checkers gives programmers the option to define their own rules for the checker to use. In this way, if developers are certain or can predict that they
+are particularly prone to some kinds of bugs, they can guard against them by writing custom bug detectors. 
+
 In this research through static code analysis engine named smtcodan was used as the checker to detect the bug in source code files. After the generation of C/C++ code files, those files are included inside the eclipse C/C++ project. This project should be included in the running eclipse instance. Then after running the project as C/C++ code analysis the bug will be detected if any bugs are available inside the project. Figure \ref{bugDetection} depicts the bug reports obtained by running the checkers in parallel on the generated programs. Here for example the sanitization scenario has selected to analyze. At first the generated files are included inside the project named "SantizationScenario". Then the project was run as C/C++ code analysis. Here the circled numbers in Figure \ref{bugDetection} indicate the following: number 1 indicates the analyzed programs (generated programs), number
 2 presents bug reports generated by one of the checker for the analyzed programs and number 3 shows the
 bug location (line number 69) in source code file scenario3.c by
 clicking on the second bug report (Missing Sanitization function Bug
 Detected). The bug reports depicted in Figure \ref{bugDetection} with number
 2 , confirm that bug is successfully detected and no
-false positives and false negatives were generated.
+false positives and false negatives were generated. Beside the number 2 there also exist more information like file name, line number of the bug location and file path. 
 
 \begin{figure}[htbp]
 	\centering
@@ -146,3 +175,13 @@ false positives and false negatives were generated.
 	\label{bugDetection}
 	\caption{Bug Reports in Checker}
 \end{figure}
+
+When bug found inside the source file, if user click the bug location then easily can view the bug message.Below in the figure \ref{bugDetectionWithMessage} it is presented how the message will appear.In the scenario3.c file after clicking the bug symbol in line number 69 the message is appeared as like this sanitization function missing bug detected. 
+
+\begin{figure}[htbp]
+	\centering
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/bugDetectionWithMessage.pdf}}
+	\label{bugDetectionWithMessage}
+	\caption{Bug Reports in Checker with Message}
+\end{figure}
+
