@@ -96,6 +96,15 @@ same authors present an alternative approach that is based
 on bounded model checking. Whaley and Lam \cite{ref_77_whaley2004cloning} described an interprocedural, flow-insensitive alias analysis for Java applications. Their analysis is based on binary decision diagrams, and was used by Livshits and Lam \cite{ref_78_livshits2005finding} for the detection of taint-style vulnerabilities.In \cite{ref_62_balzarotti2008saner}, their approach is based on Pixy \cite{ref_79_jovanovic2010static,ref_80_jovanovic2006precise}, an open
 source static PHP analyzer that uses taint analysis for detecting XSS vulnerabilities.
 
+Weinberger et al. empirically studied present sanitization
+approaches against XSS in web application frameworks \cite{ref_105_weinberger2011systematic}.
+They analyzed the availability of sanitization approaches for
+different HTML markup contexts for five PHP frameworks.
+Furthermore, eight PHP applications were studied for the
+usage of various markup contexts. A templating framework
+was proposed by Samuel et al. that uses type qualifiers
+to automate context-sensitive XSS sanitization \cite{ref_106_samuel2011context}.
+
 A good overview of static analysis approaches applied to security problems is provided in  \cite{ref_81_chess2004static}. Simple lexical approaches employed by scanning tools such as ITS4 and RATS use a set of predefined patterns to identify potentially dangerous areas of a program \cite{ref_82_wilander2002comparison}. While a significant improvement on Unix grep, these tools, however, have no knowledge of how data propagates throughout the program and cannot be used to automatically and fully solve taint-style problems.
 A few projects use path-sensitive analysis to find errors in C and C++ programs \cite{ref_83_bush2000static,ref_84_hallem2002system,ref_85_livshits2003tracking}. While capable of addressing taint-style problems, these tools rely on an unsound approach to pointers and may therefore miss some errors. The WebSSARI project uses combined unsound static and dynamic analysis in the context of analyzing PHP programs \cite{ref_75_huang2004securing}. WebSSARI has successfully been applied to find many SQL injection and cross-site scripting vulnerabilities in PHP code.
 

@@ -419,7 +419,7 @@ Networkworld.
 
 \bibitem{ref_104_owasp:owasp}
 OWASP.
-\newblock {OWSP}.
+\newblock {OWASP}.
 \newblock Technical report, OWASP, http://www.owasp.org.
 
 \bibitem{ref_22_preibusch2011information}
@@ -462,6 +462,13 @@ Jerome~H Saltzer, David~P Reed, and David~D Clark.
 \newblock End-to-end arguments in system design.
 \newblock {\em ACM Transactions on Computer Systems (TOCS)}, 2(4):277--288,
   1984.
+
+\bibitem{ref_106_samuel2011context}
+Mike Samuel, Prateek Saxena, and Dawn Song.
+\newblock Context-sensitive auto-sanitization in web templating languages using
+  type qualifiers.
+\newblock In {\em Proceedings of the 18th ACM conference on Computer and
+  communications security}, pages 587--600. ACM, 2011.
 
 \bibitem{ref_28_umesh:cqual}
 U.~Shankar and et~al.
@@ -540,6 +547,14 @@ John Viega and Gary McGraw.
 D.~Volpano, G.~Smith, and C.~Irvine.
 \newblock {A sound type system for secure flow analysis}.
 \newblock {\em Journal of Computer Security}, 4(3):167--187, 1996.
+
+\bibitem{ref_105_weinberger2011systematic}
+Joel Weinberger, Prateek Saxena, Devdatta Akhawe, Matthew Finifter, Richard
+  Shin, and Dawn Song.
+\newblock A systematic analysis of xss sanitization in web application
+  frameworks.
+\newblock In {\em Computer Security--ESORICS 2011}, pages 150--171. Springer,
+  2011.
 
 \bibitem{ref_77_whaley2004cloning}
 John Whaley and Monica~S Lam.
