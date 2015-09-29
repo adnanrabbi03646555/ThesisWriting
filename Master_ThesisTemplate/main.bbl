@@ -119,6 +119,12 @@ J.~Condit, M.~Harren, Z.~R. Anderson, D.~Gay, and G.~C. Necula.
 \newblock {Dependent types for low-level programming}.
 \newblock {\em ESOP}, 2007.
 
+\bibitem{ref_93_dahse2014simulation}
+Johannes Dahse and Thorsten Holz.
+\newblock Simulation of built-in php features for precise static code analysis.
+\newblock In {\em Symposium on Network and Distributed System Security (NDSS)},
+  2014.
+
 \bibitem{ref_70_darvas2005theorem}
 {\'A}d{\'a}m Darvas, Reiner H{\"a}hnle, and David Sands.
 \newblock A theorem proving approach to analysis of secure information flow.
@@ -257,6 +263,13 @@ L.~Jia, J.~Vaughan, K.~Mazurak, J.~Zhao, L.~Zarko, J.~Schorr, and S.~Zdancewic.
 Rajeev Joshi and K~Rustan~M Leino.
 \newblock A semantic approach to secure information flow.
 \newblock volume~37, pages 113--138. Elsevier, 2000.
+
+\bibitem{ref_99_jovanovic2006pixy}
+Nenad Jovanovic, Christopher Kruegel, and Engin Kirda.
+\newblock Pixy: A static analysis tool for detecting web application
+  vulnerabilities.
+\newblock In {\em Security and Privacy, 2006 IEEE Symposium on}, pages 6--pp.
+  IEEE, 2006.
 
 \bibitem{ref_80_jovanovic2006precise}
 Nenad Jovanovic, Christopher Kruegel, and Engin Kirda.
@@ -434,6 +447,20 @@ U.~Shankar and et~al.
 \newblock {Detecting Format-String Vulnerabilities with Type Qualifiers}.
 \newblock {\em 10th USENIX Security Symposium}, August 2001.
 
+\bibitem{ref_97_shar2012predicting}
+Lwin~Khin Shar and Hee Beng~Kuan Tan.
+\newblock Predicting common web application vulnerabilities from input
+  validation and sanitization code patterns.
+\newblock In {\em Automated Software Engineering (ASE), 2012 Proceedings of the
+  27th IEEE/ACM International Conference on}, pages 310--313. IEEE, 2012.
+
+\bibitem{ref_98_shar2013mining}
+Lwin~Khin Shar, Hee Beng~Kuan Tan, and Lionel~C Briand.
+\newblock Mining sql injection and cross site scripting vulnerabilities using
+  hybrid program analysis.
+\newblock In {\em Proceedings of the 2013 International Conference on Software
+  Engineering}, pages 642--651. IEEE Press, 2013.
+
 \bibitem{ref_49_simonet:flowcaml}
 V.~Simonet.
 \newblock {\em {FlowCaml in a nutshell}}.
@@ -519,5 +546,24 @@ Alexander Yip, Xi~Wang, Nickolai Zeldovich, and M~Frans Kaashoek.
 \newblock Improving application security with data flow assertions.
 \newblock In {\em Proceedings of the ACM SIGOPS 22nd symposium on Operating
   systems principles}, pages 291--304. ACM, 2009.
+
+\bibitem{ref_95_yu2010stranger}
+Fang Yu, Muath Alkhalaf, and Tevfik Bultan.
+\newblock Stranger: An automata-based string analysis tool for php.
+\newblock In {\em Tools and Algorithms for the Construction and Analysis of
+  Systems}, pages 154--157. Springer, 2010.
+
+\bibitem{ref_96_yu2011patching}
+Fang Yu, Muath Alkhalaf, and Tevfik Bultan.
+\newblock Patching vulnerabilities with sanitization synthesis.
+\newblock In {\em Proceedings of the 33rd International Conference on Software
+  Engineering}, pages 251--260. ACM, 2011.
+
+\bibitem{ref_94_zheng2013path}
+Yunhui Zheng and Xiangyu Zhang.
+\newblock Path sensitive static analysis of web applications for remote code
+  execution vulnerability detection.
+\newblock In {\em Proceedings of the 2013 International Conference on Software
+  Engineering}, pages 652--661. IEEE Press, 2013.
 
 \end{thebibliography}

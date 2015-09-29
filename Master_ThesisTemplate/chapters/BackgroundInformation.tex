@@ -87,7 +87,7 @@ could cause toxic waste to leak, and weapons targeting, where an inaccuracy coul
 operational environments, the impact is virtually irreversible and must therefore be prevented even if it is likely to occur
 with low probability.It's always good that transforming information to a form which is suitable for release or sanitize the information by redacting some portions of it.
 
-Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS), and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
+Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
 
 SQL injection vulnerabilities arise in applications where elements of a SQL query originate from an untrusted source. Without precautions, the untrusted data may maliciously alter the query, resulting in information leaks or data modification. The primary means of preventing SQL injection are sanitization and validation, which are typically implemented as parameterized queries and stored procedures.
 
@@ -122,6 +122,44 @@ producing the following query:
 	SELECT * FROM db_user WHERE username='<USERNAME>' AND password='' OR '1'='1'
 \end{lstlisting}
 '1'='1' always evaluates to true, causing the query to yield every row in the database. In this scenario, the attacker would be authenticated without needing a valid username or password.
+
+Web applications receive remotely supplied (and potentially
+malicious) user data via HTTP request parameters. In PHP, a variety of security mechanisms exist that can be applied by developers in order to defuse user input for sensitive operations. However, different markup contexts of different operations require different security mechanisms.
+User input is always received as data of type string in PHP applications. If this input is processed in a security sensitive 
+operation of the web application, a vulnerability can
+occur. For example, a dynamically built SQL query with
+embedded user input may lead to a SQL injection vulnerability. In order to prevent such a critical vulnerability, the
+user input has to be sanitized or validated beforehand. For
+this purpose, a security mechanism is applied between the
+user input (source) and the sensitive operation (sink) such
+that malicious data cannot reach the sensitive operation.
+Some sanitization and validation mechanisms have to be applied carefully to the context of the markup. Additionally, a security mechanism can be applied path sensitively. During input sanitization the data is
+transformed such that harmful characters are removed or defused.
+The advantage of this approach is that relevant parts of the data stay intact, while only certain characters are removed
+or replaced. This way, the application can proceed
+with the sanitized data without a request for resubmission.
+
+The symbols meta information about sanitization is inferred
+from PHP operators and built-in functions within the
+AST. For this purpose, a whitelist of sanitizers is used and
+complex sanitizers are simulated carefully \cite{ref_93_dahse2014simulation}. RIPS assigns
+different sanitization tags to the inferred data symbols that
+precisely point out the sanitized markup contexts.
+
+For example, the built-in function htmlentities() sanitizes
+against double quotes and lower-than characters by default.
+Thus, the corresponding sanitization tags for doublequoted
+attributes or HTML elements are added to the argument's
+data symbol. If the mechanism sanitizes against all
+types of injection flaws, such as an integer typecast, a universal
+sanitization tag is added. In order to track multiple levels
+of escaping and encoding, each data symbol has an escaping
+and encoding stack that is modified by certain built-in
+functions, such as addslashes() and urlencode(). String
+and regular expression replacements are evaluated against a
+configured list of characters that are required for exploitation
+of specific markup contexts. If a character is replaced,
+the according sanitization tag is added to the data symbol.
 
 
 In many cases, the data is passed directly to a component in a different trusted domain. Data sanitization is the process of ensuring that data conforms to the requirements of the subsystem to which it is passed. Sanitization also involves ensuring that data conforms to security-related requirements regarding leaking or exposure of sensitive data when output across a trust boundary. Sanitization may include the elimination of unwanted characters from the input by means of removing, replacing, encoding, or escaping the characters. Sanitization may occur following input (input sanitization) or before the data is passed across a trust boundary (output sanitization). Data sanitization and input validation may coexist and complement each other. Many command interpreters and parsers provide their own sanitization and validation methods. When available, their use is preferred over custom sanitization techniques because custom-developed sanitization can often neglect special cases or hidden complexities in the parser. Another problem with custom sanitization code is that it may not be adequately maintained when new capabilities are added to the command interpreter or parser software.
@@ -168,6 +206,12 @@ Security-typed languages promise to be a valuable tool in making provably secure
 data item is labeled with its security policy. In practical security-typed languages support some form of declassification, in which high-security information is permitted to flow to a low-security receiver/observer.
 
 To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_3_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
+
+While the security research community has recognized the importance of the problem, the state-of-the-art in information release comprises a fast growing number of definitions and analyses for different kinds of information release policies over a variety of languages and calculi. The relationship between different definitions of release is often unclear and, in our opinion, the relationships that do exist between methods are
+often inaccurately portrayed. This creates hazardous situations where policies provide only partial assurance that information release mechanisms cannot be compromised.
+
+For example, consider a policy for describing what information is released. This policy stipulates that at most four digits of a credit card number might be released when a purchase is made (as often needed for logging purposes). This policy specifies what can be released but says nothing about who controls which of the numbers are revealed.
+Leaving this information unspecified leads to an attack where the attacker launders the entire credit card number by asking to reveal different digits under different purchases.
 
 Myers and Liskov introduced the decentralized label model \cite{ref_4_myers2000protecting}, describing how labels could be applied
 to a programming language and then used to check information
@@ -311,6 +355,28 @@ Static program analysis is the analysis of computer software that is performed w
 
 The principal advantage of static analysis is the fact that it can reveal errors that do not manifest themselves until a disaster occurs weeks, months or years after release. Nevertheless, static analysis is only a first step in a comprehensive software quality-control regime. After static analysis has been done, dynamic analysis is often performed in an effort to uncover subtle defects or vulnerabilities. In computer terminology, static means fixed, while dynamic means capable of action and/or change. Dynamic analysis involves the testing and evaluation of a program based on execution. Static and dynamic analysis, considered together, are sometimes referred to as glass-box testing \cite{ref_86_techtarget:techtarget}.
 
+A variety of static analysis approaches have been proposed
+to automatically identify security vulnerabilities in PHP applications
+based on insufficient sanitization and validation.
+Zheng and Zhang introduced path-sensitive static analysis
+for PHP applications with Z3-str \cite{ref_94_zheng2013path}. They leverage a
+modified version of the Z3 SMT solver that is also capable
+of analyzing strings. Shar and Tan proposed static code attributes
+for predicting SQLi and XSS vulnerabilities \cite{ref_97_shar2012predicting, ref_98_shar2013mining}.Yu et al. built an automata-based string analysis tool
+called STRANGER \cite{ref_95_yu2010stranger} based on the static code analysis
+tool Pixy \cite{ref_99_jovanovic2006pixy}. STRANGER detects security vulnerabilities
+in PHP applications by computing possible string
+values using a symbolic automata representation of common
+string functions, including escaping and replacement
+functions. Later, they automatically generated sanitization
+statements for detected vulnerabilities by using regular expression
+replacements \cite{ref_96_yu2011patching}. Balzarotti et al. combine static
+and dynamic analysis techniques to identify faulty custom
+sanitization routines \cite{ref_62_balzarotti2008saner}. The static analysis component of
+their tool called Saner extends Pixy and analyzes string
+modification with automata, while the dynamic component
+verifies analysis results to reduce false positives.
+
 Static code analysis advantages are:
 \begin{itemize}
 	\item It can find weaknesses in the code at the exact location.
@@ -369,6 +435,28 @@ tools for understanding and verification of security properties.
 
 
 \section{ Detecting Information Flow Errors During Design}
+
+The systems development life cycle (SDLC), also referred to as the application development life-cycle, is a term used in systems engineering, information systems and software engineering to describe a process for planning, creating, testing and deploying an information system (according to the wikipedia). The systems development life-cycle concept applies to a range of hardware and software configurations, as a system can be composed of hardware only, software only or a combination of both.
+
+\begin{figure}[htbp]
+	\centering
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/sdlc.jpg}}
+	\caption{Software Development Life Cycle}
+	\label{figure_sdlc}
+\end{figure}
+
+There are following five phases in every Software development life cycle model:
+
+\begin{itemize}
+	\item Requirement gathering and analysis
+	\item Design
+	\item Implementation or coding
+	\item Testing
+	\item Evolution 
+\end{itemize}
+
+It would be easier for the developer if information flow errors can be detected in the early statge of software development lifecycle. In this research we propose a method to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way we detected the information flow in designing phase is described below.
+
 If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
@@ -379,6 +467,8 @@ If a step of function call like authentication, sanitization or declassification
 
 
 \section{ Detecting Information Flow Errors During Coding}
+
+Another way to detect the information flow vulnerabilities in our research is in coding stage of software development life cycle. Here mainly we detected the bug by static analyzing the code through our engine named smtcodan. How we implemented the checker in our static analysis engine is given in the implementation chapter of this paper. The visual representation of how we detect the bug is given below.
 
 Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to A lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
 where each of the flows starts with statement variable a and ends with leaving the system. The the variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
