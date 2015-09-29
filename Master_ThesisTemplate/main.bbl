@@ -477,6 +477,12 @@ L.~Torvalds.
 \newblock {Sparse - A sematic parser for C},
   http://www.kernel.org/pub/software/devel/sparse.
 
+\bibitem{ref_92_viega2001building}
+John Viega and Gary McGraw.
+\newblock {\em Building secure software: how to avoid security problems the
+  right way}.
+\newblock Pearson Education, 2001.
+
 \bibitem{ref_38_volpano:sound}
 D.~Volpano, G.~Smith, and C.~Irvine.
 \newblock {A sound type system for secure flow analysis}.

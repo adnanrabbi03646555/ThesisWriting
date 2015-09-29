@@ -208,7 +208,7 @@ In order to implement the annotation language grammer in this research it was re
 	*            :{} multi line comment 
 	*/ 
 	terminal ML_COMMENT	: '/*' !('@') -> !('@')'*/'   !('\n'|'\r')* ('\n'|'\r')*   
-	// '{' -> '}' can be used optional to disable the method bodyes together with single line { comment 
+	// '{' -> '}' can be used optional to disable the method bodies together with single line { comment 
 		//      | '{' -> '}'                   ('\n'|'\r')?
 		;   
 \end{lstlisting}

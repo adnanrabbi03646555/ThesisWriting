@@ -153,7 +153,55 @@ harder to formalize in a general way, beyond saying that they cannot be captured
 \enquote{what} and \enquote{when} dimensions.
 
 \section{Authentication}
+
+Malicious applications targeting financial account information have increased dramatically over the last years. The number of online applications is growing strong. The ease of use of the Internet and the growing user base make a perfect target for criminals. Attacking thousands of users is achievable with only one click.The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore.
+
+To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.
+
+Before describing the process of the authentication, need to explain some terms. Now-a-days, AAA is often used. AAA stands for Authentication, Authorization and Accounting. It is important to know the differences between those terms:
+ 
+\textbf{Authentication}: the confirmation that a user is who it is claiming to be. 
+
+\textbf{Authorization}: the process to determine whether the user has the authority to issue certain commands.
+ 
+\textbf{Accounting}: measuring the resources a user consumes during access.
+
+
 Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, User verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request granted.
+
+Now-a-days following authentication, a user must gain authorization for doing certain tasks. After logging into a system, for instance, the user may try to issue commands. The authorization process determines whether the user has the authority to issue such commands. Simply put, authorization is the process of enforcing policies: determining what types or qualities of activities, resources, or services a user is permitted. Usually, authorization occurs within the context of authentication. Once you have authenticated a user, they may be authorized for different types of access or activity.
+
+According to J Viega and G McGraw \cite{ref_92_viega2001building} the processes how to avoid the top ten software security flaws are:
+\begin{itemize}
+	\item Earn or give, but never assume, trust.
+	
+	\item Use an authentication mechanism that
+	cannot be bypassed or tampered with.
+	
+	\item Authorize after you authenticate.
+	
+	\item Strictly separate data and control
+	instructions, and never process control
+	instructions received from untrusted sources.
+	
+	\item Define an approach that ensures all data are
+	explicitly validated.
+
+	\item Use cryptography correctly.
+	 
+	\item Identify sensitive data and how they should
+	be handled.
+	
+	\item Always consider the users.
+
+	\item Understand how integrating external
+	components changes your attack surface.
+	
+	\item Be flexible when considering future changes
+	to objects and actors.
+	
+	
+\end{itemize}
 
 Protecting confidential data in computing environments has long been recognized as a difficult and daunting problem. All modern operating systems include some form of access control to protect files from being read or modified by unauthorized users. However, access controls are insufficient to regulate the propagation of information after it has been released for processing by a program. Similarly,
 cryptography provides strong confidentiality guarantees in open, possibly hostile environments like the Internet, but it is prohibitively expensive to perform nontrivial computations with encrypted data. Neither access control nor encryption
@@ -181,6 +229,15 @@ One familiar use of authentication and authorization is access control. A comput
 	 hardware device.
 	\item	 Something you are is a physical attribute that can be identified, such as a fingerprint or voice.
 \end{itemize}
+
+\textbf{The Challenges in secure Authentication:}
+
+The security of an application is always a trade off between a high level of security and more usability. The more security is added to an authentication system (pass phrases instead of passwords, multiple authentication tokens), the lower will be the acceptance rate of the users and the usability will decrease. It is a big challenge to find the most secure authentication system which is accepted by the users. 
+
+Users always want new applications and features with easy to use interfaces. At the same time they are worried about the increasing dangers. Moreover, new legislations are pushing manufactures and companies to protect the privacy of their clients.The increasing mobility of the users is another important factor. The users want to access their applications not only with their desktop at home, but also in their office, on vacation with their PDA and everywhere with their cell phone. Those needs pose significant requirements to the security of applications. 
+
+These broad demands from the users create a wide range of attack vectors. Phishing, identity theft, spyware, malware, keyloggers, javascript attacks, and generally untrusted consumer platforms all make the traditional means of password based authentication ever more complicated.
+
 
 According to the networkworld \cite{ref_21_networld} now-a-days seven strong authentication methods are:
 \begin{itemize}
