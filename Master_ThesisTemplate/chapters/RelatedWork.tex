@@ -1,13 +1,13 @@
 \chapter{Related Work}
 
 There are many annotation languages proposed until now for
-extending the C type system \cite{ref_54_condit:dependent}, \cite{ref_53_evans:static}, \cite{ref_51_microsoft:sal}, \cite{ref_55_sun:lock}, \cite{ref_56_torvalds:sparse} to be
+extending the C type system \cite{ref_54_condit:dependent}, \cite{ref_53_evans:static,ref_51_microsoft:sal,ref_55_sun:lock,ref_56_torvalds:sparse} to be
 used during run-time as a new language run-time for PHP and
-Python \cite{ref_57_alex:improving} to annotate function interfaces \cite{ref_53_evans:static}, \cite{ref_51_microsoft:sal}, \cite{ref_56_torvalds:sparse} to
+Python \cite{ref_57_alex:improving} to annotate function interfaces \cite{ref_53_evans:static,ref_51_microsoft:sal,ref_56_torvalds:sparse} to
 annotate models in order to detect information flow bugs \cite{ref_58_iflow:kuzman}
-to annotate source code files \cite{ref_59_rosenblum:towards}, \cite{ref_60_rosenblum:practical}, \cite{ref_61_lintan:acomment} or to annotate
-control flows \cite{ref_53_evans:static}, \cite{ref_52_splint:flow}, \cite{ref_51_microsoft:sal}.The following annotation languages have made significant impact: Microsoft\'s SAL annotations \cite{ref_51_microsoft:sal} helped to detect more than 1000 potential security vulnerabilities in Windows
-code \cite{ref_50_ball:research}. In addition, several other annotation languages including FlowCaml \cite{ref_49_simonet:flowcaml}, Jif \cite{ref_48_chong:jif}, Fable \cite{ref_47_swamy:fable}, AURA \cite{ref_46_jia:aura} and FINE \cite{ref_45_nikhil:fine} express information flow related concerns.
+to annotate source code files \cite{ref_59_rosenblum:towards,ref_60_rosenblum:practical,ref_61_lintan:acomment} or to annotate
+control flows \cite{ref_53_evans:static,ref_52_splint:flow,ref_51_microsoft:sal}.The following annotation languages have made significant impact: Microsoft\'s SAL annotations \cite{ref_51_microsoft:sal} helped to detect more than 1000 potential security vulnerabilities in Windows
+code \cite{ref_50_ball:research}. In addition, several other annotation languages including  Jif \cite{ref_48_chong:jif}, AURA \cite{ref_46_jia:aura}, FlowCaml \cite{ref_49_simonet:flowcaml}, FINE \cite{ref_45_nikhil:fine} and Fable \cite{ref_47_swamy:fable} express information flow related concerns.
 
 Saner \cite{ref_61_lintan:acomment}, a novel approach to the evaluation of the sanitization process in web applications. The approach relies on two complementary analysis techniques to identify faulty sanitization procedures. Saner \cite{ref_61_lintan:acomment} introduce a dynamic analysis technique that is
 able to reconstruct the code that is responsible for
@@ -60,8 +60,8 @@ information release. This research suggests a promising practical approach of na
 
 
 The detection of information flow errors can be
-addressed with dynamic analysis techniques \cite{ref_44_avgerinos:aeg}, \cite{ref_43_fenton:memoryless}, \cite{ref_42_sabelfeld:dynamic},
-static analysis techniques \cite{ref_41_guarnieri:security}, \cite{ref_40_myers:jflow}, \cite{ref_39_simonet:report}, \cite{ref_38_volpano:sound}, \cite{ref_37_xiao:transparent} (similar
+addressed with dynamic analysis techniques \cite{ref_44_avgerinos:aeg,ref_43_fenton:memoryless,ref_42_sabelfeld:dynamic},
+static analysis techniques \cite{ref_41_guarnieri:security,ref_40_myers:jflow,ref_39_simonet:report,ref_38_volpano:sound,ref_37_xiao:transparent} (similar
 to our approach with respect to static analysis of code and
 tracking of data information flow) and hybrid techniques which
 combine static and dynamic approaches \cite{ref_36_moore:static}. Also, extended
@@ -129,7 +129,7 @@ Thus, a user has to learn to use two annotation languages
 which can be perceived to be a high burden in some scenarios.
 
 
- Heldal et al. \cite{ref_25_heldal:bridging}, \cite{ref_23_heldal:supporting} introduced an
+ Heldal et al. \cite{ref_25_heldal:bridging,ref_23_heldal:supporting} introduced an
 UML profile that incorporates a decentralized label model [40]
 into the UML. It allows the annotation of UML artifacts with
 Jif \cite{ref_24_myers:descentrelized} labels in order to generate Jif code from the UML
