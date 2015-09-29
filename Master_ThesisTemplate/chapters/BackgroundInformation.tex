@@ -89,6 +89,43 @@ with low probability.It's always good that transforming information to a form wh
 
 Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS), and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
 
+SQL injection vulnerabilities arise in applications where elements of a SQL query originate from an untrusted source. Without precautions, the untrusted data may maliciously alter the query, resulting in information leaks or data modification. The primary means of preventing SQL injection are sanitization and validation, which are typically implemented as parameterized queries and stored procedures.
+
+Suppose a system authenticates users by issuing the following query to a SQL database. If the query returns any results, authentication succeeds; otherwise, authentication fails.
+
+\begin{lstlisting}
+	SELECT * FROM db_user WHERE username='<USERNAME>' AND
+	password='<PASSWORD>'
+\end{lstlisting}
+
+Suppose an attacker can substitute arbitrary strings for <USERNAME> and <PASSWORD>. In that case, the authentication mechanism can be bypassed by supplying the following <USERNAME> with an arbitrary password:
+
+\begin{lstlisting}
+	validuser' OR '1'='1
+\end{lstlisting}
+
+The authentication routine dynamically constructs the following query:
+
+\begin{lstlisting}
+	SELECT * FROM db_user WHERE username='validuser' OR '1'='1' AND password='<PASSWORD>'
+\end{lstlisting}
+
+If validuser is a valid user name, this SELECT statement yields the validuser record in the table. The password is never checked because username='validuser' is true; consequently, the items after the OR are not tested. As long as the components after the OR generate a syntactically correct SQL expression, the attacker is granted the access of validuser.
+Similarly, an attacker could supply the following string for PASSWORD with an arbitrary username:
+
+\begin{lstlisting}
+	' OR '1'='1
+\end{lstlisting}
+producing the following query:
+
+\begin{lstlisting}
+	SELECT * FROM db_user WHERE username='<USERNAME>' AND password='' OR '1'='1'
+\end{lstlisting}
+'1'='1' always evaluates to true, causing the query to yield every row in the database. In this scenario, the attacker would be authenticated without needing a valid username or password.
+
+
+In many cases, the data is passed directly to a component in a different trusted domain. Data sanitization is the process of ensuring that data conforms to the requirements of the subsystem to which it is passed. Sanitization also involves ensuring that data conforms to security-related requirements regarding leaking or exposure of sensitive data when output across a trust boundary. Sanitization may include the elimination of unwanted characters from the input by means of removing, replacing, encoding, or escaping the characters. Sanitization may occur following input (input sanitization) or before the data is passed across a trust boundary (output sanitization). Data sanitization and input validation may coexist and complement each other. Many command interpreters and parsers provide their own sanitization and validation methods. When available, their use is preferred over custom sanitization techniques because custom-developed sanitization can often neglect special cases or hidden complexities in the parser. Another problem with custom sanitization code is that it may not be adequately maintained when new capabilities are added to the command interpreter or parser software.
+
 Input sanitization describes cleansing and scrubbing user input to prevent it from jumping the fence and exploiting security holes. But thorough input sanitization is hard. While some vulnerable sites simply don't sanitize at all, others do so incompletely, lending their owners a false sense of security.
 
 Some basic purpose of sanitization are given below:
@@ -101,6 +138,25 @@ Some basic purpose of sanitization are given below:
 	\item Most paths that go from a source to a sink pass through a sanitizer.
 	\item Developers typically define a small number of sanitization functions in libraries.
 	\item Prevent web attacks using input sanitization.
+\end{itemize}
+
+\textbf{Sanitize the input by removing suspicious tags:}
+This is a naive approach because it's almost impossible to cover everything. This regex function removes the obvious code to inject unwanted scripting which is given below.
+
+\begin{lstlisting}
+	public static String sanitize(String string) {
+	return string
+		.replaceAll("(?i)<script.*?>.*?</script.*?>", "")   // case 1
+		.replaceAll("(?i)<.*?javascript:.*?>.*?</.*?>", "") // case 2
+		.replaceAll("(?i)<.*?\\s+on.*?>.*?</.*?>", "");     // case 3
+	}
+	
+\end{lstlisting}
+
+\begin{itemize}
+	\item case 1 : script tags are removed are removed.
+	\item case 2 : javascript call are removed.
+	\item case 3 : remove on* attributes like onLoad or onClick
 \end{itemize}
 
 \section{Declassification}
@@ -153,7 +209,6 @@ harder to formalize in a general way, beyond saying that they cannot be captured
 \enquote{what} and \enquote{when} dimensions.
 
 \section{Authentication}
-
 Malicious applications targeting financial account information have increased dramatically over the last years. The number of online applications is growing strong. The ease of use of the Internet and the growing user base make a perfect target for criminals. Attacking thousands of users is achievable with only one click.The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore.
 
 To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.

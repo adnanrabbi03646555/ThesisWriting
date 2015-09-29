@@ -9,11 +9,11 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Sanitization}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Declassification}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Authentication}{10}{section.2.3}
-\contentsline {section}{\numberline {2.4}Static Code Analysis}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}Information Flow Vulnerabilities}{14}{section.2.5}
-\contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{15}{section.2.6}
+\contentsline {section}{\numberline {2.2}Declassification}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}Authentication}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}Static Code Analysis}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Information Flow Vulnerabilities}{15}{section.2.5}
+\contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{16}{section.2.6}
 \contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{16}{section.2.7}
 \contentsline {part}{\numberline {II}The 2nd Part}{19}{part.2}
 \contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{21}{chapter.3}
