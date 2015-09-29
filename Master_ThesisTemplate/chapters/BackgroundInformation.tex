@@ -89,6 +89,17 @@ with low probability.It's always good that transforming information to a form wh
 
 Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
 
+Cross-site scripting (XSS) attacks (the most common vulnerability)
+may occur when a Web application accepts data originating
+from a user and sends it to another user's browser without
+first validating or encoding it. For example, suppose an attacker
+embeds malicious JavaScript code into his or her profile on a
+social Web site. If the site fails to validate such input, that code
+may execute in the browser of any other user who visits that
+profile.
+
+Malicious file executions happen when a Web application improperly trusts input files or uses unverified user data in stream functions, thereby allowing hostile content to be executed on the server.
+
 SQL injection vulnerabilities arise in applications where elements of a SQL query originate from an untrusted source. Without precautions, the untrusted data may maliciously alter the query, resulting in information leaks or data modification. The primary means of preventing SQL injection are sanitization and validation, which are typically implemented as parameterized queries and stored procedures.
 
 Suppose a system authenticates users by issuing the following query to a SQL database. If the query returns any results, authentication succeeds; otherwise, authentication fails.
@@ -402,6 +413,15 @@ According to the GCN \cite{ref_87_gcn:gcn} static code analysis limitations are:
 \section{Information Flow Vulnerabilities}
 
 Information flow means  transmission of information from one "place" to another. Securing the data manipulated by computing systems has been a challenge in the past years. Several methods to limit the information disclosure exist today, such as access control lists, firewalls, and cryptography. However, although these methods do impose limits on the information that is released by a system, they provide no guarantees about information propagation. For example, access control lists of file systems prevent unauthorized file access, but they do not control how the data is used afterwards. Similarly, cryptography provides a means to exchange information privately across a non-secure channel, but no guarantees about the confidentiality of the data are given once it is decrypted.
+
+Information-flow violations \cite{ref_103_denning1977certification} comprise the most serious security
+vulnerabilities in today's Web applications. In fact, according to
+the Open Web Application Security Project (OWASP) \cite{ref_104_owasp:owasp}, they
+constitute the top six security problems. Automatically detecting
+such vulnerabilities in real-world web applications may be difficult
+due to their size and complexity. Manual code inspection is often
+ineffective for such complex programs, and security testing may
+remain inconclusive due to insufficient coverage.
 
 In low level information flow analysis, each variable is usually assigned a security level. The basic model comprises two distinct levels: low and high, meaning, respectively, publicly observable information, and secret information. To ensure confidentiality, flowing information from high to low variables should not be allowed. On the other hand, to ensure integrity, flows to high variables should be restricted.For example, considering two security levels L and H (low and high), if L less equal to H, flows from L to L, from H to H, and L to H would be allowed, while flows from H to L would not \cite{ref_88_smith2007principles}.
 

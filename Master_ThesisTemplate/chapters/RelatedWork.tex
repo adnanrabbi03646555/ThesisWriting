@@ -33,8 +33,26 @@ our approach, UMLSec does neither automatic code
 generation nor the annotations can be used for automated
 constraints checking.
 
+TAJ \cite{ref_100_tripp2009taj}, an approach to taint analysis suitable for industrial applications. An experimental evaluation indicates that
+the hybrid algorithm TAJ uses for slice construction is an attractive
+compromise between context-sensitive and context-insensitive
+thin slicing. TAJ is able to perform effective taint analysis in a limited budget, improving performance without significantly degrading accuracy.
+
 Darvas, H{\"a}hnle, and Sands \cite{ref_70_darvas2005theorem} used a self-compositional approach to prove secure information flow properties for Java CARD programs. They used an interactive approach instead of an automatic approach. Barthe, D'Argenio, and Rezk coined the term "self-composition" in their paper \cite{ref_71_barthe2004secure}. Their paper is mostly theoretical results on characterizing various secure information flow problems, including
 non-deterministic and termination-sensitive cases, in a self-compositional framework.
+
+Wassermann and Su extend Minamide's string-analysis algorithm
+\cite{ref_102_minamide2005static} to syntactically isolate tainted substrings from untainted
+substrings in PHP applications. They label non-terminals in a
+Context-Free Grammar (CFG) with annotations reflecting taintedness
+and untaintedness. Their expensive, yet elegant, mechanism
+is applied to detect both SQL injection and XSS vulnerabilities.
+
+McCamant and Ernst \cite{ref_101_mccamant2008quantitative} take a quantitative approach in information
+flow: instead of using taint analysis, they cast information-
+flow security to a network-flow-capacity problem, and describe a
+dynamic technique for measuring the amount of secret data that
+leaks to public observers.
 
 Barthe, D'Argenio, and Rezk in the same paper showed that their selfcompositional framework can handle delimited information release as originally proposed by Sabelfeld and Myers \cite{ref_72_sabelfeld2004model}. Li and Zdancewic's
 recently proposed relaxed non-interference \cite{ref_73_li2005downgrading} is equivalent to delimited information release when strengthened with semantic equivalence. Relaxed non-interference is arguably a more natural formulation of information downgrading than delimited
