@@ -1,12 +1,9 @@
 \chapter{ Challenges and Annotation Language Extension}
 Main goal was to overcome the challenge of not being able
-to detect implicit and explicit information flow bugs in UML
-state charts and C code. An annotation language
+to detect implicit and explicit information flow bugs in UML state charts and C code. An annotation language
 which can be used to annotate UML state charts and code by inserting information flow
 restrictions during two software development phases (design
-and coding). The insight was that the same annotation language
-can be used to add information flow constraints to UML state
-charts and code in order to detect information flow errors.
+and coding). The insight was that the same annotation language can be used to add information flow constraints to UML state charts and code in order to detect information flow errors.
  
 In this chapter the challenges and how the annotation language has extended are described.
 
@@ -56,7 +53,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	\textbf{Users of Xtext:}
 	Xtext is used in many different industries. It is used in the field of mobile devices, automotive development, embedded systems or Java enterprise software projects and game development. People use Xtext based languages to drive code generators that target Java, C, C++, C sharp, Objective C, Python, or Ruby code. Although the language infrastructure itself runs on the JVM, you can compile Xtext languages to any existing platform. Xtext based languages are developed for well known Open-Source projects such as Maven, Eclipse B3, the Eclipse Webtools platform or Google's Protocol Buffers and the framework is also widely used in research projects.
 	
-	\item Xtend : According to the \cite{ref_92_xtend:xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: Everything you write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
+	\item Xtend : According to the \cite{ref_20_xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: Everything you write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
 	
 	\textbf{Java Interoperability:}
 	Xtend, like Java, is a statically typed language. In fact it completely supports Java's type system, including the primitive types like int or boolean, arrays and all the Java classes, interfaces, enums and annotations that reside on the class path.
@@ -131,7 +128,7 @@ defined and implemented iteratively based on the work flow
 presented in figure \ref{figure:Language_Design_Process} and by using the eclipse xtext \cite{ref_17_xtext:grammar} language
 definition grammar.\\
 
-For detecting of authentication, declassification and sanitization errors new function tags included like authentication, declassification and sanitization function type. Also for parameter new tag type of parameter included such as authenticated, declassified and sanitized. Still H/L tags for parameter exists in the annotation tags for parameter to define that which type of parameter is this either \enquote{High} or \enquote{Low}. High means that this parameter is highly confidential or secured and low means that this parameter is not highly secured. In Table \ref{table:Security_language_annotation_tags} the new tags for annotation language grammar has given. 
+For detecting of authentication, declassification and sanitization errors new function tags included like authentication, declassification and sanitization function type. Also for parameter new tag type of parameter included such as authenticated, declassified and sanitized. Still H/L tags for parameter exists in the annotation tags for parameter to define that which type of parameter is this either \enquote{High} or \enquote{Low}. High means that this parameter is highly confidential or secured and low means that this parameter is not highly secured. The tag preStep used to annotate the previous function call name and tag postStep is used for next function call name. In Table \ref{table:Security_language_annotation_tags} the new tags for annotation language grammar has given with previous annotation tags. 
 
 \begin{table}
 	\centering
@@ -139,6 +136,7 @@ For detecting of authentication, declassification and sanitization errors new fu
 	\hline
 	Annotation Type   & Annotation Tag & Description  \\
 	\hline
+
 	@function         & sink  		   & uses information \\
 	                  & source         & source provides information	\\
 	                  & authentication & authentication authenticates information	\\
@@ -153,19 +151,73 @@ For detecting of authentication, declassification and sanitization errors new fu
 					  & source H/L & source High/Low tags   \\
 	\hline
 	
+	@preStep         & preStep  & previous function call name\\ 	\hline
+	@postStep        & postStep  & next function call name\\ 	\hline
+
+	
 \end{tabular}
 \caption{Security language annotation tags}
 \label{table:Security_language_annotation_tags}
 \end{table}
 
-\section{Language Implementation Process}
+\section{Annotation Language Implementation Process}
+
+To implement the annotation language Eclipse Xtext \cite{ref_17_xtext:grammar} was used. Xtext is a sophisticated framework that helps to implement own DSL(Domain Specific Language) with appropriate IDE support. There is no such limitation as with XML, user's are free to define user's concrete syntax as user like. It may be as concise and suggestive as possible being a best match for user's particular domain. The hard task of reading user model, working with it and writing it back to user's syntax is greatly simplified by Xtext. Xtext relies heavily on Eclipse Modeling Framework (EMF) internally, but it can also be used as the serialization back-end of other EMF-based tools.  
+
+Xtext provides a lot of generic implementations for language's infrastructure but also uses code generation to generate some of the components. Those generated components are for instance the parser, the serializer, the inferred Ecore model (if any) and a couple of convenient base classes for content assist etc.The generator also contributes to shared project resources such as the plugin.xml, MANIFEST.MF and the Guice modules. Xtext's generator uses a special DSL called MWE2 - the modeling workflow engine to configure the generator. MWE2 allows to compose object graphs declaratively in a very compact manner. The nice thing about it is that it just instantiates Java classes and the configuration is done through public setter and adder methods as one is used to from Java Beans encapsulation principles.
+
+Xtext itself and every language infrastructure developed with Xtext is configured and wired-up using dependency injection. Xtext may be used in different environments which introduce different constraints. Especially important is the difference between OSGi managed containers and plain vanilla Java programs. To honor these differences Xtext uses the concept of ISetup (src)-implementations in normal mode and uses Eclipse's extension mechanism when it should be configured in an OSGi environment.
+
+The Modeling Workflow Engine 2 (MWE2) is a rewritten backwards compatible implementation of the Modeling Workflow Engine (MWE). It is a declarative, externally configurable generator engine. Users can describe arbitrary object compositions by means of a simple, concise syntax that allows to declare object instances, attribute values and references. One use case - that's where the name had its origins - is the definition of workflows. Such a workflow consists usually of a number of components that interact with each other. There are components to read EMF resources, to perform operations (transformations) on them and to write them back or to generate any number of other artifacts out of the information. Workflows are typically executed in a single JVM. However there are no constraints the prevent implementors to provide components that spawn multiple threads or new processes.
+
+Xtext ships with a default set of predefined, reasonable and often required terminal rules. The grammar for these common terminal rules is defined as follows:
+	\begin{lstlisting}
+		grammar org.eclipse.xtext.common.Terminals 
+		hidden(WS, ML_COMMENT, SL_COMMENT)
+		import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+		terminal ID : 
+		'^'?('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+		terminal INT returns ecore::EInt: 
+		('0'..'9')+;
+		terminal STRING  : 
+		'"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+		"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"; 
+		terminal ML_COMMENT  : 
+		'/*' -> '*/';
+		terminal SL_COMMENT : 
+		'//' !('\n'|'\r')* ('\r'? '\n')?;
+		terminal WS  : 
+		(' '|'\t'|'\r'|'\n')+;
+		terminal ANY_OTHER: 
+		.;
+	\end{lstlisting}
+
+In order to implement the annotation language grammer in this research it was required to extend the terminal rule ML\_COMMENT and SL\_COMMENT. After extending these two rules it looks like this:
+
+\begin{lstlisting}
+	/**
+	* @SL_COMMENT :all strings which follow // | || | } will be a single line comment
+	*/ 
+	terminal SL_COMMENT 	: '//'!('@')  !('\n'|'\r')* ('\n'|'\r')*
+	// '}' can be used optional to disable the method bodyes together with multiline line {} comment 
+	//     | '}'         !('\n'|'\r')* ('\n'|'\r')*               
+	;
+	
+	/**
+	* @ML_COMMENT :@/* multiline comment excluding @ from inside
+	*            :{} multi line comment 
+	*/ 
+	terminal ML_COMMENT	: '/*' !('@') -> !('@')'*/'   !('\n'|'\r')* ('\n'|'\r')*   
+	// '{' -> '}' can be used optional to disable the method bodyes together with single line { comment 
+		//      | '{' -> '}'                   ('\n'|'\r')?
+		;   
+\end{lstlisting}
 
 The process depicted in figure \ref{figure:Language_Design_Process} was used in order to
 implement annotation language. Figure 3.1 depicts the
 annotation language implementation process. The process is
 comprised of the following steps: At first, the .xtext file
-containing the language grammar was extended following the requirements. Next the grammar file is compiled and software
-artifacts are generated. After editing the .mwe2 file then compile it. The result of compiling is: a parser, a lexer and class bindings between these two (lexer and parser) and the grammar ECore model. The generated parser, lexer and the bindings were reused inside static analysis engine and in the UI source file editor. After opening and editing a source file with the editor,the file can be parsed and the annotations can be automatically loaded and used inside checkers.
+containing the language grammar was extended following the requirements. Next the grammar file is compiled and software artifacts are generated. After editing the .mwe2 file then compile it. The result of compiling is: a parser, a lexer and class bindings between these two (lexer and parser) and the grammar ECore model. The generated parser, lexer and the bindings were reused inside static analysis engine and in the UI source file editor. After opening and editing a source file with the editor,the file can be parsed and the annotations can be automatically loaded and used inside checkers.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics{styles/Language_Design_Process.png}
