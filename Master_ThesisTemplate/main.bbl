@@ -543,6 +543,12 @@ John Viega and Gary McGraw.
   right way}.
 \newblock Pearson Education, 2001.
 
+\bibitem{ref_107_visual-paradigm:visual-paradigm}
+visual paradigm.
+\newblock {visual-paradigm}.
+\newblock Technical report, visual-paradigm,
+  http://www.visual-paradigm.com/VPGallery/diagrams/Sequence.html.
+
 \bibitem{ref_38_volpano:sound}
 D.~Volpano, G.~Smith, and C.~Irvine.
 \newblock {A sound type system for secure flow analysis}.
