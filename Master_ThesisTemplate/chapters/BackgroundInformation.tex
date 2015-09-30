@@ -480,7 +480,7 @@ It would be easier for the developer if information flow errors can be detected 
 If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. That's why it is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/FunctionCallMissing.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/FunctionCallMissing.pdf}}
 	\caption{Information flow errors during design}
 	\label{figure_FunctionCallMissing}
 \end{figure}
@@ -496,7 +496,7 @@ two information flows. A source is any function or programming language statemen
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/bug_detection_during_coding.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/bug_detection_during_coding.pdf}}
 	\caption{Information flow errors during coding}
 	\label{figure_bug_detection_during_coding}
 \end{figure}

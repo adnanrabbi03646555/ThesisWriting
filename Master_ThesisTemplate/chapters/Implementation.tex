@@ -30,7 +30,7 @@ System Architecture is based on 9 fundamental principles:
 The architecture of our system is given below:
 \begin{figure}[htbp]
 	\centering
-	\includegraphics{styles/system_architecture.png}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/system_architecture.pdf}}
 	\caption{System Overview}
 \end{figure}
 
@@ -57,7 +57,7 @@ Using SAL is relatively easy. You simply add annotations to your function protot
 		Category  & Parameter Annotation & Description  \\
 		\hline
 		
-		Input to called function        & \_In\_k  		   &Data is passed to the called function, and is treated as read-only\\
+		Input to called function        & \_In\_k  		   & Data is passed to the called function, and is treated as read-only\\
 		\hline
 		
 		Input to called function, and output to caller        & \_Inout\_ & Usable data is passed into the function and potentially is modified. \\ \hline
