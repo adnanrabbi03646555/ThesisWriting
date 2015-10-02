@@ -1,0 +1,337 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+/**
+   [xText Grammar description.  Logger]
+   
+   [Other notes: used for adding annotations to .h, .hh, .hhh, .hxx, .c, .cpp, .C and .Cpp files"]
+   This grammar is intended to be used for annotating the above mentioned header files
+   @author Paul Muntean
+   @version $Revision: 0.3  Date: 14.05.2014 Hour: 18:10;15 PM
+**/
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+/**
+ * @AnnotationLanguage: top root node of the annotation language
+ */
+AnnotationLanguage:
+    element+= HeaderModel*
+;
+
+/**
+ * @SingleLineAnnotation: entity used for single line annotations
+ * @MultilineAnnotation : entity used for multi line annotations
+ * @MethodHeader        : entity used for recognizing anykind of C/C++ headers
+ * @AttributeDefinition : entity used for recognizing anykind of variable definition
+ */ 
+HeaderModel:
+   headers+= SingleLineAnnotation      
+           | MultilineAnnotation
+           | MethodHeader   
+           | AttributeDefinition
+;
+
+/**
+ * @AttributeDefinition : entity used for recognizing anykind of statement which begins with the simbol #
+ */ 
+AttributeDefinition:
+	{AttributeDefinition}(attribute_def+=(SYMBOLS)?(' '?)*extension+=KeyWord (extension_2+=ExpressionAttribute))('\n'|'\r')*                          
+;
+
+/**
+ * @ExpressionAttribute : atribute of the AttributeDefinition
+ */ 
+ExpressionAttribute returns Ref:
+    EntityRef(({Expression.ref=current} (symbols_attr+=SYMBOLS) tail=EntityRef)*)
+;
+
+/**
+ * @MethodHeader :this recognizes anykind of method headers
+ */ 
+MethodHeader returns MethodHeader :
+	 {MethodHeader}(	 
+	 	((name0=SYMBOLS)?(' '?'*'* ' '* ID ' '?)* 
+	 		name1=SYMBOLS exp+=Expression name2=SYMBOLS)
+	 	((name3=SYMBOLS)?(ID?)(name4=SYMBOLS)?(ID?)(name5=SYMBOLS)?(ID?))
+	 	   name6=SYMBOLS?
+	 )  ('\n' | '\r')?
+;
+
+/**
+ * @Expression :used for recognizing expresions inside a MethodHeader
+ *               :it contains one recursion on the current
+ */ 
+Expression returns Ref:
+    EntityRef(({Expression.ref=current} (symbols+=SYMBOLS) tail=EntityRef)*)
+;
+
+/**
+ * @EntityRef :@Expression contains @EntityRef, this is a list of entitys
+ */ 
+EntityRef returns Ref:
+    {EntityRef} (entity+=SpecialExpression)*
+;
+/**
+ * @IDSpace :contains a left recursion on the currrent
+ *          :used for identityfing expressions with a space in front
+ */ 
+IDSpace:
+	EntityRef ({IDSpace.left=current} (' ')* right=SpecialExpression)*
+;
+
+/**
+ * @SpecialExpression :expressions containing stars
+ */ 
+SpecialExpression:
+	{Entity}(rules+=
+		ID 
+		| '**'((name0=SYMBOLS)?)(ID)? 
+		| name1=SYMBOLS(name2=SYMBOLS)?(name3=SYMBOLS)?(name4=SYMBOLS)?(ID)? 
+		| INT
+	)
+;
+
+/**
+ * @SpaceID :used for recognizing spaces followed be ID
+ */ 
+SpaceID:
+	{SpaceID}(expr+= (' ')* ID?)*
+;
+
+/**
+ * @MultilineAnnotation :used for adding multiline annotations
+ */ 
+MultilineAnnotation returns MultilineAnnotation:
+	{MultilineAnnotation}(
+		          rule+= ('/*@ ')?  ('* ')?  functionAnnotation=FunctionAnnotation ('\n')? (' @*/')? (name0=SYMBOLS)?
+	                   | ('*') ' ' ' ' ('@*/') (name1=SYMBOLS)? ('\n' | '\r')?
+	)	
+;
+
+/**
+ * @FunctionAnnotation :used for function annotations
+ */ 
+FunctionAnnotation returns FunctionAnnotation:
+	{FunctionAnnotation}( 
+	                      result +=  '@function '   functionType=FunctionType      (' ')?                              (level =('H'|'L'))?     ((name0=SYMBOLS))? ((nameComment=ID))? ('\n' | '\r')?
+	                               // supported without space before confidential and sensitive
+	                               | '@parameter '   parameter=ID (name0=SYMBOLS)? (securityType=SecurityType)?(' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((name1=SYMBOLS))? ((nameComment=ID))? ('\n' | '\r')?
+	                               //for annotating pre and post functions
+	                               | '@preStep '     preStep=ID (name0=SYMBOLS)? (' ')?                                (level =('H'|'L'))?     ((name2=SYMBOLS))? ((nameComment=ID))? ('\n' | '\r')?
+	                               | '@postStep '    postStep=ID (name0=SYMBOLS)? (' ')?                               (level =('H'|'L'))?     ((name3=SYMBOLS))? ((nameComment=ID))? ('\n' | '\r')?	
+	                               | '@return'                                    (' ')?                               (level =('H'|'L'))?    									('\n' | '\r')?                                           
+	)
+;
+
+/**
+ * @SingleLineAnnotation :used for adding single line annotations
+ */ 
+SingleLineAnnotation returns SingleLineAnnotation:
+	{SingleLineAnnotation}(
+	                      result+=  '//@ @function '    functionType=FunctionType (' ')?                  (level =('H'|'L'))?  ((name0=SYMBOLS))? ((nameComment=ID))?  ('\n' | '\r')*
+	                              // supported without space before confidential and sensitive
+	                              | '//@ @parameter '   parameter=ID (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)? ((nameComment=ID))?  ('\n' | '\r')?
+	                              | '//@ @variable '    variable=ID  (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?
+	                              //for annotating pre and post functions
+	                              | '//@ @preStep '     preStep=ID (' ')?                                 (level =('H'|'L'))?  ((name2=SYMBOLS))? ((nameComment=ID))?  ('\n' | '\r')*
+	                              | '//@ @postStep '    postStep=ID (' ')?                                (level =('H'|'L'))?  ((name3=SYMBOLS))? ((nameComment=ID))?  ('\n' | '\r')*	                       
+	)
+;
+
+/**
+ * @AnnotationType :annotation types
+ *                 :annotations can addres whole functions or parameters of a function
+ */ 
+enum AnnotationType:
+	function
+  |	parameter 
+  | preStep
+  | postStep
+;
+
+/**
+ * @FunctionType :annotaions types for functions
+ */ 
+enum FunctionType: declassification 
+                  | sanitization
+                  | authentication
+                  | sink
+                  | source
+                  | trust_boundary
+;
+
+/**
+ * @SecurityType :annotations types for parameters
+ */ 
+enum SecurityType: confidential 
+	              | sensitive
+;
+
+/**
+ * @VariableSituation :annotaions types for function parameters
+ */ 
+enum VariableType: declassified 
+                  | sanitized
+                  | authenticated
+;
+
+/**
+ * @KeyWord :list of C/C++ keywords
+ */ 
+KeyWord returns KeyWord:
+	{KeyWord}(
+			rule=
+	            '__BEGIN_DECLS'
+	           |'__BEGIN_NAMESPACE_STD'
+           	   |'__BEGIN_NAMESPACE_C99'
+	           |'__END_DECLS'    
+	           |'__END_NAMESPACE_STD'
+	           |'__END_NAMESPACE_C99' 
+               |'__USING_NAMESPACE_STD'
+               |'define'
+               |'ifndef'
+               |'undef'
+               |'ifdef'
+               |'if'
+               |'include'
+               |'include_next'
+               |'pragma'
+               |'else'
+               |'elif'
+               |'error'
+               |'typedef'
+               |'class'
+               |'endif'
+               |'source'
+	)
+;
+
+/**
+ * @SYMBOLS :all available C/C++ symbols
+ */ 
+SYMBOLS: 
+{SYMBOLS}(symbols+=
+      ','
+ 	| '.'
+ 	| '..'
+ 	| '...'
+ 	| '' //don't know what this is, it is in math.h
+ 	| ';'
+ 	| ' ' 
+ 	| '*'
+ 	| '* '
+    | '['
+ 	| ']'
+    | '\n'
+ 	| '('
+ 	| ')'
+ 	| '>>'
+ 	| '<<'
+ 	| '>'
+ 	| '<'
+ 	| '^'
+ 	| '+'
+ 	| '-'
+ 	| '/'
+ 	| BackSlash
+ 	| '%'
+ 	| '|'
+ 	| '->'
+ 	| '<-'
+ 	| '='
+ 	| '?'
+ 	| '!'
+ 	| DoubleQuote
+ 	| SingleQuote
+ 	| ':'
+ 	| '&'
+ 	| '~'
+ 	| '#'
+ 	| CURLY_OPEN
+ 	| CURLY_CLOSE
+ 	| INT
+ 	| name0=KeyWord //used to bypass the reserved xText keyword source, source can be used a function call in C/C++ headers or source files
+ )
+ ;	
+
+/**
+ * @StructDefinition :used for identifying structs
+ *                   :this is future work. This can be used in the future
+ *                   :when {} is removed as multiline comment and the body of 
+ *                   :the struct will be available
+ */ 
+StructDefinition:
+	'typedef ' ID (name0=SYMBOLS) name1=ID CURLY_OPEN
+	  attr+=ID* 
+	CURLY_CLOSE (name2=SYMBOLS) name3=ID (name4=SYMBOLS)?
+;
+ 
+/**
+ * @SingleQuote :declaration of ' and avoinding overriding the terminal STRING
+ */ 
+SingleQuote: 
+ 	 MY_STRING
+ ;
+ 
+/**
+ * @DoubleQuote :declaration of " and avoinding overriding the terminal STRING
+ */ 
+DoubleQuote: 
+ 	STRING | DOUBLE_DQ_STRING
+ ;
+
+/**
+ * @BackSlash :declaration of \ and avoinding overriding the terminal STRING
+ */ 
+BackSlash:
+ 	STRING | MY_BACKSLASH
+ ;
+
+/**
+ * @MY_BACKSLASH :double backslash
+ */ 
+ terminal MY_BACKSLASH: '\\' ;
+ 
+ /**
+ * @DQ_STRING :double quote declaration
+ */ 
+ terminal DOUBLE_DQ_STRING :   "'\"' ~('\"')* '\"'";
+ 
+ /**
+ * @SQ_STRING :single quote declaration
+ */ 
+ terminal DOUBLE_SQ_STRING :   "'\'' ~('\'')* '\''";
+ 
+ /**
+ * @CURLY_OPEN :open curly bracket declaration
+ */ 
+ terminal CURLY_OPEN:   '{';
+ 
+ /**
+ * @CURLY_CLOSE :close curly bracket declaration
+ */ 
+ terminal CURLY_CLOSE:  '}';
+
+ /**
+ * @MY_STRING :modified string terminals, it allows anykind of symbols inside the single and double quotations \
+ */
+terminal MY_STRING	: 
+			'"' ( '\\' | !('\\'|'"') )* '"' |
+			"'" ( '\\' | !('\\'|"'") )* "'"
+		; 
+	
+ /**
+ * @SL_COMMENT :all strings which follow // | || | } will be a single line comment
+ */ 
+ terminal SL_COMMENT 	: '//'!('@')  !('\n'|'\r')* ('\n'|'\r')*
+ 	 	           // '}' can be used optional to disable the method bodyes together with multiline line {} comment 
+ 	               //     | '}'         !('\n'|'\r')* ('\n'|'\r')*               
+ ;
+
+/**
+ * @ML_COMMENT :@/* multiline comment excluding @ from inside
+  *            :{} multi line comment 
+ */ 
+ terminal ML_COMMENT	: '/*' !('@') -> !('@')'*/'   !('\n'|'\r')* ('\n'|'\r')*   
+ 	              // '{' -> '}' can be used optional to disable the method bodyes together with single line { comment 
+ 	              //      | '{' -> '}'                   ('\n'|'\r')?
+ ;

@@ -188,3 +188,20 @@ When bug found inside the source file, if user click the bug location then easil
 	\caption{Bug Reports in Checker with Message}
 \end{figure}
 
+\section{Error Trace in Sequence Diagram}
+
+To trace the buggy path here in this research sequence digram have used. Function calls, variable declaration and other statements of C/C++ language have included inside the sequence diagram. How we developed it that was described in implementation chapter. 
+
+After the bug detection in static analysis engine a buggy path can be found as a list of string if information flow bug exist in the source code files. To generate the sequence diagram a new class is added inside the smtcodan engine. The class name is SequenceDiagramGenerator. Inside the list which is returned from the smtcodan static analysis engine there
+exist function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java
+a sequence diagram is generated through the class of SequenceDiagramGenerator.  Inside the sequence diagram all function calls are included inside rectangular box attached to the head of timeline/lifeline. To move from one lifeline to another a function call
+required. Like in the figure \ref{viewSequenceDiagram} from function call int main() there is a transition to move from int
+main() to good path(). Above the transition there also exist the function name for which it goes from one function call to another. Here for example to move from int main() to good path() there is a transition and above that transition function call good path() is attached. This means through calling the good path() function buggy path goes into good path() function from int main(); Inside
+the sequence diagram the statements before the function call are attached to the timeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file.Now it is easier to trace the buggy path by viewing generated sequence diagram.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics{styles/viewSequenceDiagram.pdf}
+	\label{viewSequenceDiagram}
+	\caption{Sequence Diagram Representation of Buggy Path}
+\end{figure}
