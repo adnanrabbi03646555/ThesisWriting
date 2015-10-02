@@ -456,11 +456,11 @@ tools for understanding and verification of security properties.
 
 \section{ Detecting Information Flow Errors During Design}
 
-The systems development life cycle (SDLC), also referred to as the application development life-cycle, is a term used in systems engineering, information systems and software engineering to describe a process for planning, creating, testing and deploying an information system (according to the wikipedia). The systems development life-cycle concept applies to a range of hardware and software configurations, as a system can be composed of hardware only, software only or a combination of both.
+The systems development life cycle (SDLC), also referred to as the software/application development life-cycle, is a term used in systems engineering, information systems and software engineering to describe a process for planning, creating, management, testing and deploying an information system (according to the wikipedia). The systems development life-cycle concept applies to a range of hardware and software configurations, as a system can be composed of hardware only, software only or a combination of both.
 
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[scale=0.28,width=\textwidth]{styles/sdlc.jpg}}
+	\makebox[\textwidth]{\includegraphics[scale=0.50,width=\textwidth]{styles/sdlc.pdf}}
 	\caption{Software Development Life Cycle}
 	\label{figure_sdlc}
 \end{figure}
@@ -472,8 +472,39 @@ There are following five phases in every Software development life cycle model:
 	\item Design
 	\item Implementation or coding
 	\item Testing
-	\item Evolution 
+	\item Operations and maintenance 
 \end{itemize}
+
+\textbf{Requirement gathering and analysis:}
+This is the first phase of software development life cycle which is presented in figure \ref{figure_sdlc} as number \textcircled{1}. Sometimes it is also known as feasibility study. In this stage of the software development life cycle, the development team visits the customer and studies their requirements and system. The team investigate the need for possible software automation in the given system/software. By the end of the requirement analysis or feasibility study, the team creates a document that holds the different specific recommendations for the candidate system/software. It also includes the personnel assignments, costs, project schedule, target dates , requirements etc. The requirement gathering process is intensified and focused specially on software. To understand the nature of the software/system to be built, the system engineer or analyst must understand the information domain for the software, as well as required function, behavior, performance and interfacing. The essential purpose of this phase is to find the need and to define the problem that needs to be solved.
+
+The goal of requirement analysis is to determine where the problem is and also it is an attempt to fix the system requirements. This step involves breaking down the system in different pieces to analyze the situation, analyzing project goals, breaking down what needs to be created and attempting to engage users so that definite requirements can be defined perfectly.
+
+\textbf{Design:}
+This is the sencond phase in the software development life cycle. It is marked as number \textcircled{2} in figure \ref{figure_sdlc}. In this phase, the software's overall structure, the software development process and its nuances are defined. In terms of the client/server technology, the number of tiers needed for the package architecture, the database design, the data structure design etc. are all defined in design phase. A software development model is thus created. Analysis and Design are very crucial in the whole development cycle. Any glitch in the design phase could be very expensive to solve in the later stage of the software development. Much care is taken during this phase. The logical system of the product is developed in this phase.
+
+System features in detail, functional hierarchy diagrams, screen layout diagrams, tables of business rules, business process diagrams, pseudo-code and a complete entity-relationship diagram with a full data dictionary of the desired system are described in this stage of software development life cycle. These design elements are intended to describe the system in sufficient detail, such that skilled developers and engineers may develop and deliver the system with minimal additional input design.
+
+\textbf{Implementation or coding:}
+The design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools like compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages like C, C++, Pascal, Java are used for coding. With respect to the type of application, the right programming language is chosen.
+
+\textbf{Testing:}
+Once the code is generated, the software program testing begins. Different testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. The following are types of testing that may be relevant, depending on the type of system under development:
+\begin{itemize}
+	\item Unit testing
+    \item System testing
+	\item Integration testing
+	\item Black-box testing
+	\item White-box testing
+	\item Regression testing
+	\item Automation testing
+	\item User acceptance testing
+	\item Software performance testing
+	\item Path testing
+\end{itemize}
+
+\textbf{Operations and maintenance:}
+The deployment of the system includes changes and enhancements before the decommissioning or sunset of the system. Maintaining the system is an important aspect of SDLC. As key personnel change positions in the organization, new changes will be implemented. There are two approaches to system development; there is the traditional approach (structured) and object oriented. Information Engineering includes the traditional system approach, which is also called the structured analysis and design technique. The object oriented approach views the information system as a collection of objects that are integrated with each other to make a full and complete information system.
 
 It would be easier for the developer if information flow errors can be detected in the early statge of software development lifecycle. In this research we propose a method to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way we detected the information flow in designing phase is described below.
 

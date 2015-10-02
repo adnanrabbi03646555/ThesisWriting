@@ -144,11 +144,11 @@ For detecting of authentication, declassification and sanitization errors new fu
 	                  & sanitization   & sanitization sanitizes information	\\
 	                  & trust\_boundary& trust\_boundary is a trust-boundary\\ \hline
 
-	@parameter        & authenticated H/L& authenticated High/Low tags\\
-					  & declassified H/L  & declassified High/Low tags    \\
-				      & sanitized H/L     & sanitized High/Low tags    \\ \hline
-	@variable         & confidential H/L & confidential High/Low tags\\
-					  & source H/L & source High/Low tags   \\
+	@parameter        & authenticated H/L& authenticated-High/Low tags\\
+					  & declassified H/L  & declassified-High/Low tags    \\
+				      & sanitized H/L     & sanitized-High/Low tags    \\ \hline
+	@variable         & confidential H/L & confidential-High/Low tags\\
+					  & source H/L & source-High/Low tags   \\
 	\hline
 	
 	@preStep         & preStep  & previous function call name\\ 	\hline
@@ -220,7 +220,7 @@ comprised of the following steps: At first, the .xtext file
 containing the language grammar was extended following the requirements. Next the grammar file is compiled and software artifacts are generated. After editing the .mwe2 file then compile it. The result of compiling is: a parser, a lexer and class bindings between these two (lexer and parser) and the grammar ECore model. The generated parser, lexer and the bindings were reused inside static analysis engine and in the UI source file editor. After opening and editing a source file with the editor,the file can be parsed and the annotations can be automatically loaded and used inside checkers.
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=\textwidth]{styles/Language_Design_Process.pdf}}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth,scale=.50]{styles/Language_Design_Process.pdf}}
 	\caption{Annotation language design process}
 	\label{figure:Language_Design_Process}
 \end{figure}

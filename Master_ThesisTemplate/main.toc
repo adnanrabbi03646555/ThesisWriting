@@ -14,28 +14,30 @@
 \contentsline {section}{\numberline {2.4}Static Code Analysis}{15}{section.2.4}
 \contentsline {section}{\numberline {2.5}Information Flow Vulnerabilities}{17}{section.2.5}
 \contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{18}{section.2.6}
-\contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{19}{section.2.7}
-\contentsline {part}{\numberline {II}The 2nd Part}{21}{part.2}
-\contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Challenges and Idea}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Annotation Language Tags}{26}{section.3.2}
-\contentsline {section}{\numberline {3.3}Annotation Language Implementation Process}{27}{section.3.3}
-\contentsline {chapter}{\numberline {4}Implementation}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview of System Architecture}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Grammar of Annotation Language}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}UML State Chart Editor}{34}{section.4.3}
-\contentsline {section}{\numberline {4.4}Source Code Editor}{39}{section.4.4}
-\contentsline {section}{\numberline {4.5}C Code Generator}{40}{section.4.5}
-\contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{44}{section.4.6}
-\contentsline {section}{\numberline {4.7}View Buggy Path in Sequence Diagram}{45}{section.4.7}
-\contentsline {chapter}{\numberline {5}Experiments}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}Authentication Scenario}{51}{section.5.1}
-\contentsline {section}{\numberline {5.2}Declassification Scenario}{52}{section.5.2}
-\contentsline {section}{\numberline {5.3}Sanitization Scenario}{54}{section.5.3}
-\contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{55}{section.5.4}
-\contentsline {chapter}{\numberline {6}Related Work}{59}{chapter.6}
-\contentsline {chapter}{\numberline {7}Limitations}{63}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{65}{chapter.8}
-\contentsline {part}{Appendix}{69}{part*.11}
-\contentsline {chapter}{\numberline {A}Appendix}{69}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.12}
+\contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{20}{section.2.7}
+\contentsline {part}{\numberline {II}The 2nd Part}{23}{part.2}
+\contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Challenges and Idea}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Annotation Language Tags}{28}{section.3.2}
+\contentsline {section}{\numberline {3.3}Annotation Language Implementation Process}{29}{section.3.3}
+\contentsline {chapter}{\numberline {4}Implementation}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overview of System Architecture}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Grammar of Annotation Language}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}UML State Chart Editor}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Source Code Editor}{41}{section.4.4}
+\contentsline {section}{\numberline {4.5}C Code Generator}{42}{section.4.5}
+\contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{46}{section.4.6}
+\contentsline {section}{\numberline {4.7}View Buggy Path in Sequence Diagram}{47}{section.4.7}
+\contentsline {chapter}{\numberline {5}Experiments}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Authentication Scenario}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}Declassification Scenario}{54}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sanitization Scenario}{56}{section.5.3}
+\contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{57}{section.5.4}
+\contentsline {chapter}{\numberline {6}Related Work}{61}{chapter.6}
+\contentsline {chapter}{\numberline {7}Limitations}{65}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{67}{chapter.8}
+\contentsline {section}{\numberline {8.1}Conclusion}{67}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Work}{68}{section.8.2}
+\contentsline {part}{Appendix}{71}{part*.11}
+\contentsline {chapter}{\numberline {A}Appendix}{71}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{73}{chapter*.12}
