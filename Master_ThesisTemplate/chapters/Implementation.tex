@@ -351,15 +351,15 @@ The source code editor has extended which offers annotation language proposals w
 
 As per requirements previous annotation language grammar which was written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Mainly FunctionAnnotation, FunctionType  and SingleLineAnnotation rules  are extended. A new rule is added which is enumeration type. The rule name is VariableType. Inside the VariableType new attributes are included like declassified, sanitized and authenticated. New function types are added like declassification, sanitization and authentication function inside FunctionType rule. Inside the FunctionAnnotation and SingleLineAnnotation rules there exist an annotation for parameter name @parameter. Inside @ parameter declaration new attribute is added named VariableType. Some part of the code snippet of extended xtext grammar is given below. 
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Xtext Code for Annotation Language Grammar},label=lst:xtextCode]
 /**
 * @FunctionAnnotation :used for function annotations
 */ 
 FunctionAnnotation returns FunctionAnnotation:
 {FunctionAnnotation}( 
-result +=  '@function '   functionType=FunctionType      (' ')?                              (level =('H'|'L'))?     ((name0=ID))? ((nameComment=ID))? ('\n' | '\r')?
-// supported without space before confidential and sensitive
-| '@parameter '   parameter=ID (name0=ID)? (securityType=SecurityType)?(' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((name1=ID))? ((nameComment=ID))? ('\n' | '\r')?	
+	result +=  '@function '   functionType=FunctionType      (' ')?                              (level =('H'|'L'))?     ((name0=ID))? ((nameComment=ID))? ('\n' | '\r')?
+	// supported without space before confidential and sensitive
+	| '@parameter '   parameter=ID (name0=ID)? (securityType=SecurityType)?(' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((name1=ID))? ((nameComment=ID))? ('\n' | '\r')?	
 ;
 
 /**
@@ -367,22 +367,21 @@ result +=  '@function '   functionType=FunctionType      (' ')?                 
 */ 
 SingleLineAnnotation returns SingleLineAnnotation:
 {SingleLineAnnotation}(
-result+=  '//@ @function '    functionType=FunctionType (' ')?                  (level =('H'|'L'))?  ((name0=ID))? ((nameComment=ID))?  ('\n' | '\r')*
-// supported without space before confidential and sensitive
-| '//@ @parameter '   parameter=ID (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((nameComment=ID))?  ('\n' | '\r')?
-| '//@ @variable '    variable=ID  (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?
-
+	result+=  '//@ @function '    functionType=FunctionType (' ')?                  (level =('H'|'L'))?  ((name0=ID))? ((nameComment=ID))?  ('\n' | '\r')*
+	// supported without space before confidential and sensitive
+	| '//@ @parameter '   parameter=ID (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? (variableTyp=VariableType)?  ((nameComment=ID))?  ('\n' | '\r')?
+	| '//@ @variable '    variable=ID  (securityType=SecurityType)? (' ')?  (level =('H'|'L'))? ('True'|'False')? ((nameComment=ID))?  ('\n' | '\r')?
 ;
 
 /**
 * @FunctionType :annotaions types for functions
 */ 
 enum FunctionType: declassification 
-| sanitization
-| authentication
-| sink
-| source
-| trust_boundary
+					| sanitization
+					| authentication
+					| sink
+					| source
+					| trust_boundary
 ;
 
 
@@ -390,8 +389,8 @@ enum FunctionType: declassification
 * @Variable Type :annotaions types for function parameters
 */ 
 enum VariableType: declassified 
-| sanitized
-| authenticated
+					| sanitized
+					| authenticated
 ;	
 \end{lstlisting}
 
@@ -413,7 +412,7 @@ paths were previously modeled inside the UML state chart.\\
 
 The algorithm is given below how the C code generator has been created. The input of the algorithm for code generator is UML statechart. In eclipse xtend \cite{ref_20_xtend} function can be declared as \enquote{def}. Here the generateTypeH function requires the input of UML statechart. The plug-in named \enquote{MyC} uses eclipse xtend to parse the UML statechart. Inside this function there another two functions named \enquote{typesHAnnotationContent} to generate header file of c(extension .h) and \enquote{typesCAnnotationContent} to generate source code file of c(extension .c).Function typesHAnnotationContent generate the required contents for C header file mostly function signature and annotation of the function which exist in the UML statechart. One sample example of a header file is given below-
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={C Header File Codes with Annotation},label=lst:cHeaderFileCode]
 	/*@ @function authentication
 	* @parameter a L @*/
 	void authentication(char *a);
@@ -434,8 +433,8 @@ Function typesCAnnotationContent generate the required contents for C source fil
 	
 		\Function{generateTypesH}{$sc$}\Comment{Where sc - statchart}
 		
-			\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $ {Where def - function declaration in xtend}
-			\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $
+			\State $def {generateFile_1} (testModule.h, typesHAnnotationContent(sc)) $ \Comment{def= function declaration}
+			\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $  \Comment{C file generator}
 		\EndFunction
 		
 		\Function {typesHAnnotationContent}{$sc$}		

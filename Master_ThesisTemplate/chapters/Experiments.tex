@@ -5,7 +5,7 @@ In this chapter experimental results are presented for semi-automated detection 
 
 To understand the authentication scenario a simple example has chosen. The scenario contains a user account creation inside database to access the contents of the database. To access the database contents user have to be authorized by the database administrator or from who is responsible to do the authorization. User creation inside a database now-a-days normally does the database administrator. When database administrator creates the user then user can access the contents of the database otherwise not. In the following Java example the method createUser is used to create a DBAccess object for a database management application.
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Java Code Example Create User Method for Database Access},label=lst:javaCodeforCreateUser]
 public DBAccess createUser(String userName, String userType,
  String userPassword) {
 
@@ -22,7 +22,7 @@ public DBAccess createUser(String userName, String userType,
 However, there is no authentication mechanism to ensure that the user creating this database user account object has the authority to create new user access. Some authentication mechanisms should be used to verify that the user has the authority to create database access objects.
 The following Java code includes a boolean variable and method for authenticating a user. If the user has not been authenticated then the createUser will not create the database access object.
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Java Code Example for Authentication Scenario},label=lst:javaCodeforAuthentication]
 
 private boolean isUserAuthentic = false;
 

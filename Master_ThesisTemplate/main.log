@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  3 OCT 2015 00:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  3 OCT 2015 00:26
 entering extended mode
 **main.tex
 
@@ -1051,7 +1051,11 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 Package hyperref Info: Option `colorlinks' set `true' on input line 104.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\main.aux)
+e\main.aux
+
+LaTeX Warning: Label `lst:javaCodeforAuthentication' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
 LaTeX Font Info:    ... okay on input line 106.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
@@ -1600,21 +1604,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--314
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
-Underfull \vbox (badness 2717) has occurred while \output is active []
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 354.
+
+Underfull \vbox (badness 1509) has occurred while \output is active []
 
  [41]
-Underfull \hbox (badness 10000) in paragraph at lines 401--413
+Underfull \hbox (badness 10000) in paragraph at lines 400--412
 
  []
 
 [42]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 429.
-
-Underfull \vbox (badness 3009) has occurred while \output is active []
-
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 428.
  [43]
-Underfull \hbox (badness 10000) in paragraph at lines 509--514
+Underfull \hbox (badness 10000) in paragraph at lines 508--513
 
  []
 
@@ -1625,11 +1629,11 @@ Underfull \vbox (badness 1253) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
-<styles/errorTracePath.pdf, id=848, 427.5975pt x 351.3125pt>
+<styles/errorTracePath.pdf, id=847, 427.5975pt x 351.3125pt>
 File: styles/errorTracePath.pdf Graphic file (type pdf)
 
 <use styles/errorTracePath.pdf>
-Package pdftex.def Info: styles/errorTracePath.pdf used on input line 585.
+Package pdftex.def Info: styles/errorTracePath.pdf used on input line 584.
 (pdftex.def)             Requested size: 213.79822pt x 175.6558pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1642,7 +1646,7 @@ e\chapters/Experiments.tex [49] [50
 
 ]
 chapter 5.
-[51] <styles/authentication_scenario.pdf, id=901, 743.77875pt x 335.75438pt>
+[51] <styles/authentication_scenario.pdf, id=896, 743.77875pt x 335.75438pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1654,28 +1658,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--64
 
  []
 
-
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[52]
+
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<styles/declassification_scenario.pdf, id=918, 754.31813pt x 307.1475pt>
+
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
+ [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/authentication_scenario.pdf>]
+<styles/declassification_scenario.pdf, id=924, 754.31813pt x 307.1475pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
 Package pdftex.def Info: styles/declassification_scenario.pdf used on input lin
 e 75.
 (pdftex.def)             Requested size: 377.15814pt x 153.57336pt.
-
-Underfull \vbox (badness 1960) has occurred while \output is active []
-
- [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
-mplate/styles/authentication_scenario.pdf>]
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 92.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
@@ -1691,7 +1695,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-<styles/sanitization_scenario.pdf, id=941, 743.77875pt x 322.95656pt>
+<styles/sanitization_scenario.pdf, id=940, 743.77875pt x 322.95656pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
@@ -1706,7 +1710,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
-<styles/bugDetectionDiagram.pdf, id=965, 936.49875pt x 384.43625pt>
+<styles/bugDetectionDiagram.pdf, id=964, 936.49875pt x 384.43625pt>
 File: styles/bugDetectionDiagram.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionDiagram.pdf>
@@ -1714,7 +1718,7 @@ Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 177.
 
 (pdftex.def)             Requested size: 468.24823pt x 192.21765pt.
 
-<styles/bugDetectionWithMessage.pdf, id=967, 931.48pt x 382.42876pt>
+<styles/bugDetectionWithMessage.pdf, id=966, 931.48pt x 382.42876pt>
 File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
@@ -1724,7 +1728,7 @@ Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line
  [58 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionDiagram.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITReposi
 tory/ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=983, 401.5pt x 217.81375pt>
+<styles/viewSequenceDiagram.pdf, id=982, 401.5pt x 217.81375pt>
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
@@ -1765,8 +1769,6 @@ chapter 8.
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/oneAppendix.tex
 chapter A.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 3.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\sourceCode/MyDsl.xtext [71
@@ -1905,13 +1907,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 42F2427365AE820690D03A5A37DA1F7F;3046.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
- 25328 strings out of 493921
- 453134 string characters out of 3144876
- 654752 words of memory out of 3000000
- 26977 multiletter control sequences out of 15000+200000
+ 25331 strings out of 493921
+ 453204 string characters out of 3144876
+ 654753 words of memory out of 3000000
+ 26981 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,13n,72p,2416b,1997s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1930,9 +1936,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 5194026 bytes).
+Output written on main.pdf (107 pages, 5194163 bytes).
 PDF statistics:
- 2126 PDF objects out of 2487 (max. 8388607)
- 1071 named destinations out of 1200 (max. 500000)
+ 2125 PDF objects out of 2487 (max. 8388607)
+ 1070 named destinations out of 1200 (max. 500000)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
