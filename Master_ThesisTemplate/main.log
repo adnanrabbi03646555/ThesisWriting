@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  2 OCT 2015 23:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  3 OCT 2015 00:01
 entering extended mode
 **main.tex
 
@@ -1614,55 +1614,35 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 Underfull \vbox (badness 3009) has occurred while \output is active []
 
  [43]
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
+Underfull \hbox (badness 10000) in paragraph at lines 509--514
 
  []
 
 [44]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1253) has occurred while \output is active []
 
  [45]
-Overfull \hbox (89.8023pt too wide) in paragraph at lines 602--603
-[][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (98.30167pt too wide) in paragraph at lines 606--608
-[][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (20.30167pt too wide) in paragraph at lines 619--620
-[][][][][][][][][][][][][][][][]  
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 649--654
-
- []
-
-[47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
-<styles/error_trace_path.png, id=987, 444.15938pt x 365.11406pt>
-File: styles/error_trace_path.png Graphic file (type png)
+ [46]
+<styles/errorTracePath.pdf, id=848, 427.5975pt x 351.3125pt>
+File: styles/errorTracePath.pdf Graphic file (type pdf)
 
-<use styles/error_trace_path.png>
-Package pdftex.def Info: styles/error_trace_path.png used on input line 725.
-(pdftex.def)             Requested size: 444.15828pt x 365.11316pt.
+<use styles/errorTracePath.pdf>
+Package pdftex.def Info: styles/errorTracePath.pdf used on input line 585.
+(pdftex.def)             Requested size: 213.79822pt x 175.6558pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
-[50 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
-plate/styles/error_trace_path.png>])
+ [47]
+[48 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
+plate/styles/errorTracePath.pdf>])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Experiments.tex [51] [52
+e\chapters/Experiments.tex [49] [50
 
 ]
 chapter 5.
-[53] <styles/authentication_scenario.pdf, id=1035, 743.77875pt x 335.75438pt>
+[51] <styles/authentication_scenario.pdf, id=901, 743.77875pt x 335.75438pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1679,12 +1659,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[54]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<styles/declassification_scenario.pdf, id=1052, 754.31813pt x 307.1475pt>
+<styles/declassification_scenario.pdf, id=918, 754.31813pt x 307.1475pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
@@ -1694,7 +1674,7 @@ e 75.
 
 Underfull \vbox (badness 1960) has occurred while \output is active []
 
- [55 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+ [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/authentication_scenario.pdf>]
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 92.
 
@@ -1705,28 +1685,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[56 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
+[54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
 plate/styles/declassification_scenario.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-<styles/sanitization_scenario.pdf, id=1076, 743.77875pt x 322.95656pt>
+<styles/sanitization_scenario.pdf, id=941, 743.77875pt x 322.95656pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
 Package pdftex.def Info: styles/sanitization_scenario.pdf used on input line 11
 2.
 (pdftex.def)             Requested size: 371.88846pt x 161.47787pt.
- [57 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+ [55 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/sanitization_scenario.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
-<styles/bugDetectionDiagram.pdf, id=1099, 936.49875pt x 384.43625pt>
+ [57]
+<styles/bugDetectionDiagram.pdf, id=965, 936.49875pt x 384.43625pt>
 File: styles/bugDetectionDiagram.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionDiagram.pdf>
@@ -1734,17 +1714,17 @@ Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 177.
 
 (pdftex.def)             Requested size: 468.24823pt x 192.21765pt.
 
-<styles/bugDetectionWithMessage.pdf, id=1101, 931.48pt x 382.42876pt>
+<styles/bugDetectionWithMessage.pdf, id=967, 931.48pt x 382.42876pt>
 File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
 Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line 
 186.
 (pdftex.def)             Requested size: 465.73886pt x 191.2139pt.
- [60 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+ [58 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionDiagram.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITReposi
 tory/ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=1117, 401.5pt x 217.81375pt>
+<styles/viewSequenceDiagram.pdf, id=983, 401.5pt x 217.81375pt>
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
@@ -1753,12 +1733,12 @@ Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 204.
 (pdftex.def)             Requested size: 401.49901pt x 217.8132pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/RelatedWork.tex [61 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
-sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagram.pdf>] [62
+e\chapters/RelatedWork.tex [59 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
+sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagram.pdf>] [60
 
 ]
 chapter 6.
-[63]
+[61]
 Overfull \hbox (6.33179pt too wide) in paragraph at lines 44--50
 []\OT1/ppl/m/n/10.95 Wassermann and Su ex-tend Mi-namide's string-analysis al-g
 o-rithm [[]] to syn-tac-ti-cally iso-late tainted
@@ -1767,21 +1747,21 @@ o-rithm [[]] to syn-tac-ti-cally iso-late tainted
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64])
+ [62])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Limitations.tex [65] [66
+e\chapters/Limitations.tex [63] [64
 
 ]
 chapter 7.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/ConclusionAndFutureWork.tex [67] [68
+e\chapters/ConclusionAndFutureWork.tex [65] [66
 
 ]
 chapter 8.
-[69]) [70] [71
+[67]) [68] [69
 
-] [72]
+] [70]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/oneAppendix.tex
 chapter A.
@@ -1789,62 +1769,29 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 3.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\sourceCode/MyDsl.xtext [73
+e\sourceCode/MyDsl.xtext [71
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [74]
+[75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76]
-[77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78])
+ [76])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\sourceCode/Naming.xtend [79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [80]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
+e\sourceCode/Types.xtend [77]
 LaTeX Font Info:    External font `yhcmex10' loaded for size
-(Font)              <10> on input line 248.
+(Font)              <10> on input line 45.
 LaTeX Font Info:    External font `yhcmex10' loaded for size
-(Font)              <7> on input line 248.
+(Font)              <7> on input line 45.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [83]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [84]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [85]
-Overfull \hbox (76.3024pt too wide) in paragraph at lines 389--390
-[][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (44.30203pt too wide) in paragraph at lines 393--395
-[][][][][][][][][][][][][][][][][][]  
- []
-
-)
-(F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\sourceCode/Types.xtend
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [86]
 Overfull \hbox (252.91437pt too wide) in paragraph at lines 56--57
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1854,13 +1801,27 @@ Overfull \hbox (252.91437pt too wide) in paragraph at lines 56--57
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [87]))
+ [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88]
-[89] [90
+ [79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [80]
+Overfull \hbox (76.3024pt too wide) in paragraph at lines 238--239
+[][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (44.30203pt too wide) in paragraph at lines 242--244
+[][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]))
+[82]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.bbl
 chapter without number
@@ -1873,7 +1834,8 @@ ent.techtarget.com/definition/
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91
+ [83
+
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 150--154
@@ -1890,10 +1852,10 @@ clipse, iTemis,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [92]
+ [84]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93]
+ [85]
 Underfull \hbox (badness 10000) in paragraph at lines 358--361
 []\OT1/ppl/m/n/10.95 Microsoft.  MSDN run-time li-brary ref-er-ence - SAL an-no
 -ta-tions,
@@ -1908,7 +1870,7 @@ d-lock de-tec-tion tool for C,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
+ [86]
 Underfull \hbox (badness 10000) in paragraph at lines 415--419
 []\OT1/ppl/m/n/10.95 Networkworld.  net-work-world Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Net-work-
@@ -1923,7 +1885,7 @@ ntrol/seven-strong-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [95]
+ [87]
 Overfull \hbox (17.31421pt too wide) in paragraph at lines 531--534
 []\OT1/ppl/m/n/10.95 L. Tor-valds.  Sparse - A se-matic parser for C, http://ww
 w.kernel.org/pub/software/devel/sparse. 
@@ -1932,8 +1894,8 @@ w.kernel.org/pub/software/devel/sparse.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [96])
-[97]
+ [88])
+[89]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
 
@@ -1946,10 +1908,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
- 25846 strings out of 493921
- 461708 string characters out of 3144876
- 654755 words of memory out of 3000000
- 27073 multiletter control sequences out of 15000+200000
+ 25328 strings out of 493921
+ 453134 string characters out of 3144876
+ 654752 words of memory out of 3000000
+ 26977 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,13n,72p,2416b,1997s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1968,9 +1930,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (115 pages, 5231622 bytes).
+Output written on main.pdf (107 pages, 5194026 bytes).
 PDF statistics:
- 2652 PDF objects out of 2984 (max. 8388607)
- 1490 named destinations out of 1728 (max. 500000)
+ 2126 PDF objects out of 2487 (max. 8388607)
+ 1071 named destinations out of 1200 (max. 500000)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
