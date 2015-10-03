@@ -302,7 +302,6 @@ of a state.
 \item The start state is not the target state.
 \item The start state does not belong to domain of substates
 mapping that is it has no sub-state.
-\item The set of states is non-empty.
 \item For any state, s, if it is in the states and is not the start or target state and not the simple state then it belongs to domain of sub-states.
 \item The target state does not belong to states.
 \item The target state of the state diagram does not belong to domain of the sub-states.
@@ -310,7 +309,7 @@ mapping that is it has no sub-state.
 
 UML state chart editor has been extended based on the open source Yakindu SCT \cite{ref_15_yakindu:sct}framework. The existing language grammar with
 annotation language grammar has extended in order to support new set
-of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.\\
+of tags. Furthermore, an annotation proposal filter implemented which was used to filter out the annotation language tags of the Yakindu SCT language grammar.
 
 To extend the Yakindu SCT editor here it has been decided to represent the statements like variable declaration, function calling as state and transitions are represent as move from one statement to another. A rectangular box can be attached with transitions where annotation can be written as per requirements. So for the developed system the UML statechart formal representation is as like this: 
 \begin{figure}[ht!]
@@ -346,9 +345,10 @@ To extend the Yakindu SCT editor here it has been decided to represent the state
 	\caption{UML Statechart Formal Representation for this System}
 	\label{statechart_formal_representation_for _this_system}
 	\end{figure}
+	
 \section{Source Code Editor}
 
-A source code editor is a text editor program designed specifically for editing source code of computer programs by programmers. It may be a standalone application or it may be built into an integrated development environment (IDE) or web browser. Source code editors are the most fundamental programming tool, as the fundamental job of programmers is to write and edit source code.Source code editors have features specifically designed to simplify and speed up input of source code, such as syntax highlighting, indentation, autocomplete and bracket matching functionality. Some well-known source code editors are:
+A source code editor is a text editor. It is a program which is designed specifically for editing source code of computer programs. It may be built into an integrated development environment (IDE) or web browser. To simplify and speed up input of source code such as syntax highlighting, indentation, autocomplete and bracket matching functionality, source code editors features have designed. Source code editors are the most fundamental programming tool. Some well-known source code editors are:
 \begin{itemize}
 	\item Gedit 
 	\item IntelliJ 
@@ -356,7 +356,7 @@ A source code editor is a text editor program designed specifically for editing 
 	\item Notepad++ and more.
 \end{itemize}
 
-The source code editor \cite{ref_108_paul2015infoflow} has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line. Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext \cite{ref_17_xtext:grammar}.
+For this research, previous source code editor \cite{ref_108_paul2015infoflow} has extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line. Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext \cite{ref_17_xtext:grammar}.
 
 As per requirements previous annotation language grammar \cite{ref_108_paul2015infoflow} which was written in xtext language has been extended. Extra annotation have included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Mainly FunctionAnnotation, FunctionType  and SingleLineAnnotation rules  are extended. A new rule is added which is enumeration type. The rule name is VariableType. Inside the VariableType new attributes are included like declassified, sanitized and authenticated. New function types are added like declassification, sanitization and authentication function inside FunctionType rule. Inside the FunctionAnnotation and SingleLineAnnotation rules there exist an annotation for parameter name @parameter. Inside @ parameter declaration new attribute is added named VariableType. The code snippet of extended xtext grammar has given in \ref{Source_Code_Editor_in_Xtext}. 
 
@@ -377,7 +377,7 @@ will contain at least one bad path (contains a true positive) and
 a good path (contains no bug) per UML state chart if those
 paths were previously modeled inside the UML state chart.
 
-The algorithm \ref{Algorithm:C_Code_Generator} which is given below is representing how the C code generator has been created. The input of the algorithm for code generator is UML statechart. In eclipse xtend \cite{ref_20_xtend} function can be declared as \enquote{def}. Inside the algorithm \ref{Algorithm:C_Code_Generator} the generateTypeH function requires the input of UML statechart. The plug-in named \enquote{MyC} uses eclipse xtend to parse the UML statechart. Inside this function there another two functions named \enquote{typesHAnnotationContent} to generate header file of c(extension .h) and \enquote{typesCAnnotationContent} to generate source code file of c(extension .c).Function typesHAnnotationContent generate the required contents for C header file mostly function signature and annotation of the function which exist in the UML statechart. 
+The algorithm \ref{Algorithm:C_Code_Generator} which is given below is representing how the C code generator has developed. The input of the algorithm for code generator is UML statechart. In eclipse xtend \cite{ref_20_xtend} function can be declared as \enquote{def}. Inside the algorithm \ref{Algorithm:C_Code_Generator} the generateTypeH function requires the input of UML statechart. The plug-in named \enquote{MyC} uses eclipse xtend to parse the UML statechart. Inside this function there another two functions named \enquote{typesHAnnotationContent} to generate header file of c(extension .h) and \enquote{typesCAnnotationContent} to generate source code file of c(extension .c).Function typesHAnnotationContent generate the required contents for C header file mostly function signature and annotation of the function which exist in the UML statechart. 
 
 One sample example of a header file is given below-
 
@@ -395,8 +395,7 @@ Inside the algorithm \ref{Algorithm:C_Code_Generator} function typesCAnnotationC
 
 Function typesCAnnotationContent is responsible to generate the C source code. Inside this function to get all function content there is a method called getFunctionContent which returns a hashmap with all function signatures and annotation. By iterating that hashmap the required function signatures are placed inside the C code file. Those functions who has annotations only signatures and blank function bodies are placed inside the C source code file. Because the annotations of the functions mainly placed inside the header file. Now in the modeling stage the system was designed with two regions. One region name is good\_path() and another one is bad\_path(). To get the content of good\_path() and bad\_path(), two methods have created inside the Naming.xtend file named getGoodPathContent() and getBadPathContent(). Those two methods also returned two hashmaps respectively. One hashmap contains the contents of good\_path() region and another hashmap contains the contents of bad\_path() region. Both hashmaps contains the function signatures, statements of C/C++ language and annotations. According to the design in the modeling stage the required contents are placed inside the body of good\_path() and bad\_path(). Normally inside the method of good\_path() and bad\_path() only the variable annotations exist and other statement like function calling, variable declarations etc. The annotations for functions are placed inside the header files of C/C++ language. 
 
-Some of the contents of the header file, C file comes from another xtend file named \enquote{Naming.xtend} which contains in \enquote{MyC} project folder of YAKINDU Sct Editor. the methods like getFileContent, getFunctionContent, getGoodPathContent() and getBadPathContent() all are implemented inside the "Naming.xtend" file. The code snippet from C code generator has given in \ref{C_Code_Generator_Xtend_Code_Snippet}.
-
+Some of the contents of the header file, C file comes from another xtend file named \enquote{Naming.xtend}. The methods like getFileContent, getFunctionContent, getGoodPathContent() and getBadPathContent() all are implemented inside the "Naming.xtend" file. The code snippet from C code generator has given in \ref{C_Code_Generator_Xtend_Code_Snippet}.
 \begin{algorithm}
 	\label{Algorithm:C_Code_Generator}
 	{\textbf{C code generator}}\\

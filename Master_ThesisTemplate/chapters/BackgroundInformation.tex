@@ -1,12 +1,11 @@
 \chapter{Literature Review}
 
 Although the difficulty of strongly protecting confidential
-information has been known for some time, the research
+information has been known for some time. The research
 addressing this problem has had relatively little impact on the
 design of commercially available computing systems. These
 systems employ security mechanisms such as access control,
-capabilities, firewalls and antivirus software; it is useful to see
-how the these standard security mechanisms fall short. Access control is an important part of the current
+capabilities, firewalls and antivirus software; it is useful to see how these standard security mechanisms fall short. Access control is an important part of the current
 security infrastructure. For example, a file may be assigned
 access-control permissions that prevent users other than its
 owner from reading the file; more precisely, these permissions
@@ -26,9 +25,9 @@ firewalls, encryption and antivirus software are useful for protecting
 confidential information. However, these mechanisms
 do not provide end-to-end security. For example, a firewall
 protects confidential information by preventing communication
-with the outside. In practical systems, however, firewalls
+with the outside. In practical systems, firewalls
 permit some communication in both directions \cite{ref_64_box2000simple};
-whether this communication violates confidentiality lies outside
+whether this communication violates confidentiality, lies outside
 the scope of the firewall mechanism. Similarly, encryption
 can be used to secure an information channel so that only
 the communicating endpoints have access to the information.
@@ -39,7 +38,7 @@ based on detecting patterns of previously known malicious
 behavior in code and, thus, offers limited protection against
 new attacks.
 
-However, many intuitively secure programs do allow some release, or declassification, of secret information (such as- password checking, information purchase, and spreadsheet computation). Noninterference fails to recognize such programs as secure. In this respect, many security type systems enforcing noninterference are impractical. On the other side of the spectrum are type systems designed to accommodate some information leakage. However, there is often little or no guarantee about what is actually being leaked. As a consequence, such type systems are vulnerable to laundering attacks, which exploit declassification mechanisms to reveal more secret data than intended. To bridge this gap, Sabelfeld and Myers
+However, many intuitively secure programs do allow some release, or declassification, of secret information (such as- password checking, information purchase, and spreadsheet computation). Noninterference fails to recognize such programs as secure. In this respect, many security type systems enforcing noninterference are impractical. However, there is often little or no guarantee about what is actually being leaked. As a consequence, such type systems are vulnerable to laundering attacks, which exploit declassification mechanisms to reveal more secret data than intended. To bridge this gap, Sabelfeld and Myers
 \cite{ref_72_sabelfeld2004model} introduces a new security property, delimited release, an end-to-end guarantee that declassification cannot be exploited to construct laundering attacks. In addition, a security type system is given that straightforwardly and provably enforces delimited release.
 
 If a user wishes to keep some data confidential, he or
@@ -77,17 +76,17 @@ improper information flows at run time. The type system
 in such a language is a security-type system that enforces
 information-flow policies.
 
-This chapter described the basic of sanitization, declassification and authentication mechanism in software and web application. Also here the purpose and requirements of those three functions (sanitization, declassification and authentication) are presented. At last of this chapter the mechanism of detecting information flow errors during design and code also presented.
+This chapter describes the basic of sanitization, declassification and authentication mechanism in software and web application. Also the purpose and requirements of these three functions: sanitization, declassification and authentication are presented here. At the end of this chapter the mechanism of detecting information flow errors during design and code are also presented.
 
 \section{Sanitization}
-Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience. Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulneribility analysis has mostly focused on identifying cases which web applications directly uses external input for critical operations. It is suggested that always use proper sanitization method to validate external input values from the user for any application.For example, user inputs must always flow through a sanitizing function before flowing into a SQL query or HTML, to avoid SQL injection or cross-site scripting vulnerabilities.
+Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience. Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulnerability analysis has mostly focused on identifying cases where web applications directly uses external input for critical operations. It is suggested to always use proper sanitization method to validate external input values from the user for any application. For example, user inputs must always flow through a sanitizing function before flowing into a SQL query or HTML, to avoid SQL injection or cross-site scripting vulnerabilities.
 
 Reflection of security breaches are very significant for high assurance system. For examples of this type of systems are aircraft navigation, where a fault could lead to a crash, various control systems which has critical infrastructure , where an error 
 could cause toxic waste to leak, and weapons targeting, where an inaccuracy could result in severe collateral damage. In such
 operational environments, the impact is virtually irreversible and must therefore be prevented even if it is likely to occur
-with low probability.It's always good that transforming information to a form which is suitable for release or sanitize the information by redacting some portions of it.
+with low probability. It's always good that transforming information to a form which is suitable for release or sanitize the information by redacting some portions of it.
 
-Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
+Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends to the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
 
 Cross-site scripting (XSS) attacks (the most common vulnerability)
 may occur when a Web application accepts data originating
@@ -145,7 +144,7 @@ this purpose, a security mechanism is applied between the
 user input (source) and the sensitive operation (sink) such
 that malicious data cannot reach the sensitive operation.
 Some sanitization and validation mechanisms have to be applied carefully to the context of the markup. Additionally, a security mechanism can be applied path sensitively. During input sanitization the data is
-transformed such that harmful characters are removed or defused.
+transformed as such that harmful characters are removed or defused.
 The advantage of this approach is that relevant parts of the data stay intact, while only certain characters are removed
 or replaced. This way, the application can proceed
 with the sanitized data without a request for resubmission.
@@ -203,7 +202,7 @@ This is a naive approach because it's almost impossible to cover everything. Thi
 \end{lstlisting}
 
 \begin{itemize}
-	\item case 1 : script tags are removed are removed.
+	\item case 1 : script tags are removed.
 	\item case 2 : javascript call are removed.
 	\item case 3 : remove on* attributes like onLoad or onClick
 \end{itemize}
