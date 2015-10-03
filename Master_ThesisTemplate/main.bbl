@@ -28,7 +28,7 @@ T.~Avgerinos, S.K. Cha, B.~L.~T. Hao, and D.~Brumley.
 Jean Bacon, David Eyers, Thomas~F Pasquier, Jaskirat Singh, Ioannis
   Papagiannis, and Peter Pietzuch.
 \newblock Information flow control for secure cloud computing.
-\newblock {\em Network and Service Management, IEEE Transactions on},
+\newblock {\em IEEE Transactions on Network and Service Management},
   11(1):76--89, 2014.
 
 \bibitem{ref_50_ball:research}
@@ -145,18 +145,6 @@ Dorothy~E Denning and Peter~J Denning.
 D.~L. Detlefs, K.~R.~M. Leino, G.~Nelson, and J.~B. Saxe.
 \newblock {Extended Static Checking }.
 \newblock {\em Compaq SRC Research Report 159}, 1998.
-
-\bibitem{ref_20_xtend}
-Eclipse.
-\newblock {xtend Documentation}.
-\newblock Technical report, Eclipse,
-  http://www.eclipse.org/xtend/documentation/.
-
-\bibitem{ref_17_xtext:grammar}
-Eclipse.
-\newblock {xText Documentation}.
-\newblock Technical report, Eclipse, iTemis,
-  http://www.eclipse.org/Xtext/documentation.html.
 
 \bibitem{ref_53_evans:static}
 D.~Evans.
@@ -422,6 +410,19 @@ OWASP.
 \newblock {OWASP}.
 \newblock Technical report, OWASP, http://www.owasp.org.
 
+\bibitem{ref_108_paul2015infoflow}
+
+Andreas~Ibing Paul~Muntean, Adnan~Rabbi and Claudia Eckert.
+
+\newblock Automated detection of information flow vulnerabilities in uml state
+
+  charts and c code.
+
+\newblock In {\em IEEE International Conference on Software Quality,Reliability
+
+  and Security}. IEEE, 2015.
+
+
 \bibitem{ref_22_preibusch2011information}
 S{\"o}ren Preibusch.
 \newblock Information flow control for static enforcement of user-defined
@@ -582,6 +583,18 @@ John Wilander and Mariam Kamkar.
 X.~Xiao and et~al.
 \newblock {Transparent Privacy Control via Static Information Flow Analysis }.
 \newblock Technical report, Microsoft, August 2011.
+
+\bibitem{ref_20_xtend}
+Eclipse Xtend.
+\newblock {Eclipse xtend Documentation}.
+\newblock Technical report, Eclipse Xtend,
+  http://www.eclipse.org/xtend/documentation/.
+
+\bibitem{ref_17_xtext:grammar}
+Eclipse Xtext.
+\newblock {Eclipse xText Documentation}.
+\newblock Technical report, Eclipse Xtext, iTemis,
+  http://www.eclipse.org/Xtext/documentation.html.
 
 \bibitem{ref_57_alex:improving}
 A.~Yip, X.~Wang, N.~Zeldovich, and M.~F. Kaashoek.
