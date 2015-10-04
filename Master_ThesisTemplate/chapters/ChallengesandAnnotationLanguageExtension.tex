@@ -12,9 +12,10 @@ In this chapter the challenges and how the annotation language has extended are 
 To develop the system eclipse xtext, eclipse xtend and static analysis engine named smtcodan(which is developed in Java to detect C and C++ vulneribilities) are used. For building the source code annotation editor eclipse xtext is used. Modeling the source as UML Statechart opensource platform YAKINDU SCT editor is used. Inside YAKINDU sct editor to genrate the .c(c file) and .h(header file) eclipse xtend is used mainly for genrating code files from statechart. Let's see in briefly what is xtext, xtend and how it works.
 
 \begin{itemize}	
-	\item Xtext : Xtext is a framework for development of programming languages and domain specific languages.According to the \cite{ref_17_xtext:grammar}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to your individual needs.
-	Here is an example of Xtext file:
-		\begin{lstlisting}
+	\item Xtext : Xtext is a framework for development of programming languages and domain specific languages. According to the \cite{ref_17_xtext:grammar}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to individual user needs.
+	
+	Here is an example of xtext code:
+		\begin{lstlisting} [caption={Xtext Code Example},label=lst:xtextCodeExample]
 		grammar org.xtext.example.mydsl.MyDsl with 
 		org.eclipse.xtext.common.Terminals
 		
@@ -28,7 +29,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 		
 		\end{lstlisting}
 		 
-	This language allows to write down a list of messages. The following would be proper input messages which are allowed to write:
+	This language allows to write down a list of messages. The following would be the proper input messages which are allowed to write:
 		\begin{lstlisting}
 			Hello User!
 			Hello World!		
@@ -44,7 +45,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 		
 	The opposite of a DSL is a so called GPL, a General Purpose Language such as Java or any other common programming language. With a GPL you can solve every computer problem, but it might not always be the best way to solve it.
 	
-	Imagine you want to remove the core from an apple. You could of course use a Swiss army knife to cut it out, and this is reasonable if you have to do it just once or twice. But if you need to do that on a regular basis it might be more efficient to use an apple corer.
+	Imagine a user want to remove the core from an apple. User could of course use a Swiss army knife to cut it out and this is reasonable if user have to do it just once or twice. But if user need to do that on a regular basis it might be more efficient to use an apple corer.
 	
 	There are a couple of well-known examples of DSLs. For instance SQL is actually a DSL which focuses on querying relational databases. Other DSLs are regular expressions or even languages provided by tools like MathLab. Also most XML languages are actually domain-specific languages. The whole purpose of XML is to allow for easy creation of new languages. Unfortunately, XML uses a fixed concrete syntax, which is very verbose and yet not adapted to be read by humans. Into the bargain, a generic syntax for everything is a compromise.
 	
@@ -53,12 +54,12 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	\textbf{Users of Xtext:}
 	Xtext is used in many different industries. It is used in the field of mobile devices, automotive development, embedded systems or Java enterprise software projects and game development. People use Xtext based languages to drive code generators that target Java, C, C++, C sharp, Objective C, Python, or Ruby code. Although the language infrastructure itself runs on the JVM, you can compile Xtext languages to any existing platform. Xtext based languages are developed for well known Open-Source projects such as Maven, Eclipse B3, the Eclipse Webtools platform or Google's Protocol Buffers and the framework is also widely used in research projects.
 	
-	\item Xtend : According to the \cite{ref_20_xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: Everything you write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
+	\item Xtend : According to \cite{ref_20_xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: Everything you write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
 	
 	\textbf{Java Interoperability:}
 	Xtend, like Java, is a statically typed language. In fact it completely supports Java's type system, including the primitive types like int or boolean, arrays and all the Java classes, interfaces, enums and annotations that reside on the class path.
 	
-	Java generics are fully supported as well: You can define type parameters on methods and classes and pass type arguments to generic types just as you are used to from Java. The type system and its conformance and casting rules are implemented as defined in the Java Language Specification.
+	Java generics are fully supported in xtend. User can define type parameters on methods and classes and pass type arguments to generic types just as user's are used to from Java. The type system and its conformance and casting rules are implemented as defined in the Java Language Specification.
 	
 	Resembling and supporting every aspect of Java's type system ensures that there is no impedance mismatch between Java and Xtend. This means that Xtend and Java are 100\% interoperable. There are no exceptional cases and you do not have to think in two worlds. You can invoke Xtend code from Java and vice versa without any surprises or hassles. As a bonus, if you know Java's type system and are familiar with Java's generic types, you already know the most complicated part of Xtend.
 	
@@ -76,8 +77,8 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 		val list = new LinkedList<String>
 	\end{lstlisting}
 		
-	Here is an example of Xtend file:
-	\begin{lstlisting}
+	Here is an example of xtend code:
+	\begin{lstlisting} [caption={Xtend Code Example},label=lst:xtendCodeExample]
 	package example	
 	import java.util.List		
 	class A {
@@ -106,7 +107,7 @@ state charts and C code. The purpose of the same annotation language
 can be used to add information flow constraints to UML state
 charts and code in order to detect information flow errors.\\
 
-The challenge was addressed by extending the annotation language containing textual annotations which can be used to annotate source code and UML state charts which are backward compatible.The single-line annotations have the same as previous consisting start tag "//@" and the multi-line annotations have the start tag "/*@" and the end tag "@*/" .\\
+The challenge was addressed by extending the annotation language containing textual annotations which can be used to annotate source code and UML state charts which are backward compatible. The single-line annotations have the same as previous consisting start tag "//@" and the multi-line annotations have the start tag "/*@" and the end tag "@*/" .\\
 
 Some challenges throughout the approach are- converting textual
 comments into annotations objects, introducing syntactically
@@ -116,8 +117,8 @@ code, dealing with scattered annotations and attaching annotations to the right 
 
 The eclipse xtext based grammar is used to parse the whole C/C++ language. The C/C++ source code file extensions (.h, .hh, .hhh, .hxx, .c, .cpp) and UML state chart annotation box (graphical boxes
 which can be attached to different parts of a UML state chart diagram) can be annotated with policy language restrictions. The obtained CORE model (a one to one mapping from xtext grammar to the ECORE grammar representation) that can be reused for integrating the policy language into an UML state chart editor. Treating the annotation tags as EObjects created new possibilities for annotating
-UML models.The policy language grammar has about 420 lines of code with code comments included. Source code generation is also supported by using
-eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used.The result is an extensible policy language and a highly reusable source code implementation as well as source code generator that can easily be used for annotating models and source files.
+UML models. The policy language grammar has about 420 lines of code with code comments included. Source code generation is also supported by using
+eclipse xtend, ANTLR and .mwe2 files. To parse other programming languages as well this annotation language parser can be used. The result is an extensible policy language and a highly reusable source code implementation as well as source code generator that can easily be used for annotating models and source files.
 
 \section{Annotation Language Tags}
 Table \ref{table:Security_language_annotation_tags} contains in this section: the annotation language
@@ -162,9 +163,9 @@ For detecting of authentication, declassification and sanitization errors new fu
 
 \section{Annotation Language Implementation Process}
 
-To implement the annotation language Eclipse Xtext \cite{ref_17_xtext:grammar} was used. Xtext is a sophisticated framework that helps to implement own DSL(Domain Specific Language) with appropriate IDE support. There is no such limitation as with XML, user's are free to define user's concrete syntax as user like. It may be as concise and suggestive as possible being a best match for user's particular domain. The hard task of reading user model, working with it and writing it back to user's syntax is greatly simplified by Xtext. Xtext relies heavily on Eclipse Modeling Framework (EMF) internally, but it can also be used as the serialization back-end of other EMF-based tools.  
+To implement the annotation language Eclipse Xtext \cite{ref_17_xtext:grammar} was used. Xtext is a sophisticated framework that helps to implement own DSL (Domain Specific Language) with appropriate IDE support. There is no such limitation as with XML, user's are free to define user's concrete syntax as user like. It may be as concise and suggestive as possible being a best match for user's particular domain. The hard task of reading user model, working with it and writing it back to user's syntax is greatly simplified by Xtext. Xtext relies heavily on Eclipse Modeling Framework (EMF) internally, but it can also be used as the serialization back-end of other EMF-based tools.  
 
-Xtext provides a lot of generic implementations for language's infrastructure but also uses code generation to generate some of the components. Those generated components are for instance the parser, the serializer, the inferred Ecore model (if any) and a couple of convenient base classes for content assist etc.The generator also contributes to shared project resources such as the plugin.xml, MANIFEST.MF and the Guice modules. Xtext's generator uses a special DSL called MWE2 - the modeling workflow engine to configure the generator. MWE2 allows to compose object graphs declaratively in a very compact manner. The nice thing about it is that it just instantiates Java classes and the configuration is done through public setter and adder methods as one is used to from Java Beans encapsulation principles.
+Xtext provides a lot of generic implementations for language's infrastructure but also uses code generation to generate some of the components. Those generated components are for instance the parser, the serializer, the inferred Ecore model (if any) and a couple of convenient base classes for content assist etc. The generator also contributes to shared project resources such as the plugin.xml, MANIFEST.MF and the Guice modules. Xtext's generator uses a special DSL called MWE2 - the modeling workflow engine to configure the generator. MWE2 allows to compose object graphs declaratively in a very compact manner. The nice thing about it is that it just instantiates Java classes and the configuration is done through public setter and adder methods as one is used to from Java Beans encapsulation principles.
 
 Xtext itself and every language infrastructure developed with Xtext is configured and wired-up using dependency injection. Xtext may be used in different environments which introduce different constraints. Especially important is the difference between OSGi managed containers and plain vanilla Java programs. To honor these differences Xtext uses the concept of ISetup (src)-implementations in normal mode and uses Eclipse's extension mechanism when it should be configured in an OSGi environment.
 

@@ -246,13 +246,12 @@ Classification of the basic declassification goals according to four axes: what 
    owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
    the Jif compiler \cite{ref_11_myers2001jif}.
    
-   \item Where: In a system information  Where is an important aspect of information release.One can ensure that no other  part can release further information.
-   by delegating particular parts of the system to release information.Declassification
+   \item Where: In a system information  Where is an important aspect of information release. One can ensure that no other  part can release further information. By delegating particular parts of the system to release information. Declassification
    via encryption is not harmful as long as the program is, in some sense, noninterfering
    before and after encryption.  A combination of \enquote{where} and \enquote{who} policies in the presence of encryption has
    been recently investigated by Hicks et al. \cite{ref_12_hicks2005declassification}
    
-   \item When: The fourth dimension of declassification is  \enquote{when} information should be released.The work of Giambiagi and Dam \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released.Chong and Myers security policies \cite{ref_13_chong2004security} address when information is released.By annotating variables this is achieved.
+   \item When: The fourth dimension of declassification is  \enquote{when} information should be released. The work of Giambiagi and Dam \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released. Chong and Myers security policies \cite{ref_13_chong2004security} address when information is released. By annotating variables this is achieved.
    
 \end{itemize}
 
@@ -263,11 +262,11 @@ harder to formalize in a general way, beyond saying that they cannot be captured
 \enquote{what} and \enquote{when} dimensions.
 
 \section{Authentication}
-Malicious applications targeting financial account information have increased dramatically over the last years. The number of online applications is growing strong. The ease of use of the Internet and the growing user base make a perfect target for criminals. Attacking thousands of users is achievable with only one click.The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore.
+Malicious applications targeting financial account information have increased dramatically over the last few years. The number of online applications is growing strong. The ease of use of the Internet and the growing user base make a perfect target for criminals. Attacking thousands of users is achievable with only one click.The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore.
 
 To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.
 
-Before describing the process of the authentication, need to explain some terms. Now-a-days, AAA is often used. AAA stands for Authentication, Authorization and Accounting. It is important to know the differences between those terms:
+Before describing the process of the authentication, it is important to explain some terms. Now-a-days, AAA is often used. AAA stands for Authentication, Authorization and Accounting. It is also important to know the differences between those terms:
  
 \textbf{Authentication}: the confirmation that a user is who it is claiming to be. 
 
@@ -276,11 +275,11 @@ Before describing the process of the authentication, need to explain some terms.
 \textbf{Accounting}: measuring the resources a user consumes during access.
 
 
-Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, User verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request granted.
+Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, user verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request is granted.
 
 Now-a-days following authentication, a user must gain authorization for doing certain tasks. After logging into a system, for instance, the user may try to issue commands. The authorization process determines whether the user has the authority to issue such commands. Simply put, authorization is the process of enforcing policies: determining what types or qualities of activities, resources, or services a user is permitted. Usually, authorization occurs within the context of authentication. Once you have authenticated a user, they may be authorized for different types of access or activity.
 
-According to J Viega and G McGraw \cite{ref_92_viega2001building} the processes how to avoid the top ten software security flaws are:
+According to J Viega and G McGraw \cite{ref_92_viega2001building} the processes of how to avoid the top ten software security flaws are:
 \begin{itemize}
 	\item Earn or give, but never assume, trust.
 	
@@ -326,11 +325,11 @@ One familiar use of authentication and authorization is access control. A comput
 	\item A computer program using a blind credential to authenticate to another program.
 	\item Logging in to a computer.	
 	\item Using an Internet banking system.
-	\item Withdrawing cash from an ATM and more
+	\item Withdrawing cash from an ATM.
 	\item Assurance of identity of person or originator of data.
 \end{itemize}
 
- A variety of authentication technologies have hit the market over the years.To better understand what they are and how they compare to the user name/password combination, it helps to be familiar with the standard authentication factors something you know, something you have and something you are and how each technology leverages them to power its authentication capabilities.
+ A variety of authentication technologies have hit the market over the years.To better understand what they are and how they compare to the user name/password combination, it helps to be familiar with the standard authentication factors; something you know, something you have and something you are and how each technology leverages them to power its authentication capabilities.
  \begin{itemize}	
 	\item Something you know is a bit of knowledge committed to memory, such as a password or
 	 an answer to a secret question.
@@ -361,7 +360,7 @@ According to the networkworld \cite{ref_21_networld} now-a-days seven strong aut
 
 \section{Static Code Analysis}
 
-Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code.The term is usually applied to the analysis performed by an automated tool, with human analysis being called program understanding, program comprehension, or code review. Software inspections and Software walkthroughs are also used in the latter case. .Static analysis, also called static code analysis, is a method of computer program debugging that is done by examining the code without executing the program. The process provides an understanding of the code structure, and can help to ensure that the code adheres to industry standards. Automated tools can assist programmers and developers in carrying out static analysis. The process of scrutinizing code by visual inspection alone (by looking at a printout, for example), without the assistance of automated tools, is sometimes called program understanding or program comprehension \cite{ref_86_techtarget:techtarget}.
+Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code. The term is usually applied to the analysis performed by an automated tool, with human analysis being called program understanding, program comprehension, or code review. Software inspections and Software walkthroughs are also used in the later case. Static analysis, also called static code analysis, is a method of computer program debugging that is done by examining the code without executing the program. The process provides an understanding of the code structure, and can help to ensure that the code adheres to industry standards. Automated tools can assist programmers and developers in carrying out static analysis. The process of scrutinizing code by visual inspection alone (by looking at a printout, for example), without the assistance of automated tools, is sometimes called program understanding or program comprehension \cite{ref_86_techtarget:techtarget}.
 
 The principal advantage of static analysis is the fact that it can reveal errors that do not manifest themselves until a disaster occurs weeks, months or years after release. Nevertheless, static analysis is only a first step in a comprehensive software quality-control regime. After static analysis has been done, dynamic analysis is often performed in an effort to uncover subtle defects or vulnerabilities. In computer terminology, static means fixed, while dynamic means capable of action and/or change. Dynamic analysis involves the testing and evaluation of a program based on execution. Static and dynamic analysis, considered together, are sometimes referred to as glass-box testing \cite{ref_86_techtarget:techtarget}.
 
@@ -369,10 +368,10 @@ A variety of static analysis approaches have been proposed
 to automatically identify security vulnerabilities in PHP applications
 based on insufficient sanitization and validation.
 Zheng and Zhang introduced path-sensitive static analysis
-for PHP applications with Z3-str \cite{ref_94_zheng2013path}. They leverage a
+for PHP applications with Z3-str \cite{ref_94_zheng2013path}. They leveraged a
 modified version of the Z3 SMT solver that is also capable
 of analyzing strings. Shar and Tan proposed static code attributes
-for predicting SQLi and XSS vulnerabilities \cite{ref_97_shar2012predicting, ref_98_shar2013mining}.Yu et al. built an automata-based string analysis tool
+for predicting SQLi and XSS vulnerabilities \cite{ref_97_shar2012predicting, ref_98_shar2013mining}. Yu et al. built an automata-based string analysis tool
 called STRANGER \cite{ref_95_yu2010stranger} based on the static code analysis
 tool Pixy \cite{ref_99_jovanovic2006pixy}. STRANGER detects security vulnerabilities
 in PHP applications by computing possible string
@@ -380,7 +379,7 @@ values using a symbolic automata representation of common
 string functions, including escaping and replacement
 functions. Later, they automatically generated sanitization
 statements for detected vulnerabilities by using regular expression
-replacements \cite{ref_96_yu2011patching}. Balzarotti et al. combine static
+replacements \cite{ref_96_yu2011patching}. Balzarotti et al. combined static
 and dynamic analysis techniques to identify faulty custom
 sanitization routines \cite{ref_62_balzarotti2008saner}. The static analysis component of
 their tool called Saner extends Pixy and analyzes string
@@ -405,7 +404,7 @@ According to the GCN \cite{ref_87_gcn:gcn} static code analysis limitations are:
 	\item Automated tools produce false positives and false negatives.
 	\item There are not enough trained personnel to thoroughly conduct static code analysis.
 	\item Automated tools can provide a false sense of security that everything is being addressed.
-	\item Automated tools only as good as the rules they are using to scan with.
+	\item Automated tools are only as good as the rules they are using to scan with.
 	\item It does not find vulnerabilities introduced in the runtime environment.
 \end{itemize}
 
@@ -422,7 +421,7 @@ due to their size and complexity. Manual code inspection is often
 ineffective for such complex programs, and security testing may
 remain inconclusive due to insufficient coverage.
 
-In low level information flow analysis, each variable is usually assigned a security level. The basic model comprises two distinct levels: low and high, meaning, respectively, publicly observable information, and secret information. To ensure confidentiality, flowing information from high to low variables should not be allowed. On the other hand, to ensure integrity, flows to high variables should be restricted.For example, considering two security levels L and H (low and high), if L less equal to H, flows from L to L, from H to H, and L to H would be allowed, while flows from H to L would not \cite{ref_88_smith2007principles}.
+In low level information flow analysis, each variable is usually assigned a security level. The basic model comprises two distinct levels: low and high, meaning, respectively, publicly observable information, and secret information. To ensure confidentiality, flowing information from high to low variables should not be allowed. On the other hand, to ensure integrity, flows to high variables should be restricted. For example, considering two security levels L and H (low and high), if L less equal to H, flows from L to L, from H to H, and L to H would be allowed, while flows from H to L would not \cite{ref_88_smith2007principles}.
 
 A system is secure with respect to confidentiality
 should arise from a rigorous analysis showing that the system
@@ -443,14 +442,10 @@ have eluded researchers for some time.
 Information flow can be classified as explicit (information flow
 that arises explicitly, due to assignment statements), and implicit
 (flow that arises implicitly, due to conditional statements). In \cite{ref_90_liu2008static}, proposed a new general-purpose static analysis for the inference
-of explicit information flow. This analysis is light-weight,works directly on Java programs before program execution, and
+of explicit information flow. This analysis is light-weight,works directly on Java programs before program execution and
 does not require annotations by the programmer. It can be incorporated
 in program understanding and verification tools and help
-verify in a practical manner the confidentiality and integrity of sensitive program data. We believe that our work, although limited in
-the sense that it does not handle implicit flow, is a step forward towards
-the use of static analysis for the purposes of reasoning about
-information flow; it may help advance the use of static analysis in
-tools for understanding and verification of security properties.
+verify in a practical manner the confidentiality and integrity of sensitive program data. This research may help advance the use of static analysis in tools for understanding and verification of security properties.
 
 
 \section{ Detecting Information Flow Errors During Design}
@@ -520,9 +515,9 @@ If a step of function call like authentication, sanitization or declassification
 
 Another way to detect the information flow vulnerabilities in our research is in coding stage of software development life cycle. Here mainly we detected the bug by static analyzing the code through our engine named smtcodan. How we implemented the checker in our static analysis engine is given in the implementation chapter of this paper. The visual representation of how we detect the bug is given below.
 
-Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to A lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
-where each of the flows starts with statement variable a and ends with leaving the system. The the variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
-two information flows. A source is any function or programming language statement which provides private information through a system boundary. A sink can be a function call or programming language statement which exposes private information to the outside of the system through a system boundary. A system boundary can be a statement, function call, class, package or module. In figure 2.2 the source and sink represent C language statements where information enters and respectively leaves system 1 or system 2. The variable a was tagged with label \enquote{H} (confidential) as it inserts confidential information into system 1. The arrows represent the passing of the confidential label \enquote{H} between the program statements. When a variable labeled with \enquote{H} is about to leave system 1 or system 2 without passing through either authentication/declassifiaction/sanitization function then a bug report should be created.In figure \ref{figure_bug_detection_during_coding} right side system has a bug because it passes a secured/confidential information without passing through authentication/declassifiaction/sanitization function. The bug place is represented as red color \textcircled{X} which is showing the missing of those functions. These functions either authenticated,declassified or sanitized  secured/confidential information and makes the variable label as \enquote{L} to leave the system. But in the left part of the picture there is no bug as in this system, secured/confidential information and the variable which is labeled with \enquote{H} passes through either authentication/declassifiaction/sanitization function.
+Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to a lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
+where each of the flows starts with statement variable a and ends with leaving the system. The variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
+two information flows. A source is any function or programming language statement which provides private information through a system boundary. A sink can be a function call or programming language statement which exposes private information to the outside of the system through a system boundary. A system boundary can be a statement, function call, class, package or module. In figure 2.2 the source and sink represent C language statements where information enters and respectively leaves system 1 or system 2. The variable a was tagged with label \enquote{H} (confidential) as it inserts confidential information into system 1. The arrows represent the passing of the confidential label \enquote{H} between the program statements. When a variable labeled with \enquote{H} is about to leave system 1 or system 2 without passing through either authentication/declassifiaction/sanitization function then a bug report should be created. In figure \ref{figure_bug_detection_during_coding} right side system has a bug because it passes a secured/confidential information without passing through authentication/declassifiaction/sanitization function. The bug place is represented as red color \textcircled{X} which is showing the missing of those functions. These functions either authenticated, declassified or sanitized  secured/confidential information and makes the variable label as \enquote{L} to leave the system. But in the left part of the picture there is no bug as in this system, secured/confidential information and the variable which is labeled with \enquote{H} passes through either authentication/declassifiaction/sanitization function.
 
 \begin{figure}[htbp]
 	\centering
