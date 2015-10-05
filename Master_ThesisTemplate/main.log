@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  4 OCT 2015 19:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  5 OCT 2015 19:40
 entering extended mode
 **main.tex
 
@@ -1443,41 +1443,11 @@ sys-tem en-sures that there is no impedance
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-Underfull \hbox (badness 10000) in paragraph at lines 104--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--131
-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
-Underfull \hbox (badness 3746) in paragraph at lines 143--144
-[]|\OT1/ppl/m/n/10.95 authentication au-then-ti-cates
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-[]|\OT1/ppl/m/n/10.95 declassification de-clas-si-fies
- []
-
-
-Underfull \hbox (badness 4328) in paragraph at lines 145--146
-[]|\OT1/ppl/m/n/10.95 sanitization san-i-tizes in-for-
+Underfull \hbox (badness 6526) in paragraph at lines 144--145
+[]|\OT1/ppl/m/n/10.95 declassification mainly de-
  []
 
 
@@ -1487,16 +1457,21 @@ Underfull \hbox (badness 7012) in paragraph at lines 146--146
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
-[]|\OT1/ppl/m/n/10.95 authenticated-High/Low
+[]|\OT1/ppl/m/n/10.95 authenticated with High-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]|\OT1/ppl/m/n/10.95 sanitized with High-/Low
  []
 
 [29] [30]
-<styles/Language_Design_Process.pdf, id=662, 470.75874pt x 253.94875pt>
+<styles/Language_Design_Process.pdf, id=663, 470.75874pt x 253.94875pt>
 File: styles/Language_Design_Process.pdf Graphic file (type pdf)
 
 <use styles/Language_Design_Process.pdf>
 Package pdftex.def Info: styles/Language_Design_Process.pdf used on input line 
-224.
+223.
 (pdftex.def)             Requested size: 235.3788pt x 126.97406pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
@@ -1506,7 +1481,7 @@ ThesisWriting/Master_ThesisTemplate/styles/Language_Design_Process.pdf>]
 
 ]
 chapter 4.
-[33] <styles/system_architecture.pdf, id=696, 598.235pt x 217.81375pt>
+[33] <styles/system_architecture.pdf, id=697, 598.235pt x 217.81375pt>
 File: styles/system_architecture.pdf Graphic file (type pdf)
 
 <use styles/system_architecture.pdf>
@@ -1562,7 +1537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
-<styles/simpleStateChart.pdf, id=730, 185.94469pt x 175.40532pt>
+<styles/simpleStateChart.pdf, id=731, 185.94469pt x 175.40532pt>
 File: styles/simpleStateChart.pdf Graphic file (type pdf)
 
 <use styles/simpleStateChart.pdf>
@@ -1630,6 +1605,12 @@ e\chapters/Experiments.tex [49] [50
 
 ]
 chapter 5.
+
+Overfull \hbox (1.22887pt too wide) in paragraph at lines 22--24
+[]\OT1/ppl/m/n/10.95 However, there is no au-then-ti-ca-tion mech-a-nism to en-
+sure that the user who is cre-at-ing this database
+ []
+
 [51] <styles/authentication_scenario.pdf, id=858, 743.77875pt x 335.75438pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
@@ -1684,7 +1665,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: styles/bugDetectionDiagram.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionDiagram.pdf>
-Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 178.
+Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 176.
 
 (pdftex.def)             Requested size: 468.24823pt x 192.21765pt.
 
@@ -1693,7 +1674,7 @@ File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
 Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line 
-189.
+187.
 (pdftex.def)             Requested size: 465.73886pt x 191.2139pt.
  [58 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionDiagram.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITReposi
@@ -1702,7 +1683,7 @@ tory/ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
-Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 207.
+Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 205.
 
 (pdftex.def)             Requested size: 401.49901pt x 217.8132pt.
 )
@@ -1844,7 +1825,7 @@ ntrol/seven-strong-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [87]
-Overfull \hbox (17.31421pt too wide) in paragraph at lines 532--535
+Overfull \hbox (17.31421pt too wide) in paragraph at lines 526--529
 []\OT1/ppl/m/n/10.95 L. Tor-valds.  Sparse - A se-matic parser for C, http://ww
 w.kernel.org/pub/software/devel/sparse. 
  []
@@ -1853,13 +1834,13 @@ w.kernel.org/pub/software/devel/sparse.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [88]
-Underfull \hbox (badness 5637) in paragraph at lines 588--592
+Underfull \hbox (badness 5637) in paragraph at lines 582--586
 []\OT1/ppl/m/n/10.95 Eclipse Xtend.  Eclipse xtend Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Eclipse Xtend,
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 594--598
+Underfull \hbox (badness 1178) in paragraph at lines 588--592
 []\OT1/ppl/m/n/10.95 Eclipse Xtext.  Eclipse xText Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Eclipse Xtext, iTemis,
  []
@@ -1877,10 +1858,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
- 25292 strings out of 493921
- 452685 string characters out of 3144876
- 654755 words of memory out of 3000000
- 26984 multiletter control sequences out of 15000+200000
+ 25293 strings out of 493921
+ 452702 string characters out of 3144876
+ 653755 words of memory out of 3000000
+ 26985 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,13n,72p,2408b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1899,7 +1880,7 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 5190764 bytes).
+Output written on main.pdf (107 pages, 5190883 bytes).
 PDF statistics:
  2078 PDF objects out of 2487 (max. 8388607)
  1028 named destinations out of 1200 (max. 500000)

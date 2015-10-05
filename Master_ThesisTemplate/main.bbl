@@ -411,17 +411,11 @@ OWASP.
 \newblock Technical report, OWASP, http://www.owasp.org.
 
 \bibitem{ref_108_paul2015infoflow}
-
-Andreas~Ibing Paul~Muntean, Adnan~Rabbi and Claudia Eckert.
-
+Andreas Ibing Claudia~Eckert Paul~Muntean, Adnan~Rabbi.
 \newblock Automated detection of information flow vulnerabilities in uml state
-
   charts and c code.
-
 \newblock In {\em IEEE International Conference on Software Quality,Reliability
-
   and Security}. IEEE, 2015.
-
 
 \bibitem{ref_22_preibusch2011information}
 S{\"o}ren Preibusch.
