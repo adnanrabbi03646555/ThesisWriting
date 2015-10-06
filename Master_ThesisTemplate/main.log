@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  5 OCT 2015 20:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  6 OCT 2015 10:40
 entering extended mode
 **main.tex
 
@@ -1328,13 +1328,14 @@ Class scrbook Warning: \float@addtolists detected!
 [3
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 71.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4])
+ [4]
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 66.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+))
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/BackgroundInformation.tex [5] [6
 
@@ -1873,7 +1874,7 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 5190821 bytes).
+Output written on main.pdf (107 pages, 5190768 bytes).
 PDF statistics:
  2079 PDF objects out of 2487 (max. 8388607)
  1028 named destinations out of 1200 (max. 500000)
