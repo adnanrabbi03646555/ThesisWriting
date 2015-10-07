@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{section*.1}{Acknowledgements}{}% 1
 \BOOKMARK [0][-]{section*.2}{Abstract}{}% 2
 \BOOKMARK [0][-]{section*.6}{Outline of the Thesis}{}% 3
-\BOOKMARK [-1][]{part.1}{Introduction and Theory}{}% 4
+\BOOKMARK [-1][]{part.1}{The 1st Part}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Introduction}{part.1}% 5
 \BOOKMARK [0][-]{chapter.2}{Literature Review}{part.1}% 6
 \BOOKMARK [1][-]{section.2.1}{Sanitization}{chapter.2}% 7
@@ -32,11 +32,12 @@
 \BOOKMARK [1][-]{section.5.5}{Error Trace in Sequence Diagram}{chapter.5}% 32
 \BOOKMARK [0][-]{chapter.6}{Related Work}{part.2}% 33
 \BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 34
-\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.2}% 35
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.2}{Future Work}{chapter.8}% 37
-\BOOKMARK [-1][]{part*.11}{Appendix}{}% 38
-\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.11}% 39
-\BOOKMARK [1][-]{section.A.1}{Appendix A: Source Code Editor with Annotation Language}{appendix.A}% 40
-\BOOKMARK [1][-]{section.A.2}{Appendix B: C Code Generator}{appendix.A}% 41
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{part*.11}% 42
+\BOOKMARK [-1][]{part.3}{The 3rd Part}{}% 35
+\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.3}% 36
+\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.2}{Future Work}{chapter.8}% 38
+\BOOKMARK [-1][]{part*.11}{Appendix}{}% 39
+\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.11}% 40
+\BOOKMARK [1][-]{section.A.1}{Appendix A: Source Code Editor with Annotation Language}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.2}{Appendix B: C Code Generator}{appendix.A}% 42
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{part*.11}% 43

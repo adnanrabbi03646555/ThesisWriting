@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
+Warning--I didn't find a database entry for "ref_39_simonet:report"
 Warning--to sort, need author or key in ref_86_techtarget:techtarget
 Warning--to sort, need author or key in ref_87_gcn:gcn
 Too many commas in name 1 of "Paul Muntean, Adnan Rabbi, Andreas Ibing, Claudia Eckert" for entry ref_108_paul2015infoflow
@@ -9,7 +10,6 @@ Warning--to sort, need author or key in ref_15_yakindu:sct
 Warning--there's a number but no volume in ref_18_chess2004static
 Warning--there's a number but no volume in ref_81_chess2004static
 Warning--can't use both volume and number fields in ref_67_cohen1977information
-Warning--can't use both volume and number fields in ref_5_cohen1977information
 Warning--empty booktitle in ref_6_cohen1978information
 Warning--can't use both volume and number fields in ref_84_hallem2002system
 Warning--empty booktitle in ref_7_joshi2000semantic

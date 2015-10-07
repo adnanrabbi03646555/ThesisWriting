@@ -23,9 +23,9 @@ AnnotationLanguage:
  */ 
 HeaderModel:
    headers+= SingleLineAnnotation      
-           | MultilineAnnotation
-           | MethodHeader   
-           | AttributeDefinition
+			 | MultilineAnnotation
+			 | MethodHeader   
+			 | AttributeDefinition
 ;
 
 /**

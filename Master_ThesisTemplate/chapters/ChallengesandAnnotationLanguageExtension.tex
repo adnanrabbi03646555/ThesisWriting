@@ -14,7 +14,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 \begin{itemize}	
 	\item Xtext : Xtext is a framework for development of programming languages and domain specific languages. According to the \cite{ref_17_xtext:grammar}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to individual user needs.
 	
-	Here is an example of xtext code:
+	Here is an example of xtext code (listing \ref{lst:xtextCodeExample}):
 		\begin{lstlisting} [caption={Xtext Code Example},label=lst:xtextCodeExample]
 		grammar org.xtext.example.mydsl.MyDsl with 
 		org.eclipse.xtext.common.Terminals
@@ -29,8 +29,8 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 		
 		\end{lstlisting}
 		 
-	The above language allows user to write down a list of messages. The following would be the proper input messages which are allowed to write:
-		\begin{lstlisting}
+	The above language allows user to write down a list of messages. The following would be the proper input messages which are allowed to write (listing \ref{lst:inputMessages}):
+		\begin{lstlisting} [caption={Input messages which are allowed to write},label=lst:inputMessages]
 			Hello User!
 			Hello World!		
 		\end{lstlisting}
@@ -68,8 +68,8 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	\textbf{Type Inference:}
 	One of the problems with Java is that you are forced to write type signatures over and over again. That is why so many people do not like static typing. But this is in fact not a problem of static typing but simply a problem with Java. Although Xtend is statically typed just like Java, user rarely have to write types down because they can be computed from the context.
 	
-	Consider the following Java variable declaration:
-	\begin{lstlisting}
+	Consider the following Java variable declaration (listing \ref{lst:javaVariableDeclaration}):
+	\begin{lstlisting} [caption={Java variable declaration},label=lst:javaVariableDeclaration]
 		final LinkedList<String> list = new LinkedList<String>();
 	\end{lstlisting}
 	The type name written for the constructor call must be repeated to declare the variable type. In Xtend the variable type can be inferred from the initialization expression:
@@ -77,7 +77,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 		val list = new LinkedList<String>
 	\end{lstlisting}
 		
-	Here is an example of xtend code:
+	Here is an example of xtend code (listing \ref{lst:xtendCodeExample}):
 	\begin{lstlisting} [caption={Xtend Code Example},label=lst:xtendCodeExample]
 	package example	
 	import java.util.List		
@@ -95,12 +95,8 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	
 	\end{lstlisting} 
 	   
-Xtend provides type inference, the type of name and the return types of the methods can be inferred from the context. Classes and methods are public by default, fields private. Semicolons are optional.
-	
-The example also shows the method helloMessage called as an extension method, like a feature of its first argument. Extension methods can also be provided by other classes or instances.
+Xtend provides type inference, the type of name and the return types of the methods can be inferred from the context. Classes and methods are public by default, fields private. Semicolons are optional. The example also shows the method helloMessage called as an extension method, like a feature of its first argument. Extension methods can also be provided by other classes or instances.
 \end{itemize}
-
-
 Previous annotation language grammer has been extended more
 to detect implicit and explicit information flow bugs in UML
 state charts and C code. The purpose of the same annotation language
@@ -135,25 +131,25 @@ For detecting of authentication, declassification and sanitization errors new fu
 	\centering
 \begin{tabular}{|l|c|p{5cm}|}
 	\hline
-	Annotation Type   & Annotation Tag & Description  \\
+	\textbf{Annotation Type} & \textbf{Annotation Tag} & \textbf{Description}\\
 	\hline
 
-	@function         & sink  		   & uses information \\
-	                  & source         & source provides information	\\
-	                  & authentication & authentication is responsible for authenticate information	\\
-	                  & declassification& declassification mainly declassifies information	\\
-	                  & sanitization   & sanitization mainly sanitizes information	\\
-	                  & trust\_boundary& trust\_boundary is a trust-boundary\\ \hline
+	\textbf{@function}& \textbf{sink} & uses information \\
+	                  & \textbf{source}& source provides information	\\
+	                  & \textbf{authentication} & authentication is responsible for authenticate information	\\
+	                  & \textbf{declassification}& declassification mainly declassifies information	\\
+	                  & \textbf{sanitization}   & sanitization mainly sanitizes information	\\
+	                  & \textbf{trust\_boundary}& trust\_boundary is a trust-boundary\\ \hline
 
-	@parameter        & authenticated H/L& authenticated with High/Low tags\\
-					  & declassified H/L  & declassified-High/Low tags    \\
-				      & sanitized H/L     & sanitized with High/Low tags    \\ \hline
-	@variable         & confidential H/L & confidential with High/Low tags\\
-					  & source H/L & source with High/Low tags   \\
+	\textbf{@parameter}        & \textbf{authenticated H/L}& authenticated with High/Low tags\\
+					  & \textbf{declassified H/L}  & declassified-High/Low tags    \\
+				      & \textbf{sanitized H/L}     & sanitized with High/Low tags    \\ \hline
+	\textbf{@variable}         & \textbf{confidential H/L} & confidential with High/Low tags\\
+					  & \textbf{source H/L} & source with High/Low tags   \\
 	\hline
 	
-	@preStep         & preStep  & previous function call name\\ 	\hline
-	@postStep        & postStep  & next function call name\\ 	\hline
+	\textbf{@preStep}         & \textbf{preStep}  & previous function call name\\ 	\hline
+	\textbf{@postStep}        & \textbf{postStep}  & next function call name\\ 	\hline
 
 	
 \end{tabular}

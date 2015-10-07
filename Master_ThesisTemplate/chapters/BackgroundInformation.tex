@@ -96,39 +96,36 @@ social web site. If the site fails to validate such input, that code
 may execute in the browser of any other user who visits that
 profile.Malicious file executions happen when a web application improperly trusts input files or uses unverified user data in stream functions, thereby allowing hostile content to be executed on the server.
 
-
-
 SQL injection vulnerabilities arise in applications where elements of a SQL query originate from an untrusted source. Without precautions, the untrusted data may maliciously alter the query, resulting in information leaks or data modification. The primary means of preventing SQL injection are sanitization and validation, which are typically implemented as parameterized queries and stored procedures.
 
-Suppose a system authenticates users by issuing the following query to a SQL database. If the query returns any results, authentication succeeds; otherwise, authentication fails.
+Suppose a system authenticates users by issuing the following query (listing \ref{lst:sqlUserAuth}) to a SQL database. If the query returns any results, authentication succeeds; otherwise, authentication fails.
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={SQL query for user authentication},label=lst:sqlUserAuth]
 	SELECT * FROM db_user WHERE username='USERNAME' AND
 	password='PASSWORD'
 \end{lstlisting}
 
-Suppose an attacker can substitute arbitrary strings for USERNAME and PASSWORD. In that case, the authentication mechanism can be bypassed by supplying the following USERNAME with an arbitrary password:
+An attacker can substitute arbitrary strings for USERNAME and PASSWORD. In that case, the authentication mechanism can be bypassed by supplying the following USERNAME with an arbitrary password (listing \ref{lst:sqlUserAuthAttacker}):
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={SQL query after substitution by attacker},label=lst:sqlUserAuthAttacker]
 	'validuser' OR '1'='1
 \end{lstlisting}
 
-The authentication routine dynamically constructs the following query:
+The authentication routine dynamically constructs the following query (listing \ref{lst:sqlUserAuthAttackerFull}):
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Full SQL query after substitution by attacker},label=lst:sqlUserAuthAttackerFull]
 	SELECT * FROM db_user WHERE username='validuser' OR '1'='1' AND password='PASSWORD'
 \end{lstlisting}
 
-If validuser is a valid user name, this SELECT statement yields the validuser record in the table. The password is never checked because username='validuser' is true; consequently, the items after the OR are not tested. As long as the components after the OR generate a syntactically correct SQL expression, the attacker is granted the access of validuser.
-Similarly, an attacker could supply the following string for PASSWORD with an arbitrary username:
+If validuser is a valid user name, this SELECT statement yields the validuser record in the table. The password is never checked because username='validuser' is true; consequently, the items after the OR are not tested. As long as the components after the OR generate a syntactically correct SQL expression, the attacker is granted the access of validuser. Similarly, an attacker could supply the following string for PASSWORD with an arbitrary username (listing \ref{lst:sqlPassUser}):
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={SQL query  for password with an arbitrary username},label=lst:sqlPassUser]
 	' OR '1'='1
 \end{lstlisting}
 
-Now producing the following query:
+Now producing the following query (listing \ref{lst:sqlInjection}):
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Query  after SQL injection},label=lst:sqlInjection]
 	SELECT * FROM db_user WHERE username='USERNAME' AND password='' OR '1'='1'
 \end{lstlisting}
 '1'='1' always evaluates to true, causing the query to yield every row in the database. In this scenario, the attacker would be authenticated without needing a valid username or password.
@@ -189,9 +186,9 @@ Some basic purpose of sanitization are given below:
 \end{itemize}
 
 \textbf{Sanitize the input by removing suspicious tags:}
-This is a naive approach because it's almost impossible to cover everything. This regex function removes the obvious code to inject unwanted scripting which is given below.
+This is a naive approach because it's almost impossible to cover everything. This regex function removes the obvious code to inject unwanted scripting which is given below (listing \ref{lst:regexInjectJs}).
 
-\begin{lstlisting}
+\begin{lstlisting} [caption={Regex function to inject unwanted scripting},label=lst:regexInjectJs]
 	public static String sanitize(String string) {
 	return string
 		.replaceAll("(?i)<script.*?>.*?</script.*?>", "")   // case 1
@@ -232,7 +229,7 @@ owners policies allow. The model allows principals to define their own downgradi
 \textbf{Dimensions of declassification:}
 Classification of the basic declassification goals according to four axes: what information is released, who releases information, where in the system information is released and when information can be released.
 \begin{itemize}
-   \item What: Selective or Partial information flow policies \cite{ref_5_cohen1977information,ref_6_cohen1978information,ref_8_giacobazzi2005adjoining,ref_7_joshi2000semantic} regulate what
+   \item What: Selective or Partial information flow policies \cite{ref_67_cohen1977information,ref_6_cohen1978information,ref_8_giacobazzi2005adjoining,ref_7_joshi2000semantic} regulate what
    information may be released. Partial release guarantees that only a part of a secret is
    released to a public domain. Partial release can be specified in terms of precisely which
    parts of the secret are released. This is useful,
@@ -451,7 +448,7 @@ verify in a practical manner the confidentiality and integrity of sensitive prog
 
 The systems development life cycle (SDLC), also referred to as the software/application development life-cycle, is a term used to describe a process for planning, creating, management, testing and deploying an information system. The systems development life-cycle concept applies to a range of hardware and software configurations, as a system can be composed of hardware only, software only or a combination of both.
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 	\makebox[\textwidth]{\includegraphics[scale=0.50,width=\textwidth]{styles/sdlc.pdf}}
 	\caption{Software Development Life Cycle}

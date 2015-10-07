@@ -98,12 +98,6 @@ Ellis Cohen.
 \newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
   133--139. ACM, 1977.
 
-\bibitem{ref_5_cohen1977information}
-Ellis Cohen.
-\newblock Information transmission in computational systems.
-\newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
-  133--139. ACM, 1977.
-
 \bibitem{ref_68_cohen1978information}
 Ellis~S Cohen.
 \newblock Information transmission in sequential programs.
@@ -342,11 +336,6 @@ John McLean.
 \newblock Proving noninterference and functional correctness using traces.
 \newblock Technical report, DTIC Document, 1992.
 
-\bibitem{ref_51_microsoft:sal}
-Microsoft.
-\newblock {MSDN run-time library reference - SAL annotations},
-  http://msdn.microsoft.com/en--us/library/ms235402.aspx, 2014.
-
 \bibitem{ref_55_sun:lock}
 Sun Microsystems.
 \newblock {Lock\_Lint - Static data race and ceadlock detection tool for C},
@@ -424,6 +413,11 @@ S{\"o}ren Preibusch.
 \newblock In {\em Policies for Distributed Systems and Networks (POLICY), 2011
   IEEE International Symposium on}, pages 133--136. IEEE, 2011.
 
+\bibitem{ref_51_microsoft:sal}
+Microsoft Run-Time~Library Reference.
+\newblock {MSDN run-time library reference - SAL annotations},
+  https://msdn.microsoft.com/en-us/library/vstudio/ms235402(v=vs.100).aspx.
+
 \bibitem{ref_59_rosenblum:towards}
 D.~S. Rosemblum.
 \newblock {Towards a Method of Programming with Assertions}.
@@ -483,16 +477,6 @@ Lwin~Khin Shar, Hee Beng~Kuan Tan, and Lionel~C Briand.
   hybrid program analysis.
 \newblock In {\em Proceedings of the 2013 International Conference on Software
   Engineering}, pages 642--651. IEEE Press, 2013.
-
-\bibitem{ref_49_simonet:flowcaml}
-V.~Simonet.
-\newblock {\em {FlowCaml in a nutshell}}.
-\newblock In G. Hutton, ed. APPSEM-II, 2003.
-
-\bibitem{ref_39_simonet:report}
-V.~Simonet.
-\newblock {The Flow Caml System: documentation and user{\rq}s manual }.
-\newblock Technical report, INRIA, July 2003.
 
 \bibitem{ref_32_simonet:report}
 V.~Simonet.

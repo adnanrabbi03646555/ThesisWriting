@@ -23,12 +23,12 @@ System Architecture is based on 9 fundamental principles:
 	\item System can be linked to another through an interface, which will model the properties of the link
 	\item A system can be considered at various abstraction levels, allowing to consider only relevant properties and behaviors
 	\item A system can be viewed according to several layers (usually three: its sense, its functions, and its composition)
-	\item A system can be described through interrelated models with given semantics (properties, structure, states, behaviors, datas, etc)
+	\item A system can be described through interrelated models with given semantics (properties, structure, states, behaviors, data's etc.)
 	\item A system can be described through different viewpoints corresponding to various actors concerned by the system.
 \end{itemize}
 
 The architecture of our system is given below:
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
 	\makebox[\textwidth]{\includegraphics[scale=.50,width=\textwidth]{styles/system_architecture.pdf}}
 	\caption{System Overview}
@@ -56,7 +56,7 @@ Using SAL is relatively easy. User simply add annotations to user's function pro
 	\centering
 	\begin{tabular}{|l|c|p{5cm}|}
 		\hline
-		Category  & Parameter Annotation & Description  \\
+		\textbf{Category} & \textbf{Parameter Annotation} & \textbf{Description}  \\
 		\hline
 		
 		Input to called function        & \_In\_k  		   & Data is passed to the called function, and 
@@ -132,7 +132,7 @@ charts and code in order to detect information flow errors. The grammar of annot
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
  		
  	\end{tabular}
- 	\caption{Light-weight annotation language grammar excerpt}
+ 	\caption{Light-weight annotation language grammar excerpt \cite{ref_108_paul2015infoflow}}
  	\label{language grammar}
  \end{figure}
  
@@ -155,7 +155,7 @@ Statechart diagram defines the states of a component and these state changes are
 
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=55mm,scale=.55]{styles/simpleStateChart.pdf}}
+	\makebox[\textwidth]{\frame{\includegraphics[width=55mm,scale=.55]{styles/simple_statechart.pdf}}}
 	\label{simple_stateChart}
 	\caption{Simple UML State Chart}
 \end{figure}
@@ -349,13 +349,7 @@ To extend the Yakindu SCT editor here it has been decided to represent the state
 	
 \section{Source Code Editor}
 
-A source code editor is a text editor. It is a program which is designed specifically for editing source code of computer programs. It may be built into an integrated development environment (IDE) or web browser. To simplify and speed up input of source code such as syntax highlighting, indentation, autocomplete and bracket matching functionality, source code editors features have designed. Source code editors are the most fundamental programming tool. Some well-known source code editors are:
-\begin{itemize}
-	\item Gedit 
-	\item IntelliJ 
-	\item NetBeans
-	\item Notepad++ and more.
-\end{itemize}
+A source code editor is a text editor. It is a program which is designed specifically for editing source code of computer programs. It may be built into an integrated development environment (IDE) or web browser. To simplify and speed up input of source code such as syntax highlighting, indentation, autocomplete and bracket matching functionality, source code editors features have designed. Source code editors are the most fundamental programming tool. Some well-known source code editors are Gedit, IntelliJ, NetBeans, Notepad++ and more.
 
 For this research, previous source code editor \cite{ref_108_paul2015infoflow} has been extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line. Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext \cite{ref_17_xtext:grammar}.
 
