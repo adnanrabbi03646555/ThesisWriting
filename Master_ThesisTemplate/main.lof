@@ -21,10 +21,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces UML Statechart Modeling for Authentication Scenario}}{51}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces UML Statechart Modeling for Declassification Scenario}}{52}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces UML Statechart Modeling for Sanitization Scenario}}{53}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug Reports in Checker}}{56}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug Reports in Checker with Message}}{56}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence Diagram Representation of Buggy Path}}{57}{figure.5.6}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces UML statechart modeling for sanitization scenario}}{53}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug reports in checker}}{56}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug reports in checker with message}}{56}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence diagram representation of buggy path}}{57}{figure.5.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

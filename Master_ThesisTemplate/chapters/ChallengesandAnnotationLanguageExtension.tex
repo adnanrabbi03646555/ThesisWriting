@@ -167,7 +167,7 @@ Xtext itself and every language infrastructure developed with Xtext is configure
 
 The Modeling Workflow Engine 2 (MWE2) is a rewritten backwards compatible implementation of the Modeling Workflow Engine (MWE). It is a declarative, externally configurable generator engine. Users can describe arbitrary object compositions by means of a simple, concise syntax that allows to declare object instances, attribute values and references. One use case - that's where the name had its origins - is the definition of workflows. Such a workflow consists usually of a number of components that interact with each other. There are components to read EMF resources, to perform operations (transformations) on them and to write them back or to generate any number of other artifacts out of the information. Workflows are typically executed in a single JVM. However there are no constraints that prevent implementors to provide components that spawn multiple threads or new processes.
 
-Xtext ships with a default set of predefined, reasonable and often required terminal rules. The grammar for these common terminal rules is defined as follows:
+Xtext ships with a default set of predefined, reasonable and often required terminal rules. The grammar for these common terminal rules (listing \ref{lst:xtextCommonTerminalRules}) is defined as follows:
 	\begin{lstlisting}[caption={Common terminal Rules in Xtext },label=lst:xtextCommonTerminalRules]
 		grammar org.eclipse.xtext.common.Terminals 
 		hidden(WS, ML_COMMENT, SL_COMMENT)
@@ -189,9 +189,9 @@ Xtext ships with a default set of predefined, reasonable and often required term
 		.;
 	\end{lstlisting}
 
-In order to implement the annotation language grammer in this research it was required to extend the terminal rule ML\_COMMENT and SL\_COMMENT. After extending these two rules it looks like this:
+In order to implement the annotation language grammer in this research it was required to extend the terminal rule ML\_COMMENT and SL\_COMMENT. After extending these two rules looks like this (listing \ref{lst:slMlRuleXtext}):
 
-\begin{lstlisting}[caption={Sigleline and Multiline Comments Rule in Xtext},label=lst:slMlRuleXtext]
+\begin{lstlisting}[caption={Singleline and Multiline Comments Rule in Xtext},label=lst:slMlRuleXtext]
 	/**
 	* @SL_COMMENT :all strings which follow // | || | } will be a single line comment
 	*/ 

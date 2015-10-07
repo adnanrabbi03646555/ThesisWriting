@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  7 OCT 2015 23:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  8 OCT 2015 00:33
 entering extended mode
 **main.tex
 
@@ -1452,7 +1452,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--146
  []
 
 [29] [30]
-<styles/Language_Design_Process.pdf, id=679, 470.75874pt x 253.94875pt>
+<styles/Language_Design_Process.pdf, id=681, 470.75874pt x 253.94875pt>
 File: styles/Language_Design_Process.pdf Graphic file (type pdf)
 
 <use styles/Language_Design_Process.pdf>
@@ -1471,7 +1471,7 @@ chapter 4.
 Underfull \vbox (badness 2150) has occurred while \output is active []
 
  [33]
-<styles/system_architecture.pdf, id=713, 598.235pt x 217.81375pt>
+<styles/system_architecture.pdf, id=715, 598.235pt x 217.81375pt>
 File: styles/system_architecture.pdf Graphic file (type pdf)
 
 <use styles/system_architecture.pdf>
@@ -1527,7 +1527,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37]
-<styles/simple_statechart.pdf, id=749, 59.7432pt x 56.1297pt>
+<styles/simple_statechart.pdf, id=751, 59.7432pt x 56.1297pt>
 File: styles/simple_statechart.pdf Graphic file (type pdf)
 
 <use styles/simple_statechart.pdf>
@@ -1566,7 +1566,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
-<styles/errorTracePath.pdf, id=826, 427.5975pt x 351.3125pt>
+<styles/errorTracePath.pdf, id=828, 427.5975pt x 351.3125pt>
 File: styles/errorTracePath.pdf Graphic file (type pdf)
 
 <use styles/errorTracePath.pdf>
@@ -1585,7 +1585,7 @@ sure that the user who is cre-at-ing this database
 
 [49
 
-] <styles/authentication_scenario.pdf, id=869, 237.76831pt x 106.7187pt>
+] <styles/authentication_scenario.pdf, id=873, 237.76831pt x 106.7187pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1607,7 +1607,7 @@ Underfull \vbox (badness 3657) has occurred while \output is active []
 
  [51 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/authentication_scenario.pdf>]
-<styles/declassification_scenario.pdf, id=898, 241.38179pt x 98.2872pt>
+<styles/declassification_scenario.pdf, id=902, 241.38179pt x 98.2872pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
@@ -1620,22 +1620,19 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 93.
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [52 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisT
 emplate/styles/declassification_scenario.pdf>]
-<styles/sanitization_scenario.pdf, id=913, 237.04561pt x 102.1416pt>
+<styles/sanitization_scenario.pdf, id=919, 237.04561pt x 102.1416pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
 Package pdftex.def Info: styles/sanitization_scenario.pdf used on input line 11
 3.
 (pdftex.def)             Requested size: 118.5225pt x 51.07066pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/sanitization_scenario.pdf>] [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [55]
-<styles/bugDetectionDiagram.pdf, id=940, 936.49875pt x 384.43625pt>
+<styles/bugDetectionDiagram.pdf, id=947, 936.49875pt x 384.43625pt>
 File: styles/bugDetectionDiagram.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionDiagram.pdf>
@@ -1643,7 +1640,7 @@ Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 176.
 
 (pdftex.def)             Requested size: 468.24823pt x 192.21765pt.
 
-<styles/bugDetectionWithMessage.pdf, id=941, 931.48pt x 382.42876pt>
+<styles/bugDetectionWithMessage.pdf, id=948, 931.48pt x 382.42876pt>
 File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
@@ -1653,7 +1650,7 @@ Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line
  [56 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionDiagram.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITReposi
 tory/ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=957, 401.5pt x 217.81375pt>
+<styles/viewSequenceDiagram.pdf, id=964, 401.5pt x 217.81375pt>
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
@@ -1843,10 +1840,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 25295 strings out of 493921
- 452103 string characters out of 3144876
- 650755 words of memory out of 3000000
- 26991 multiletter control sequences out of 15000+200000
+ 25298 strings out of 493921
+ 452156 string characters out of 3144876
+ 650753 words of memory out of 3000000
+ 26994 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,13n,72p,2412b,2015s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1865,9 +1862,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 6448863 bytes).
+Output written on main.pdf (107 pages, 6515217 bytes).
 PDF statistics:
- 2094 PDF objects out of 2487 (max. 8388607)
+ 2101 PDF objects out of 2487 (max. 8388607)
  1024 named destinations out of 1200 (max. 500000)
  427 words of extra memory for PDF output out of 10000 (max. 10000000)
 
