@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  6 OCT 2015 10:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  7 OCT 2015 13:11
 entering extended mode
 **main.tex
 
@@ -1342,7 +1342,7 @@ e\chapters/BackgroundInformation.tex [5] [6
 ]
 chapter 2.
 [7] [8]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 106.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 105.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -1358,10 +1358,7 @@ Overfull \hbox (12.32082pt too wide) in paragraph at lines 218--219
 rity clas-si-fi-ca-tion of se-lected in-for-ma-tion. Sabelfeld
  []
 
-
-Underfull \vbox (badness 1688) has occurred while \output is active []
-
- [11]
+[11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
@@ -1381,19 +1378,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <styles/sdlc.pdf, id=514, 615.29875pt x 181.67876pt>
 File: styles/sdlc.pdf Graphic file (type pdf)
  <use styles/sdlc.pdf>
-Package pdftex.def Info: styles/sdlc.pdf used on input line 457.
+Package pdftex.def Info: styles/sdlc.pdf used on input line 456.
 (pdftex.def)             Requested size: 307.64862pt x 90.83914pt.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 473.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 472.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 473.
-
-Underfull \vbox (badness 1762) has occurred while \output is active []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 472.
  [18 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/sdlc.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1403,17 +1397,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: styles/FunctionCallMissing.pdf Graphic file (type pdf)
 
 <use styles/FunctionCallMissing.pdf>
-Package pdftex.def Info: styles/FunctionCallMissing.pdf used on input line 508.
+Package pdftex.def Info: styles/FunctionCallMissing.pdf used on input line 507.
 
 (pdftex.def)             Requested size: 235.3788pt x 126.97406pt.
  [20 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/FunctionCallMissing.pdf>]
-<styles/bug_detection_during_coding.pdf, id=551, 470.75874pt x 326.21875pt>
+<styles/bug_detection_during_coding.pdf, id=552, 470.75874pt x 326.21875pt>
 File: styles/bug_detection_during_coding.pdf Graphic file (type pdf)
 
 <use styles/bug_detection_during_coding.pdf>
 Package pdftex.def Info: styles/bug_detection_during_coding.pdf used on input l
-ine 524.
+ine 523.
 (pdftex.def)             Requested size: 235.3788pt x 163.10896pt.
 ) [21 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisT
 emplate/styles/bug_detection_during_coding.pdf>] [22
@@ -1467,7 +1461,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--150
  []
 
 [29] [30]
-<styles/Language_Design_Process.pdf, id=663, 470.75874pt x 253.94875pt>
+<styles/Language_Design_Process.pdf, id=664, 470.75874pt x 253.94875pt>
 File: styles/Language_Design_Process.pdf Graphic file (type pdf)
 
 <use styles/Language_Design_Process.pdf>
@@ -1486,7 +1480,7 @@ chapter 4.
 Underfull \vbox (badness 2150) has occurred while \output is active []
 
  [33]
-<styles/system_architecture.pdf, id=697, 598.235pt x 217.81375pt>
+<styles/system_architecture.pdf, id=698, 598.235pt x 217.81375pt>
 File: styles/system_architecture.pdf Graphic file (type pdf)
 
 <use styles/system_architecture.pdf>
@@ -1586,14 +1580,17 @@ Underfull \vbox (badness 1253) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
-<styles/errorTracePath.pdf, id=810, 427.5975pt x 351.3125pt>
+<styles/errorTracePath.pdf, id=808, 427.5975pt x 351.3125pt>
 File: styles/errorTracePath.pdf Graphic file (type pdf)
 
 <use styles/errorTracePath.pdf>
-Package pdftex.def Info: styles/errorTracePath.pdf used on input line 555.
+Package pdftex.def Info: styles/errorTracePath.pdf used on input line 552.
 (pdftex.def)             Requested size: 213.79822pt x 175.6558pt.
- [47] [48 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_The
-sisTemplate/styles/errorTracePath.pdf>])
+ [47 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/errorTracePath.pdf>]
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+ [48])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/Experiments.tex [49] [50
 
@@ -1852,13 +1849,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
- 25293 strings out of 493921
- 452702 string characters out of 3144876
- 653755 words of memory out of 3000000
- 26985 multiletter control sequences out of 15000+200000
+ 25290 strings out of 493921
+ 452654 string characters out of 3144876
+ 650755 words of memory out of 3000000
+ 26984 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,13n,72p,2409b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,13n,72p,2412b,2009s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
@@ -1874,9 +1871,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 5190768 bytes).
+Output written on main.pdf (107 pages, 5190709 bytes).
 PDF statistics:
- 2079 PDF objects out of 2487 (max. 8388607)
- 1028 named destinations out of 1200 (max. 500000)
+ 2076 PDF objects out of 2487 (max. 8388607)
+ 1026 named destinations out of 1200 (max. 500000)
  419 words of extra memory for PDF output out of 10000 (max. 10000000)
 
