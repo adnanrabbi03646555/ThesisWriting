@@ -140,10 +140,10 @@ SingleLineAnnotation returns SingleLineAnnotation:
  *                 :annotations can addres whole functions or parameters of a function
  */ 
 enum AnnotationType:
-	function
-  |	parameter 
-  | preStep
-  | postStep
+						function
+					  |	parameter 
+					  | preStep
+					  | postStep
 ;
 
 /**

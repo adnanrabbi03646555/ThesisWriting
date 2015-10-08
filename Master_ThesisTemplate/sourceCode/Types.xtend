@@ -11,10 +11,8 @@
 package Myc
 
 import org.yakindu.sct.model.sexec.ExecutionFlow
-
 import org.yakindu.sct.model.sgraph.Statechart
 import org.yakindu.sct.model.sgraph.Choice
-
 import org.eclipse.xtext.generator.IFileSystemAccess
 import com.google.inject.Inject
 import org.yakindu.sct.model.sgen.GeneratorEntry
@@ -28,7 +26,8 @@ class Types {
 	@Inject extension Naming
 	@Inject extension GenmodelEntries
 	
-	var String variableName
+	var String variableName	
+//	var fileContent = <String, String>newHashMap	
 
 	def generateTypesH(ExecutionFlow flow, Statechart sc, IFileSystemAccess fsa, GeneratorEntry entry) {		
 		
@@ -42,227 +41,77 @@ class Types {
 
 def typesCAnnotationContent(ExecutionFlow flow, Statechart sc ,GeneratorEntry entry)'''  
 
-#import "«flow.testModule.h»"	
+#import "flow.testModule.h"	
 #pragma comment(lib, "advapi32")
 			
 #define HASH_INPUT "ABCDEFG123456" /* INCIDENTAL: Hardcoded crypto */
-#define PAYLOAD "plaintext"
-			
+#define PAYLOAD "plaintext"			
 
-«FOR s: getFunctionContent(sc).entrySet»	   
-
-// extern void «s.value» {}    
-
-  «IF(!s.value.contains('authentication')&&(!s.value.contains('declassification'))&&(!s.value.contains('sanitization')))»           
-		        void «s.value» {}
-  «ENDIF»
-«ENDFOR»
+FOR s: getFunctionContent(sc).entrySet
+// extern void s.value {}   
+  IF(!s.value.contains('authentication')&&(!s.value.contains('declassification'))&&(!s.value.contains('sanitization')))           
+		        void s.value {}
+  ENDIF
+ENDFOR
           
-«FOR region : sc.regions»
+FOR region : sc.regions
 
-«IF ( region.name.equalsIgnoreCase('bad_path()'))»
-void «region.name»{  
-	     
-«FOR s: getBadPathContent(sc).entrySet» 
-	«IF s.key.contains('//@ @variable')» 
-	«s.key»
-	«s.value»;
-	«ENDIF»
-	«IF s.value.contains('(')»
-		«s.value»;
-	«ENDIF»             
-					            
-		 «ENDFOR»
-}	
+	IF ( region.name.equalsIgnoreCase('bad_path()'))
+		void region.name{  
+				 
+			FOR s: getBadPathContent(sc).entrySet 
+				IF s.key.contains('//@ @variable') 
+				s.key
+				s.value;
+				ENDIF
+				IF s.value.contains('(')
+					s.value;
+				ENDIF             
+											
+			ENDFOR
+		}	
 
-«ENDIF»	
+	ENDIF	
 
-«IF ( region.name.equalsIgnoreCase('good_path()'))»
-void «region.name»{  
-«FOR s: getGoodPathContent(sc).entrySet» 
-	«IF s.key.contains('//@ @variable')» 
-	   «s.key»;
-	«ENDIF»    
-	«s.value»;  				            
-«ENDFOR»
-}	
-«ENDIF»	
+	IF ( region.name.equalsIgnoreCase('good_path()'))
+		void region.name{  
+			FOR s: getGoodPathContent(sc).entrySet 
+				IF s.key.contains('//@ @variable') 
+				   s.key;
+				ENDIF
+				
+				s.value;  
+										
+			ENDFOR
+		}	
+	ENDIF	
 	
-«ENDFOR»
+ENDFOR
           
 int main(int argc, char * argv[])
 {
-«FOR region : sc.regions»
-     «IF region.name.contains('good_path()')||region.name.contains('bad_path()') » 
-	   «region.name»; 
-	«ENDIF»
-        
-«ENDFOR»
+	FOR region : sc.regions
+		 IF region.name.contains('good_path()')||region.name.contains('bad_path()')  
+		   region.name; 
+		ENDIF
+			
+	ENDFOR
  return 0;
 }
           
-'''
-
-	def typesHAnnotationContent(ExecutionFlow flow, Statechart sc ,GeneratorEntry entry)'''  
-		«FOR s: getFileContent(sc).entrySet»
-		            «IF s.value.contains('(') && s.key.contains('@')» 
-			            «s.key»;
-			            void «s.value»;	
-		            «ENDIF»          
+def typesHAnnotationContent(ExecutionFlow flow, Statechart sc ,GeneratorEntry entry)'''  
+		FOR s: getFileContent(sc).entrySet
+		            IF s.value.contains('(') && s.key.contains('@') 
+			            s.key;
+			            void s.value;	
+		            ENDIF          
 		            
-		«ENDFOR» 
-	'''
+		ENDFOR 
 
-
-	def protected exists(String filename, SimpleResourceFileSystemAccess fsa) {
+def protected exists(String filename, SimpleResourceFileSystemAccess fsa) {
 		val uri = fsa.getURI(filename);
 		val file = ResourcesPlugin.getWorkspace().getRoot()
 					.getFile(new Path(uri.toPlatformString(true)));
 		return file.exists;
-	}
-
-	
+	}	
 }
-
-//Naming.xtend
-def HashMap<String, String> getFileContent(Statechart sc) {
-		
-		var fileContent = <String, String>newHashMap
-		for( region : sc.regions){
-			for(vertex : region.vertices)  {
-					if (!(vertex.name.nullOrEmpty)){
-						for(transition : vertex.incomingTransitions) {
-							if(transition.specification.nullOrEmpty)
-							  	fileContent.put(vertex.name,vertex.name)
-							if((!transition.specification.contains('//@ @variable')) && !(transition.specification.nullOrEmpty))
-							  	fileContent.put(transition.specification,vertex.name)	
-								
-					    }							
-						
-			        }
-				
-		    }     
-				
-	    }          
-	 return fileContent
-	}
-	
-	def HashMap<String, String> getFunctionContent(Statechart sc) {
-		var functionContent = <String, String>newHashMap
-		
-		for( region : sc.regions){        
-			for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {	  
-				   
-					if ( (vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){						
-							functionContent.put(vertex.name,vertex.name)
-			        }
-		    }     
-				
-	    }          
-	 return functionContent
-	}
-	def HashMap<String, String> getBadPathContent(Statechart sc) {
-		var badfunctionContent = <String, String>newHashMap
-		var String newName
-		
-		for( region : sc.regions){
-		
-			 if(region.name.equalsIgnoreCase('bad_path()')){
-				for(vertex : region.vertices.filter[eClass.name.contentEquals('State')]){			
-					
-					if(!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
-						for(transition : vertex.incomingTransitions) {
-							badfunctionContent.put(transition.specification,vertex.name)			
-					    }							    
-
-				      }
-					if((vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
-							if ( (vertex.name.contains('char '))){
-								    newName=vertex.name.replaceAll('char *','')
-								    if(newName.contains('*'))	
-								        newName=newName.replaceAll('\\*','')				
-									badfunctionContent.put(newName,newName)
-					        }
-					        else
-					           badfunctionContent.put(vertex.name,vertex.name)
-				      }
-			    }
-			    
-			 }     
-				
-	    }          
-	 return badfunctionContent
-	}
-	
-	def String getVariableName(Statechart sc){		
-		var String variablename
-		for( region : sc.regions){
-			for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {	 
-				   
-					if (!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){						
-							for(transition : vertex.incomingTransitions) {												
-												variablename= vertex.name.replaceAll('char *','')
-												if(variablename.contains('*'))
-												   variablename=variablename.replaceAll('\\*','')														
-					    	}
-			        }
-		    } 
-		    
-		}
-	return variablename
-	}
-	
-	def HashMap<String, String> getGoodPathContent(Statechart sc) {
-		var goodfunctionContent = <String, String>newHashMap
-		
-		var String newName		
-	  
-		for( region : sc.regions){
-			if(region.name.equalsIgnoreCase('good_path()')){
-					
-                 
-                  val choiceState=0; 
-                  val increment=1; 
-                  
-                 
-                  for(vertex : region.vertices.filter[eClass.name.contentEquals('Choice')]){                   	
-                   val sum=choiceState+increment;
-                  	for(transition : vertex.incomingTransitions) {                	
-                  	   System.out.println("*********"+"if\n"+sum);     
-                  	    
-                  	}         	    
-                  }
-                     
-					for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {						    
-			          
-				            for(invertex : vertex.parentRegion.vertices.filter[eClass.name.contentEquals('State')])
-				            {
-				            	if(!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
-										for(transition : vertex.incomingTransitions) {
-												goodfunctionContent.put(transition.specification,vertex.name)
-													
-					    				}
-				            	}
-								if((vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
-																	
-									if ( (vertex.name.contains('char '))){
-										   
-										    newName=vertex.name.replaceAll('char *','')	
-										    newName=newName.replaceAll('\\*','')					
-											goodfunctionContent.put(newName,newName)
-							        }
-							        else
-							           goodfunctionContent.put(vertex.name,vertex.name)
-						        }
-				            	
-				             }				             
-					    
-				    } 
-				    
-			}    
-				
-	    }          
-	 return goodfunctionContent
-	}
-
-

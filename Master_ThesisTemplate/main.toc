@@ -43,5 +43,6 @@
 \contentsline {part}{Appendix}{69}{part*.33}
 \contentsline {chapter}{\numberline {A}Appendix}{69}{appendix.A}
 \contentsline {section}{\numberline {A.1}Appendix A: Source Code Editor with Annotation Language}{69}{section.A.1}
-\contentsline {section}{\numberline {A.2}Appendix B: C Code Generator}{75}{section.A.2}
+\contentsline {section}{\numberline {A.2}Appendix B: C Code Generator(Part 1)}{75}{section.A.2}
+\contentsline {section}{\numberline {A.3}Appendix C: C Code Generator(Part 2)}{77}{section.A.3}
 \contentsline {chapter}{\nonumberline Bibliography}{81}{chapter*.34}
