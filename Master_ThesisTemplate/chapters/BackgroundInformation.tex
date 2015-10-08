@@ -55,7 +55,7 @@ to demonstrate that the attacker cannot observe any difference
 between two executions that differ only in their confidential
 input \cite{ref_66_goguen1984unwinding}. Noninterference can be naturally expressed by
 semantic models of program execution. This idea goes back
-to Cohen's early work on strong dependency \cite{ref_67_cohen1977information,ref_68_cohen1978information}.
+to Cohen's early work on strong dependency \cite{ref_67_cohen1977information,ref_6_cohen1978information}.
 McLean \cite{ref_69_mclean1992proving} argues for noninterference for programs in the
 context of trace semantics. However, neither work suggests an
 automatic security enforcement mechanism.
@@ -185,24 +185,19 @@ Some basic purpose of sanitization are given below:
 	\item Prevent web attacks using input sanitization.
 \end{itemize}
 
-\textbf{Sanitize the input by removing suspicious tags:}
+Sanitize the input by removing suspicious tags:
 This is a naive approach because it's almost impossible to cover everything. This regex function removes the obvious code to inject unwanted scripting which is given below (listing \ref{lst:regexInjectJs}).
 
 \begin{lstlisting} [caption={Regex function to inject unwanted scripting},label=lst:regexInjectJs]
 	public static String sanitize(String string) {
 	return string
-		.replaceAll("(?i)<script.*?>.*?</script.*?>", "")   // case 1
-		.replaceAll("(?i)<.*?javascript:.*?>.*?</.*?>", "") // case 2
-		.replaceAll("(?i)<.*?\\s+on.*?>.*?</.*?>", "");     // case 3
+		.replaceAll("(?i)<script.*?>.*?</script.*?>", "")   // case 1: script tags are removed.
+		.replaceAll("(?i)<.*?javascript:.*?>.*?</.*?>", "") // case 2: javascript call are removed.
+		.replaceAll("(?i)<.*?\\s+on.*?>.*?</.*?>", "");     // case 3: remove on* attributes like onLoad or onClick.
 	}
 	
 \end{lstlisting}
 
-\begin{itemize}
-	\item case 1 : script tags are removed.
-	\item case 2 : javascript call are removed.
-	\item case 3 : remove on* attributes like onLoad or onClick
-\end{itemize}
 
 \section{Declassification}
 Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system. Practical security-typed languages support some form of declassification through which high-security information is allowed to flow to a low-security system or observer.
@@ -316,43 +311,18 @@ the data to determine whether it obeys some predefined policy with respect to th
 
 Also authentication can be defined as it is the process by which the system validates a user's logon information. A user's name and password are compared to an authorized list and if the system detects a match then access is granted to the extent specified in the permission list for that user.
 
-One familiar use of authentication and authorization is access control. A computer system that is supposed to be used only by those authorized must attempt to detect and exclude the unauthorized. Common examples of access control involving authentication include:
-\begin{itemize}	
-	\item A computer program using a blind credential to authenticate to another program.
-	\item Logging in to a computer.	
-	\item Using an Internet banking system.
-	\item Withdrawing cash from an ATM.
-	\item Assurance of identity of person or originator of data.
-\end{itemize}
+One familiar use of authentication and authorization is access control. A computer system that is supposed to be used only by those authorized must attempt to detect and exclude the unauthorized. Common examples of access control involving authentication are- a computer program using a blind credential to authenticate to another program, logging in to a computer, using an internet banking system, withdrawing cash from an ATM, assurance of identity of person or originator of data and more.
 
- A variety of authentication technologies have hit the market over the years.To better understand what they are and how they compare to the user name/password combination, it helps to be familiar with the standard authentication factors; something you know, something you have and something you are and how each technology leverages them to power its authentication capabilities.
- \begin{itemize}	
-	\item Something you know is a bit of knowledge committed to memory, such as a password or
-	 an answer to a secret question.
-	\item Something you have is an item that is owned or carried, such as a smart card or similar
-	 hardware device.
-	\item	 Something you are is a physical attribute that can be identified, such as a fingerprint or voice.
-\end{itemize}
+A variety of authentication technologies have hit the market over the years.To better understand what they are and how they compare to the user name/password combination, it helps to be familiar with the standard authentication factors; something you know, something you have and something you are and how each technology leverages them to power its authentication capabilities. Something you know is a bit of knowledge committed to memory, such as a password or an answer to a secret question. Something you have is an item that is owned or carried, such as a smart card or similar hardware device. Something you are is a physical attribute that can be identified, such as a fingerprint or voice.
+
 
 \textbf{The Challenges in secure Authentication:}
 
 The security of an application is always a trade off between a high level of security and more usability. The more security is added to an authentication system (pass phrases instead of passwords, multiple authentication tokens), the lower will be the acceptance rate of the users and the usability will decrease. It is a big challenge to find the most secure authentication system which is accepted by the users. 
 
-Users always want new applications and features with easy to use interfaces. At the same time they are worried about the increasing dangers. Moreover, new legislations are pushing manufactures and companies to protect the privacy of their clients.The increasing mobility of the users is another important factor. The users want to access their applications not only with their desktop at home, but also in their office, on vacation with their PDA and everywhere with their cell phone. Those needs pose significant requirements to the security of applications. 
-
-These broad demands from the users create a wide range of attack vectors. Phishing, identity theft, spyware, malware, keyloggers, javascript attacks and generally untrusted consumer platforms all make the traditional means of password based authentication ever more complicated.
-
-
-According to the networkworld \cite{ref_21_networld} now-a-days seven strong authentication methods are:
-\begin{itemize}
-\item Computer recognition software.
-\item Biometrics
-\item E-mail or SMS one-time password (OTP).
-\item One Time Password (OTP) token.
-\item Out of band.
-\item Peripheral device recognition.
-\item Scratch-off card.
-\end{itemize}	
+Users always want new applications and features with easy to use interfaces. At the same time they are worried about the increasing dangers. Moreover, new legislations are pushing manufactures and companies to protect the privacy of their clients.The increasing mobility of the users is another important factor. The users want to access their applications not only with their desktop at home, but also in their office, on vacation with their PDA and everywhere with their cell phone. 
+These broad demands from the users create a wide range of attack vectors. Phishing, identity theft, spyware, malware, keyloggers, javascript attacks and generally untrusted consumer platforms all make the traditional means of password based authentication ever more complicated. According to the networkworld \cite{ref_21_networld} now-a-days seven strong authentication methods are- computer recognition software, biometrics, e-mail or SMS, one-time password (OTP) token, peripheral device recognition, scratch-off card etc.
+	
 
 \section{Static Code Analysis}
 
@@ -382,31 +352,31 @@ their tool called Saner extends Pixy and analyzes string
 modification with automata, while the dynamic component
 verifies analysis results to reduce false positives.
 
-Static code analysis advantages are:
+\textbf{Static code analysis advantages are:}
 \begin{itemize}
 	\item It can find weaknesses in the code at the exact location.
-	\item It can be conducted by trained software assurance developers who fully understand the code.
+	\item It can be conducted by trained software assurance. developers who fully understand the code.
 	\item It allows a quicker turn around for fixes.
 	\item It is relatively fast if automated tools are used.
-	\item Automated tools can scan the entire code base.
-	\item Automated tools can provide mitigation recommendations, reducing the research time.
+	\item It can scan the entire code base.
+	\item It can provide mitigation, reduce the research time.
 	\item It permits weaknesses to be found earlier in the development life cycle, reducing the cost to fix.
 \end{itemize}
 
-According to the GCN \cite{ref_87_gcn:gcn} static code analysis limitations are:
+\textbf{According to the GCN \cite{ref_87_gcn:gcn} static code analysis limitations are:}
 \begin{itemize}
 	\item It is time consuming if conducted manually.
-	\item Automated tools do not support all programming languages.
-	\item Automated tools produce false positives and false negatives.
+	\item It does not support all programming languages.
+	\item It can produce false positives and false negatives.
 	\item There are not enough trained personnel to thoroughly conduct static code analysis.
-	\item Automated tools can provide a false sense of security that everything is being addressed.
-	\item Automated tools are only as good as the rules they are using to scan with.
+	\item It can provide a false sense of security that everything is being addressed.
+	\item It is only as good as the rules they are using to scan with.
 	\item It does not find vulnerabilities introduced in the runtime environment.
 \end{itemize}
 
 \section{Information Flow Vulnerabilities}
 
-Information flow means  transmission of information from one place to another. Securing the data manipulated by computing systems has been a challenge in the past years. Several methods to limit the information disclosure exist today, such as access control lists, firewalls and cryptography. Although these methods do impose limits on the information that is released by a system, they provide no guarantees about information propagation. For example, access control lists of file systems prevent unauthorized file access, but they do not control how the data is used afterwards. Similarly, cryptography provides a means to exchange information privately across a non-secure channel, but no guarantees about the confidentiality of the data are given once it is decrypted.
+Information flow means transmission of information from one place to another. Securing the data manipulated by computing systems has been a challenge in the past years. Several methods to limit the information disclosure exist today, such as access control lists, firewalls and cryptography. Although these methods do impose limits on the information that is released by a system, they provide no guarantees about information propagation. For example, access control lists of file systems prevent unauthorized file access, but they do not control how the data is used afterwards. Similarly, cryptography provides a means to exchange information privately across a non-secure channel, but no guarantees about the confidentiality of the data are given once it is decrypted.
 
 Information-flow violations \cite{ref_103_denning1977certification} comprise the most serious security
 vulnerabilities in today's web applications. In fact, according to
@@ -456,52 +426,45 @@ The systems development life cycle (SDLC), also referred to as the software/appl
 	\label{figure_sdlc}
 \end{figure}
 
-There are following five phases in every Software development life cycle model:
+Almost every software development life cycle model has following five phases:
 
-\begin{itemize}
-	\item Requirement gathering and analysis
-	\item Design
-	\item Implementation or coding
-	\item Testing
-	\item Operations and maintenance 
-\end{itemize}
-
-\textbf{Requirement gathering and analysis:}
-This is the first phase of software development life cycle which is presented in figure \ref{figure_sdlc} as number \textcircled{1}. Sometimes it is also known as feasibility study. In this stage of the software development life cycle, the development team visits the customer and studies their requirements and system. The team investigate the need for possible software automation in the given system/software. By the end of the requirement analysis or feasibility study, the team creates a document that holds the different specific recommendations for the candidate system/software. It also includes the personnel assignments, costs, project schedule, target dates , requirements etc. The requirement gathering process is intensified and focused specially on software. To understand the nature of the software/system to be built, the system engineer or analyst must understand the information domain for the software, as well as required function, behavior, performance and interfacing. The essential purpose of this phase is to find the need and to define the problem that needs to be solved.
+\textbf{\textcircled{1} Requirement gathering and analysis:}
+This is the first phase of software development life cycle which is presented in Figure \ref{figure_sdlc} as number \textcircled{1}. Sometimes it is also known as feasibility study. In this stage of the software development life cycle, the development team visits the customer and studies their requirements and system. The team investigate the need for possible software automation in the given system/software. By the end of the requirement analysis or feasibility study, the team creates a document that holds the different specific recommendations for the candidate system/software. It also includes the personnel assignments, costs, project schedule, target dates , requirements etc. The requirement gathering process is intensified and focused specially on software. To understand the nature of the software/system to be built, the system engineer or analyst must understand the information domain for the software, as well as required function, behavior, performance and interfacing. The essential purpose of this phase is to find the need and to define the problem that needs to be solved.
 
 The goal of requirement analysis is to determine where the problem is and also it is an attempt to fix the system requirements. This step involves breaking down the system in different pieces to analyze the situation, analyzing project goals, breaking down what needs to be created and attempting to engage users so that definite requirements can be defined perfectly.
 
-\textbf{Design:}
-This is the sencond phase in the software development life cycle. It is marked as number \textcircled{2} in figure \ref{figure_sdlc}. In this phase, the software's overall structure, the software development process and its nuances are defined. In terms of the client/server technology, the number of tiers needed for the package architecture, the database design, the data structure design etc. are all defined in design phase. A software development model is thus created. Analysis and Design are very crucial in the whole development cycle. Any glitch in the design phase could be very expensive to solve in the later stage of the software development. Much care is taken during this phase. The logical system of the product is developed in this phase.
+\textbf{\textcircled{2} Design:}
+This is the sencond phase in the software development life cycle. It is marked as number \textcircled{2} in Figure \ref{figure_sdlc}. In this phase, the software's overall structure, the software development process and its nuances are defined. In terms of the client/server technology, the number of tiers needed for the package architecture, the database design, the data structure design etc. are all defined in design phase. A software development model is thus created. Analysis and Design are very crucial in the whole development cycle. Any glitch in the design phase could be very expensive to solve in the later stage of the software development. Much care is taken during this phase. The logical system of the product is developed in this phase.
 
 System features in detail, functional hierarchy diagrams, screen layout diagrams, tables of business rules, business process diagrams, pseudo-code and a complete entity-relationship diagram with a full data dictionary of the desired system are described in this stage of software development life cycle. These design elements are intended to describe the system in sufficient detail, such that skilled developers and engineers may develop and deliver the system with minimal additional input design.
 
-\textbf{Implementation or coding:}
-Implementation and coding is the third phase of software development life cycle which is denoted as number \textcircled{3} in figure \ref{figure_sdlc}. To develop the software/system the design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools like compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages like C, C++, Pascal, Java are used for coding. With respect to the type of application/software , the right programming language is chosen.
+\textbf{\textcircled{3} Implementation or coding:}
+Implementation and coding is the third phase of software development life cycle which is denoted as number \textcircled{3} in Figure \ref{figure_sdlc}. To develop the software/system the design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools like compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages like C, C++, Pascal, Java are used for coding. With respect to the type of application/software , the right programming language is chosen.
 
-\textbf{Testing:}
-Testing is the fourth phase of software development life cycle which is marked as number \textcircled{4} in figure \ref{figure_sdlc}. After the code generation, the software program testing begins. Various kind of testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. The following are types of testing which are so popular to test the software/system:
+\textbf{\textcircled{4} Testing:}
+Testing is the fourth phase of software development life cycle which is marked as number \textcircled{4} in Figure \ref{figure_sdlc}. After the code generation, the software program testing begins. Various kind of testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. The following are types of testing which are so popular to test the software/system:
 \begin{itemize}
-	\item Unit testing
-    \item System testing
-	\item Integration testing
-	\item Black-box testing
-	\item White-box testing
-	\item Regression testing
-	\item Automation testing
-	\item User acceptance testing
-	\item Software performance testing
-	\item Path testing
+	\item Unit testing.
+    \item System testing.
+	\item Integration testing.
+	\item Black-box testing.
+	\item White-box testing.
+	\item Regression testing.
+	\item Automation testing.
+	\item User acceptance testing.
+	\item Software performance testing.
+	\item Path testing.
 \end{itemize}
 
-\textbf{Operations and maintenance:}
-This is the last phase of software development life cycle which is denoted as number \textcircled{5} in figure \ref{figure_sdlc}. The deployment of the system includes changes and enhancements before the decommissioning of the system. Maintaining the system is an important aspect of SDLC(Software/System Development life Cycle). As key personnel change positions in the organization, new changes will be implemented. There are two approaches to system development; there is the traditional approach (structured) and object oriented. Information Engineering includes the traditional system approach, which is also called the structured analysis and design technique. The object oriented approach views the information system as a collection of objects that are integrated with each other to make a full and complete information system.
+\textbf{\textcircled{5} Operations and maintenance:}
+This is the last phase of software development life cycle which is denoted as number \textcircled{5} in Figure \ref{figure_sdlc}. The deployment of the system includes changes and enhancements before the decommissioning of the system. Maintaining the system is an important aspect of SDLC(Software/System Development life Cycle). As key personnel change positions in the organization, new changes will be implemented. There are two approaches to system development; there is the traditional approach (structured) and object oriented. Information Engineering includes the traditional system approach, which is also called the structured analysis and design technique. The object oriented approach views the information system as a collection of objects that are integrated with each other to make a full and complete information system.
 
 It would be easier for the developer if information flow errors can be detected in the early statge of software development lifecycle. In this research we propose a method to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way we detected the information flow in designing phase is described below.
 
-If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. Inside the figure the bug is represented as a red cross sign like this \textcircled{X} in figure \ref{figure_FunctionCallMissing}. It is the buggy path of UML state charts during design stage of software life cycle. 
+If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the Figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. Inside the Figure the bug is represented as a red cross sign like this \textcircled{X} in Figure \ref{figure_FunctionCallMissing}. It is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
+	\vspace{-1em}
 	\makebox[\textwidth]{\includegraphics[width=120mm,scale=.50]{styles/FunctionCallMissing.pdf}}
 	\caption{Information flow errors during design}
 	\label{figure_FunctionCallMissing}
@@ -514,7 +477,7 @@ Another way to detect the information flow vulnerabilities in our research is in
 
 Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to a lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
 where each of the flows starts with statement \emph{variable a} and ends with leaving the system. The variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
-two information flows. A source is any function or programming language statement which provides private information through a system boundary. A sink can be a function call or programming language statement which exposes private information to the outside of the system through a system boundary. A system boundary can be a statement, function call, class, package or module. In figure 2.2 the source and sink represent C language statements where information enters and respectively leaves system 1 or system 2. The \emph{ variable a} was tagged with label \enquote{H} (confidential) as it inserts confidential information into system 1. The arrows represent the passing of the confidential label \enquote{H} between the program statements. When a variable labeled with \enquote{H} is about to leave system 1 or system 2 without passing through either authentication/declassifiaction/sanitization function then a bug report should be generated. In figure \ref{figure_bug_detection_during_coding} right side system has a bug because it passes a secured/confidential information without passing through authentication/declassifiaction/sanitization function. The bug place is represented as red color cross symbol (\textcircled{X}) which is showing the missing of those functions. These functions either authenticated, declassified or sanitized  secured/confidential information and makes the variable label as \enquote{L} to leave the system. But in the left part of the picture there is no bug as in this system, secured/confidential information and the variable which is labeled with \enquote{H} passes through either authentication/declassifiaction/sanitization function.
+two information flows. A source is any function or programming language statement which provides private information through a system boundary. A sink can be a function call or programming language statement which exposes private information to the outside of the system through a system boundary. A system boundary can be a statement, function call, class, package or module. In Figure \ref{figure_bug_detection_during_coding} the source and sink represent C language statements where information enters and respectively leaves system 1 or system 2. The \emph{ variable a} was tagged with label \enquote{H} (confidential) as it inserts confidential information into system 1. The arrows represent the passing of the confidential label \enquote{H} between the program statements. When a variable labeled with \enquote{H} is about to leave system 1 or system 2 without passing through either authentication/declassifiaction/sanitization function then a bug report should be generated. In Figure \ref{figure_bug_detection_during_coding} right side system has a bug because it passes a secured/confidential information without passing through authentication/declassifiaction/sanitization function. The bug place is represented as red color cross symbol (\textcircled{X}) which is showing the missing of those functions. These functions either authenticated, declassified or sanitized  secured/confidential information and makes the variable label as \enquote{L} to leave the system. But in the left part of the picture there is no bug as in this system, secured/confidential information and the variable which is labeled with \enquote{H} passes through either authentication/declassifiaction/sanitization function.
 
 \begin{figure}[htbp]
 	\centering

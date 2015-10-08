@@ -98,11 +98,6 @@ Ellis Cohen.
 \newblock In {\em ACM SIGOPS Operating Systems Review}, volume~11, pages
   133--139. ACM, 1977.
 
-\bibitem{ref_68_cohen1978information}
-Ellis~S Cohen.
-\newblock Information transmission in sequential programs.
-\newblock {\em Foundations of Secure Computation}, pages 297--335, 1978.
-
 \bibitem{ref_6_cohen1978information}
 Ellis~S Cohen.
 \newblock Information transmission in sequential programs.
@@ -277,12 +272,6 @@ J.~Juerjens.
 \newblock {\em {Secure systems development with UML}}.
 \newblock Springer Verlag, 2005.
 
-\bibitem{ref_58_iflow:kuzman}
-K.~Katkalov, K.~Stenzel, M.~Borek, and W.~Reif.
-\newblock {Model-Driven Development of Information Flow-Secure Systems with
-  IFlow}.
-\newblock {\em ASE Science Journal}, 2(2), 2013.
-
 \bibitem{ref_27_iflow:kuzman}
 K.~Katkalov, K.~Stenzel, M.~Borek, and W.~Reif.
 \newblock {Model-Driven Development of Information Flow-Secure Systems with
@@ -390,8 +379,8 @@ Andrew~C Myers, Lantian Zheng, Steve Zdancewic, Stephen Chong, and Nathaniel
 
 \bibitem{ref_21_networld}
 Networkworld.
-\newblock {networkworld Documentation}.
-\newblock Technical report, Networkworld,
+\newblock {Networkworld Documentation}.
+\newblock Technical report, Networkworld Documentation,
   http://www.networkworld.com/article/2296774/access-control/seven-strong-authentication-methods.html.
 
 \bibitem{ref_104_owasp:owasp}
@@ -523,9 +512,9 @@ John Viega and Gary McGraw.
 \newblock Pearson Education, 2001.
 
 \bibitem{ref_107_visual-paradigm:visual-paradigm}
-visual paradigm.
-\newblock {visual-paradigm}.
-\newblock Technical report, visual-paradigm,
+Visual-paradigm.
+\newblock {Visual-paradigm}.
+\newblock Technical report, Visual-paradigm,
   http://www.visual-paradigm.com/VPGallery/diagrams/Sequence.html.
 
 \bibitem{ref_38_volpano:sound}

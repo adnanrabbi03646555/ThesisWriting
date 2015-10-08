@@ -3,27 +3,18 @@ This chapter focuses mainly about the software implementation for semi-automated
 
 \section{Overview of System Architecture}
 
-A system architecture is the conceptual model that defines the structure, behavior and more views of a system. An architecture description is a formal description and representation of a system, organized in a way that supports reasoning about the structures and behaviors of the system.
-
-It can be said that the system architecture is (similar to one of the building architecture)  a global model of this system consisting of:
-\begin{itemize}
-	\item   a structure
-	\item	properties (of various elements involved)
-	\item	relationships (between various elements)
-	\item	behaviors and dynamics
-	\item	multiple views of the system (complementary and consistent).
-\end{itemize}
+A system architecture is the conceptual model that defines the structure, behavior and more views of a system. An architecture description is a formal description and representation of a system, organized in a way that supports reasoning about the structures and behaviors of the system. System architecture is similar to one of the building architecture and it's a global model of this system consisting of a structure, properties (of various elements involved), relationships (between various elements), behaviors and dynamics and multiple views of the system (complementary and consistent).
 
 System Architecture is based on 9 fundamental principles:
 \begin{itemize}
-	\item The objects of the reality are modeled as systems
-	\item A system can be broken down into a set of smaller subsystems, which is less than the whole system
-	\item A system must be considered in interaction with other systems
-	\item A system must be considered through its whole lifecycle
-	\item System can be linked to another through an interface, which will model the properties of the link
-	\item A system can be considered at various abstraction levels, allowing to consider only relevant properties and behaviors
-	\item A system can be viewed according to several layers (usually three: its sense, its functions, and its composition)
-	\item A system can be described through interrelated models with given semantics (properties, structure, states, behaviors, data's etc.)
+	\item The objects of the reality are modeled as systems.
+	\item A system can be broken down into a set of smaller subsystems, which is less than the whole system.
+	\item A system must be considered in interaction with other systems.
+	\item A system must be considered through its whole lifecycle.
+	\item System can be linked to another through an interface, which will model the properties of the link.
+	\item A system can be considered at various abstraction levels, allowing to consider only relevant properties and behaviors.
+	\item A system can be viewed according to several layers (usually three: its sense, its functions, and its composition).
+	\item A system can be described through interrelated models with given semantics (properties, structure, states, behaviors, data's etc.).
 	\item A system can be described through different viewpoints corresponding to various actors concerned by the system.
 \end{itemize}
 
@@ -32,13 +23,13 @@ The architecture of our system is given below:
 	\centering
 	\vspace{-1em}
 	\makebox[\textwidth]{\includegraphics[scale=.50,width=\textwidth]{styles/system_architecture.pdf}}
-	\vspace{-3em}
+	\vspace{-5em}
 	\caption{System overview}
 	\vspace{-1em}
 	\label{system_architecture}
 \end{figure}
 
-Figure \ref{system_architecture} depicts the complete system overview. At first which is presented as number \textcircled{1}, the source code editor is developed using Eclipse Xtext. By this editor one can easily annotate the source code of C/C++. It is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code, this annotation technique has chosen which is easy to extend and backward compatible. This editor has developed as an Eclipse plug-in. If this plug-in exists in eclipse then user can easily annotate C/C++ source code files and header files by pressing the keys ctrl+space in keyboard. Then for modeling purpose open source tool Yakindu SCT editor \cite{ref_15_yakindu:sct} has chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle which is depicted as number \textcircled{2} in the figure \ref{system_architecture}. Inside the Yakindu SCT editor the annotation language grammar has also included using Eclipse Xtext. So, user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has extended inside the Yakindu SCT editor using Eclipse Xtend. This C code generator is represented as number \textcircled{3} in the figure \ref{system_architecture}. After modeling, the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named \enquote{smtcodan} three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. This three checkers have represented as number \textcircled{4} phase in the figure \ref{system_architecture}. Inside the static analysis engine according to the requirements new modules are added. Then to view the buggy path in sequence diagram a sequence diagram generator has created. Sequence diagram generator to view buggy path is the number \textcircled{5} and last phase of the system. That is the end of complete system architecture of this system. 
+Figure \ref{system_architecture} depicts the complete system overview. At first which is presented as number \textcircled{1}, the source code editor is developed using Eclipse Xtext. By this editor one can easily annotate the source code of C/C++. It is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code, this annotation technique has chosen which is easy to extend and backward compatible. This editor has developed as an Eclipse plug-in. If this plug-in exists in eclipse then user can easily annotate C/C++ source code files and header files by pressing the keys ctrl+space in keyboard. Then for modeling purpose open source tool Yakindu SCT editor \cite{ref_15_yakindu:sct} has chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle which is depicted as number \textcircled{2} in the Figure \ref{system_architecture}. Inside the Yakindu SCT editor the annotation language grammar has also included using Eclipse Xtext. So, user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has extended inside the Yakindu SCT editor using Eclipse Xtend. This C code generator is represented as number \textcircled{3} in the Figure \ref{system_architecture}. After modeling, the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named \enquote{smtcodan} three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. This three checkers have represented as number \textcircled{4} phase in the Figure \ref{system_architecture}. Inside the static analysis engine according to the requirements new modules are added. Then to view the buggy path in sequence diagram a sequence diagram generator has created. Sequence diagram generator to view buggy path is the number \textcircled{5} and last phase of the system. That is the end of complete system architecture of this system. 
 
 
 \section{The Grammar of Annotation Language}
@@ -77,6 +68,7 @@ Using SAL is relatively easy. User simply add annotations to user's function pro
 		Output of pointer to caller         & \_Outptr\_  & Like Output to caller. The value that's returned by the called function is a pointer.\\ 	\hline
 			
 	\end{tabular}
+	\vspace{1em}
 	\caption{SAL-four basic kinds of parameters}
 	\label{table:four basic kinds of parameters}
 \end{table}
@@ -90,7 +82,7 @@ which can be used to annotate UML state charts and code by inserting information
 restrictions during two software development phases (design
 and coding). Our insight is that the same annotation language
 can be used to add information flow constraints to UML state
-charts and code in order to detect information flow errors. The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in figure \ref{language grammar}. The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.\\
+charts and code in order to detect information flow errors. The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in Figure \ref{language grammar}. The following type face conventions were used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.
  
  \begin{figure}[ht!]
  	\centering
@@ -139,7 +131,7 @@ charts and code in order to detect information flow errors. The grammar of annot
  	\label{language grammar}
  \end{figure}
  
-All main rules are included under \texttt{H\_Model}. This  \texttt{H\_Model} rule contains all rules like \texttt{S\_L\_Anno}, \texttt{M\_L\_Anno}, \texttt{Func\_Ann} and \texttt{Attr\_Def}. Annotation language grammar has two grammar rules named \texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. \texttt{S\_L\_Anno} is used for single line annotation rule. Because of this rule one can easily annotate the variables of C/C++ language in a single line. The \texttt{M\_L\_Anno} rule is used for multiline annotation rule. Normally multiline rule annotation is required for function annotation in C/C++ function declaration. The \texttt{Func\_Ann} and \texttt{Attr\_Definition} rules are used to recognize C or C++ function declarations and variable. The \texttt{Var\_Type} rule is used for variable type which is either for authenticated or declassified or sanitized variable. \texttt{Sec\_Type} rule is used for type of security whether a variable is confidential or not. In \texttt{Func\_Type} rule the type of function is declared. A function can be either one of this like authentication, declassification, sanitization, source or sink.\\
+All main rules are included under \texttt{H\_Model}. This  \texttt{H\_Model} rule contains all rules like \texttt{S\_L\_Anno}, \texttt{M\_L\_Anno}, \texttt{Func\_Ann} and \texttt{Attr\_Def}. Annotation language grammar has two grammar rules named \texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. \texttt{S\_L\_Anno} is used for single line annotation rule. Because of this rule one can easily annotate the variables of C/C++ language in a single line. The \texttt{M\_L\_Anno} rule is used for multiline annotation rule. Normally multiline rule annotation is required for function annotation in C/C++ function declaration. The \texttt{Func\_Ann} and \texttt{Attr\_Definition} rules are used to recognize C or C++ function declarations and variable. The \texttt{Var\_Type} rule is used for variable type which is either for authenticated or declassified or sanitized variable. \texttt{Sec\_Type} rule is used for type of security whether a variable is confidential or not. In \texttt{Func\_Type} rule the type of function is declared. A function can be either one of this like authentication, declassification, sanitization, source or sink.
 
 
 \section{UML State Chart Editor}
@@ -153,17 +145,17 @@ Statechart diagram defines the states of a component and these state changes are
 	\item To model object states of a system.
 	\item To model reactive system. Reactive system consists of reactive objects.
 	\item To identify events responsible for state changes.
-	\item Forward and reverse engineering.
+	\item To forward and reverse engineering.
 \end{itemize}
 
 \begin{figure}[htbp]
 	\centering
 	\makebox[\textwidth]{\frame{\includegraphics[width=55mm,scale=.55]{styles/simple_statechart.pdf}}}
-	\label{simple_stateChart}
-	\caption{Simple UML State Chart}
+	\label{fig:simple_stateChart}
+	\caption{Simple UML state chart}
 \end{figure}
 
-The following are the basic notational elements that can be used to make up a diagram represented in figure \ref{simple_stateChart}:
+The following are the basic notational elements that can be used to make up a diagram represented in Figure 4.3.
 \begin{itemize}
 	\item Filled circle, representing to the initial state.	
 	\item Hollow circle containing a smaller filled circle, indicating the final state (if any).	
@@ -180,7 +172,7 @@ Statechart diagram is used to describe the states of different objects in its li
 	
 	\item To describe different states of an object during its life time.
 	
-	\item Define a state machine to model states of an object.
+	\item To define a state machine to model states of an object.
 \end{itemize}
 
 A set of formal representation of UML state chart is presented in this section. The state identifier and event are represented as S and Event respectively both as set types. For simple specification, the basic set types are used. In the definition of a transition from one state to another the guard is defined as a Boolean type. According to F Alhumaidan state based static and dynamic formal analysis of UML state diagrams \cite{ref_16_alhumaidan2012state} , a state can have three possible values that are active, passive or null represented as Active, Passive and null respectively. The type of state can be simple, concurrent, non-concurrent, initial or final.
@@ -201,7 +193,8 @@ A set of formal representation of UML state chart is presented in this section. 
 		 	$\ \vert $ {Concurent}$\ \vert $ {Nonconcurent} $\ \vert $ {Initial}$\ \vert $ {Final};       \\	 	 
 		
 	\end{tabular}
-	\caption{UML Statechart Formal Representation}
+	\vspace{1em}
+	\caption{UML statechart formal representation}
 	\label{statechart_formal_representation}
 \end{figure}
 
@@ -212,12 +205,12 @@ element is a member of the given collection or not. As a
 consequence, sets S and Event are sets over which cannot define any operation of set theory. For example,
 cardinality to know the number of elements in a set cannot
 be defined. Similarly, the subset, union, intersection or
-complement operations over the sets are not defined.\\
+complement operations over the sets are not defined.
 
 The state diagram is a collection of states related by
 certain types of relations. In the definition of a state, state identifier, its type, status and set of regions is required. Region is defined as a power set of sequence of states. The state is represented by a schema which consists of four components described above. All these components are encapsulated and put in the Schema State given below.
 The invariants over the schema are defined in the second
-part of schema.\\
+part of schema.
 
 \begin{figure}[ht!]
 	\centering
@@ -242,7 +235,8 @@ part of schema.\\
 		 
 		
 	\end{tabular}
-	\caption{UML statechart some other formal representation}
+	\vspace{1em}
+	\caption{More UML statechart formal representation}
 	\label{statechart_formal_representation_part2}
 \end{figure}
 
@@ -296,7 +290,8 @@ of a state.
  		\footnotesize                       
  		\textit{target}  $\ \  $ \textit{dom} $\ \  ${substates}\\	
  	\end{tabular}
- 	\caption{UML Statechart Formal Representation some parts}
+ 	\vspace{1em}
+ 	\caption{UML statechart formal representation (some other parts)}
  	\label{statechart_formal_representation_invariants}
  	\end{figure}
 
@@ -346,7 +341,8 @@ To extend the Yakindu SCT editor here it has been decided to represent the state
 	\footnotesize                       
 	\textit{target} $:$ \textit{states}        \\ 	
 	\end{tabular}
-	\caption{UML Statechart Formal Representation for this System}
+	\vspace{1em}
+	\caption{UML statechart formal representation for this research}
 	\label{statechart_formal_representation_for _this_system}
 	\end{figure}
 	
@@ -356,7 +352,7 @@ A source code editor is a text editor. It is a program which is designed specifi
 
 For this research, previous source code editor \cite{ref_108_paul2015infoflow} has been extended which offers annotation language proposals which are context sensitive with respect to the position of the currently edited syntax line. Editor suggestions work only if the whole file is parsed without errors. Editor was developed using Eclipse Xtext \cite{ref_17_xtext:grammar}.
 
-As per requirements previous annotation language grammar \cite{ref_108_paul2015infoflow} which was written in xtext language has been extended. Extra annotation have been included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Mainly FunctionAnnotation, FunctionType  and SingleLineAnnotation rules  are extended. A new rule is added which is enumeration type. The rule name is VariableType. Inside the VariableType new attributes are included like declassified, sanitized and authenticated. New function types are added like declassification, sanitization and authentication function inside FunctionType rule. Inside the FunctionAnnotation and SingleLineAnnotation rules there exist an annotation for parameter name @parameter. Inside @ parameter declaration new attribute is added named VariableType. The code snippet of extended xtext grammar has given in \ref{Source_Code_Editor_in_Xtext}. 
+As per requirements previous annotation language grammar \cite{ref_108_paul2015infoflow} which was written in xtext language has been extended. Extra annotation have been included like \enquote{authenticated}, \enquote{declassified}, \enquote{sanitized}, \enquote{sanitization}, \enquote{declassification}, \enquote{authentication}. Mainly FunctionAnnotation, FunctionType  and SingleLineAnnotation rules  are extended. A new rule is added which is enumeration type. The rule name is VariableType. Inside the VariableType new attributes are included like declassified, sanitized and authenticated. New function types are added like declassification, sanitization and authentication function inside FunctionType rule. Inside the FunctionAnnotation and SingleLineAnnotation rules there exist an annotation for parameter name @parameter. Inside @ parameter declaration new attribute is added named VariableType. The code snippet of extended xtext grammar has given in Appendix  \ref{Source_Code_Editor_in_Xtext}. 
 
 
 From the xtext code snippet previous annotation grammar \cite{ref_108_paul2015infoflow} has FunctionAnnotation(line number 113), SingleLineAnnotation(line number 128) rules. According to the requirements previous rules are extended. Inside the rules of FunctionAnnotation and SingleLineAnnotation, new enumeration types are added. Enumeration type name is VariableType which is declared in line number 172 in \ref{Source_Code_Editor_in_Xtext}. The new enumeration type rule has attributes declassified, sanitized and authenticated. Also the rule of enumeration FunctionType(line number 154 in \ref{Source_Code_Editor_in_Xtext}) extended by adding new type of funtion like authentication, declassification and sanitization.
@@ -379,7 +375,7 @@ The algorithm \ref{Algorithm:C_Code_Generator} which is given below is represent
 
 One sample example of a header file of C programming language is given below-
 
-\begin{lstlisting} [caption={C Header File Codes with Annotation},label=lst:cHeaderFileCode]
+\begin{lstlisting} [caption={C header file codes with annotation},label=lst:cHeaderFileCode]
 	/*@ @function authentication
 	* @parameter a L @*/
 	void authentication(char *a);
@@ -393,7 +389,7 @@ Inside the algorithm \ref{Algorithm:C_Code_Generator} function typesCAnnotationC
 
 Function typesCAnnotationContent is responsible to generate the C source code. Inside this function to get all function content there is a method called getFunctionContent which returns a hashmap with all function signatures and annotation. By iterating that hashmap the required function signatures are placed inside the C code file. Those functions who has annotations only signatures and blank function bodies are placed inside the C source code file. Because the annotations of the functions mainly placed inside the header file. Now in the modeling stage the system was designed with two regions. One region name is good\_path() and another one is bad\_path(). To get the content of good\_path() and bad\_path(), two methods have created inside the Naming.xtend file named getGoodPathContent() and getBadPathContent(). Those two methods also returned two hashmaps respectively. One hashmap contains the contents of good\_path() region and another hashmap contains the contents of bad\_path() region. Both hashmaps contains the function signatures, statements of C/C++ language and annotations. According to the design in the modeling stage the required contents are placed inside the body of good\_path() and bad\_path(). Normally inside the method of good\_path() and bad\_path() only the variable annotations exist and other statement like function calling, variable declarations etc. The annotations for functions are placed inside the header files of C/C++ language. 
 
-Some of the contents of the header file, C file comes from another xtend file named \enquote{Naming.xtend}. The methods like getFileContent, getFunctionContent, getGoodPathContent() and getBadPathContent() all are implemented inside the "Naming.xtend" file. The code snippet from C code generator has given in \ref{C_Code_Generator_Xtend_Code_Snippet}.
+Some of the contents of the header file, C file comes from another xtend file named \enquote{Naming.xtend}. The methods like getFileContent, getFunctionContent, getGoodPathContent() and getBadPathContent() all are implemented inside the "Naming.xtend" file. The code snippet from C code generator has given in Appendix \ref{C_Code_Generator_Xtend_Code_Snippet}.
 \begin{algorithm}
 	\label{Algorithm:C_Code_Generator}
 	{\textbf{C code generator}}\\
@@ -408,8 +404,8 @@ Some of the contents of the header file, C file comes from another xtend file na
 			\State $def {generateFile_2} (testModule.c, typesCAnnotationContent(sc)) $  \Comment{C file generator}
 		\EndFunction
 		
-		\Function {typesHAnnotationContent}{$sc$}		
-			\For{$s : getFileContent(sc).entrySet$}
+		\Function {typesHAnnotationContent}{$sc$} \Comment{Method for header file generator}		
+			\For{$s : getFileContent(sc).entrySet$} \Comment{Iterating hashmap}
 				\If {$!s.key.contains('//@ @variable')$}
 					\State $s.key$
 				\ElsIf {$s.value.contains('(')$}
@@ -418,7 +414,7 @@ Some of the contents of the header file, C file comes from another xtend file na
 			\EndFor			
 		\EndFunction
 		
-		\Function {typesCAnnotationContent}{$sc$}
+		\Function {typesCAnnotationContent}{$sc$} \Comment{Method for C file generator}
 		
 		\For{$s: getFunctionContent(sc).entrySet$}
 			\If {$(!s.value.contains('authentication') and (!s.value.contains('declassification'))$  \\  
@@ -428,28 +424,27 @@ Some of the contents of the header file, C file comes from another xtend file na
 		\EndFor
 			
 		\For{$ region : sc.regions$}
-			\If {$ region.name.equalsIgnoreCase('bad_path()'$}
+			\If {$ region.name.equalsIgnoreCase('bad\_path()'$} \Comment{Getting the contents of bad path}
 			\State $void <region.name>$
 				
 					\For {$s: getBadPathContent(sc).entrySet$}
 					
 						\If {$ s.key.contains('//@ @variable')$} 
 							\State $s.key$
-							\State $s.value$
+							\State $s.value;$
 						\EndIf
 					
 						\If {$ s.value.contains('(')$} 
 							\State $s.value;$
-							\State $s.value$
 						\EndIf
 					
 					\EndFor 
 			\EndIf
 		
-			\If {$ region.name.equalsIgnoreCase('good_path()')$} 
+			\If {$ region.name.equalsIgnoreCase('good\_path()')$} \Comment{Getting the contents of good path}
 			\State $void <region.name>$
-				\For {$s: getGoodPathContent(sc).entrySet$}
-					\If {$s.key.contains('//@ @variable')$} 
+				\For {$s: getGoodPathContent(sc).entrySet$} \Comment{Get statements and comments}
+					\If {$s.key.contains('//@ @variable')$} \Comment{Check for variable and get the comments} 
 						\State $s.key$						
 					\EndIf
 					\State $s.value;$
@@ -547,12 +542,12 @@ In this research we used sequence diagram to view the buggy path. In our case, t
 \begin{figure}[htbp]
 	\centering
 	\makebox[\textwidth]{\includegraphics[width=130mm,scale=.50]{styles/errorTracePath.pdf}}
-	\label{fig:Error_trace_path}
+	\label{figure:Error_trace_path}
 	\caption{Error trace path in UML sequence diagram}
 	\vspace{-1em}
 \end{figure}
 
-Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated. Inside the sequence diagram all function calls are included inside rectangular box attached to the head of lifeline. To switch one lifeline to another a function call required. Like in the figure \ref{Error_trace_path} from function call int main() there is a transition to move from int main() to good\_path(). Above the transition there also exists the function name for which it goes from one function call to another. Here, for example to move from int main() to good\_path() there is a transition and above that transition function call good\_path() is attached. This means through calling the good\_path() function buggy path goes into good\_path() function from int main(); Inside the sequence diagram the statements before the function call are attached to the lifeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file. Now it is easier to trace the buggy path by viewing generated sequence diagram. One sample example of the part of a buggy path has given in figure 4.8.
+Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated. Inside the sequence diagram all function calls are included inside rectangular box attached to the head of lifeline. To switch one lifeline to another a function call required. Like in the Figure 4.8 from function call int main() there is a transition to move from int main() to good\_path(). Above the transition there also exists the function name for which it goes from one function call to another. Here, for example to move from int main() to good\_path() there is a transition and above that transition function call good\_path() is attached. This means through calling the good\_path() function buggy path goes into good\_path() function from int main(); Inside the sequence diagram the statements before the function call are attached to the lifeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file. Now it is easier to trace the buggy path by viewing generated sequence diagram. One sample example of the part of a buggy path has given in Figure 4.8.
 
 
 The process of creating sequence diagram using Java programming language is given below as an algorithm representation. To develop the sequence diagram, a separate class is included inside the smtcodan project. The class name is SequenceDiagramGenerator. Inside this class the drawSequenceDiagram function creates the diagram. The function input parameter is a list of IASTNode which is delivered from the smtcodan project packages. To draw the diagram BufferedImage, Graphics2D, JPanel, JFrame  classes were used. At first it is required to declare object for each of these (BufferedImage, Graphics2D, JPanel, JFrame) classes. Then iterating through the list of IASTNodes set all the statements except function call with line number and file name. There is a class which is responsible to draw the visual things of the sequence diagram named MyCanvasDraw. Afterwards it is required to create an object of this class. This class has a list. The list of this class has to be set with the list of all statements, line number  and file name. Then it will draw the diagram according to the list. To view this diagram need to set the JFrame object and make it visible. Inside the JFrame JScrollpane object also added to make the frame scrollable. For saving the diagram as an image save as option is also included. Through the menu bar, user can easily save the sequence diagram as an image. By default it will save the image as in .jpg format. But one can easily save this image in other format like .png,.bmp,.jpeg etc. Exit option is also included inside the JFrame through which user can exit the current window.  
@@ -566,11 +561,11 @@ The process of creating sequence diagram using Java programming language is give
 	\begin{algorithmic}[1]
 		
 		\Function{drawSequenceDiagram}{$ArrayList<IASTNode> statementsList$}
-		    \State $ Frame (object)  $ 
-			\State $ BufferedImage (object)  $ 
-			\State $ Graphics2D(object) $
-			\State $ Panel (object)$
-			\State $ MyCanvasDraw(object )  $
+		    \State $ Frame (object)  $  \Comment{Frame object initialization}
+			\State $ BufferedImage (object)  $ \Comment{BufferedImage object initialization}
+			\State $ Graphics2D(object) $ \Comment{Graphics2D object initialization}
+			\State $ Panel (object)$ \Comment{Panel object initialization}
+			\State $ MyCanvasDraw(object )  $ \Comment{MyCanvasDraw object initialization}
 			\For{$i:statementsList.size()$} 
 				\If {$!statementsList.get(i).getRawSignature().toString().contains("(")$}
 					
@@ -585,7 +580,7 @@ The process of creating sequence diagram using Java programming language is give
 				\EndIf		
 				
 			\EndFor
-				\State $set <- ScrollPane(property)$
+				\State $set <- ScrollPane(property)$ \Comment{Setting ScrollPane property}
 				\State $mcd.paint(graphics2D)$ \Comment{Where mcd = MyCanvasDraw object}
 				\State $topPanel.add(mcd)$ \Comment{Where topPanel = Panel object}	
 				\State $menuBar <- MenuBar$
