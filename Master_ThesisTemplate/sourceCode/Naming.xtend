@@ -65,7 +65,7 @@ class Naming {
 	    }          
 	 return fileContent
 	}
-	
+	//getFunctionContent returns the function content
 	def HashMap<String, String> getFunctionContent(Statechart sc) {
 		var functionContent = <String, String>newHashMap		
 		for( region : sc.regions){        
@@ -77,6 +77,7 @@ class Naming {
 	    }          
 	 return functionContent
 	}
+	// getBadPathContent returns the content from bad path region
 	def HashMap<String, String> getBadPathContent(Statechart sc) {
 		var badfunctionContent = <String, String>newHashMap
 		var String newName		
@@ -103,7 +104,7 @@ class Naming {
 	    }          
 	 return badfunctionContent
 	}
-	
+	// getVariableName returns the exact variable name which required to static analysis engine
 	def String getVariableName(Statechart sc){		
 		var String variablename
 		for( region : sc.regions){
@@ -119,7 +120,7 @@ class Naming {
 		}
 	return variablename
 	}
-	
+	// getGoodPathContent returns the contents from good path region
 	def HashMap<String, String> getGoodPathContent(Statechart sc) {
 		var goodfunctionContent = <String, String>newHashMap		
 		var String newName		  
