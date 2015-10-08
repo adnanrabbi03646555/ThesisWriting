@@ -28,7 +28,7 @@ System Architecture is based on 9 fundamental principles:
 \end{itemize}
 
 The architecture of our system is given below:
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 	\centering
 	\vspace{-1em}
 	\makebox[\textwidth]{\includegraphics[scale=.50,width=\textwidth]{styles/system_architecture.pdf}}
@@ -130,7 +130,7 @@ charts and code in order to detect information flow errors. The grammar of annot
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};    \\ \\
  		\footnotesize                       
  		\textit{Var\_Type}           &\footnotesize $::=$         &\footnotesize \textbf{authenticated}; \\
- 		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified}
+ 		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified};
  		\\
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
  		
@@ -546,14 +546,13 @@ In this research we used sequence diagram to view the buggy path. In our case, t
 
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=150mm,scale=.50]{styles/errorTracePath.pdf}}
-	\label{Error_trace_path}
+	\makebox[\textwidth]{\includegraphics[width=130mm,scale=.50]{styles/errorTracePath.pdf}}
+	\label{fig:Error_trace_path}
 	\caption{Error trace path in UML sequence diagram}
+	\vspace{-1em}
 \end{figure}
 
-Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated. Inside the sequence diagram all function calls are included inside rectangular box attached to the head of lifeline. To switch one lifeline to another a function call required. Like in the figure \ref{Error_trace_path} from function call int main() there is a transition to move from int main() to good\_path(). Above the transition there also exists the function name for which it goes from one function call to another. Here, for example to move from int main() to good\_path() there is a transition and above that transition function call good\_path() is attached. This means through calling the good\_path() function buggy path goes into good\_path() function from int main(); Inside the sequence diagram the statements before the function call are attached to the lifeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file. Now it is easier to trace the buggy path by viewing generated sequence diagram.
-
- One sample example of the part of a buggy path has given in figure \ref{Error_trace_path}.
+Through the static analysis engine buggy path can be found as a list of string. Inside the list there are function calls, separate statements like if statements, switch-case statements, variable declaration, assignment of variables etc. of programming language (like C,C++). Then to view the path using java a sequence diagram is generated. Inside the sequence diagram all function calls are included inside rectangular box attached to the head of lifeline. To switch one lifeline to another a function call required. Like in the figure \ref{Error_trace_path} from function call int main() there is a transition to move from int main() to good\_path(). Above the transition there also exists the function name for which it goes from one function call to another. Here, for example to move from int main() to good\_path() there is a transition and above that transition function call good\_path() is attached. This means through calling the good\_path() function buggy path goes into good\_path() function from int main(); Inside the sequence diagram the statements before the function call are attached to the lifeline as blue color. Those statements are just the statements before a function of the analyzed C/C++ source code file. Inside the box of the blue color texts there exist "ln:" which means the line number of the statement in the analyzed file and "fn:" means the file name of analyzed file. Now it is easier to trace the buggy path by viewing generated sequence diagram. One sample example of the part of a buggy path has given in figure 4.8.
 
 
 The process of creating sequence diagram using Java programming language is given below as an algorithm representation. To develop the sequence diagram, a separate class is included inside the smtcodan project. The class name is SequenceDiagramGenerator. Inside this class the drawSequenceDiagram function creates the diagram. The function input parameter is a list of IASTNode which is delivered from the smtcodan project packages. To draw the diagram BufferedImage, Graphics2D, JPanel, JFrame  classes were used. At first it is required to declare object for each of these (BufferedImage, Graphics2D, JPanel, JFrame) classes. Then iterating through the list of IASTNodes set all the statements except function call with line number and file name. There is a class which is responsible to draw the visual things of the sequence diagram named MyCanvasDraw. Afterwards it is required to create an object of this class. This class has a list. The list of this class has to be set with the list of all statements, line number  and file name. Then it will draw the diagram according to the list. To view this diagram need to set the JFrame object and make it visible. Inside the JFrame JScrollpane object also added to make the frame scrollable. For saving the diagram as an image save as option is also included. Through the menu bar, user can easily save the sequence diagram as an image. By default it will save the image as in .jpg format. But one can easily save this image in other format like .png,.bmp,.jpeg etc. Exit option is also included inside the JFrame through which user can exit the current window.  

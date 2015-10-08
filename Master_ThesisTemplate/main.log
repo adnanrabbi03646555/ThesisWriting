@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  8 OCT 2015 01:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  8 OCT 2015 15:13
 entering extended mode
 **main.tex
 
@@ -1593,40 +1593,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
-<styles/errorTracePath.pdf, id=826, 427.5975pt x 351.3125pt>
+<styles/errorTracePath.pdf, id=826, 132.7359pt x 114.1866pt>
 File: styles/errorTracePath.pdf Graphic file (type pdf)
 
 <use styles/errorTracePath.pdf>
 Package pdftex.def Info: styles/errorTracePath.pdf used on input line 549.
-(pdftex.def)             Requested size: 213.79822pt x 175.6558pt.
-
-
-Package caption Warning: \label without proper \caption on input line 550.
-See the caption package documentation for explanation.
+(pdftex.def)             Requested size: 66.36778pt x 57.09315pt.
 
 
 LaTeX Warning: Reference `Error_trace_path' on page 46 undefined on input line 
-554.
+555.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
 [47 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
-plate/styles/errorTracePath.pdf>]
-
-Package caption Warning: \label without proper \caption on input line 550.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `Error_trace_path' on page 48 undefined on input line 
-556.
-
-[48])
+plate/styles/errorTracePath.pdf>])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Experiments.tex [49] [50
-
-]
+e\chapters/Experiments.tex [48]
 chapter 5.
 
 Overfull \hbox (1.22887pt too wide) in paragraph at lines 22--24
@@ -1634,7 +1619,9 @@ Overfull \hbox (1.22887pt too wide) in paragraph at lines 22--24
 sure that the user who is cre-at-ing this database
  []
 
-[51] <styles/authentication_scenario.pdf, id=881, 237.76831pt x 106.7187pt>
+[49
+
+] <styles/authentication_scenario.pdf, id=872, 237.76831pt x 106.7187pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1647,7 +1634,7 @@ Package caption Warning: \label without proper \caption on input line 53.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `authentication_scenario' on page 52 undefined on inpu
+LaTeX Warning: Reference `authentication_scenario' on page 50 undefined on inpu
 t line 57.
 
 
@@ -1655,10 +1642,10 @@ Package caption Warning: \label without proper \caption on input line 53.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `authentication_scenario' on page 52 undefined on inpu
+LaTeX Warning: Reference `authentication_scenario' on page 50 undefined on inpu
 t line 57.
 
-[52 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
+[50 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
 plate/styles/authentication_scenario.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
@@ -1674,7 +1661,7 @@ Package caption Warning: \label without proper \caption on input line 77.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `declassification_scenario' on page 53 undefined on in
+LaTeX Warning: Reference `declassification_scenario' on page 51 undefined on in
 put line 69.
 
 
@@ -1682,10 +1669,10 @@ Package caption Warning: \label without proper \caption on input line 77.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `declassification_scenario' on page 53 undefined on in
+LaTeX Warning: Reference `declassification_scenario' on page 51 undefined on in
 put line 69.
 
-[53] <styles/declassification_scenario.pdf, id=912, 241.38179pt x 98.2872pt>
+[51] <styles/declassification_scenario.pdf, id=903, 241.38179pt x 98.2872pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
@@ -1696,9 +1683,9 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 95.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisT
+) [52 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisT
 emplate/styles/declassification_scenario.pdf>]
-<styles/sanitization_scenario.pdf, id=930, 237.04561pt x 102.1416pt>
+<styles/sanitization_scenario.pdf, id=921, 237.04561pt x 102.1416pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
@@ -1711,7 +1698,7 @@ Package caption Warning: \label without proper \caption on input line 116.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `sanitization_scenario' on page 55 undefined on input 
+LaTeX Warning: Reference `sanitization_scenario' on page 53 undefined on input 
 line 120.
 
 
@@ -1719,28 +1706,20 @@ Package caption Warning: \label without proper \caption on input line 116.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `sanitization_scenario' on page 55 undefined on input 
+LaTeX Warning: Reference `sanitization_scenario' on page 53 undefined on input 
 line 120.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
-mplate/styles/sanitization_scenario.pdf>] [56]
+ [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/sanitization_scenario.pdf>] [54]
 
 Package caption Warning: \label without proper \caption on input line 179.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `bugDetection' on page 57 undefined on input line 170.
-
-
-
-Package caption Warning: \label without proper \caption on input line 179.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `bugDetection' on page 57 undefined on input line 170.
+LaTeX Warning: Reference `bugDetection' on page 55 undefined on input line 170.
 
 
 
@@ -1748,14 +1727,22 @@ Package caption Warning: \label without proper \caption on input line 179.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `bugDetection' on page 57 undefined on input line 172.
+LaTeX Warning: Reference `bugDetection' on page 55 undefined on input line 170.
+
+
+
+Package caption Warning: \label without proper \caption on input line 179.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `bugDetection' on page 55 undefined on input line 172.
 
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
-<styles/bugDetectionDiagram.pdf, id=957, 936.49875pt x 384.43625pt>
+ [55]
+<styles/bugDetectionDiagram.pdf, id=948, 936.49875pt x 384.43625pt>
 File: styles/bugDetectionDiagram.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionDiagram.pdf>
@@ -1763,7 +1750,7 @@ Package pdftex.def Info: styles/bugDetectionDiagram.pdf used on input line 178.
 
 (pdftex.def)             Requested size: 468.24823pt x 192.21765pt.
 
-<styles/bugDetectionWithMessage.pdf, id=958, 931.48pt x 382.42876pt>
+<styles/bugDetectionWithMessage.pdf, id=949, 931.48pt x 382.42876pt>
 File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
@@ -1776,83 +1763,83 @@ Package caption Warning: \label without proper \caption on input line 208.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `viewSequenceDiagram' on page 58 undefined on input li
+LaTeX Warning: Reference `viewSequenceDiagram' on page 56 undefined on input li
 ne 201.
 
-[58 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
+[56 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
 plate/styles/bugDetectionDiagram.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITReposit
 ory/ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=974, 401.5pt x 217.81375pt>
+<styles/viewSequenceDiagram.pdf, id=965, 109.3686pt x 57.5751pt>
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
 Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 207.
 
-(pdftex.def)             Requested size: 401.49901pt x 217.8132pt.
+(pdftex.def)             Requested size: 54.68416pt x 28.78748pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/RelatedWork.tex [59 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
-sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagram.pdf>] [60
+e\chapters/RelatedWork.tex [57 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
+sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagram.pdf>] [58
 
 ]
 chapter 6.
-[61]
+[59]
 
-LaTeX Warning: Citation `ref_39_simonet:report' on page 62 undefined on input l
+LaTeX Warning: Citation `ref_39_simonet:report' on page 60 undefined on input l
 ine 64.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62])
+ [60])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\chapters/Limitations.tex [63] [64
+e\chapters/Limitations.tex [61] [62
 
 ]
 chapter 7.
-) [65] [66
+) [63] [64
 
 ]
 part III.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
 (scrkbase)              on input line 167.
-[67] [68]
+[65] [66]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/ConclusionAndFutureWork.tex
 chapter 8.
 
 Underfull \vbox (badness 2150) has occurred while \output is active []
 
- [69
+ [67
 
 ])
-[70] [71
+[68] [69
 
-] [72]
+] [70]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/oneAppendix.tex
 chapter A.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\sourceCode/MyDsl.xtext [73
+e\sourceCode/MyDsl.xtext [71
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [74]
+[75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76]
-[77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78])
+ [76])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\sourceCode/Types.xtend [79]
+e\sourceCode/Types.xtend [77]
 LaTeX Font Info:    External font `yhcmex10' loaded for size
 (Font)              <10> on input line 45.
 LaTeX Font Info:    External font `yhcmex10' loaded for size
@@ -1867,13 +1854,13 @@ Overfull \hbox (252.91437pt too wide) in paragraph at lines 56--57
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [80]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
 Overfull \hbox (76.3024pt too wide) in paragraph at lines 238--239
 [][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -1886,8 +1873,8 @@ Overfull \hbox (44.30203pt too wide) in paragraph at lines 242--244
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83]))
-[84]
+ [81]))
+[82]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.bbl
 chapter without number
@@ -1900,16 +1887,16 @@ ent.techtarget.com/definition/
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85
+ [83
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
+ [84]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [87]
+ [85]
 Underfull \hbox (badness 2119) in paragraph at lines 340--343
 []\OT1/ppl/m/n/10.95 Sun Mi-crosys-tems.  Lock[]Lint - Static data race and cea
 d-lock de-tec-tion tool for C,
@@ -1918,7 +1905,7 @@ d-lock de-tec-tion tool for C,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88]
+ [86]
 Underfull \hbox (badness 10000) in paragraph at lines 392--396
 []\OT1/ppl/m/n/10.95 Networkworld.  net-work-world Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Net-work-
@@ -1933,7 +1920,7 @@ ntrol/seven-strong-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89]
+ [87]
 Overfull \hbox (17.31421pt too wide) in paragraph at lines 510--513
 []\OT1/ppl/m/n/10.95 L. Tor-valds.  Sparse - A se-matic parser for C, http://ww
 w.kernel.org/pub/software/devel/sparse. 
@@ -1954,8 +1941,8 @@ cal re-port, Eclipse Xtext, iTemis,
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90])
-[91]
+ [88])
+[89]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
 
@@ -1972,10 +1959,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
- 26276 strings out of 493921
- 470533 string characters out of 3144876
- 670770 words of memory out of 3000000
- 27962 multiletter control sequences out of 15000+200000
+ 26275 strings out of 493921
+ 470541 string characters out of 3144876
+ 670771 words of memory out of 3000000
+ 27963 multiletter control sequences out of 15000+200000
  32745 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,13n,78p,2412b,1995s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1994,9 +1981,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (109 pages, 6519012 bytes).
+Output written on main.pdf (107 pages, 8327599 bytes).
 PDF statistics:
- 2114 PDF objects out of 2487 (max. 8388607)
- 1028 named destinations out of 1200 (max. 500000)
+ 2103 PDF objects out of 2487 (max. 8388607)
+ 1026 named destinations out of 1200 (max. 500000)
  427 words of extra memory for PDF output out of 10000 (max. 10000000)
 

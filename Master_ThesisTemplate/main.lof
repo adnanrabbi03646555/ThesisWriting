@@ -19,12 +19,12 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces UML Statechart Formal Representation for this System\relax }}{40}{figure.caption.24}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Error trace path in UML sequence diagram\relax }}{47}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces UML Statechart Modeling for Authentication Scenario\relax }}{52}{figure.caption.26}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces UML Statechart Modeling for Declassification Scenario\relax }}{54}{figure.caption.27}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces UML statechart modeling for sanitization scenario\relax }}{55}{figure.caption.28}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug reports in checker\relax }}{58}{figure.caption.29}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug reports in checker with message\relax }}{58}{figure.caption.30}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence diagram representation of buggy path\relax }}{59}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces UML Statechart Modeling for Authentication Scenario\relax }}{50}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces UML Statechart Modeling for Declassification Scenario\relax }}{52}{figure.caption.27}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces UML statechart modeling for sanitization scenario\relax }}{53}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug reports in checker\relax }}{56}{figure.caption.29}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug reports in checker with message\relax }}{56}{figure.caption.30}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence diagram representation of buggy path\relax }}{57}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
