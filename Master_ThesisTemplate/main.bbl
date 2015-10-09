@@ -12,6 +12,10 @@
 {Searchwindevelopment Techtarget},
   http://searchwindevelopment.techtarget.com/definition/ static-analysis.
 
+\bibitem{ref_104_owasp:owasp}
+{OWASP}.
+\newblock Technical report, http://www.owasp.org.
+
 \bibitem{ref_16_alhumaidan2012state}
 Fahad Alhumaidan et~al.
 \newblock State based static and dynamic formal analysis of uml state diagrams.
@@ -121,12 +125,12 @@ Johannes Dahse and Thorsten Holz.
   2005.
 
 \bibitem{ref_14_denning1976lattice}
-Dorothy~E Denning.
+Dorothy~E. Denning.
 \newblock A lattice model of secure information flow.
 \newblock {\em Communications of the ACM}, 19(5):236--243, 1976.
 
 \bibitem{ref_103_denning1977certification}
-Dorothy~E Denning and Peter~J Denning.
+Dorothy~E. Denning and Peter~J Denning.
 \newblock Certification of programs for secure information flow.
 \newblock {\em Communications of the ACM}, 20(7):504--513, 1977.
 
@@ -382,11 +386,6 @@ Networkworld.
 \newblock {Networkworld Documentation}.
 \newblock Technical report, Networkworld Documentation,
   http://www.networkworld.com/article/2296774/access-control/seven-strong-authentication-methods.html.
-
-\bibitem{ref_104_owasp:owasp}
-OWASP.
-\newblock {OWASP}.
-\newblock Technical report, OWASP, http://www.owasp.org.
 
 \bibitem{ref_108_paul2015infoflow}
 Andreas Ibing Claudia~Eckert Paul~Muntean, Adnan~Rabbi.

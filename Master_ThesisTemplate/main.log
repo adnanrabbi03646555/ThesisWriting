@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  9 OCT 2015 00:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  9 OCT 2015 12:31
 entering extended mode
 **main.tex
 
@@ -1042,7 +1042,7 @@ Package csquotes Info: ... configuration file loaded successfully.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg"
 File: csquotes.cfg 
 )
-Package csquotes Info: Disabling multilingual quotes.
+Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Disabling multilingual quotes.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 )
@@ -1600,10 +1600,10 @@ File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
 Package pdftex.def Info: styles/declassification_scenario.pdf used on input lin
-e 76.
+e 77.
 (pdftex.def)             Requested size: 120.6906pt x 49.14346pt.
  [49]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 95.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 96.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -1614,7 +1614,7 @@ File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
 Package pdftex.def Info: styles/sanitization_scenario.pdf used on input line 11
-5.
+6.
 (pdftex.def)             Requested size: 118.5225pt x 51.07066pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1628,7 +1628,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: styles/bugDetectionNew.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionNew.pdf>
-Package pdftex.def Info: styles/bugDetectionNew.pdf used on input line 178.
+Package pdftex.def Info: styles/bugDetectionNew.pdf used on input line 179.
 (pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
 
 <styles/bugDetectionWithMessage.pdf, id=929, 931.48pt x 382.42876pt>
@@ -1636,7 +1636,7 @@ File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
 
 <use styles/bugDetectionWithMessage.pdf>
 Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line 
-190.
+191.
 (pdftex.def)             Requested size: 465.73886pt x 191.2139pt.
  [54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionNew.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITRepository
@@ -1645,7 +1645,7 @@ mplate/styles/bugDetectionNew.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITRepository
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
-Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 207.
+Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 208.
 
 (pdftex.def)             Requested size: 54.68416pt x 28.78748pt.
 )
@@ -1744,10 +1744,7 @@ Overfull \hbox (1.37088pt too wide) in paragraph at lines 12--14
 ent.techtarget.com/definition/
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81
+[81
 
 
 ]
@@ -1757,13 +1754,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [83]
-Underfull \hbox (badness 2119) in paragraph at lines 329--332
+Underfull \hbox (badness 2119) in paragraph at lines 333--336
 []\OT1/ppl/m/n/10.95 Sun Mi-crosys-tems.  Lock[]Lint - Static data race and cea
 d-lock de-tec-tion tool for C,
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 381--385
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Underfull \hbox (badness 3250) in paragraph at lines 385--389
 \OT1/ppl/m/n/10.95 u-men-ta-tion, http://www.networkworld.com/article/2296774/a
 ccess-control/seven-strong-
  []
@@ -1771,23 +1771,20 @@ ccess-control/seven-strong-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [85]
-Overfull \hbox (17.31421pt too wide) in paragraph at lines 499--502
+Overfull \hbox (17.31421pt too wide) in paragraph at lines 498--501
 []\OT1/ppl/m/n/10.95 L. Tor-valds.  Sparse - A se-matic parser for C, http://ww
 w.kernel.org/pub/software/devel/sparse. 
  []
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 555--559
+Underfull \hbox (badness 5637) in paragraph at lines 554--558
 []\OT1/ppl/m/n/10.95 Eclipse Xtend.  Eclipse xtend Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Eclipse Xtend,
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 561--565
+Underfull \hbox (badness 1178) in paragraph at lines 560--564
 []\OT1/ppl/m/n/10.95 Eclipse Xtext.  Eclipse xText Doc-u-men-ta-tion.  Tech-ni-
 cal re-port, Eclipse Xtext, iTemis,
  []
@@ -1814,7 +1811,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
  26299 strings out of 493921
- 471098 string characters out of 3144876
+ 471097 string characters out of 3144876
  670769 words of memory out of 3000000
  27978 multiletter control sequences out of 15000+200000
  32736 words of font info for 85 fonts, out of 3000000 for 9000
@@ -1834,9 +1831,9 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (105 pages, 8317315 bytes).
+Output written on main.pdf (105 pages, 8317384 bytes).
 PDF statistics:
- 2090 PDF objects out of 2487 (max. 8388607)
+ 2091 PDF objects out of 2487 (max. 8388607)
  1032 named destinations out of 1200 (max. 500000)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -38,23 +38,23 @@ the hybrid algorithm TAJ uses for slice construction is an attractive
 compromise between context-sensitive and context-insensitive
 thin slicing. TAJ is able to perform effective taint analysis in a limited budget, improving performance without significantly degrading accuracy.
 
-Darvas, H{\"a}hnle, and Sands \cite{ref_70_darvas2005theorem} used a self-compositional approach to prove secure information flow properties for Java CARD programs. They used an interactive approach instead of an automatic approach. Barthe, D'Argenio, and Rezk coined the term "self-composition" in their paper \cite{ref_71_barthe2004secure}. Their paper is mostly theoretical results on characterizing various secure information flow problems, including
+Darvas et al. \cite{ref_70_darvas2005theorem} used a self-compositional approach to prove secure information flow properties for Java CARD programs. They used an interactive approach instead of an automatic approach. Barthe et al. coined the term "self-composition" in their paper \cite{ref_71_barthe2004secure}. Their paper is mostly theoretical results on characterizing various secure information flow problems, including
 non-deterministic and termination-sensitive cases, in a self-compositional framework.
 
-Wassermann and Su extended Minamide's string-analysis algorithm
+Wassermann et al. string-analysis algorithm
 \cite{ref_102_minamide2005static} to syntactically isolate tainted substrings from untainted
 substrings in PHP applications. They labeled non-terminals in a
 Context-Free Grammar (CFG) with annotations reflecting taintedness
 and untaintedness. Their expensive, yet elegant mechanism
 is applied to detect both SQL injection and XSS vulnerabilities.
 
-McCamant and Ernst \cite{ref_101_mccamant2008quantitative} take a quantitative approach in information
+McCamant et al. \cite{ref_101_mccamant2008quantitative} take a quantitative approach in information
 flow: instead of using taint analysis, they cast information-
 flow security to a network-flow-capacity problem, and describe a
 dynamic technique for measuring the amount of secret data that
 leaks to public observers.
 
-Barthe, D'Argenio, and Rezk in the same paper showed that their self compositional framework can handle delimited information release as originally proposed by Sabelfeld and Myers \cite{ref_72_sabelfeld2004model}. Li and Zdancewic's
+Barthe et al. in the paper \cite{ref_71_barthe2004secure} showed that their self compositional framework can handle delimited information release as originally proposed by Sabelfeld et al. \cite{ref_72_sabelfeld2004model}. Li et al.
 recently proposed relaxed non-interference \cite{ref_73_li2005downgrading} is equivalent to delimited information release when strengthened with semantic equivalence. Relaxed non-interference is arguably a more natural formulation of information downgrading than delimited
 information release. This research suggests a promising practical approach of natural formulation of information downgrading.
 
@@ -93,7 +93,7 @@ frequently occur in web applications. Huang et al. \cite{ref_75_huang2004securin
 adapted parts of the techniques used in CQual to develop
 an intraprocedural analysis for PHP programs. In \cite{ref_76_huang2004verifying}, the
 same authors presented an alternative approach that is based
-on bounded model checking. Whaley and Lam \cite{ref_77_whaley2004cloning} described an interprocedural, flow-insensitive alias analysis for Java applications. Their analysis is based on binary decision diagrams and was used by Livshits and Lam \cite{ref_78_livshits2005finding} for the detection of taint-style vulnerabilities. In \cite{ref_62_balzarotti2008saner}, their approach is based on Pixy \cite{ref_79_jovanovic2010static,ref_80_jovanovic2006precise}, an open
+on bounded model checking. Whaley et al. \cite{ref_77_whaley2004cloning} described an interprocedural, flow-insensitive alias analysis for Java applications. Their analysis is based on binary decision diagrams and was used by Livshits et al. \cite{ref_78_livshits2005finding} for the detection of taint-style vulnerabilities. In \cite{ref_62_balzarotti2008saner}, their approach is based on Pixy \cite{ref_80_jovanovic2006precise,ref_79_jovanovic2010static}, an open
 source static PHP analyzer that uses taint analysis for detecting XSS vulnerabilities.
 
 Weinberger et al. empirically studied present sanitization
@@ -105,19 +105,18 @@ usage of various markup contexts. A templating framework
 was proposed by Samuel et al. that uses type qualifiers
 to automate context-sensitive XSS sanitization \cite{ref_106_samuel2011context}.
 
-A good overview of static analysis approaches applied to security problems are provided in  \cite{ref_81_chess2004static}. Simple lexical approaches employed by scanning tools such as ITS4 and RATS use a set of predefined patterns to identify potentially dangerous areas of a program \cite{ref_82_wilander2002comparison}. While a significant improvement on Unix grep, these tools, however, have no knowledge of how data propagates throughout the program and cannot be used to automatically and fully solve taint-style problems.
+A good overview of static analysis approaches applied to security problems are provided in \cite{ref_81_chess2004static}. Simple lexical approaches employed by scanning tools such as ITS4 and RATS use a set of predefined patterns to identify potentially dangerous areas of a program \cite{ref_82_wilander2002comparison}. While a significant improvement on Unix grep, these tools, however, have no knowledge of how data propagates throughout the program and cannot be used to automatically and fully solve taint-style problems.
 A few projects use path-sensitive analysis to find errors in C and C++ programs \cite{ref_83_bush2000static,ref_84_hallem2002system,ref_85_livshits2003tracking}. While capable of addressing taint-style problems, these tools rely on an unsound approach to pointers and may therefore miss some errors. The WebSSARI project uses combined unsound static and dynamic analysis in the context of analyzing PHP programs \cite{ref_75_huang2004securing}. WebSSARI has successfully been applied to find many SQL injection and cross-site scripting vulnerabilities in PHP code.
 
  The studies rely on manually
 written annotations while our annotation language is integrated
-into two editors which are be used to annotate UML state
+into two editors which are used to annotate UML state
 charts and C code by selecting annotations from a list and
 without the need to memorize a new annotation language.
 
 Recently taint modes integrated in programming languages as Camlbased FlowCaml \cite{ref_32_simonet:report}, Ada-based SPARK Examiner \cite{ref_31_chapman:enforcing} and the scripting. However, none of these annotation and programming languages have support for introducing information flow
 restrictions in both models and the source code.
-Splint \cite{ref_30_david:splint}, Flawfinder \cite{ref_29_wheeler:flawfinder} and Cqual \cite{ref_28_umesh:cqual} are used to
-detect information flow bugs in source code and come with
+Splint \cite{ref_30_david:splint}, Flawfinder \cite{ref_29_wheeler:flawfinder} and Cqual \cite{ref_28_umesh:cqual} are used to detect information flow bugs in source code and come with
 comprehensive user manuals describing how the annotation
 language can be used in order to annotate source code.
 iFlow \cite{ref_27_iflow:kuzman} is used for detecting information flow bugs in
@@ -130,8 +129,7 @@ which can be perceived to be a high burden in some scenarios.
 
 
  Heldal et al. \cite{ref_25_heldal:bridging,ref_23_heldal:supporting} introduced an
-UML profile that incorporates a decentralized label model [40]
-into the UML. It allows the annotation of UML artifacts with
+UML profile that incorporates a decentralized label model into the UML. It allows the annotation of UML artifacts with
 Jif \cite{ref_24_myers:descentrelized} labels in order to generate Jif code from the UML
 model automatically. However, the Jif-style annotation already
 proved to be non-trivial on the code level \cite{ref_22_preibusch2011information}, while \cite{ref_23_heldal:supporting}

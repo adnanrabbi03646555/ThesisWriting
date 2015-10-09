@@ -1,13 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
-Warning--I didn't find a database entry for "ref_68_cohen1978information"
-Warning--I didn't find a database entry for "ref_39_simonet:report"
 Too many commas in name 1 of "Paul Muntean, Adnan Rabbi, Andreas Ibing, Claudia Eckert" for entry ref_108_paul2015infoflow
 while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in ref_86_techtarget:techtarget
 Warning--to sort, need author or key in ref_87_gcn:gcn
+Warning--to sort, need author or key in ref_104_owasp:owasp
 Warning--to sort, need author or key in ref_15_yakindu:sct
+Warning--empty author in ref_104_owasp:owasp
+Warning--empty institution in ref_104_owasp:owasp
 Warning--there's a number but no volume in ref_18_chess2004static
 Warning--there's a number but no volume in ref_81_chess2004static
 Warning--can't use both volume and number fields in ref_67_cohen1977information
