@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {2.4}Static Code Analysis}{15}{section.2.4}
 \contentsline {section}{\numberline {2.5}Information Flow Vulnerabilities}{16}{section.2.5}
 \contentsline {section}{\numberline {2.6}Detecting Information Flow Errors During Design}{17}{section.2.6}
-\contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{19}{section.2.7}
+\contentsline {section}{\numberline {2.7}Detecting Information Flow Errors During Coding}{20}{section.2.7}
 \contentsline {part}{\numberline {II}The 2nd Part}{21}{part.2}
 \contentsline {chapter}{\numberline {3}Challenges and Annotation Language Extension}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Challenges and Idea}{23}{section.3.1}

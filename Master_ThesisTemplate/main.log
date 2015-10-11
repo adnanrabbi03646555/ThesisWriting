@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  9 OCT 2015 12:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  10 OCT 2015 23:43
 entering extended mode
 **main.tex
 
@@ -1428,6 +1428,9 @@ File: styles/FunctionCallMissing.pdf Graphic file (type pdf)
 Package pdftex.def Info: styles/FunctionCallMissing.pdf used on input line 468.
 
 (pdftex.def)             Requested size: 235.3788pt x 126.97406pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [19 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/FunctionCallMissing.pdf>]
 <styles/bug_detection_during_coding.pdf, id=565, 470.75874pt x 326.21875pt>
@@ -1641,13 +1644,13 @@ Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line
  [54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetectionNew.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITRepository
 /ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=944, 109.3686pt x 57.5751pt>
+<styles/viewSequenceDiagram.pdf, id=944, 132.7359pt x 51.5526pt>
 File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagram.pdf>
 Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 208.
 
-(pdftex.def)             Requested size: 54.68416pt x 28.78748pt.
+(pdftex.def)             Requested size: 66.36778pt x 25.77623pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/RelatedWork.tex [55 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
@@ -1831,7 +1834,7 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (105 pages, 8317384 bytes).
+Output written on main.pdf (105 pages, 7774988 bytes).
 PDF statistics:
  2091 PDF objects out of 2487 (max. 8388607)
  1032 named destinations out of 1200 (max. 500000)

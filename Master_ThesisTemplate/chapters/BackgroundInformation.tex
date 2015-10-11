@@ -207,7 +207,7 @@ need for software applications with strong, confidentiality guarantees.
 Security-typed languages promise to be a valuable tool in making provably secure software applications. In such languages, each
 data item is labeled with its security policy. In practical security-typed languages support some form of declassification, in which high-security information is permitted to flow to a low-security receiver/observer.
 
-To declassify information means lowering the security classification of selected information. Sabelfeld and Sands \cite{ref_3_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
+To declassify information means lowering the security classification of selected information. Sabelfeld et al. \cite{ref_3_sabelfeld2009declassification} identify four different dimensions of declassification, what is declassified, who is able to declassify, where the declassification occurs and when the declassification takes place.
 
 While the security research community has recognized the importance of the problem, the state-of-the-art in information release comprises a fast growing number of definitions and analyses for different kinds of information release policies over a variety of languages and calculi. The relationship between different definitions of release is often unclear and the relationships that do exist between methods are
 often inaccurately portrayed. This creates hazardous situations where policies provide only partial assurance that information release mechanisms cannot be compromised.
@@ -215,7 +215,7 @@ often inaccurately portrayed. This creates hazardous situations where policies p
 For example, consider a policy for describing what information is released. This policy stipulates that at most four digits of a credit card number might be released when a purchase is made (as often needed for logging purposes). This policy specifies what can be released but says nothing about who controls which of the numbers are revealed.
 Leaving this information unspecified leads to an attack where the attacker launders the entire credit card number by asking to reveal different digits under different purchases.
 
-Myers and Liskov introduced the decentralized label model \cite{ref_4_myers2000protecting}, describing how labels could be applied
+Myers et al. introduced the decentralized label model \cite{ref_4_myers2000protecting}, describing how labels could be applied
 to a programming language and then used to check information
 flow policy compliance in distributed systems. The framework
 includes a declassify function for downgrading data if the
@@ -232,7 +232,7 @@ Classification of the basic declassification goals according to four axes: what 
    
    \item Who: In a computing system it is essential to specify who controls information release .
    Ignoring the issue of control opens up attacks where the attacker hijacks release
-   mechanisms to launder secret information. Myers and Liskov decentralised label
+   mechanisms to launder secret information. Myers et al. decentralised label
    model \cite{ref_9_myers1997decentralized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
    owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
    the Jif compiler \cite{ref_11_myers2001jif}.
@@ -242,7 +242,7 @@ Classification of the basic declassification goals according to four axes: what 
    before and after encryption.  A combination of \enquote{where} and \enquote{who} policies in the presence of encryption has
    been recently investigated by Hicks et al. \cite{ref_12_hicks2005declassification}
    
-   \item When: The fourth dimension of declassification is  \enquote{when} information should be released. The work of Giambiagi and Dam \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released. Chong and Myers security policies \cite{ref_13_chong2004security} address when information is released. By annotating variables this is achieved.
+   \item When: The fourth dimension of declassification is  \enquote{when} information should be released. The work of Giambiagi et al. \cite{ref_19_giambiagi2003secure} focuses on the correct implementation of security protocols. Here the goal is not to prove a noninterference property of the protocol, but to use the components of the protocol description as a specification of what and when information may be released. Chong et al. security policies \cite{ref_13_chong2004security} address when information is released. By annotating variables this is achieved.
    
 \end{itemize}
 
@@ -270,7 +270,7 @@ Authentication is the mechanism which confirms the identity of users trying to a
 
 Now-a-days following authentication, a user must gain authorization for doing certain tasks. After logging into a system, for instance, the user may try to issue commands. The authorization process determines whether the user has the authority to issue such commands. Simply put, authorization is the process of enforcing policies: determining what types or qualities of activities, resources or services a user is permitted. Usually, authorization occurs within the context of authentication. Once you have authenticated a user, they may be authorized for different types of access or activity.
 
-According to J Viega and G McGraw \cite{ref_92_viega2001building} the processes of how to avoid the top ten software security flaws are:
+According to J Viega et al. \cite{ref_92_viega2001building} the processes of how to avoid the top ten software security flaws are:
 \begin{itemize}
 	\item Earn or give, but never assume, trust.
 	
@@ -303,7 +303,7 @@ According to J Viega and G McGraw \cite{ref_92_viega2001building} the processes 
 \end{itemize}
 
 Protecting confidential data in computing environments has long been recognized as a difficult and daunting problem. All modern operating systems include some form of access control to protect files from being read or modified by unauthorized users. However, access controls are insufficient to regulate the propagation of information after it has been released for processing by a program. Similarly,
-cryptography provides strong confidentiality guarantees in open, possibly hostile environments like the Internet, but it is prohibitively expensive to perform nontrivial computations with encrypted data. Neither access control nor encryption
+cryptography provides strong confidentiality guarantees in open, possibly hostile environments such as the Internet, but it is prohibitively expensive to perform nontrivial computations with encrypted data. Neither access control nor encryption
 provide complete solutions for protecting confidentiality.
 
 A complementary approach, proposed more than thirty years ago, is to track and regulate the information flows of the system to prevent secret data from leaking to unauthorized parties. This can be done either dynamically, by marking data with a label describing its security level and then propagating those labels to all derivatives of the data, or statically, by analyzing the software that processes
@@ -333,10 +333,10 @@ The principal advantage of static analysis is the fact that it can reveal errors
 A variety of static analysis approaches have been proposed
 to automatically identify security vulnerabilities in PHP applications
 based on insufficient sanitization and validation.
-Zheng and Zhang introduced path-sensitive static analysis
+Zheng et al. introduced path-sensitive static analysis
 for PHP applications with Z3-str \cite{ref_94_zheng2013path}. They leveraged a
 modified version of the Z3 SMT solver that is also capable
-of analyzing strings. Shar and Tan proposed static code attributes
+of analyzing strings. Shar et al. proposed static code attributes
 for predicting SQLi and XSS vulnerabilities \cite{ref_97_shar2012predicting, ref_98_shar2013mining}. Yu et al. built an automata-based string analysis tool
 called STRANGER \cite{ref_95_yu2010stranger} based on the static code analysis
 tool Pixy \cite{ref_99_jovanovic2006pixy}. STRANGER detects security vulnerabilities
@@ -439,7 +439,7 @@ This is the sencond phase in the software development life cycle. It is marked a
 System features in detail, functional hierarchy diagrams, screen layout diagrams, tables of business rules, business process diagrams, pseudo-code and a complete entity-relationship diagram with a full data dictionary of the desired system are described in this stage of software development life cycle. These design elements are intended to describe the system in sufficient detail, such that skilled developers and engineers may develop and deliver the system with minimal additional input design.
 
 \textbf{\textcircled{3} Implementation or coding:}
-Implementation and coding is the third phase of software development life cycle which is denoted as number \textcircled{3} in Figure \ref{figure_sdlc}. To develop the software/system the design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools like compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages like C, C++, Pascal, Java are used for coding. With respect to the type of application/software , the right programming language is chosen.
+Implementation and coding is the third phase of software development life cycle which is denoted as number \textcircled{3} in Figure \ref{figure_sdlc}. To develop the software/system the design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools e.g. compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages e.g. C, C++, Pascal, Java are used for coding. With respect to the type of application/software , the right programming language is chosen.
 
 \textbf{\textcircled{4} Testing:}
 Testing is the fourth phase of software development life cycle which is marked as number \textcircled{4} in Figure \ref{figure_sdlc}. After the code generation, the software program testing begins. Various kind of testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. The following are types of testing which are so popular to test the software/system:
@@ -461,7 +461,7 @@ This is the last phase of software development life cycle which is denoted as nu
 
 It would be easier for the developer if information flow errors can be detected in the early statge of software development lifecycle. In this research we propose a method to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way we detected the information flow in designing phase is described below.
 
-If a step of function call like authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the Figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. Inside the Figure the bug is represented as a red cross sign like this \textcircled{X} in Figure \ref{figure_FunctionCallMissing}. It is the buggy path of UML state charts during design stage of software life cycle. 
+If a step of function call e.g. authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the Figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. Inside the Figure the bug is represented as a red cross sign like this \textcircled{X} in Figure \ref{figure_FunctionCallMissing}. It is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
 	\vspace{-1em}
