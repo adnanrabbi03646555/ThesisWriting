@@ -1,14 +1,11 @@
 \chapter{Literature Review}
 
-Although the difficulty of strongly protecting confidential
+The difficulty of strongly protecting confidential
 information has been known for some time. The research
-addressing this problem has had relatively little impact on the
+addressing this problem have had relatively little impacts on the
 design of commercially available computing systems. These
 systems employ security mechanisms such as access control,
-capabilities, firewalls and antivirus software; it is useful to see how these standard security mechanisms fall short. Access control is an important part of the current
-security infrastructure. For example, a file may be assigned
-access-control permissions that prevent users other than its
-owner from reading the file; more precisely, these permissions
+capabilities, firewalls and antivirus software; it is useful to see how these standard security mechanisms fall short. Access control is an important part of the current security infrastructure. For example, a file may be assigned access-control permissions that prevent users other than its owner from reading the file; more precisely, these permissions
 prevent processes not authorized by the file owner from
 reading the file. However, access control does not control how
 the data is used after it is read from the file. To soundly enforce
@@ -18,7 +15,7 @@ not improperly transmit or leak the confidential data. But
 these are precisely the processes that obey a much stronger
 information-flow policy. Access-control mechanisms cannot
 identify these processes; therefore, access control, while useful,
-cannot substitute for information-flow control. 
+can not act as a substitute for information-flow control. 
 
 Other common security enforcement mechanisms such as
 firewalls, encryption and antivirus software are useful for protecting
@@ -38,7 +35,7 @@ based on detecting patterns of previously known malicious
 behavior in code and offers limited protection against
 new attacks.
 
-However, many intuitively secure programs do allow some release, or declassification, of secret information (such as- password checking, information purchase, and spreadsheet computation). Noninterference fails to recognize such programs as secure. In this respect, many security type systems enforcing noninterference are impractical. However, there is often little or no guarantee about what is actually being leaked. As a consequence, such type systems are vulnerable to laundering attacks, which exploit declassification mechanisms to reveal more secret data than intended. To bridge this gap, Sabelfeld and Myers
+However, many intuitively secure programs do allow some release, or declassification, of secret information (such as- password checking, information purchase, and spreadsheet computation). Noninterference fails to recognize such programs as secured. In this respect, many security type systems enforcing noninterference are impractical. However, there is often little or no guarantee about what is actually being leaked. As a consequence, such type systems are vulnerable to laundering attacks, which exploit declassification mechanisms to reveal more secret data than intended. To bridge this gap, Sabelfeld and Myers
 \cite{ref_72_sabelfeld2004model} introduces a new security property, delimited release and end-to-end guarantee that declassification cannot be exploited to construct laundering attacks. In addition, a security type system is given that straightforwardly and provably enforces delimited release.
 
 If a user wishes to keep some data confidential, he or
@@ -75,7 +72,7 @@ improper information flows at run time. The type system
 in such a language is a security-type system that enforces
 information-flow policies.
 
-This chapter describes the basic of sanitization, declassification, authentication, information flow vulnerabilities and static code analysis mechanism in software and web applications. Also the purpose and requirements of these three functions: sanitization, declassification and authentication are presented here. At the end of this chapter the mechanism of detecting information flow errors during design and code are also presented.
+This chapter describes the basics of sanitization, declassification, authentication, information flow vulnerabilities and static code analysis mechanism in software and web applications. Also the purpose and requirements of these three functions: sanitization, declassification and authentication are presented here. At the end of this chapter, the mechanism of detecting information flow errors during design and code are also presented.
 
 \section{Sanitization}
 Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience. Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulnerability analysis has mostly focused on identifying cases where web applications directly uses external input for critical operations. It is suggested to always use proper sanitization method to validate external input values from the user for any application. For example, user inputs must always flow through a sanitizing function before flowing into a SQL query or HTML, to avoid SQL injection or cross-site scripting vulnerabilities.
@@ -85,7 +82,7 @@ could cause toxic waste to leak, and weapons targeting, where an inaccuracy coul
 operational environments, the impact is virtually irreversible and must therefore be prevented even if it is likely to occur
 with low probability. It's always good that transforming information to a form which is suitable for release or sanitize the information by redacting some portions of it.
 
-Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good guy, the data he sends to the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
+Three of the top five most common website attacks are SQL injection, cross-site scripting (XSS) and remote file inclusion (RFI). The root cause of these attacks is common: input sanitization. All three exploits are leveraged by data sent to the web server by the end user. When the end user is a good person, the data he sends to the server is relevant to his interaction with the website. But when the end user is a hacker, he/she can exploit this mechanism to send the web server input which is deliberately constructed to escape the legitimate context and execute unauthorized actions.
 
 Cross-site scripting (XSS) attacks (the most common vulnerability)
 may occur when a web application accepts data originating
@@ -149,13 +146,9 @@ with the sanitized data without a request for resubmission.
 The symbols meta information about sanitization is inferred
 from PHP operators and built-in functions within the
 AST. For this purpose, a whitelist of sanitizers is used and
-complex sanitizers are simulated carefully \cite{ref_93_dahse2014simulation}. RIPS assigns
-different sanitization tags to the inferred data symbols that
-precisely point out the sanitized markup contexts.
-
-For example, the built-in function htmlentities() sanitizes
-against double quotes and lower-than characters by default.
-Thus, the corresponding sanitization tags for doublequoted
+complex sanitizers are simulated carefully \cite{ref_93_dahse2014simulation}. The built-in function htmlentities() sanitizes
+against double quotes and less-than characters by default.
+Thus, the corresponding sanitization tags for double quoted
 attributes or HTML elements are added to the argument's
 data symbol. If the mechanism sanitizes against all
 types of injection flaws, such as an integer typecast, a universal
@@ -171,9 +164,9 @@ the according sanitization tag is added to the data symbol.
 
 In many cases, the data is passed directly to a component in a different trusted domain. Data sanitization is the process of ensuring that data conforms to the requirements of the subsystem to which it is passed. Sanitization also involves ensuring that data conforms to security-related requirements regarding leaking or exposure of sensitive data when output across a trust boundary. Sanitization may include the elimination of unwanted characters from the input by means of removing, replacing, encoding or escaping the characters. Sanitization may occur following input (input sanitization) or before the data is passed across a trust boundary (output sanitization). Data sanitization and input validation may coexist and complement each other. Many command interpreters and parsers provide their own sanitization and validation methods. When available, their use is preferred over custom sanitization techniques because custom-developed sanitization can often neglect special cases or hidden complexities in the parser. Another problem with custom sanitization code is that it may not be adequately maintained when new capabilities are added to the command interpreter or parser software.
 
-Input sanitization describes cleansing and scrubbing user input to prevent it from jumping the fence and exploiting security holes. But thorough input sanitization is hard. While some vulnerable sites simply don't sanitize at all, others do so incompletely, lending their owners a false sense of security.
+Input sanitization describes cleansing and scrubbing user input to prevent it from jumping the fence and exploiting security holes. But thorough input sanitization is hard. While some vulnerable sites simply do not sanitize at all, others do so incompletely, leading their owners a false sense of security.
 
-Some basic purpose of sanitization are given below:
+Some basic purposes of sanitization are given below:
 \begin{itemize}
 	\item Remove malicious elements from the input.
 	\item To identify the set of parameters and global variables which must be sanitized before calling functions.
@@ -230,14 +223,14 @@ Classification of the basic declassification goals according to four axes: what 
    parts of the secret are released. This is useful,
    for example, when partial information about a credit card number or a social security number is used for logging.
    
-   \item Who: In a computing system it is essential to specify who controls information release .
+   \item Who: In a computing system it is essential to specify "who" controls information release.
    Ignoring the issue of control opens up attacks where the attacker hijacks release
-   mechanisms to launder secret information. Myers et al. decentralised label
+   mechanisms to launder secret information. Myers et al. decentralized label
    model \cite{ref_9_myers1997decentralized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
    owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
    the Jif compiler \cite{ref_11_myers2001jif}.
    
-   \item Where: In a system information  Where is an important aspect of information release. One can ensure that no other  part can release further information. By delegating particular parts of the system to release information. Declassification
+   \item Where: In a system information  "where" is an important aspect of information release. One can ensure that no other part can release further information. By delegating particular parts of the system to release information. Declassification
    via encryption is not harmful as long as the program is, in some sense, noninterfering
    before and after encryption.  A combination of \enquote{where} and \enquote{who} policies in the presence of encryption has
    been recently investigated by Hicks et al. \cite{ref_12_hicks2005declassification}
@@ -253,9 +246,7 @@ harder to formalize in a general way, beyond saying that they cannot be captured
 \enquote{what} and \enquote{when} dimensions.
 
 \section{Authentication}
-Malicious applications targeting financial account information have increased dramatically over the last few years. The number of online applications is growing everyday. The ease of use of the Internet and the growing number of users are making a perfect target for criminals. Attacking thousands of users is achievable with only one click. The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore.
-
-To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.
+Malicious applications targeting financial account information have increased dramatically over the last few years. The number of online applications is growing everyday. The ease of use of the Internet and the growing number of users are making a perfect target for criminals. Attacking thousands of users is achievable with only one click. The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore. To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.
 
 Before describing the process of the authentication, it is important to explain some terms. Now-a-days, AAA is often used. AAA stands for Authentication, Authorization and Accounting. It is also important to know the differences between those terms:
  
@@ -266,9 +257,9 @@ Before describing the process of the authentication, it is important to explain 
 \textbf{Accounting}: measuring the resources a user consumes during access.
 
 
-Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally this is handled by passing a key with each request (often called an access token, user verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request is granted.
+Authentication is the mechanism which confirms the identity of users trying to access a system. For a user to be granted access to a resource, they must first prove that they are who they claim to be. Generally, this is handled by passing a key with each request (often called an access token, user verification using user id and password). The system or server verifies that the access token or user id and password is genuine, that the user does indeed have the required privileges to access the requested resource and only then the request is granted.
 
-Now-a-days following authentication, a user must gain authorization for doing certain tasks. After logging into a system, for instance, the user may try to issue commands. The authorization process determines whether the user has the authority to issue such commands. Simply put, authorization is the process of enforcing policies: determining what types or qualities of activities, resources or services a user is permitted. Usually, authorization occurs within the context of authentication. Once you have authenticated a user, they may be authorized for different types of access or activity.
+Now-a-days following authentication, a user must gain authorization for doing certain tasks. After logging into a system, for instance, the user may try to issue commands. The authorization process determines whether the user has the authority to issue such commands. Simply put, authorization is the process of enforcing policies: determining what types or qualities of activities, resources or services a user is permitted. Usually, authorization occurs within the context of authentication. Once users are authenticated, they may be authorized for different types of access or activity.
 
 According to J Viega et al. \cite{ref_92_viega2001building} the processes of how to avoid the top ten software security flaws are:
 \begin{itemize}
@@ -312,8 +303,6 @@ the data to determine whether it obeys some predefined policy with respect to th
 Also authentication can be defined as it is the process by which the system validates a user's logon information. A user's name and password are compared to an authorized list and if the system detects a match then access is granted to the extent specified in the permission list for that user.
 
 One familiar use of authentication and authorization is access control. A computer system that is supposed to be used only by those authorized must attempt to detect and exclude the unauthorized. Common examples of access control involving authentication are- a computer program using a blind credential to authenticate to another program, logging in to a computer, using an internet banking system, withdrawing cash from an ATM, assurance of identity of person or originator of data and more.
-
-A variety of authentication technologies have hit the market over the years.To better understand what they are and how they compare to the user name/password combination, it helps to be familiar with the standard authentication factors; something you know, something you have and something you are and how each technology leverages them to power its authentication capabilities. Something you know is a bit of knowledge committed to memory, such as a password or an answer to a secret question. Something you have is an item that is owned or carried, such as a smart card or similar hardware device. Something you are is a physical attribute that can be identified, such as a fingerprint or voice.
 
 
 \textbf{The Challenges in secure Authentication:}
@@ -393,14 +382,12 @@ A system is secure with respect to confidentiality
 should arise from a rigorous analysis showing that the system
 as a whole enforces the confidentiality policies of its users.
 This analysis must show that information controlled by a confidentiality policy cannot flow to a location where that policy
-is violated. The confidentiality policies we wish to enforce
-are, thus, information-flow policies and the mechanisms that
+is violated. The confidentiality policies that are expected to be enforced, thus, information-flow policies and the mechanisms that
 enforce them are information-flow controls. Information-flow
 policies are a natural way to apply the well-known systems
 principle of end-to-end design \cite{ref_89_saltzer1984end} to the specification of
-computer security requirements; therefore, we also consider
-them to be specifications of end-to-end security. In a truly
-secure system, these confidentiality policies could be precisely
+computer security requirements. In a truly
+secured system, these confidentiality policies could be precisely
 expressed and translated into mechanisms that enforce them.
 However, practical methods for controlling information flow
 have eluded researchers for some time.
@@ -442,7 +429,7 @@ System features in detail, functional hierarchy diagrams, screen layout diagrams
 Implementation and coding is the third phase of software development life cycle which is denoted as number \textcircled{3} in Figure \ref{figure_sdlc}. To develop the software/system the design must be translated into a machine-readable form. The code generation step performs this task. If the design is performed in a detailed manner, code generation can be accomplished without much complication. Programming tools e.g. compilers, interpreters, debuggers etc. are used to generate the code. Different high level programming languages e.g. C, C++, Pascal, Java are used for coding. With respect to the type of application/software , the right programming language is chosen.
 
 \textbf{\textcircled{4} Testing:}
-Testing is the fourth phase of software development life cycle which is marked as number \textcircled{4} in Figure \ref{figure_sdlc}. After the code generation, the software program testing begins. Various kind of testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. The following are types of testing which are so popular to test the software/system:
+Testing is the fourth phase of software development life cycle which is marked as number \textcircled{4} in Figure \ref{figure_sdlc}. After the code generation, the software program testing begins. Various kind of testing methodologies are available to unravel the bugs that were committed during the previous phases. Different testing tools and methodologies are already available. Some companies build their own testing tools that are tailor made for their own development operations. Below are the types of testing which are so popular to test the software/system:
 \begin{itemize}
 	\item Unit testing.
     \item System testing.
@@ -457,11 +444,11 @@ Testing is the fourth phase of software development life cycle which is marked a
 \end{itemize}
 
 \textbf{\textcircled{5} Operations and maintenance:}
-This is the last phase of software development life cycle which is denoted as number \textcircled{5} in Figure \ref{figure_sdlc}. The deployment of the system includes changes and enhancements before the decommissioning of the system. Maintaining the system is an important aspect of SDLC(Software/System Development life Cycle). As key personnel change positions in the organization, new changes will be implemented. There are two approaches to system development; there is the traditional approach (structured) and object oriented. Information Engineering includes the traditional system approach, which is also called the structured analysis and design technique. The object oriented approach views the information system as a collection of objects that are integrated with each other to make a full and complete information system.
+This is the last phase of software development life cycle which is denoted as number \textcircled{5} in Figure \ref{figure_sdlc}. The deployment of the system includes changes and enhancements before the decommissioning of the system. Maintaining the system is an important aspect of SDLC(Software/System Development life Cycle). As key personnel change positions in the organization, new changes will be implemented. There are two approaches to system development- the traditional approach (structured) and object oriented. Information Engineering includes the traditional system approach, which is also called the structured analysis and design technique. The object oriented approach views the information system as a collection of objects that are integrated with each other to make a full and complete information system.
 
-It would be easier for the developer if information flow errors can be detected in the early statge of software development lifecycle. In this research we propose a method to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way we detected the information flow in designing phase is described below.
+It would be easier for the developer if information flow errors can be detected in the early stage of software development life cycle. In this research a method has been proposed to detect the information flow vulnerabilities in the earlier stage of software development like in designing stage. The process in which way the information flow in designing phase has been detected is described below.
 
-If a step of function call e.g. authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In the Figure \ref{figure_FunctionCallMissing} left side picture depicted that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents there is a missing function of sanitization/declassification/authentication function. Inside the Figure the bug is represented as a red cross sign like this \textcircled{X} in Figure \ref{figure_FunctionCallMissing}. It is the buggy path of UML state charts during design stage of software life cycle. 
+If a step of function call e.g. authentication, sanitization or declassification is missing inside the program then this can lead to software vulnerabilities. In Figure \ref{figure_FunctionCallMissing} the left side picture depicts that it has three functions. Among them func2() is named either sanitization/declassification/authentication function. Which means in this scenario there will be no error regarding sanitization/declassification/authentication function. On the other hand the right side picture represents a missing function of sanitization/declassification/authentication function. Inside the Figure the bug is represented as a red cross sign like \textcircled{X}. It is the buggy path of UML state charts during design stage of software life cycle. 
 \begin{figure}[htbp]
 	\centering
 	\vspace{-1em}
@@ -473,7 +460,7 @@ If a step of function call e.g. authentication, sanitization or declassification
 
 \section{ Detecting Information Flow Errors During Coding}
 
-Another way to detect the information flow vulnerabilities in our research is in coding stage of software development life cycle. Here mainly we detected the bug by static analyzing the code through our engine named smtcodan. How we implemented the checker in our static analysis engine is given in the implementation chapter of this paper. The visual representation of how we detect the bug is given below.
+Another way to detect the information flow vulnerabilities in this research is in coding stage of software development life cycle. Here mainly has been detected by static analyzing the code through the engine named smtcodan. How the checker in the static analysis engine has been implemented is given in the implementation chapter of this research. The visual representation of how the bug has been detected is given below.
 
 Figure \ref{figure_bug_detection_during_coding} depicts two explicit information flows according to a lattice model of secure information flow of Denning \cite{ref_14_denning1976lattice} contained in two systems (system 1) and (system 2)
 where each of the flows starts with statement \emph{variable a} and ends with leaving the system. The variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the

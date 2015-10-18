@@ -16,16 +16,15 @@
 \end{center}
 \vspace{1cm}
 
-Information flow vulnerabilities detection with static code analysis techniques is challenging because code
-is usually not available during the software design phase and
+Information flow vulnerabilities detection with static code analysis techniques is challenging because codes are usually unavailable during  the software design phase and
 previous knowledge about what should be annotated and tracked
 is needed. To detect information flow errors in UML state
-charts and C code are not easy task as they can cause data leakages or unexpected program behavior. In this research it is proposed that textual annotations used to
-introduce information flow constraints in UML state charts and code which are afterwards automatically loaded by information flow checkers that check if imposed constraints hold or not. The experimental results on selected sample scenarios shows that this approach
+charts and C code are not easy task as they can cause data leakages or unexpected program behavior. In this research it has been proposed that textual annotations used to
+introduce information flow constraints in UML state charts and code which are afterwards automatically loaded by information flow checkers that check if imposed constraints hold or not. The experimental results of the selected sample scenarios show that this approach
 is effective and can be further applied to other types of UML
 models and programming languages as well, in order to detect
 different types of vulnerabilities.
 
-The contributions of this thesis is the development of a system for semi-automated detection of sanitization, authentication and declassification errors in UML state charts. A light-weight security annotation language is used in order to define information flow constraints regarding authentication, declassification and santization function errors  in UML state charts and source code.  Annotation language editor is designed as eclipse
-plug-ins which is used to edit UML state charts and
-source code files. Developed Source code generator as eclipse plug-in which is used to generate C code with header files from UML State chart. And finally experimented automatic loading and usage of textual annotations inside 3 new checkers.
+This thesis contributes to the development of a system for semi-automated detection of sanitization, authentication and declassification errors in UML state charts. A light-weight security annotation language is used in order to define information flow constraints regarding authentication, declassification and santization function errors  in UML state charts and source code. Annotation language editor is designed as eclipse
+plug-in which is used to edit UML state charts and
+source code files. Developed Source code generator as eclipse plug-in which is used to generate C code with header files from UML State chart. And finally experimented automatic loading and usage of textual annotations inside three new checkers.
