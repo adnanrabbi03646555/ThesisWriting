@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  18 OCT 2015 22:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  20 OCT 2015 20:24
 entering extended mode
 **main.tex
 
@@ -1443,22 +1443,22 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
 
  [25]
 [26]
-Underfull \hbox (badness 6526) in paragraph at lines 135--136
+Underfull \hbox (badness 6526) in paragraph at lines 133--134
 []|\OT1/ppl/m/n/10.95 declassification mainly de-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 137--137
+Underfull \hbox (badness 7012) in paragraph at lines 135--135
 []|\OT1/ppl/m/n/10.95 trust[]boundary is a trust-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 []|\OT1/ppl/m/n/10.95 authenticated with High-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
 []|\OT1/ppl/m/n/10.95 sanitized with High-/Low
  []
 
@@ -1471,7 +1471,7 @@ File: styles/Language_Design_Process.pdf Graphic file (type pdf)
 
 <use styles/Language_Design_Process.pdf>
 Package pdftex.def Info: styles/Language_Design_Process.pdf used on input line 
-215.
+213.
 (pdftex.def)             Requested size: 235.3788pt x 126.97406pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
@@ -1786,7 +1786,7 @@ e\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BC4C5861EDD41D331294C16A9200EFE3;2990.
+(rerunfilecheck)             Checksum: 51F4929289CED5868189B1803DB7EBB6;2991.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1815,7 +1815,7 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (105 pages, 7773688 bytes).
+Output written on main.pdf (105 pages, 7773680 bytes).
 PDF statistics:
  2090 PDF objects out of 2487 (max. 8388607)
  1032 named destinations out of 1200 (max. 500000)
