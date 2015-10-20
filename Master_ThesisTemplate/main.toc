@@ -34,12 +34,12 @@
 \contentsline {section}{\numberline {5.3}Sanitization Scenario}{50}{section.5.3}
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{52}{section.5.4}
 \contentsline {section}{\numberline {5.5}Error Trace in Sequence Diagram}{54}{section.5.5}
-\contentsline {chapter}{\numberline {6}Related Work}{57}{chapter.6}
+\contentsline {chapter}{\numberline {6}Related Works}{57}{chapter.6}
 \contentsline {chapter}{\numberline {7}Limitations}{61}{chapter.7}
 \contentsline {part}{\numberline {III}The 3rd Part}{63}{part.3}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{65}{chapter.8}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Works}{65}{chapter.8}
 \contentsline {section}{\numberline {8.1}Conclusion}{65}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Work}{66}{section.8.2}
+\contentsline {section}{\numberline {8.2}Future Works}{66}{section.8.2}
 \contentsline {part}{Appendix}{69}{part*.33}
 \contentsline {chapter}{\numberline {A}Appendix}{69}{appendix.A}
 \contentsline {section}{\numberline {A.1}Appendix A: Source Code Editor with Annotation Language}{69}{section.A.1}
