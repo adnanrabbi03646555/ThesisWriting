@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
-Too many commas in name 1 of "Paul Muntean, Adnan Rabbi, Andreas Ibing, Claudia Eckert" for entry ref_108_paul2015infoflow
+Too many commas in name 1 of "P. Muntean, A. Rabbi, A. Ibing, C. Eckert" for entry ref_108_paul2015infoflow
 while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in ref_104_owasp:owasp
 Warning--to sort, need author or key in ref_86_techtarget:techtarget
 Warning--to sort, need author or key in ref_87_gcn:gcn
-Warning--to sort, need author or key in ref_104_owasp:owasp
 Warning--to sort, need author or key in ref_15_yakindu:sct
 Warning--empty author in ref_104_owasp:owasp
 Warning--empty institution in ref_104_owasp:owasp
@@ -21,7 +21,7 @@ Warning--can't use both volume and number fields in ref_85_livshits2003tracking
 Warning--can't use both volume and number fields in ref_9_myers1997decentralized
 Warning--empty booktitle in ref_4_myers2000protecting
 Warning--can't use both volume and number fields in ref_4_myers2000protecting
-Too many commas in name 1 of "Paul Muntean, Adnan Rabbi, Andreas Ibing, Claudia Eckert" for entry ref_108_paul2015infoflow
+Too many commas in name 1 of "P. Muntean, A. Rabbi, A. Ibing, C. Eckert" for entry ref_108_paul2015infoflow
 while executing---line 1090 of file plain.bst
 Warning--there's a number but no volume in ref_59_rosenblum:towards
 Warning--empty booktitle in ref_3_sabelfeld2009declassification
