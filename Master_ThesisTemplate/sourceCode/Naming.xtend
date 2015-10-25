@@ -59,8 +59,8 @@ class Naming {
 							  	fileContent.put(vertex.name,vertex.name)
 							if((!transition.specification.contains('//@ @variable')) && !(transition.specification.nullOrEmpty))
 							  	fileContent.put(transition.specification,vertex.name)					
-					    }				
-			        }
+					}				
+			    }
 		    }     
 	    }          
 	 return fileContent
@@ -72,7 +72,7 @@ class Naming {
 			for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {	 
 					if ( (vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){						
 							functionContent.put(vertex.name,vertex.name)
-			        }
+			    }
 		    }     
 	    }          
 	 return functionContent
@@ -98,9 +98,9 @@ class Naming {
 					        }
 					        else
 					           badfunctionContent.put(vertex.name,vertex.name)
-				      }
+				    }
 			    }			    
-			 }    
+			}    
 	    }          
 	 return badfunctionContent
 	}
@@ -114,8 +114,8 @@ class Naming {
 												variablename= vertex.name.replaceAll('char *','')
 												if(variablename.contains('*'))
 												   variablename=variablename.replaceAll('\\*','')														
-					    	}
-			        }
+					}
+			    }
 		    } 		    
 		}
 	return variablename
@@ -153,7 +153,7 @@ class Naming {
 							        else
 							           goodfunctionContent.put(vertex.name,vertex.name)
 						        }				            	
-				             }			             
+				            }			             
 				    } 
 			}    
 	    }          

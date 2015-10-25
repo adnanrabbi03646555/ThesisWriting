@@ -45,6 +45,8 @@
 \usepackage[english]{babel}
 
 \usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
@@ -164,7 +166,7 @@
 		\input{chapters/RelatedWork}
 		\input{chapters/Limitations}
 		
-		\part[The 3rd Part]{Conclusion and Future Works}
+		\part[The 3rd Part]{Conclusion and Future Work}
 		\input{chapters/ConclusionAndFutureWork}		
 		% ---------------------------------------------------------------------------
 		%

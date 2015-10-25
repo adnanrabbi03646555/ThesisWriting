@@ -24,8 +24,7 @@ import org.eclipse.emf.ecore.EClass
 class Types {
 
 	@Inject extension Naming
-	@Inject extension GenmodelEntries
-	
+	@Inject extension GenmodelEntries	
 	var String variableName	
 //	var fileContent = <String, String>newHashMap	
 
@@ -34,8 +33,7 @@ class Types {
 		if (fsa instanceof SimpleResourceFileSystemAccess &&
 			!exists(flow.testModule.h, fsa as SimpleResourceFileSystemAccess)) {
 			fsa.generateFile(flow.testModule.h, flow.typesHAnnotationContent(sc,entry))
-			fsa.generateFile(flow.testModule.c, flow.typesCAnnotationContent(sc,entry))
-			
+			fsa.generateFile(flow.testModule.c, flow.typesCAnnotationContent(sc,entry))			
 		}
 	}
 
@@ -57,8 +55,7 @@ ENDFOR
 FOR region : sc.regions
 
 	IF ( region.name.equalsIgnoreCase('bad_path()'))
-		void region.name{  
-				 
+		void region.name{  				 
 			FOR s: getBadPathContent(sc).entrySet 
 				IF s.key.contains('//@ @variable') 
 				s.key
@@ -66,11 +63,9 @@ FOR region : sc.regions
 				ENDIF
 				IF s.value.contains('(')
 					s.value;
-				ENDIF             
-											
+				ENDIF						
 			ENDFOR
-		}	
-
+		}
 	ENDIF	
 
 	IF ( region.name.equalsIgnoreCase('good_path()'))
@@ -78,14 +73,11 @@ FOR region : sc.regions
 			FOR s: getGoodPathContent(sc).entrySet 
 				IF s.key.contains('//@ @variable') 
 				   s.key;
-				ENDIF
-				
-				s.value;  
-										
+				ENDIF				
+				s.value;						
 			ENDFOR
 		}	
 	ENDIF	
-	
 ENDFOR
           
 int main(int argc, char * argv[])
@@ -93,8 +85,7 @@ int main(int argc, char * argv[])
 	FOR region : sc.regions
 		 IF region.name.contains('good_path()')||region.name.contains('bad_path()')  
 		   region.name; 
-		ENDIF
-			
+		ENDIF			
 	ENDFOR
  return 0;
 }
@@ -104,8 +95,7 @@ def typesHAnnotationContent(ExecutionFlow flow, Statechart sc ,GeneratorEntry en
 		            IF s.value.contains('(') && s.key.contains('@') 
 			            s.key;
 			            void s.value;	
-		            ENDIF          
-		            
+		            ENDIF  
 		ENDFOR 
 
 def protected exists(String filename, SimpleResourceFileSystemAccess fsa) {

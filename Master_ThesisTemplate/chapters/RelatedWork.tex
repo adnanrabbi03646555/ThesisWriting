@@ -27,6 +27,11 @@ phpBB, a popular Web forum application. Other assertions comprising tens of line
 and PHP applications. A prototype of RESIN incurs a 33\% CPU
 overhead running the HotCRP conference management application.
 
+Static code analysis is a way to find bugs and reduce the defects in a software application. In the 1970's, Stephan Johnson at Bell Laboratories, wrote Lint, a tool to examine C
+source programs that had compiled without errors and to find bugs that had escaped detection. There are many ways to detect and reduce the number of bugs in a program. In Java, JUnit is a very useful tool for writing tests. Overtime research proved that analyzing the code (especially code reviews) is the best way to eliminate bugs. This is not
+always possible because it is very hard to train people and get them together to study and identify problems in programs. Furthermore it is almost impossible to use code inspections on project's complete code base.
+Most errors fall into known categories, as people tend to fall into the same traps repeatedly. Therefore a static analyzer or checker is a program written to analyze other programs for flaws. 
+
 UMLSec \cite{ref_33_juerjens:secure} is a model-driven approach that allows the
 development of secure applications with UML. Compared with
 our approach, UMLSec does neither automatic code
@@ -41,8 +46,7 @@ thin slicing. TAJ is able to perform effective taint analysis in a limited budge
 Darvas et al. \cite{ref_70_darvas2005theorem} used a self-compositional approach to prove secure information flow properties for Java CARD programs. They used an interactive approach instead of an automatic approach. Barthe et al. coined the term "self-composition" in their paper \cite{ref_71_barthe2004secure}. Their paper is mostly theoretical results on characterizing various secure information flow problems, including
 non-deterministic and termination-sensitive cases, in a self-compositional framework.
 
-Wassermann et al. string-analysis algorithm
-\cite{ref_102_minamide2005static} to syntactically isolate tainted substrings from untainted
+Wassermann et al. \cite{ref_102_minamide2005static} string-analysis algorithm to syntactically isolate tainted substrings from untainted
 substrings in PHP applications. They labeled non-terminals in a
 Context-Free Grammar (CFG) with annotations reflecting taintedness
 and untaintedness. Their expensive, yet elegant mechanism
@@ -54,7 +58,7 @@ flow security to a network-flow-capacity problem, and describe a
 dynamic technique for measuring the amount of secret data that
 leaks to public observers.
 
-Barthe et al. in the paper \cite{ref_71_barthe2004secure} showed that their self compositional framework can handle delimited information release as originally proposed by Sabelfeld et al. \cite{ref_72_sabelfeld2004model}. Li et al.
+Barthe et al. \cite{ref_71_barthe2004secure} showed that their self compositional framework can handle delimited information release as originally proposed by Sabelfeld et al. \cite{ref_72_sabelfeld2004model}. Li et al.
 recently proposed relaxed non-interference \cite{ref_73_li2005downgrading} is equivalent to delimited information release when strengthened with semantic equivalence. Relaxed non-interference is arguably a more natural formulation of information downgrading than delimited
 information release. This research suggests a promising practical approach of natural formulation of information downgrading.
 

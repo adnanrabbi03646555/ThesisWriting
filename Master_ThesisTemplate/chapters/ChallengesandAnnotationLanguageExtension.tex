@@ -11,19 +11,17 @@ In this chapter the challenges to develop the system and how the annotation lang
 
 To develop the system eclipse xtext, eclipse xtend and static analysis engine named smtcodan(which is developed in Java to detect C and C++ vulneribilities) are used. For building the source code annotation editor eclipse xtext is used. To model the source code as UML Statechart opensource platform YAKINDU SCT editor is used. Inside YAKINDU sct eclipse xtend is used mainly for genrating source code files (.c and .h files) from statechart. What is xtext, xtend and how it works are described below.
 
-\textbf{\textcircled{1} Xtext :} Xtext is a framework for development of programming languages and domain specific languages. According to the \cite{ref_17_xtext:grammar}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to individual user needs.
+\textbf{\circled{1} Xtext :} Xtext is a framework for development of programming languages and domain specific languages. According to the \cite{ref_17_xtext:grammar}, it covers all aspects of a complete language infrastructure, from parsers, over linker, compiler or interpreter to fully-blown top-notch Eclipse IDE integration. It comes with great defaults for all these aspects which at the same time can be easily tailored to individual user needs.
 	
 	Here is an example of xtext code (listing \ref{lst:xtextCodeExample}):
 		\begin{lstlisting} [caption={Xtext code example},label=lst:xtextCodeExample]
 		grammar org.xtext.example.mydsl.MyDsl with 
 		org.eclipse.xtext.common.Terminals		
-		generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
-		
+		generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"		
 		Model:
 		messages+=Message*; //messages containing list of messages		
 		Message:
-		'Hello' name=ID '!'; // After Hello one can add anything and then '!' symbol.
-		
+		'Hello' name=ID '!'; // After Hello one can add anything and then '!' symbol.		
 		\end{lstlisting}
 		 
 	The above language allows user to write down a list of messages. The proper input messages which are allowed to write anything like 'Hello User!' or 'Hello World!'.
@@ -48,7 +46,7 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	\textbf{Users of Xtext:}
 	Xtext is used in many different industries. It is used in the field of mobile devices, automotive development, embedded systems or Java enterprise software projects and game development. People use Xtext based languages to drive code generators that target Java, C, C++, C sharp, Objective C, Python, or Ruby code. Although the language infrastructure itself runs on the JVM, user can compile Xtext languages to any existing platform. Xtext based languages are developed for well known Open-Source projects such as Maven, Eclipse B3, the Eclipse Webtools platform or Google's Protocol Buffers and the framework is also widely used in research projects.
 	
-\textbf{\textcircled{2} Xtend :} According to \cite{ref_20_xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: everything users write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
+\textbf{\circled{2} Xtend :} According to \cite{ref_20_xtend}, Xtend is a statically-typed programming language which translates to comprehensible Java source code. Syntactically and semantically Xtend has its roots in the Java programming language but improves on many aspects such as- Extension methods, Lambda Expressions, Active Annotations, Operator overloading, Powerful switch expressions, Multiple dispatch, Template expressions etc. Xtend has zero interoperability issues with Java: everything users write interacts with Java exactly as expected. At the same time Xtend is much more concise, readable and expressive. Its small library is just a thin layer that provides useful utilities and extensions on top of the Java Development Kit (JDK). 
 	
 	\textbf{Java Interoperability:}
 	Xtend, like Java, is a statically typed language. In fact it completely supports Java's type system, including the primitive types like int or boolean, arrays and all the Java classes, interfaces, enums and annotations that reside on the class path.
@@ -69,22 +67,16 @@ To develop the system eclipse xtext, eclipse xtend and static analysis engine na
 	The type name written for the constructor call must be repeated to declare the variable type. In Xtend the variable type can be inferred from the initialization expression:
 	\begin{lstlisting}
 		val list = new LinkedList<String>
-	\end{lstlisting}
-		
+	\end{lstlisting}		
 	Here is an example of xtend code (listing \ref{lst:xtendCodeExample}):
 	\begin{lstlisting} [caption={Xtend Code Example},label=lst:xtendCodeExample]
 	package example	
 	import java.util.List		
 	class A {
 	def greetToAll(List<String> names) {
-		for(name: names) {
-			println(name.helloMessage)
-		}
-	}
-		
-	def helloMessage(String name) {
-		'Hello ' + name + '!'
-		}
+		for(name: names) { println(name.helloMessage) }
+	}		
+	def helloMessage(String name) { 'Hello ' + name + '!' }
 	}
 	
 	\end{lstlisting} 
