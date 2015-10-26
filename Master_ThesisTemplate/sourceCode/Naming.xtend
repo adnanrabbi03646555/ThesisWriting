@@ -136,11 +136,13 @@ class Naming {
                   	}         	    
                   }                     
 					for(vertex : region.vertices.filter[eClass.name.contentEquals('State')])  {				    
-				            for(invertex : vertex.parentRegion.vertices.filter[eClass.name.contentEquals('State')])
+				            for(invertex : vertex.parentRegion.vertices.filter
+							[eClass.name.contentEquals('State')])
 				            {
 				            	if(!(vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
 										for(transition : vertex.incomingTransitions) {
-												goodfunctionContent.put(transition.specification,vertex.name)					
+												goodfunctionContent.put
+												(transition.specification,vertex.name)					
 					    				}
 				            	}
 								if((vertex.name.contains('(')) && (!(vertex.name.nullOrEmpty))){
@@ -152,9 +154,9 @@ class Naming {
 							        }
 							        else
 							           goodfunctionContent.put(vertex.name,vertex.name)
-						        }				            	
-				            }			             
-				    } 
+						}				            	
+				    }			             
+				} 
 			}    
 	    }          
 	 return goodfunctionContent

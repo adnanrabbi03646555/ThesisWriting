@@ -47,7 +47,8 @@ def typesCAnnotationContent(ExecutionFlow flow, Statechart sc ,GeneratorEntry en
 
 FOR s: getFunctionContent(sc).entrySet
 // extern void s.value {}   
-  IF(!s.value.contains('authentication')&&(!s.value.contains('declassification'))&&(!s.value.contains('sanitization')))           
+  IF(!s.value.contains('authentication')&&(!s.value.contains('declassification'))
+  &&(!s.value.contains('sanitization')))           
 		        void s.value {}
   ENDIF
 ENDFOR

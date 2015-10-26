@@ -17,7 +17,7 @@
 \newblock Technical report, http://www.owasp.org.
 
 \bibitem{ref_16_alhumaidan2012state}
-Fahad Alhumaidan et~al.
+F.~Alhumaidan et~al.
 \newblock State based static and dynamic formal analysis of uml state diagrams.
 \newblock {\em Journal of Software Engineering and Applications}, 5(07):483,
   2012.
@@ -343,6 +343,13 @@ S.~Moore and S.~Chong.
 \newblock {\em CSF '11 Proceedings of the IEEE 24th Computer Security
   Foundations Symposium}, pages 146--160, 2011.
 
+\bibitem{ref_108_paul2015infoflow}
+P.~Muntean, A.~Rabbi, A.~Ibing, and C.~Eckert.
+\newblock Automated detection of information flow vulnerabilities in uml state
+  charts and c code.
+\newblock In {\em IEEE International Conference on Software Quality,Reliability
+  and Security}. IEEE, 2015.
+
 \bibitem{ref_40_myers:jflow}
 A.~C. Myers.
 \newblock {JFlow: Practical Mostly-Static Information Flow Control}.
@@ -382,13 +389,6 @@ Networkworld.
 \newblock {Networkworld Documentation}.
 \newblock Technical report, Networkworld Documentation,
   http://www.networkworld.com/article/2296774/access-control/seven-strong-authentication-methods.html.
-
-\bibitem{ref_108_paul2015infoflow}
-A.~Ibing C.~Eckert P.~Muntean, A.~Rabbi.
-\newblock Automated detection of information flow vulnerabilities in uml state
-  charts and c code.
-\newblock In {\em IEEE International Conference on Software Quality,Reliability
-  and Security}. IEEE, 2015.
 
 \bibitem{ref_22_preibusch2011information}
 S{\"o}ren Preibusch.

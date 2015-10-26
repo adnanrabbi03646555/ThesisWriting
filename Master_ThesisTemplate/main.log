@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  26 OCT 2015 22:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  26 OCT 2015 22:47
 entering extended mode
 **main.tex
 
@@ -1664,13 +1664,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [74])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\sourceCode/Types.xtend [75]
-Overfull \hbox (227.30307pt too wide) in paragraph at lines 50--51
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [76])
@@ -1679,16 +1672,6 @@ e\sourceCode/Naming.xtend [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
-Overfull \hbox (76.3024pt too wide) in paragraph at lines 139--140
-[][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (44.30203pt too wide) in paragraph at lines 143--144
-[][][][][][][][][][][][][][][][][][]  
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [79]))
@@ -1721,15 +1704,15 @@ d-lock de-tec-tion tool for C,
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 381--385
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Underfull \hbox (badness 3250) in paragraph at lines 388--392
 \OT1/ppl/m/n/10.95 u-men-ta-tion, http://www.networkworld.com/article/2296774/a
 ccess-control/seven-strong-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [84]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [85]
@@ -1767,8 +1750,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 26279 strings out of 493921
- 471013 string characters out of 3144876
+ 26282 strings out of 493921
+ 471061 string characters out of 3144876
  670843 words of memory out of 3000000
  27986 multiletter control sequences out of 15000+200000
  32736 words of font info for 85 fonts, out of 3000000 for 9000
@@ -1788,9 +1771,9 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (105 pages, 7801643 bytes).
+Output written on main.pdf (105 pages, 7802191 bytes).
 PDF statistics:
- 2061 PDF objects out of 2073 (max. 8388607)
- 1007 named destinations out of 1200 (max. 500000)
+ 2066 PDF objects out of 2073 (max. 8388607)
+ 1010 named destinations out of 1200 (max. 500000)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
