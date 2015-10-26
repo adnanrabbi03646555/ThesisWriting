@@ -405,9 +405,9 @@ Some of the contents of the header file, C file comes from another xtend file na
 		
 		\Function {typesHAnnotationContent}{$sc$} \Comment{Method for header file generator}		
 			\For{$s : getFileContent(sc).entrySet$} \Comment{Iterating hashmap}
-				\If {$!s.key.contains('//@ @variable')$}
+				\If {$!s.key.contains('//@ @variable')$} \Comment{Checking not variables}
 					\State $s.key$
-				\ElsIf {$s.value.contains('(')$}
+				\ElsIf {$s.value.contains('(')$} \Comment{Checking functions}
 					\State $ void <s.value>;$
 				\EndIf		
 			\EndFor			
@@ -417,7 +417,7 @@ Some of the contents of the header file, C file comes from another xtend file na
 		
 		\For{$s: getFunctionContent(sc).entrySet$}
 			\If {$(!s.value.contains('authentication') and (!s.value.contains('declassification'))$  \\  
-			$\   \   $   $and(!s.value.contains('sanitization')))$}
+			$\   \   $   $and(!s.value.contains('sanitization')))$} \Comment{Checking except three types of function}
 				\State $void <s.value> {}$
 			\EndIf		
 		\EndFor
@@ -428,12 +428,12 @@ Some of the contents of the header file, C file comes from another xtend file na
 				
 					\For {$s: getBadPathContent(sc).entrySet$}
 					
-						\If {$ s.key.contains('//@ @variable')$} 
+						\If {$ s.key.contains('//@ @variable')$}  \Comment{Checking variable annotations}
 							\State $s.key$
 							\State $s.value;$
 						\EndIf
 					
-						\If {$ s.value.contains('(')$} 
+						\If {$ s.value.contains('(')$} \Comment{Checking function declarations}
 							\State $s.value;$
 						\EndIf
 					
@@ -566,7 +566,7 @@ The process of creating sequence diagram using Java programming language is give
 			\State $ Panel (object)$ \Comment{Panel object initialization}
 			\State $ MyCanvasDraw(object )  $ \Comment{MyCanvasDraw object initialization}
 			\For{$i:statementsList.size()$} 
-				\If {$!statementsList.get(i).getRawSignature().toString().contains("(")$}
+				\If {$!statementsList.get(i).getRawSignature().toString().contains("(")$} 
 					
 					\State $int j=i;$
 					\If{$j<=statementsList.size()-2$}
@@ -582,10 +582,10 @@ The process of creating sequence diagram using Java programming language is give
 				\State $set <- ScrollPane(property)$ \Comment{Setting ScrollPane property}
 				\State $mcd.paint(graphics2D)$ \Comment{Where mcd = MyCanvasDraw object}
 				\State $topPanel.add(mcd)$ \Comment{Where topPanel = Panel object}	
-				\State $menuBar <- MenuBar$
+				\State $menuBar <- MenuBar$ \Comment{Adding menu bar}
 				\State $menuFile <- Menu $
-				\State $menuFileExit <- MenuItem$
-				\State $menuSaveAs <- MenuItem $
+				\State $menuFileExit <- MenuItem$ \Comment{Adding exit menu}
+				\State $menuSaveAs <- MenuItem $ \Comment{Adding save as menu}
 				\State $menuSaveAs.addActionListener <- fileSave and exit$
 				\State $set<-frame (properties=visibility,menubar)$
 		
