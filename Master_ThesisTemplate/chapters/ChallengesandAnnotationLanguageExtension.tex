@@ -114,9 +114,9 @@ For detecting authentication, declassification and sanitization errors new funct
 
 \begin{table}
 	\centering
-\begin{tabular}{|l|c|p{5cm}|}
+\begin{tabular}{|l|c|p{9cm}|}
 	\hline
-	\textbf{Annotation Type} & \textbf{Annotation Tag} & \textbf{Description}\\
+	\textbf{Annotation Type} & \textbf{Annotation Tag} & \hspace{90pt}\textbf{Description}\\
 	\hline
 
 	\textbf{@function}& \textbf{sink} & uses information \\
@@ -184,8 +184,7 @@ In order to implement the annotation language grammar in this research it is req
 	terminal SL_COMMENT 	: '//'!('@')  !('\n'|'\r')* ('\n'|'\r')*
 	// '}' can be used optional to disable the method bodyes together with multiline line {} comment 
 	//     | '}'         !('\n'|'\r')* ('\n'|'\r')*               
-	;
-	
+	;	
 	/**
 	* @ML_COMMENT :@/* multiline comment excluding @ from inside
 	*            :{} multi line comment 
@@ -202,7 +201,7 @@ comprises of the following steps: At first, the .xtext file
 containing the language grammar was extended following the requirements. Next the grammar file is compiled and software artifacts are generated. After editing the .mwe2 file then need to compile it. The result of compilation is: a parser, a lexer and class bindings between these two (lexer and parser) and the grammar ECore model. The generated parser, lexer and the bindings were reused inside static analysis engine and in the UI source file editor. After opening and editing a source file with the editor, the file can be parsed and the annotations can be automatically loaded and used inside checkers.
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=\textwidth,scale=.50]{styles/Language_Design_Process.pdf}}
+	\makebox[\textwidth]{\includegraphics[width=\textwidth,scale=.50]{styles/Lang_design_image.pdf}}
 	\vspace{-2em}
 	\caption{Annotation language design process}
 	\label{figure:Language_Design_Process}

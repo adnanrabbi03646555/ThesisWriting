@@ -465,9 +465,11 @@ Figure \ref{figure_bug_detection_during_coding} depicts two explicit information
 where each of the flows starts with statement \emph{variable a} and ends with leaving the system. The variable declaration up to outside the system represent C language statements. System 1 is depicted in left side containing the flow from the source to the sink and leaving the system indicated with circles at the top and bottom of each of the
 two information flows. A source is any function or programming language statement which provides private information through a system boundary. A sink can be a function call or programming language statement which exposes private information to the outside of the system through a system boundary. A system boundary can be a statement, function call, class, package or module. In Figure \ref{figure_bug_detection_during_coding} the source and sink represent C language statements where information enters and respectively leaves system 1 or system 2. The \emph{ variable a} was tagged with label \enquote{H} (confidential) as it inserts confidential information into system 1. The arrows represent the passing of the confidential label \enquote{H} between the program statements. When a variable labeled with \enquote{H} is about to leave system 1 or system 2 without passing through either authentication/declassifiaction/sanitization function then a bug report should be generated. In Figure \ref{figure_bug_detection_during_coding} right side system has a bug because it passes a secured/confidential information without passing through authentication/declassifiaction/sanitization function. The bug place is represented as red color cross symbol (\circled{X}) which is showing the missing of those functions. These functions either authenticated, declassified or sanitized  secured/confidential information and makes the variable label as \enquote{L} to leave the system. But in the left part of the picture there is no bug as in this system, secured/confidential information and the variable which is labeled with \enquote{H} passes through either authentication/declassifiaction/sanitization function.
 
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=120mm,scale=.50]{styles/bug_detection_during_coding.pdf}}
+	\vspace{-1em}
+	\makebox[\textwidth]{\includegraphics[width=120mm,scale=.50]{styles/bug_detection_during_coding_new.pdf}}
+	\vspace{-1em}
 	\caption{Information flow errors during coding}
 	\label{figure_bug_detection_during_coding}
 \end{figure}
