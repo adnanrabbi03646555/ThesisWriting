@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {5.2}Declassification Scenario}{49}{section.5.2}
 \contentsline {section}{\numberline {5.3}Sanitization Scenario}{50}{section.5.3}
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{51}{section.5.4}
-\contentsline {section}{\numberline {5.5}Error Trace in Sequence Diagram}{55}{section.5.5}
+\contentsline {section}{\numberline {5.5}Error Trace in Sequence Diagram}{54}{section.5.5}
 \contentsline {chapter}{\numberline {6}Related Works}{57}{chapter.6}
 \contentsline {chapter}{\numberline {7}Limitations}{61}{chapter.7}
 \contentsline {part}{\numberline {III}The 3rd Part}{63}{part.3}

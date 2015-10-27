@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  26 OCT 2015 22:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  27 OCT 2015 22:55
 entering extended mode
 **main.tex
 
@@ -1513,18 +1513,15 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
-<styles/errorTracePath.pdf, id=808, 132.7359pt x 114.1866pt>
-File: styles/errorTracePath.pdf Graphic file (type pdf)
+<styles/errorTracePathNew.pdf, id=808, 859.21pt x 347.2975pt>
+File: styles/errorTracePathNew.pdf Graphic file (type pdf)
 
-<use styles/errorTracePath.pdf>
-Package pdftex.def Info: styles/errorTracePath.pdf used on input line 543.
-(pdftex.def)             Requested size: 66.36778pt x 57.09315pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44]
-[45 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
-plate/styles/errorTracePath.pdf>])
+<use styles/errorTracePathNew.pdf>
+Package pdftex.def Info: styles/errorTracePathNew.pdf used on input line 543.
+(pdftex.def)             Requested size: 429.60396pt x 173.64832pt.
+ [44 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/errorTracePathNew.pdf>]
+[45])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/Experiments.tex [46]
 chapter 5.
@@ -1536,7 +1533,7 @@ sure that the user who is cre-at-ing this database
 
 [47
 
-] <styles/authentication_scenario.pdf, id=854, 237.76831pt x 106.7187pt>
+] <styles/authentication_scenario.pdf, id=853, 237.76831pt x 106.7187pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1548,67 +1545,59 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/authentication_scenario.pdf>]
-<styles/declassification_scenario.pdf, id=869, 241.38179pt x 98.2872pt>
+<styles/declassification_scenario.pdf, id=868, 241.38179pt x 98.2872pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
 Package pdftex.def Info: styles/declassification_scenario.pdf used on input lin
-e 69.
+e 64.
 (pdftex.def)             Requested size: 120.6906pt x 49.14346pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [49]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 88.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
+ [49 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/declassification_scenario.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 89.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [50 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisT
-emplate/styles/declassification_scenario.pdf>]
-<styles/sanitization_scenario.pdf, id=893, 237.04561pt x 102.1416pt>
+)
+[50] <styles/sanitization_scenario.pdf, id=893, 237.04561pt x 102.1416pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
 Package pdftex.def Info: styles/sanitization_scenario.pdf used on input line 10
-8.
+9.
 (pdftex.def)             Requested size: 118.5225pt x 51.07066pt.
  [51 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/sanitization_scenario.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-<styles/bugDetectionNew.pdf, id=908, 597.23125pt x 845.1575pt>
-File: styles/bugDetectionNew.pdf Graphic file (type pdf)
+<styles/bugDetection.pdf, id=908, 597.23125pt x 845.1575pt>
+File: styles/bugDetection.pdf Graphic file (type pdf)
 
-<use styles/bugDetectionNew.pdf>
-Package pdftex.def Info: styles/bugDetectionNew.pdf used on input line 165.
+<use styles/bugDetection.pdf>
+Package pdftex.def Info: styles/bugDetection.pdf used on input line 160.
 (pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+ [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/bugDetection.pdf>]
+<styles/bug_detection_with_message.pdf, id=918, 621.32124pt x 382.42876pt>
+File: styles/bug_detection_with_message.pdf Graphic file (type pdf)
 
-<styles/bugDetectionWithMessage.pdf, id=909, 931.48pt x 382.42876pt>
-File: styles/bugDetectionWithMessage.pdf Graphic file (type pdf)
+<use styles/bug_detection_with_message.pdf>
+Package pdftex.def Info: styles/bug_detection_with_message.pdf used on input li
+ne 179.
+(pdftex.def)             Requested size: 310.65987pt x 191.2139pt.
+ [54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/bug_detection_with_message.pdf>] <styles/viewSequenceDiagramNew.p
+df, id=928, 859.21pt x 539.01375pt>
+File: styles/viewSequenceDiagramNew.pdf Graphic file (type pdf)
 
-<use styles/bugDetectionWithMessage.pdf>
-Package pdftex.def Info: styles/bugDetectionWithMessage.pdf used on input line 
-177.
-(pdftex.def)             Requested size: 465.73886pt x 191.2139pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53]
-[54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTem
-plate/styles/bugDetectionNew.pdf> <F:/L2-T2/Thesis/ThesisWriting/GITRepository/
-ThesisWriting/Master_ThesisTemplate/styles/bugDetectionWithMessage.pdf>]
-<styles/viewSequenceDiagram.pdf, id=929, 132.7359pt x 51.5526pt>
-File: styles/viewSequenceDiagram.pdf Graphic file (type pdf)
-
-<use styles/viewSequenceDiagram.pdf>
-Package pdftex.def Info: styles/viewSequenceDiagram.pdf used on input line 194.
-
-(pdftex.def)             Requested size: 66.36778pt x 25.77623pt.
+<use styles/viewSequenceDiagramNew.pdf>
+Package pdftex.def Info: styles/viewSequenceDiagramNew.pdf used on input line 1
+96.
+(pdftex.def)             Requested size: 429.60396pt x 269.50621pt.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/RelatedWork.tex [55 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/The
-sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagram.pdf>] [56
+sisWriting/Master_ThesisTemplate/styles/viewSequenceDiagramNew.pdf>] [56
 
 ]
 chapter 6.
@@ -1751,8 +1740,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
  26282 strings out of 493921
- 471061 string characters out of 3144876
- 670843 words of memory out of 3000000
+ 471091 string characters out of 3144876
+ 671843 words of memory out of 3000000
  27986 multiletter control sequences out of 15000+200000
  32736 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1771,9 +1760,9 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (105 pages, 7802191 bytes).
+Output written on main.pdf (105 pages, 6591325 bytes).
 PDF statistics:
- 2066 PDF objects out of 2073 (max. 8388607)
+ 2064 PDF objects out of 2073 (max. 8388607)
  1010 named destinations out of 1200 (max. 500000)
  435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
