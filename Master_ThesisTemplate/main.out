@@ -23,13 +23,13 @@
 \BOOKMARK [1][-]{section.4.4}{Source Code Editor}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.5}{C Code Generator}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.6}{Three Checkers in Static Analysis Engine}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.7}{View Buggy Path in Sequence Diagram}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.7}{View Buggy Path in UML Sequence Diagram}{chapter.4}% 26
 \BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 27
 \BOOKMARK [1][-]{section.5.1}{Authentication Scenario}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.2}{Declassification Scenario}{chapter.5}% 29
 \BOOKMARK [1][-]{section.5.3}{Sanitization Scenario}{chapter.5}% 30
 \BOOKMARK [1][-]{section.5.4}{Checkers in Static Analysis Engine}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.5}{Error Trace in Sequence Diagram}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.5}{Error Trace in UML Sequence Diagram}{chapter.5}% 32
 \BOOKMARK [0][-]{chapter.6}{Related Works}{part.2}% 33
 \BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 34
 \BOOKMARK [-1][]{part.3}{The 3rd Part}{}% 35
