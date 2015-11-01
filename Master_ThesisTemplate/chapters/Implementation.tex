@@ -136,15 +136,13 @@ All main rules are included under \texttt{H\_Model}. This  \texttt{H\_Model} rul
 
 \section{Inference Rules for Secure Information Flows}
 
-The goal is to prevent the information flowing from H (high security level, private) variables to 
+The goal is to prevent the information flow from H (high security level, private) variables to 
 L (low security level, public) variables through trust boundaries. The inference rules are implemented
-inside our static analysis engine which can handle pointers. 
-
-Lets consider the following C if statement, if  \[ a(L) \leq b(H)\] then\{\} else\{\}, where variable a has attached the label L and variable b has attached the label H.
-There could be implicit (the variables inside the then or \emph{else} branch do not depend on the values of a or b) 
-and explicit (the variables inside the then or else branch depend on the values of a or b) flows between variables
-contained in the then or else as follows: L to L, H to H, L to H and H to L. If a variable labeled H is used afterwards inside
-a trust boundary then a information flow leakages should be reported and a bug report should be created. 
+inside our static analysis engine which can handle pointers. Considering the following C if statement, if  \[ a(L) \leq b(H)\] then\{\} else\{\}, where variable \emph{a} has attached the label L and variable \emph{b} has attached the label H.
+There could be implicit (the variables inside the \emph{then} or \emph{else} branch do not depend on the values of \emph{a}  or \emph{b}) 
+and explicit (the variables inside the \emph{then} or \emph{else} branch depend on the values of \emph{a} or \emph{b}) flows between variables
+contained in the \emph{then} or \emph{else} as follows: L to L, H to H, L to H and H to L. If a variable labeled H is used afterwards inside
+a trust boundary then a information flow leakages should be reported and a bug report should be created. This situation marks as a forbidden flow which we try to detect.
 
 \begin{figure}[ht!]
 	\centering
@@ -152,26 +150,47 @@ a trust boundary then a information flow leakages should be reported and a bug r
 		\circled{A}\ (data types)   &$\tau ::= $ H    $|$  L  $|$ PreStep $|$ PostStep   \\ 
 		\circled{B}\ (phrase types) &$\rho ::=  \tau \ | \ \tau \ var \ | \ \tau \ cmd $ \\
 	\end{tabular}
+	\vspace{1em}
 	\caption{Secure typing system specialized on trust boundaries}
 	\label{typing:system1}
 \end{figure}
 
+Figure \ref{typing:system1} presents the typing system on which our information flow inference rules, depicted in Figure \ref{inference rules}, are based on. In the first row of Figure \ref{typing:system1},\circled{A}, we define the following data types:
+H and L used to attach private and public labels to program
+variables (High/private and Low/public) and PreStep and
+PostStep used to attach function call ordering labels to
+previous and post function calls. Figure \ref{typing:system1}, \circled{B} , presents three types of phrases on which our inference rules are based.
+
 \begin{figure}[ht!]
-	\hskip-0.2cm
-	\begin{tabular}{ll} 		         
+	
+	\centering
+	\begin{tabular}{ll} 	         
+	   \footnotesize 
+		 \circled{0} (INT)           &\footnotesize  $ \gamma  \vdash n :$ L    \\ \\
 		
-	    \footnotesize  \circled{1} (F-CALL-P)   &\footnotesize 
-		\inferrule{\gamma \vdash e : \tau \ $(PreStep,\ Poststep)$ \ $H$, \ $L$ }
-		{\gamma \vdash  e : \tau_{r} \ $(PreStep,\ PostStep)$ \ $H$, \ $H$ } \\ \\ 
+		\footnotesize 
+		\circled{1} (VAR)            &\footnotesize  $ \gamma  \vdash x$ : H  $\ var$ \ \ \ if $\gamma(x)$ = H $\ var$  \\ \\
 		
-		\footnotesize  \circled{2} (F-ORDER)    &\scriptsize
-		\inferrule{\gamma \vdash e : \tau_{1} ($PreStep$_{1},\ $PostStep$_{1})*\tau_{2}($PreStep$_{2},\ $PostStep$_{2})\dots}
-		{\gamma \vdash e : \tau_{r1} ($PreStep$_{1},\ $PostStep$_{1})*\tau_{r2}($PreStep$_{2},\ $PostStep$_{2})\dots } \\ \\		 
+		\footnotesize  \circled{2} (R-VAL)     &\footnotesize 
+		\inferrule{\gamma \vdash e : \ $H$  \ var}
+		{\gamma \vdash e : \ $H$  } \\ \\  
+		
+	    \footnotesize  \circled{3} (F-CALL-P)   &\footnotesize 
+		\inferrule{\gamma \vdash e : \tau  \ ($H$) } 
+		{\gamma \vdash  e : \tau_{r}  \ ( $L$ )}  \qquad \Comment{Function: authentication, declassification or sanitization}\\ \\ 		 
 		
 	\end{tabular}
-	\caption{Typing rules specialized to L, H, PreStep, PostStep for secure explicit and implicit information flow }
+	\caption{Typing rules specialized to L, H for secure explicit and implicit information flow }
 	\label{inference rules}
 \end{figure}
+
+Figure \ref{inference rules} depicts secure information flow inference rules
+which are based on the Denning \cite{ref_14_denning1976lattice} lattice model and Volpano
+et al. \cite{ref_38_volpano:sound}. We used only two security levels (L and H) which
+correspond to 0 and 1 whereas one could use multiple levels if
+required, (e.g., [\dots, --3, --2, --1, 0, 1, 2, 3, \dots]). The expression $ \gamma \vdash e : H $ , \circled{2}, means that expression e has security level H (High). $ \gamma \vdash e : \tau \ H $ , \circled{3} , means that if
+a function call (authentication, declassification or sanitization function) was tagged with the parameter label H and then the label of the parameter is replaced with L after execution. The
+inference rules presented in Figure \ref{inference rules} describe how the label(s): \circled{0} L is attached to an integer value, \circled{1} H is attached to a variable, \circled{2} H is passed during a return statement, \circled{3} is used to pass the parameter label H and makes the parameter as L between the parameters of a function call.
 
 \section{UML State Chart Editor}
 
@@ -579,7 +598,7 @@ In this research we used sequence diagram to view the buggy path. In our case, t
 
 \begin{figure}[htbp]
 	\centering
-	\makebox[\textwidth]{\includegraphics[width=130mm,scale=.50]{styles/errorTracePathNew.pdf}}
+	\makebox[\textwidth]{\includegraphics[width=150mm,scale=.20]{styles/viewSequenceDiagramNewImg.pdf}}
 	\label{figure:Error_trace_path}
 	\caption{Error trace path in UML sequence diagram}
 \end{figure}
