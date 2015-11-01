@@ -23,11 +23,12 @@
 \contentsline {chapter}{\numberline {4}Implementation}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Overview of System Architecture}{31}{section.4.1}
 \contentsline {section}{\numberline {4.2}The Grammar of Our Annotation Language}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}UML State Chart Editor}{35}{section.4.3}
-\contentsline {section}{\numberline {4.4}Source Code Editor}{38}{section.4.4}
-\contentsline {section}{\numberline {4.5}C Code Generator}{39}{section.4.5}
-\contentsline {section}{\numberline {4.6}Three Checkers in Static Analysis Engine}{41}{section.4.6}
-\contentsline {section}{\numberline {4.7}View Buggy Path in UML Sequence Diagram}{42}{section.4.7}
+\contentsline {section}{\numberline {4.3}Inference Rules for Secure Information Flows}{35}{section.4.3}
+\contentsline {section}{\numberline {4.4}UML State Chart Editor}{35}{section.4.4}
+\contentsline {section}{\numberline {4.5}Source Code Editor}{38}{section.4.5}
+\contentsline {section}{\numberline {4.6}C Code Generator}{39}{section.4.6}
+\contentsline {section}{\numberline {4.7}Three Checkers in Static Analysis Engine}{42}{section.4.7}
+\contentsline {section}{\numberline {4.8}View Buggy Path in UML Sequence Diagram}{43}{section.4.8}
 \contentsline {chapter}{\numberline {5}Experiments}{47}{chapter.5}
 \contentsline {section}{\numberline {5.1}Authentication Scenario}{47}{section.5.1}
 \contentsline {section}{\numberline {5.2}Declassification Scenario}{49}{section.5.2}
@@ -40,9 +41,9 @@
 \contentsline {chapter}{\numberline {8}Conclusion and Future Work}{65}{chapter.8}
 \contentsline {section}{\numberline {8.1}Conclusion}{65}{section.8.1}
 \contentsline {section}{\numberline {8.2}Future Work}{66}{section.8.2}
-\contentsline {part}{Appendix}{69}{part*.33}
+\contentsline {part}{Appendix}{69}{part*.35}
 \contentsline {chapter}{\numberline {A}Appendix}{69}{appendix.A}
 \contentsline {section}{\numberline {A.1}Appendix A: Source Code Editor with Annotation Language}{69}{section.A.1}
 \contentsline {section}{\numberline {A.2}Appendix B: C Code Generator (Part 1)}{75}{section.A.2}
 \contentsline {section}{\numberline {A.3}Appendix C: C Code Generator (Part 2)}{77}{section.A.3}
-\contentsline {chapter}{\nonumberline Bibliography}{81}{chapter*.34}
+\contentsline {chapter}{\nonumberline Bibliography}{81}{chapter*.36}

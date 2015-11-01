@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  29 OCT 2015 20:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  1 NOV 2015 12:52
 entering extended mode
 **main.tex
 
@@ -596,12 +596,24 @@ e\components/commands.tex
 \@glossaryfile=\write3
 
 Writing glossary file main.glo 
+
+(F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
+e\mathpartir.sty
+Package: mathpartir 2005/12/20 version 1.2.0 Math Paragraph for Typesetting Inf
+erence Rules
+\mpr@andskip=\skip63
+\mpr@lista=\toks27
+\mpr@listb=\toks28
+\mpr@hlist=\box32
+\mpr@vlist=\box33
+\mpr@right=\box34
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
 x"
-\pgfutil@everybye=\toks27
+\pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen124
 \pgfutil@tempdimb=\dimen125
 
@@ -609,7 +621,7 @@ x"
 sts.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
 "
-\pgfutil@abb=\box32
+\pgfutil@abb=\box35
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -624,12 +636,12 @@ Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
 "
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
 ode.tex"
-\pgfkeys@tmptoks=\toks30
+\pgfkeys@tmptoks=\toks32
 ))
 \pgf@x=\dimen126
 \pgf@y=\dimen127
@@ -645,9 +657,9 @@ ode.tex"
 \c@pgf@countb=\count121
 \c@pgf@countc=\count122
 \c@pgf@countd=\count123
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -699,10 +711,10 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 "
 \pgfmath@dimen=\dimen134
 \pgfmath@count=\count126
-\pgfmath@box=\box33
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@box=\box36
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
 tex"
@@ -758,9 +770,9 @@ File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
 de.tex"
 File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
-\pgfpic=\box34
-\pgf@hbox=\box35
-\pgf@layerbox@main=\box36
+\pgfpic=\box37
+\pgf@hbox=\box38
+\pgf@layerbox@main=\box39
 \pgf@picture@serial@count=\count128
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
@@ -805,7 +817,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
 code.tex"
 File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
-\pgfexternal@startupbox=\box37
+\pgfexternal@startupbox=\box40
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
 de.tex"
@@ -822,7 +834,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
 e.tex"
 File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box38
+\pgfnodeparttextbox=\box41
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
 tex"
@@ -849,8 +861,8 @@ Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
 \pgffor@iter=\dimen161
 \pgffor@skip=\dimen162
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
 e.tex"
@@ -868,10 +880,10 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 \tikz@lastysaved=\dimen167
 \tikzleveldistance=\dimen168
 \tikzsiblingdistance=\dimen169
-\tikz@figbox=\box39
-\tikz@figbox@bg=\box40
-\tikz@tempbox=\box41
-\tikz@tempbox@bg=\box42
+\tikz@figbox=\box42
+\tikz@figbox@bg=\box43
+\tikz@tempbox=\box44
+\tikz@tempbox@bg=\box45
 \tikztreelevel=\count131
 \tikznumberofchildren=\count132
 \tikznumberofcurrentchild=\count133
@@ -919,8 +931,8 @@ Package: todonotes 2012/07/25
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks39
-\XKV@tempa@toks=\toks40
+\XKV@toks=\toks41
+\XKV@tempa@toks=\toks42
 \XKV@depth=\count140
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
@@ -934,12 +946,12 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count142
 \calc@Adimen=\dimen177
 \calc@Bdimen=\dimen178
-\calc@Askip=\skip63
-\calc@Bskip=\skip64
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count143
-\calc@Cskip=\skip65
+\calc@Cskip=\skip66
 )
 \c@@todonotes@numberoftodonotes=\count144
 )
@@ -950,13 +962,13 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@line=\count145
 \c@ALG@rem=\count146
 \c@ALG@nested=\count147
-\ALG@tlm=\skip66
-\ALG@thistlm=\skip67
+\ALG@tlm=\skip67
+\ALG@thistlm=\skip68
 \c@ALG@Lnr=\count148
 \c@ALG@blocknr=\count149
 \c@ALG@storecount=\count150
 \c@ALG@tmpcounter=\count151
-\ALG@tmplength=\skip68
+\ALG@tmplength=\skip69
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algcompatible.sty"
 Package: algcompatible 
 Document Style - algorithmic compatible environments for the `algorithmicx' sty
@@ -977,7 +989,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutheight=\dimen184
 \Gm@layouthoffset=\dimen185
 \Gm@layoutvoffset=\dimen186
-\Gm@dimlist=\toks41
+\Gm@dimlist=\toks43
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 
@@ -990,8 +1002,8 @@ Package geometry Warning: Over-specification in `v'-direction.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count155
-\lst@gtempboxa=\box43
-\lst@token=\toks42
+\lst@gtempboxa=\box46
+\lst@token=\toks44
 \lst@length=\count156
 \lst@currlwidth=\dimen187
 \lst@column=\count157
@@ -1006,7 +1018,7 @@ Package geometry Warning: Over-specification in `v'-direction.
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count161
 \lst@skipnumbers=\count162
-\lst@framebox=\box44
+\lst@framebox=\box47
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1031,7 +1043,7 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \csq@qlevel=\count168
 \csq@maxlvl=\count169
 \csq@tshold=\count170
-\csq@ltx@everypar=\toks43
+\csq@ltx@everypar=\toks45
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
 File: csquotes.def 2015/07/18 v5.1f csquotes generic definitions (JAW)
@@ -1069,32 +1081,32 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count174
 \@thisrulewidth=\dimen203
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 107.
+Package hyperref Info: Option `colorlinks' set `true' on input line 110.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 112.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 109.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 112.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
@@ -1104,18 +1116,18 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count175
 \scratchdimen=\dimen204
-\scratchbox=\box45
+\scratchbox=\box48
 \nofMPsegments=\count176
 \nofMParguments=\count177
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count178
 \MPscratchDim=\dimen205
 \MPnumerator=\count179
 \makeMPintoPDFobject=\count180
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks47
 )
-\AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 109.
+\AtBeginShipoutBox=\box49
+Package hyperref Info: Link coloring ON on input line 112.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1124,9 +1136,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count181
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.out)
@@ -1192,7 +1204,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 43.
-<styles/informat.png, id=180, 355.3275pt x 355.3275pt>
+<styles/informat.png, id=184, 355.3275pt x 355.3275pt>
 File: styles/informat.png Graphic file (type png)
 
 <use styles/informat.png>
@@ -1285,7 +1297,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 ]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 132.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 135.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.toc
@@ -1316,9 +1328,9 @@ e\components/outline.tex [15] [16
 part I.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 148.
+(scrkbase)              on input line 151.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 148.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 151.
 [1
 
 ] [2]
@@ -1381,7 +1393,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15] [16] <styles/sdlc.pdf, id=527, 615.29875pt x 181.67876pt>
+[15] [16] <styles/sdlc.pdf, id=537, 615.29875pt x 181.67876pt>
 File: styles/sdlc.pdf Graphic file (type pdf)
 
 <use styles/sdlc.pdf>
@@ -1392,7 +1404,7 @@ mplate/styles/sdlc.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-<styles/FunctionCallMissing.pdf, id=547, 470.75874pt x 253.94875pt>
+<styles/FunctionCallMissing.pdf, id=557, 470.75874pt x 253.94875pt>
 File: styles/FunctionCallMissing.pdf Graphic file (type pdf)
 
 <use styles/FunctionCallMissing.pdf>
@@ -1401,7 +1413,7 @@ Package pdftex.def Info: styles/FunctionCallMissing.pdf used on input line 454.
 (pdftex.def)             Requested size: 235.3788pt x 126.97406pt.
  [19 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/FunctionCallMissing.pdf>]
-<styles/bug_detection_during_coding_new.pdf, id=566, 543.02875pt x 506.89375pt>
+<styles/bug_detection_during_coding_new.pdf, id=576, 543.02875pt x 506.89375pt>
 File: styles/bug_detection_during_coding_new.pdf Graphic file (type pdf)
 <use styles/bug_detection_during_coding_new.pdf>
 Package pdftex.def Info: styles/bug_detection_during_coding_new.pdf used on inp
@@ -1412,7 +1424,7 @@ emplate/styles/bug_detection_during_coding_new.pdf>]
 part II.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 161.
+(scrkbase)              on input line 164.
 [21
 
 ] [22]
@@ -1432,7 +1444,7 @@ Underfull \vbox (badness 3240) has occurred while \output is active []
 Underfull \vbox (badness 2035) has occurred while \output is active []
 
  [27]
-<styles/Lang_design_image.pdf, id=644, 470.75874pt x 253.94875pt>
+<styles/Lang_design_image.pdf, id=654, 470.75874pt x 253.94875pt>
 File: styles/Lang_design_image.pdf Graphic file (type pdf)
 
 <use styles/Lang_design_image.pdf>
@@ -1446,7 +1458,7 @@ tory/ThesisWriting/Master_ThesisTemplate/styles/Lang_design_image.pdf>]
 
 ]
 chapter 4.
-<styles/system_architecture.pdf, id=695, 598.235pt x 217.81375pt>
+<styles/system_architecture.pdf, id=705, 598.235pt x 217.81375pt>
 File: styles/system_architecture.pdf Graphic file (type pdf)
 
 <use styles/system_architecture.pdf>
@@ -1493,35 +1505,51 @@ LaTeX Font Info:    External font `yhcmex10' loaded for size
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 100.
 
-[34] <styles/simple_statechart.pdf, id=732, 59.7432pt x 56.1297pt>
+[34]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 143.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 143.
+ [35]
+<styles/simple_statechart.pdf, id=754, 59.7432pt x 56.1297pt>
 File: styles/simple_statechart.pdf Graphic file (type pdf)
 
 <use styles/simple_statechart.pdf>
-Package pdftex.def Info: styles/simple_statechart.pdf used on input line 154.
+Package pdftex.def Info: styles/simple_statechart.pdf used on input line 192.
 (pdftex.def)             Requested size: 32.85884pt x 30.87141pt.
- [35] [36 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_The
-sisTemplate/styles/simple_statechart.pdf>]
+ [36 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/simple_statechart.pdf>]
 [37] [38] [39]
-Overfull \hbox (2.55383pt too wide) in paragraph at lines 392--394
+Overfull \hbox (2.55383pt too wide) in paragraph at lines 430--432
 []\OT1/ppl/m/n/10.95 Some of the con-tents of the header file, C file comes fro
 m an-other xtend file named \  Nam-ing.xtend".
  []
 
-LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 395.
-[40] [41] [42]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-<styles/errorTracePathNew.pdf, id=809, 859.21pt x 347.2975pt>
+ [40]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 433.
+
+[41] [42] [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+<styles/errorTracePathNew.pdf, id=827, 859.21pt x 347.2975pt>
 File: styles/errorTracePathNew.pdf Graphic file (type pdf)
 
 <use styles/errorTracePathNew.pdf>
-Package pdftex.def Info: styles/errorTracePathNew.pdf used on input line 544.
+Package pdftex.def Info: styles/errorTracePathNew.pdf used on input line 582.
 (pdftex.def)             Requested size: 429.60396pt x 173.64832pt.
- [44 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
-mplate/styles/errorTracePathNew.pdf>]
-[45])
+
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
+ [45 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
+mplate/styles/errorTracePathNew.pdf>])
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/Experiments.tex [46]
 chapter 5.
@@ -1533,7 +1561,7 @@ sure that the user who is cre-at-ing this database
 
 [47
 
-] <styles/authentication_scenario.pdf, id=854, 237.76831pt x 106.7187pt>
+] <styles/authentication_scenario.pdf, id=867, 237.76831pt x 106.7187pt>
 File: styles/authentication_scenario.pdf Graphic file (type pdf)
 
 <use styles/authentication_scenario.pdf>
@@ -1545,7 +1573,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/authentication_scenario.pdf>]
-<styles/declassification_scenario.pdf, id=869, 241.38179pt x 98.2872pt>
+<styles/declassification_scenario.pdf, id=882, 241.38179pt x 98.2872pt>
 File: styles/declassification_scenario.pdf Graphic file (type pdf)
 
 <use styles/declassification_scenario.pdf>
@@ -1558,7 +1586,7 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 89.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
-[50] <styles/sanitization_scenario.pdf, id=894, 237.04561pt x 102.1416pt>
+[50] <styles/sanitization_scenario.pdf, id=907, 237.04561pt x 102.1416pt>
 File: styles/sanitization_scenario.pdf Graphic file (type pdf)
 
 <use styles/sanitization_scenario.pdf>
@@ -1570,7 +1598,7 @@ mplate/styles/sanitization_scenario.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-<styles/bugDetection.pdf, id=909, 597.23125pt x 845.1575pt>
+<styles/bugDetection.pdf, id=922, 597.23125pt x 845.1575pt>
 File: styles/bugDetection.pdf Graphic file (type pdf)
 
 <use styles/bugDetection.pdf>
@@ -1578,7 +1606,7 @@ Package pdftex.def Info: styles/bugDetection.pdf used on input line 160.
 (pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
  [53 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bugDetection.pdf>]
-<styles/bug_detection_with_message.pdf, id=919, 621.32124pt x 382.42876pt>
+<styles/bug_detection_with_message.pdf, id=932, 621.32124pt x 382.42876pt>
 File: styles/bug_detection_with_message.pdf Graphic file (type pdf)
 
 <use styles/bug_detection_with_message.pdf>
@@ -1587,7 +1615,7 @@ ne 179.
 (pdftex.def)             Requested size: 310.65987pt x 191.2139pt.
  [54 <F:/L2-T2/Thesis/ThesisWriting/GITRepository/ThesisWriting/Master_ThesisTe
 mplate/styles/bug_detection_with_message.pdf>] <styles/viewSequenceDiagramNew.p
-df, id=929, 859.21pt x 539.01375pt>
+df, id=942, 859.21pt x 539.01375pt>
 File: styles/viewSequenceDiagramNew.pdf Graphic file (type pdf)
 
 <use styles/viewSequenceDiagramNew.pdf>
@@ -1616,7 +1644,7 @@ chapter 7.
 part III.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 169.
+(scrkbase)              on input line 172.
 [63] [64]
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\chapters/ConclusionAndFutureWork.tex
@@ -1728,42 +1756,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86])
 [87]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
 
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 430532DB73CC6C4673009AB728BEA357;3006.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+(rerunfilecheck)             Checksum: AACFBCE5AEDB8ECC853316BD5D5F0066;3098.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 26262 strings out of 493921
- 470772 string characters out of 3144876
- 670843 words of memory out of 3000000
- 27986 multiletter control sequences out of 15000+200000
- 32736 words of font info for 85 fonts, out of 3000000 for 9000
+ 26485 strings out of 493921
+ 474181 string characters out of 3144876
+ 673297 words of memory out of 3000000
+ 28199 multiletter control sequences out of 15000+200000
+ 33838 words of font info for 87 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,13n,78p,2446b,1995s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,16n,78p,2446b,1995s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatin
-o/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (105 pages, 6595098 bytes).
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pa
+latino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
+plbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (105 pages, 6626546 bytes).
 PDF statistics:
- 2043 PDF objects out of 2073 (max. 8388607)
- 990 named destinations out of 1000 (max. 500000)
- 435 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2066 PDF objects out of 2073 (max. 8388607)
+ 993 named destinations out of 1000 (max. 500000)
+ 443 words of extra memory for PDF output out of 10000 (max. 10000000)
 

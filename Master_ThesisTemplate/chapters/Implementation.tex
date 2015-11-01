@@ -134,6 +134,44 @@ charts and code in order to detect information flow errors. The grammar of annot
  
 All main rules are included under \texttt{H\_Model}. This  \texttt{H\_Model} rule contains all rules like \texttt{S\_L\_Anno}, \texttt{M\_L\_Anno}, \texttt{Func\_Ann} and \texttt{Attr\_Def}. Annotation language grammar has two grammar rules named \texttt{S\_L\_Anno} and \texttt{M\_L\_Anno} used for defining security annotations. \texttt{S\_L\_Anno} is used for single line annotation rule. Because of this rule one can easily annotate the variables of C/C++ language in a single line. The \texttt{M\_L\_Anno} rule is used for multiline annotation rule. Normally multiline rule annotation is required for function annotation in C/C++ function declaration. The \texttt{Func\_Ann} and \texttt{Attr\_Definition} rules are used to recognize C or C++ function declarations and variable. The \texttt{Var\_Type} rule is used for variable type which is either for authenticated or declassified or sanitized variable. \texttt{Sec\_Type} rule is used for type of security whether a variable is confidential or not. In \texttt{Func\_Type} rule the type of function is declared. A function can be either one of this like authentication, declassification, sanitization, source or sink.
 
+\section{Inference Rules for Secure Information Flows}
+
+The goal is to prevent the information flowing from H (high security level, private) variables to 
+L (low security level, public) variables through trust boundaries. The inference rules are implemented
+inside our static analysis engine which can handle pointers. 
+
+Lets consider the following C if statement, if  \[ a(L) \leq b(H)\] then\{\} else\{\}, where variable a has attached the label L and variable b has attached the label H.
+There could be implicit (the variables inside the then or \emph{else} branch do not depend on the values of a or b) 
+and explicit (the variables inside the then or else branch depend on the values of a or b) flows between variables
+contained in the then or else as follows: L to L, H to H, L to H and H to L. If a variable labeled H is used afterwards inside
+a trust boundary then a information flow leakages should be reported and a bug report should be created. 
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tabular}{ll}    
+		\circled{A}\ (data types)   &$\tau ::= $ H    $|$  L  $|$ PreStep $|$ PostStep   \\ 
+		\circled{B}\ (phrase types) &$\rho ::=  \tau \ | \ \tau \ var \ | \ \tau \ cmd $ \\
+	\end{tabular}
+	\caption{Secure typing system specialized on trust boundaries}
+	\label{typing:system1}
+\end{figure}
+
+\begin{figure}[ht!]
+	\hskip-0.2cm
+	\begin{tabular}{ll} 		         
+		
+	    \footnotesize  \circled{1} (F-CALL-P)   &\footnotesize 
+		\inferrule{\gamma \vdash e : \tau \ $(PreStep,\ Poststep)$ \ $H$, \ $L$ }
+		{\gamma \vdash  e : \tau_{r} \ $(PreStep,\ PostStep)$ \ $H$, \ $H$ } \\ \\ 
+		
+		\footnotesize  \circled{2} (F-ORDER)    &\scriptsize
+		\inferrule{\gamma \vdash e : \tau_{1} ($PreStep$_{1},\ $PostStep$_{1})*\tau_{2}($PreStep$_{2},\ $PostStep$_{2})\dots}
+		{\gamma \vdash e : \tau_{r1} ($PreStep$_{1},\ $PostStep$_{1})*\tau_{r2}($PreStep$_{2},\ $PostStep$_{2})\dots } \\ \\		 
+		
+	\end{tabular}
+	\caption{Typing rules specialized to L, H, PreStep, PostStep for secure explicit and implicit information flow }
+	\label{inference rules}
+\end{figure}
 
 \section{UML State Chart Editor}
 

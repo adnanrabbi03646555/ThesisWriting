@@ -19,26 +19,27 @@
 \BOOKMARK [0][-]{chapter.4}{Implementation}{part.2}% 19
 \BOOKMARK [1][-]{section.4.1}{Overview of System Architecture}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.2}{The Grammar of Our Annotation Language}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{UML State Chart Editor}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{Source Code Editor}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.5}{C Code Generator}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.6}{Three Checkers in Static Analysis Engine}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.7}{View Buggy Path in UML Sequence Diagram}{chapter.4}% 26
-\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 27
-\BOOKMARK [1][-]{section.5.1}{Authentication Scenario}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.2}{Declassification Scenario}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.3}{Sanitization Scenario}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.4}{Checkers in Static Analysis Engine}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.5}{Error Trace in UML Sequence Diagram}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Related Works}{part.2}% 33
-\BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 34
-\BOOKMARK [-1][]{part.3}{The 3rd Part}{}% 35
-\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.3}% 36
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 37
-\BOOKMARK [1][-]{section.8.2}{Future Work}{chapter.8}% 38
-\BOOKMARK [-1][]{part*.33}{Appendix}{}% 39
-\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.33}% 40
-\BOOKMARK [1][-]{section.A.1}{Appendix A: Source Code Editor with Annotation Language}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.2}{Appendix B: C Code Generator \(Part 1\)}{appendix.A}% 42
-\BOOKMARK [1][-]{section.A.3}{Appendix C: C Code Generator \(Part 2\)}{appendix.A}% 43
-\BOOKMARK [0][-]{chapter*.34}{Bibliography}{part*.33}% 44
+\BOOKMARK [1][-]{section.4.3}{Inference Rules for Secure Information Flows}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.4}{UML State Chart Editor}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.5}{Source Code Editor}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.6}{C Code Generator}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.7}{Three Checkers in Static Analysis Engine}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.8}{View Buggy Path in UML Sequence Diagram}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Experiments}{part.2}% 28
+\BOOKMARK [1][-]{section.5.1}{Authentication Scenario}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{Declassification Scenario}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.3}{Sanitization Scenario}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.4}{Checkers in Static Analysis Engine}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.5}{Error Trace in UML Sequence Diagram}{chapter.5}% 33
+\BOOKMARK [0][-]{chapter.6}{Related Works}{part.2}% 34
+\BOOKMARK [0][-]{chapter.7}{Limitations}{part.2}% 35
+\BOOKMARK [-1][]{part.3}{The 3rd Part}{}% 36
+\BOOKMARK [0][-]{chapter.8}{Conclusion and Future Work}{part.3}% 37
+\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.2}{Future Work}{chapter.8}% 39
+\BOOKMARK [-1][]{part*.35}{Appendix}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Appendix}{part*.35}% 41
+\BOOKMARK [1][-]{section.A.1}{Appendix A: Source Code Editor with Annotation Language}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.2}{Appendix B: C Code Generator \(Part 1\)}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.3}{Appendix C: C Code Generator \(Part 2\)}{appendix.A}% 44
+\BOOKMARK [0][-]{chapter*.36}{Bibliography}{part*.35}% 45

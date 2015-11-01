@@ -12,19 +12,21 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces System overview\relax }}{32}{figure.caption.17}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Light-weight annotation language grammar excerpt \cite {ref_108_paul2015infoflow}\relax }}{34}{figure.caption.19}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Simple UML state chart\relax }}{36}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces UML statechart formal representation\relax }}{36}{figure.caption.21}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces More UML statechart formal representation\relax }}{37}{figure.caption.22}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces UML statechart formal representation for more parts\relax }}{37}{figure.caption.23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces UML statechart formal representation for this research\relax }}{38}{figure.caption.24}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Error trace path in UML sequence diagram\relax }}{44}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Secure typing system specialized on trust boundaries\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Typing rules specialized to L, H, PreStep, PostStep for secure explicit and implicit information flow \relax }}{35}{figure.caption.21}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple UML state chart\relax }}{36}{figure.caption.22}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces UML statechart formal representation\relax }}{37}{figure.caption.23}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces More UML statechart formal representation\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces UML statechart formal representation for more parts\relax }}{38}{figure.caption.25}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces UML statechart formal representation for this research\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Error trace path in UML sequence diagram\relax }}{45}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces UML statechart modeling for authentication scenario\relax }}{48}{figure.caption.26}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces UML statechart modeling for declassification scenario\relax }}{49}{figure.caption.27}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces UML statechart modeling for sanitization scenario\relax }}{51}{figure.caption.28}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug reports in checker\relax }}{53}{figure.caption.29}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug reports in checker with message\relax }}{54}{figure.caption.30}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence diagram representation of buggy path\relax }}{55}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces UML statechart modeling for authentication scenario\relax }}{48}{figure.caption.28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces UML statechart modeling for declassification scenario\relax }}{49}{figure.caption.29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces UML statechart modeling for sanitization scenario\relax }}{51}{figure.caption.30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bug reports in checker\relax }}{53}{figure.caption.31}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bug reports in checker with message\relax }}{54}{figure.caption.32}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequence diagram representation of buggy path\relax }}{55}{figure.caption.33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
