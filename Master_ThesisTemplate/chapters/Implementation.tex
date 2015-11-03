@@ -165,32 +165,62 @@ previous and post function calls. Figure \ref{typing:system1}, \circled{B} , pre
 	
 	\centering
 	\begin{tabular}{ll} 	         
-	   \footnotesize 
+	   \checkmark \footnotesize 
 		 \circled{0} (INT)           &\footnotesize  $ \gamma  \vdash n :$ L    \\ \\
 		
-		\footnotesize 
+		\checkmark \footnotesize 
 		\circled{1} (VAR)            &\footnotesize  $ \gamma  \vdash x$ : H  $\ var$ \ \ \ if $\gamma(x)$ = H $\ var$  \\ \\
 		
-		\footnotesize  \circled{2} (R-VAL)     &\footnotesize 
+		\checkmark \footnotesize  \circled{2} (R-VAL)     &\footnotesize 
 		\inferrule{\gamma \vdash e : \ $H$  \ var}
 		{\gamma \vdash e : \ $H$  } \\ \\  
 		
-	    \footnotesize  \circled{3} (F-CALL-P)   &\footnotesize 
+	    \checkmark \footnotesize  \circled{3} (F-CALL-P)   &\footnotesize 
 		\inferrule{\gamma \vdash e : \tau  \ ($H$) } 
-		{\gamma \vdash  e : \tau_{r}  \ ( $L$ )}  \qquad \Comment{Function: authentication, declassification or sanitization}\\ \\ 		 
+		{\gamma \vdash  e : \tau_{r}  \ ( $L$ )}  \qquad \Comment{Function: authentication, declassification or sanitization}\\ \\ 
+		
+		 \footnotesize  \circled{4} (ASSIGN)    &\footnotesize 
+		 \inferrule{\gamma \vdash e : \ $H$\ var\\\\
+		 	\gamma \vdash e\textquotesingle: \ $H$  }
+		 {\gamma \vdash e := e\textquotesingle: \ $H$ \ cmd } \\ \\		 
+		\footnotesize  \circled{5} (COMPOSE)   &\footnotesize 
+		\inferrule{\gamma  \vdash c: \ $L$\ cmd \\\\
+			\gamma  \vdash c\textquotesingle: \ $H$\ cmd }
+		{\gamma  \vdash c ; c\textquotesingle: \ $H$ \ cmd } \\ \\     
+		
+		\footnotesize  \circled{6} (IF)        &\footnotesize 
+		\inferrule{\gamma  \vdash e : \ $H$  \\\\
+			\gamma  \vdash c: \ $ H$\ cmd    \\\\
+			\gamma  \vdash c\textquotesingle: \ $H$\ cmd }
+		{\gamma  \vdash if \ e \ then \ c \ else \ c\textquotesingle: \ $H$ \ cmd  } \\ \\   
 		
 	\end{tabular}
-	\caption{Typing rules specialized to L, H for secure explicit and implicit information flow }
+	\caption{Typing rules specialized to L, H for secure explicit and implicit information flow(\checkmark implemented)}
 	\label{inference rules}
 \end{figure}
+
+\begin{lstlisting}[caption={Sanitization function behavior to maintain secure information flow},label=lst:sanitizationInferenceRule]
+//@ @variable a H;
+char *a;
+
+/*@ @function sanitization
+* @parameter a H  sanitized @*/; 
+sanitization(a); 
+
+/*@ @function sink
+* @parameter a L @*/;
+validateFunction(a);
+
+\end{lstlisting}
 
 Figure \ref{inference rules} depicts secure information flow inference rules
 which are based on the Denning \cite{ref_14_denning1976lattice} lattice model and Volpano
 et al. \cite{ref_38_volpano:sound}. We used only two security levels (L and H) which
 correspond to 0 and 1 whereas one could use multiple levels if
 required, (e.g., [\dots, --3, --2, --1, 0, 1, 2, 3, \dots]). The expression $ \gamma \vdash e : H $ , \circled{2}, means that expression e has security level H (High). $ \gamma \vdash e : \tau \ H $ , \circled{3} , means that if
-a function call (authentication, declassification or sanitization function) was tagged with the parameter label H and then the label of the parameter is replaced with L after execution. The
-inference rules presented in Figure \ref{inference rules} describe how the label(s): \circled{0} L is attached to an integer value, \circled{1} H is attached to a variable, \circled{2} H is passed during a return statement, \circled{3} is used to pass the parameter label H and makes the parameter as L between the parameters of a function call.
+a function call (authentication, declassification or sanitization function) was tagged with the parameter label H and then the label of the parameter is replaced with L after execution (e.g., \texttt{char *a} initially annotated with label H, but \texttt{sanitization(a)} makes the variable \texttt{char *a} as L after execution and passes to other function which is safe (code example presented in listing \ref{lst:sanitizationInferenceRule})). 
+
+The inference rules presented in Figure \ref{inference rules} describe how the label(s): \circled{0} L is attached to an integer value, \circled{1} H is attached to a variable, \circled{2} H is passed during a return statement, \circled{3} is used to pass the parameter label H and makes the parameter as L between the parameters of a function call, \circled{4} H is passed during an assignment statement , \circled{5} L and H are passed during a composition statement, \circled{6} is passed during an \texttt{if} statement.
 
 \section{UML State Chart Editor}
 

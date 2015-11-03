@@ -25,10 +25,10 @@
 \contentsline {section}{\numberline {4.2}The Grammar of Our Annotation Language}{32}{section.4.2}
 \contentsline {section}{\numberline {4.3}Inference Rules for Secure Information Flows}{35}{section.4.3}
 \contentsline {section}{\numberline {4.4}UML State Chart Editor}{36}{section.4.4}
-\contentsline {section}{\numberline {4.5}Source Code Editor}{39}{section.4.5}
+\contentsline {section}{\numberline {4.5}Source Code Editor}{40}{section.4.5}
 \contentsline {section}{\numberline {4.6}C Code Generator}{40}{section.4.6}
-\contentsline {section}{\numberline {4.7}Three Checkers in Static Analysis Engine}{42}{section.4.7}
-\contentsline {section}{\numberline {4.8}View Buggy Path in UML Sequence Diagram}{43}{section.4.8}
+\contentsline {section}{\numberline {4.7}Three Checkers in Static Analysis Engine}{43}{section.4.7}
+\contentsline {section}{\numberline {4.8}View Buggy Path in UML Sequence Diagram}{44}{section.4.8}
 \contentsline {chapter}{\numberline {5}Experiments}{49}{chapter.5}
 \contentsline {section}{\numberline {5.1}Authentication Scenario}{49}{section.5.1}
 \contentsline {section}{\numberline {5.2}Declassification Scenario}{51}{section.5.2}
