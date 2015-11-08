@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  3 NOV 2015 19:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.26)  8 NOV 2015 17:04
 entering extended mode
 **main.tex
 
@@ -1253,11 +1253,13 @@ Package pdftex.def Info: styles/informat.png used on input line 57.
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
 e\components/disclaimer.tex [3] [4
 
-] [5])
-(F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\components/acknowledgements.tex [6
-
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6])
+(F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
+e\components/acknowledgements.tex
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -1276,7 +1278,9 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 11.
 )
 (F:\L2-T2\Thesis\ThesisWriting\GITRepository\ThesisWriting\Master_ThesisTemplat
-e\components/abstract.tex [7] [8
+e\components/abstract.tex [7
+
+] [8
 
 ]
 
@@ -1854,7 +1858,7 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 atino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (107 pages, 14308761 bytes).
+Output written on main.pdf (107 pages, 14308948 bytes).
 PDF statistics:
  2097 PDF objects out of 2487 (max. 8388607)
  1006 named destinations out of 1200 (max. 500000)
