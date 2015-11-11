@@ -1,6 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
+I was expecting a `,' or a `}'---line 142 of file bibliography/literature.bib
+ :  
+ :  year={ISBN-1-891562-35-5, 2014}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 716 of file bibliography/literature.bib
+ :  
+ :  year = "1997"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 798 of file bibliography/literature.bib
+ :  
+ :  volume={19},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in ref_104_owasp:owasp
 Warning--to sort, need author or key in ref_86_techtarget:techtarget
 Warning--to sort, need author or key in ref_87_gcn:gcn
@@ -8,20 +23,16 @@ Warning--to sort, need author or key in ref_15_yakindu:sct
 Warning--empty author in ref_104_owasp:owasp
 Warning--empty institution in ref_104_owasp:owasp
 Warning--there's a number but no volume in ref_18_chess2004static
-Warning--there's a number but no volume in ref_81_chess2004static
 Warning--can't use both volume and number fields in ref_67_cohen1977information
-Warning--empty booktitle in ref_6_cohen1978information
+Warning--empty year in ref_93_dahse2014simulation
+Warning--empty year in ref_14_denning1976lattice
 Warning--can't use both volume and number fields in ref_84_hallem2002system
-Warning--empty booktitle in ref_7_joshi2000semantic
 Warning--can't use both volume and number fields in ref_7_joshi2000semantic
 Warning--can't use both volume and number fields in ref_73_li2005downgrading
 Warning--can't use both volume and number fields in ref_85_livshits2003tracking
-Warning--can't use both volume and number fields in ref_9_myers1997decentralized
-Warning--empty booktitle in ref_4_myers2000protecting
+Warning--empty year in ref_24_myers:descentrelized
 Warning--can't use both volume and number fields in ref_4_myers2000protecting
-Warning--there's a number but no volume in ref_59_rosenblum:towards
-Warning--empty booktitle in ref_3_sabelfeld2009declassification
 Warning--can't use both volume and number fields in ref_3_sabelfeld2009declassification
 Warning--can't use both volume and number fields in ref_77_whaley2004cloning
 Warning--empty journal in ref_82_wilander2002comparison
-(There were 23 warnings)
+(There were 3 error messages)

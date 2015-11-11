@@ -1,4 +1,4 @@
-\chapter{Literature Review}
+\chapter{Background}
 
 The difficulty of strongly protecting confidential
 information has been known for some time. The research
@@ -74,7 +74,7 @@ information-flow policies.
 
 This chapter describes the basics of sanitization, declassification, authentication, information flow vulnerabilities and static code analysis mechanism in software and web applications. Also the purpose and requirements of these three functions: sanitization, declassification and authentication are presented here. At the end of this chapter, the mechanism of detecting information flow errors during design and code are also presented.
 
-\section{Sanitization}
+\section{Sanitize User Input}
 Sanitization is the process of removing sensitive information from a document or other message or sometimes encrypting messages, so that the document may be distributed to a broader audience. Sometimes sanitization can be called as an operation that ensures that user input can be safely used in an SQL query. Web applications use malicious input as part of a sensitive operation without having properly checked or sanitized the input values from the user. Previous research on vulnerability analysis has mostly focused on identifying cases where web applications directly uses external input for critical operations. It is suggested to always use proper sanitization method to validate external input values from the user for any application. For example, user inputs must always flow through a sanitizing function before flowing into a SQL query or HTML, to avoid SQL injection or cross-site scripting vulnerabilities.
 
 Reflection of security breaches are very significant for high assurance system. For examples of this type of systems are aircraft navigation, where a fault could lead to a crash, various control systems which has critical infrastructure , where an error 
@@ -191,7 +191,7 @@ This is a naive approach because it's almost impossible to cover everything. Thi
 \end{lstlisting}
 
 
-\section{Declassification}
+\section{Declassify Confidential Information}
 Information security has a challenge to address: enabling information flow controls with expressive information release (or declassification) policies. In a scenario of systems that operate on data with different sensitivity levels, the goal is to provide security assurance via restricting the information flow within the system. Practical security-typed languages support some form of declassification through which high-security information is allowed to flow to a low-security system or observer.
 
 United States Federal Trade Commission reveals the damage that is continually caused by electronic information leakage. In protecting sensitive information, including everything from credit card information to military secrets to personal, medical information, there is a highly
@@ -225,7 +225,7 @@ Classification of the basic declassification goals according to four axes: what 
    \item Who: In a computing system it is essential to specify "who" controls information release.
    Ignoring the issue of control opens up attacks where the attacker hijacks release
    mechanisms to launder secret information. Myers et al. decentralized label
-   model \cite{ref_9_myers1997decentralized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
+   model \cite{ref_24_myers:descentrelized} security labels with explicit ownership information. According to this approach, information release of some data is safe if it is performed by the
    owner who is explicitly recorded in the data security label. This model has been used for enhancing Java with information flow controls \cite{ref_10_myers1999jflow} and has been implemented in
    the Jif compiler \cite{ref_11_myers2001jif}.
    
@@ -244,7 +244,7 @@ or via intermediate events in a computation. The \enquote{who} and \enquote{wher
 harder to formalize in a general way, beyond saying that they cannot be captured by the
 \enquote{what} and \enquote{when} dimensions.
 
-\section{Authentication}
+\section{Authenticate User Access}
 Malicious applications targeting financial account information have increased dramatically over the last few years. The number of online applications is growing everyday. The ease of use of the Internet and the growing number of users are making a perfect target for criminals. Attacking thousands of users is achievable with only one click. The methods used by these criminals vary immensely, but they have one thing in common: they are getting more and more sophisticated. With these increasing threats, governments are issuing stronger legislations and companies are realizing that their current systems can not thwart current attacks anymore. To counter these threats, current authentication systems have to be adopted. Not only the criminal side has made advances in the last years. The security industry developed new mechanisms and protection systems to thwart even the most sophisticated attacks.
 
 Before describing the process of the authentication, it is important to explain some terms. Now-a-days, AAA is often used. AAA stands for Authentication, Authorization and Accounting. It is also important to know the differences between those terms:

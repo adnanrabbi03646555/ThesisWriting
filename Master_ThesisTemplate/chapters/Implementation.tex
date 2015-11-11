@@ -22,14 +22,14 @@ The architecture of our system is given below:
 \begin{figure}[!htb]
 	\centering
 	\vspace{-1em}
-	\makebox[\textwidth]{\includegraphics[scale=.50,width=\textwidth]{styles/system_architecture.pdf}}
+	\makebox[\textwidth]{\includegraphics[scale=.50,width=\textwidth]{styles/system_architecture_new.pdf}}
 	\vspace{-5em}
 	\caption{System overview}
 	\vspace{-1em}
 	\label{system_architecture}
 \end{figure}
 
-Figure \ref{system_architecture} depicts the complete system overview. At first which is presented as number \circled{1}, the source code editor is developed using Eclipse Xtext. By this editor one can easily annotate the source code of C/C++. It is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code, this annotation technique has been chosen which is easy to extend and backward compatible. This editor has been developed as an Eclipse plug-in. If this plug-in exists in eclipse then a user can easily annotate C/C++ source code files and header files by pressing the keys ctrl+space in keyboard. Then for modeling purpose open source tool Yakindu SCT editor \cite{ref_15_yakindu:sct} has been chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle which is depicted as number \circled{2} in the Figure \ref{system_architecture}. Inside the Yakindu SCT editor the annotation language grammar has also been included using Eclipse Xtext. So, a user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has been extended inside the Yakindu SCT editor using Eclipse Xtend. This C code generator is represented as number \circled{3} in the Figure \ref{system_architecture}. After modeling, the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named \enquote{smtcodan} three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. This three checkers are represented as number \circled{4} phase in the Figure \ref{system_architecture}. Inside the static analysis engine according to the requirements new modules are added. Then to view the buggy path in sequence diagram a sequence diagram generator has been created. Sequence diagram generator to view buggy path is the number \circled{5} and last phase of the system. That is the end of complete system architecture of this system. 
+Figure \ref{system_architecture} depicts the complete system overview. The source code editor is developed using Eclipse Xtext which is not showing the Figure \ref{system_architecture} because our goal was first annotate the UML statechart editor not the source code editor. By this editor one can easily annotate the source code of C/C++. It is possible to annotate C/C++ header files. For information flow vulnerabilities detection in C/C++ code, this annotation technique has been chosen which is easy to extend and backward compatible. This editor has been developed as an Eclipse plug-in. If this plug-in exists in eclipse then a user can easily annotate C/C++ source code files and header files by pressing the keys ctrl+space in keyboard. Then for modeling purpose open source tool Yakindu SCT editor \cite{ref_15_yakindu:sct} has been chosen to model the C/C++ code into state charts to detect the bug during design stage of software development life-cycle which is depicted as number \circled{1} in the Figure \ref{system_architecture}. Inside the Yakindu SCT editor the annotation language grammar has also been included using Eclipse Xtext. So, a user can easily annotate the state charts to detect the information flow vulnerabilities. Afterwards the C code generator has been extended inside the Yakindu SCT editor using Eclipse Xtend. This C code generator is represented as number \circled{2} in the Figure \ref{system_architecture}. After modeling, the C code files in Yakindu SCT editor user can easily generate the code using C code generator. Through this generator two files will be generated. One file has .c extension and another file has .h extension. Inside those files annotation has also included. Those annotations are helpful to detect the information flow errors. After generating the code files using static analysis engine named \enquote{smtcodan} three checkers have included to detect authentication, declassification and sanitization function missing vulnerabilities. This three checkers are represented as number \circled{3} phase in the Figure \ref{system_architecture}. Inside the static analysis engine according to the requirements new modules are added. Then to view the buggy path in sequence diagram a sequence diagram generator has been created. Sequence diagram generator to view buggy path is the number \circled{4} and last phase of the system. That is the end of complete system architecture of this system. 
 
 
 \section{The Grammar of Our Annotation Language}
@@ -82,7 +82,7 @@ which can be used to annotate UML state charts and code by inserting information
 restrictions during two software development phases (design
 and coding). The idea is that the same annotation language
 can be used to add information flow constraints to UML state
-charts and code in order to detect information flow errors. The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in Figure \ref{language grammar}. The following type face conventions have been used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.
+charts and code in order to detect information flow errors. The grammar of annotation language is represented as in Extended Backus Naur Form (EBNF) in Figure \ref{language grammar}\cite{ref_108_paul2015infoflow}. The following type face conventions have been used: Italic font for non-terminals, bold typewriter font for literal terminals including keywords.
  
  \begin{figure}[ht!]
  	\centering
@@ -122,13 +122,13 @@ charts and code in order to detect information flow errors. The grammar of annot
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{source};    \\ \\
  	 
  		\footnotesize    	                   
- 		\textit{Var\_Type}           &\footnotesize $::=$        &\footnotesize \textbf{authenticated}; \qquad \Comment{Newly added annotations to annotate variable types}\\
+ 		\textit{Var\_Type}           &\footnotesize $::=$        &\footnotesize \textbf{authenticated}; \qquad \Comment{Newly added annotations to annotate variable types (Appendix  \ref{Source_Code_Editor_in_Xtext} line number 170)}\\
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{declassified};
  		\\
  		&\footnotesize $\ \vert $    &\footnotesize \textbf{sanitized};    \\ \\	
  		
  	\end{tabular}
- 	\caption{Light-weight annotation language grammar excerpt \cite{ref_108_paul2015infoflow}}
+ 	\caption{Light-weight annotation language grammar excerpt}
  	\label{language grammar}
  \end{figure}
  
@@ -166,14 +166,14 @@ previous and post function calls. Figure \ref{typing:system1}, \circled{B} , pre
 	\centering
 	\begin{tabular}{ll} 	         
 	   \checkmark \footnotesize 
-		 \circled{0} (INT)           &\footnotesize  $ \gamma  \vdash n :$ L    \\ \\
+		 \circled{0} (INT)           &\footnotesize  $ \gamma  \vdash n :$ L    \qquad \Comment{L is attached to an integer value}\\ \\
 		
 		\checkmark \footnotesize 
-		\circled{1} (VAR)            &\footnotesize  $ \gamma  \vdash x$ : H  $\ var$ \ \ \ if $\gamma(x)$ = H $\ var$  \\ \\
+		\circled{1} (VAR)            &\footnotesize  $ \gamma  \vdash x$ : H  $\ var$ \ \ \ if $\gamma(x)$ = H $\ var$  \Comment{H is attached to a varaiable}\\ \\
 		
 		\checkmark \footnotesize  \circled{2} (R-VAL)     &\footnotesize 
 		\inferrule{\gamma \vdash e : \ $H$  \ var}
-		{\gamma \vdash e : \ $H$  } \\ \\  
+		{\gamma \vdash e : \ $H$  } \Comment{H is passed during a return statement}\\ \\  
 		
 	    \checkmark \footnotesize  \circled{3} (F-CALL-P)   &\footnotesize 
 		\inferrule{\gamma \vdash e : \tau  \ ($H$) } 
@@ -182,20 +182,20 @@ previous and post function calls. Figure \ref{typing:system1}, \circled{B} , pre
 		 \footnotesize  \circled{4} (ASSIGN)    &\footnotesize 
 		 \inferrule{\gamma \vdash e : \ $H$\ var\\\\
 		 	\gamma \vdash e\textquotesingle: \ $H$  }
-		 {\gamma \vdash e := e\textquotesingle: \ $H$ \ cmd } \\ \\		 
+		 {\gamma \vdash e := e\textquotesingle: \ $H$ \ cmd } \Comment{H is passed during an assignment statement}\\ \\		 
 		\footnotesize  \circled{5} (COMPOSE)   &\footnotesize 
 		\inferrule{\gamma  \vdash c: \ $L$\ cmd \\\\
 			\gamma  \vdash c\textquotesingle: \ $H$\ cmd }
-		{\gamma  \vdash c ; c\textquotesingle: \ $H$ \ cmd } \\ \\     
+		{\gamma  \vdash c ; c\textquotesingle: \ $H$ \ cmd } \Comment{L and H are passed during a composition statement}\\ \\     
 		
 		\footnotesize  \circled{6} (IF)        &\footnotesize 
 		\inferrule{\gamma  \vdash e : \ $H$  \\\\
 			\gamma  \vdash c: \ $ H$\ cmd    \\\\
 			\gamma  \vdash c\textquotesingle: \ $H$\ cmd }
-		{\gamma  \vdash if \ e \ then \ c \ else \ c\textquotesingle: \ $H$ \ cmd  } \\ \\   
+		{\gamma  \vdash if \ e \ then \ c \ else \ c\textquotesingle: \ $H$ \ cmd  } \Comment{H is passed during an if statement}\\ \\   
 		
 	\end{tabular}
-	\caption{Typing rules specialized to L, H for secure explicit and implicit information flow(\checkmark implemented)}
+	\caption{Typing rules for secure explicit and implicit information flow(\checkmark implemented)}
 	\label{inference rules}
 \end{figure}
 
@@ -220,7 +220,7 @@ correspond to 0 and 1 whereas one could use multiple levels if
 required, (e.g., [\dots, --3, --2, --1, 0, 1, 2, 3, \dots]). The expression $ \gamma \vdash e : H $ , \circled{2}, means that expression e has security level H (High). $ \gamma \vdash e : \tau \ H $ , \circled{3} , means that if
 a function call (authentication, declassification or sanitization function) was tagged with the parameter label H and then the label of the parameter is replaced with L after execution (e.g., \texttt{char *a} initially annotated with label H, but \texttt{sanitization(a)} makes the variable \texttt{char *a} as L after execution and passes to other function which is safe (code example presented in listing \ref{lst:sanitizationInferenceRule})). 
 
-The inference rules presented in Figure \ref{inference rules} describe how the label(s): \circled{0} L is attached to an integer value, \circled{1} H is attached to a variable, \circled{2} H is passed during a return statement, \circled{3} is used to pass the parameter label H and makes the parameter as L between the parameters of a function call, \circled{4} H is passed during an assignment statement , \circled{5} L and H are passed during a composition statement, \circled{6} is passed during an \texttt{if} statement.
+The inference rules presented in Figure \ref{inference rules} describe how the label(s): \circled{0} L is attached to an integer value, \circled{1} H is attached to a variable, \circled{2} H is passed during a return statement, \circled{3} is used to pass the parameter label H and makes the parameter as L between the parameters of a function call, \circled{4} H is passed during an assignment statement , \circled{5} L and H are passed during a composition statement, \circled{6} H is passed during an \texttt{if} statement.
 
 \section{UML State Chart Editor}
 

@@ -139,19 +139,18 @@ SingleLineAnnotation returns SingleLineAnnotation:
  * @AnnotationType :annotation types
  *                 :annotations can addres whole functions or parameters of a function
  */ 
-enum AnnotationType:
-						function
-					  |	parameter 
-					  | preStep
-					  | postStep
+enum AnnotationType: function
+					 | parameter 
+					 | preStep
+					 | postStep
 ;
 
 /**
  * @FunctionType :annotaions types for functions
  */ 
-enum FunctionType: declassification 
-                  | sanitization
-                  | authentication
+enum FunctionType: declassification // newly added declassifiaction function
+                  | sanitization    // newly added sanitization function 
+                  | authentication  // newly added authentication function  
                   | sink
                   | source
                   | trust_boundary
@@ -167,9 +166,9 @@ enum SecurityType: confidential
 /**
  * @VariableSituation :annotaions types for function parameters
  */ 
-enum VariableType: declassified 
-                  | sanitized
-                  | authenticated
+enum VariableType: declassified    // newly added variable type declassified  
+                  | sanitized      // newly added variable type sanitized 
+                  | authenticated  // newly added variable type authenticated 
 ;
 
 /**

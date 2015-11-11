@@ -1,20 +1,20 @@
 \begin{thebibliography}{100}
 
 \bibitem{ref_87_gcn:gcn}
-{GCN}, http://gcn.com/articles/2009/02/09/
+{GCN}, [Online], http://gcn.com/articles/2009/02/09/
   static-vs-dynamic-code-analysis.aspx.
 
 \bibitem{ref_15_yakindu:sct}
-{Yakindu SCT Open-Source-Tool},
+{Yakindu SCT Open-Source-Tool}, [Online],
   https://code.google.com/a/eclipselabs.org/p/yakindu/.
 
 \bibitem{ref_86_techtarget:techtarget}
-{Searchwindevelopment Techtarget},
+{Searchwindevelopment Techtarget}, [Online],
   http://searchwindevelopment.techtarget.com/definition/ static-analysis.
 
 \bibitem{ref_104_owasp:owasp}
 {OWASP}.
-\newblock Technical report, http://www.owasp.org.
+\newblock Technical report, [Online], http://www.owasp.org.
 
 \bibitem{ref_16_alhumaidan2012state}
 F.~Alhumaidan et~al.
@@ -62,7 +62,8 @@ G.~Barthe, P.~R. D'Argenio, and T.~Rezk.
 \bibitem{ref_64_box2000simple}
 D.~Box, D.~Ehnebuske, G.~Kakivaya, A.~Layman, N.~Mendelsohn, H.~F. Nielsen,
   S.~Thatte, and D.~Winer.
-\newblock Simple object access protocol (soap) 1.1, 2000.
+\newblock Simple object access protocol (soap) 1.1, World Wide Web Consortium,
+  2000.
 
 \bibitem{ref_83_bush2000static}
 W.~R. Bush, Jonathan~D. Pincus, and D.~J. Sielaff.
@@ -76,11 +77,6 @@ R.~Chapman and A.~Hilton.
 \newblock {\em ACM SIGAda}, 24(4), 2004.
 
 \bibitem{ref_18_chess2004static}
-B.~Chess and G.~McGraw.
-\newblock Static analysis for security.
-\newblock {\em IEEE Security \& Privacy}, (6):76--79, 2004.
-
-\bibitem{ref_81_chess2004static}
 B.~Chess and G.~McGraw.
 \newblock Static analysis for security.
 \newblock {\em IEEE Security \& Privacy}, (6):76--79, 2004.
@@ -104,7 +100,8 @@ E.~Cohen.
 \bibitem{ref_6_cohen1978information}
 E.~S. Cohen.
 \newblock Information transmission in sequential programs.
-\newblock pages 297--335, 1978.
+\newblock In {\em Proceedings of the sixth ACM symposium on Operating systems
+  principles}, pages 297--335. ACM, 1978.
 
 \bibitem{ref_54_condit:dependent}
 J.~Condit, M.~Harren, Z.~R. Anderson, D.~Gay, and G.~C. Necula.
@@ -114,8 +111,7 @@ J.~Condit, M.~Harren, Z.~R. Anderson, D.~Gay, and G.~C. Necula.
 \bibitem{ref_93_dahse2014simulation}
 J.~Dahse and T.~Holz.
 \newblock Simulation of built-in php features for precise static code analysis.
-\newblock In {\em Symposium on Network and Distributed System Security (NDSS)},
-  2014.
+\newblock In {\em Symposium on Network and Distributed System Security (NDSS)}.
 
 \bibitem{ref_70_darvas2005theorem}
 {\'A}.~Darvas, R.~H{\"a}hnle, and D.~Sands.
@@ -126,7 +122,7 @@ J.~Dahse and T.~Holz.
 \bibitem{ref_14_denning1976lattice}
 D.~E. Denning.
 \newblock A lattice model of secure information flow.
-\newblock {\em Communications of the ACM}, 19(5):236--243, 1976.
+\newblock {\em Communications of the ACM}.
 
 \bibitem{ref_103_denning1977certification}
 D.~E. Denning and P.~J. Denning.
@@ -141,7 +137,8 @@ D.~L. Detlefs, K.~R.~M. Leino, G.~Nelson, and J.~B. Saxe.
 \bibitem{ref_53_evans:static}
 D.~Evans.
 \newblock {Static detection of dynamic memory errors}.
-\newblock {\em PLDI}, 1996.
+\newblock {\em In Proceedings of the ACM SIGPLAN 1996 conference on Programming
+  language design and implementation, PLDI}, 1996.
 
 \bibitem{ref_30_david:splint}
 D.~Evans and D.~Larochelle.
@@ -150,12 +147,14 @@ D.~Evans and D.~Larochelle.
 
 \bibitem{ref_52_splint:flow}
 D.~Evans and D.~Larochelle.
-\newblock {Splint - Manual}, http://www.splint.org/manual/html/sec8.html.
+\newblock {Splint - Manual Documentation}, [Online],
+  http://www.splint.org/manual/html/sec8.html.
 
 \bibitem{ref_43_fenton:memoryless}
 J.~S. Fenton.
 \newblock {Memoryless subsystems}.
-\newblock {\em Computer Journal}, 17(2):143--147, May 1974.
+\newblock {\em Computer Journal, doi: 10.1093/comjnl/17.2.143}, 17(2):143--147,
+  May 1974.
 
 \bibitem{ref_1_gehani2011f}
 A.~Gehani, D.~Hanz, J.~Rushby, G.~Denker, and R.~DeLong.
@@ -196,7 +195,8 @@ M.~Guarnieri, P.~El Khoury, and G.~Serme.
 \bibitem{ref_84_hallem2002system}
 S.~Hallem, B.~Chelf, Y.~Xie, and D.~Engler.
 \newblock {\em A system and language for building system-specific, static
-  analyses}, volume~37.
+  analyses, In Proceedings of the ACM SIGPLAN 2002 conference on Programming
+  language design and implementation, PLDI '02}, volume~37.
 \newblock ACM, 2002.
 
 \bibitem{ref_25_heldal:bridging}
@@ -245,7 +245,8 @@ L.~Jia, J.~Vaughan, K.~Mazurak, J.~Zhao, L.~Zarko, J.~Schorr, and S.~Zdancewic.
 \bibitem{ref_7_joshi2000semantic}
 R.~Joshi, K.~Leino, and M.~Rustan.
 \newblock A semantic approach to secure information flow.
-\newblock volume~37, pages 113--138. Elsevier, 2000.
+\newblock In {\em Proceedings of 4th International Conference, MPC'98},
+  volume~37, pages 113--138. Elsevier, 2000.
 
 \bibitem{ref_99_jovanovic2006pixy}
 N.~Jovanovic, C.~Kruegel, and E.~Kirda.
@@ -289,7 +290,7 @@ KIT.
 K.~Leino and M.~Rustan.
 \newblock {Extended Static Checking: a Ten-Year Pesrsective}.
 \newblock {\em Proceeding Informatics - 10 Years Back. 10 Years Ahead}, pages
-  157--175, January 2001.
+  157--175, January ISBN-3-540-41635-8, 2001.
 
 \bibitem{ref_73_li2005downgrading}
 P.~Li and S.~Zdancewic.
@@ -324,12 +325,13 @@ S.~McCamant and M.~D. Ernst.
 \bibitem{ref_69_mclean1992proving}
 J.~McLean.
 \newblock Proving noninterference and functional correctness using traces.
-\newblock Technical report, DTIC Document, 1992.
+\newblock Technical report, DTIC Document, Center for High Assurance Computer
+  Systems Naval Research Laboratory Washington, D. C, 1992.
 
 \bibitem{ref_55_sun:lock}
 Sun Microsystems.
 \newblock {Lock\_Lint - Static data race and ceadlock detection tool for C},
-  http://developers.sun.com/sunstudio/articles/locklint.html.
+  [Online], http://developers.sun.com/sunstudio/articles/locklint.html.
 
 \bibitem{ref_102_minamide2005static}
 Y.~Minamide.
@@ -347,8 +349,8 @@ S.~Moore and S.~Chong.
 P.~Muntean, A.~Rabbi, A.~Ibing, and C.~Eckert.
 \newblock Automated detection of information flow vulnerabilities in uml state
   charts and c code.
-\newblock In {\em IEEE International Conference on Software Quality,Reliability
-  and Security}. IEEE, 2015.
+\newblock In {\em IEEE International Conference on Software Quality,
+  Reliability and Security - Companion (QRS-C)}. IEEE, 2015.
 
 \bibitem{ref_40_myers:jflow}
 A.~C. Myers.
@@ -366,17 +368,13 @@ A.~C. Myers.
 A.~C. Myers and B.~Liskov.
 \newblock {A decentralized model for information flow control}.
 \newblock {\em Proceedings of the sixteenth ACM symposium on Operating systems
-  principles, ser. SOSP '97.}, pages 129--142, 1997.
-
-\bibitem{ref_9_myers1997decentralized}
-A.~C. Myers and B.~Liskov.
-\newblock {\em A decentralized model for information flow control}, volume~31.
-\newblock ACM, 1997.
+  principles, ser. SOSP '97.}, pages 129--142.
 
 \bibitem{ref_4_myers2000protecting}
 A.~C. Myers and B.~Liskov.
 \newblock Protecting privacy using the decentralized label model.
-\newblock volume~9, pages 410--442. ACM, 2000.
+\newblock In {\em Proceedings of ACM Transactions on Software Engineering and
+  Methodology (TOSEM)}, volume~9, pages 410--442. ACM, 2000.
 
 \bibitem{ref_11_myers2001jif}
 A.~C. Myers, L.~Zheng, S.~Zdancewic, S.~Chong, and N.~Nystrom.
@@ -387,7 +385,7 @@ A.~C. Myers, L.~Zheng, S.~Zdancewic, S.~Chong, and N.~Nystrom.
 \bibitem{ref_21_networld}
 Networkworld.
 \newblock {Networkworld Documentation}.
-\newblock Technical report, Networkworld Documentation,
+\newblock Technical report, Networkworld Documentation, [Online],
   http://www.networkworld.com/article/2296774/access-control/seven-strong-authentication-methods.html.
 
 \bibitem{ref_22_preibusch2011information}
@@ -403,9 +401,10 @@ Microsoft Run-Time~Library Reference.
   https://msdn.microsoft.com/en-us/library/vstudio/ms235402(v=vs.100).aspx.
 
 \bibitem{ref_59_rosenblum:towards}
-D.~S. Rosemblum.
+D.~S. Rosenblum.
 \newblock {Towards a Method of Programming with Assertions}.
-\newblock {\em ACM}, (1), January 1992.
+\newblock {\em International conference on Software engineering , ICSE '92},
+  January 1992.
 
 \bibitem{ref_60_rosenblum:practical}
 D.~S. Rosenblum.
@@ -428,7 +427,8 @@ A.~Sabelfeld and A.~Russo.
 \bibitem{ref_3_sabelfeld2009declassification}
 A.~Sabelfeld and D.~Sands.
 \newblock Declassification: Dimensions and principles.
-\newblock volume~17, pages 517--548. Citeseer, 2009.
+\newblock In {\em Proceedings of 18th IEEE Computer Security Foundations
+  Symposium (CSF 18)}, volume~17, pages 517--548. Citeseer, 2009.
 
 \bibitem{ref_89_saltzer1984end}
 J.~H. Saltzer, D.~P. Reed, and D.~D. Clark.
@@ -453,7 +453,7 @@ L.~K. Shar and H.~B.~K. Tan.
 \newblock Predicting common web application vulnerabilities from input
   validation and sanitization code patterns.
 \newblock In {\em Automated Software Engineering (ASE), 2012 Proceedings of the
-  27th IEEE/ACM International Conference on}, pages 310--313. IEEE, 2012.
+  27th IEEE/ACM International Conference}, pages 310--313. IEEE, 2012.
 
 \bibitem{ref_98_shar2013mining}
 L.~K. Shar, H.~B.~K. Tan, and L.~C. Briand.
@@ -492,7 +492,7 @@ L.~Tan, Y.~Zhou, and Y.~Padioleu.
 
 \bibitem{ref_56_torvalds:sparse}
 L.~Torvalds.
-\newblock {Sparse - A sematic parser for C},
+\newblock {Sparse - A sematic parser for C}, [Online],
   http://www.kernel.org/pub/software/devel/sparse.
 
 \bibitem{ref_100_tripp2009taj}
@@ -504,12 +504,13 @@ O.~Tripp, M.~Pistoia, S.~J. Fink, M.~Sridharan, and O.~Weisman.
 J.~Viega and G.~McGraw.
 \newblock {\em Building secure software: how to avoid security problems the
   right way}.
-\newblock Pearson Education, 2001.
+\newblock Addison-Wesley Professional Computing Series), Addison-Wesley
+  Professional, ISBN-978-0321774958, 2001.
 
 \bibitem{ref_107_visual-paradigm:visual-paradigm}
 Visual-paradigm.
 \newblock {Visual-paradigm}.
-\newblock Technical report, Visual-paradigm,
+\newblock Technical report, Visual-paradigm, [Online],
   http://www.visual-paradigm.com/VPGallery/diagrams/Sequence.html.
 
 \bibitem{ref_38_volpano:sound}
@@ -532,7 +533,7 @@ J.~Whaley and M.~S. Lam.
 
 \bibitem{ref_29_wheeler:flawfinder}
 D.~A. Wheeler.
-\newblock {\em {Flawfinder}}, http://www.dwheeler.com/flawfinder/.
+\newblock {\em {Flawfinder}}, [Online], http://www.dwheeler.com/flawfinder/.
 
 \bibitem{ref_82_wilander2002comparison}
 J.~Wilander and M.~Kamkar.
@@ -548,13 +549,13 @@ X.~Xiao and et~al.
 \bibitem{ref_20_xtend}
 Eclipse Xtend.
 \newblock {Eclipse xtend Documentation}.
-\newblock Technical report, Eclipse Xtend,
+\newblock Technical report, Eclipse Xtend, [Online],
   http://www.eclipse.org/xtend/documentation/.
 
 \bibitem{ref_17_xtext:grammar}
 Eclipse Xtext.
 \newblock {Eclipse xText Documentation}.
-\newblock Technical report, Eclipse Xtext, iTemis,
+\newblock Technical report, Eclipse Xtext, iTemis, [Online],
   http://www.eclipse.org/Xtext/documentation.html.
 
 \bibitem{ref_57_alex:improving}
@@ -578,7 +579,7 @@ F.~Yu, M.~Alkhalaf, and T.~Bultan.
 F.~Yu, M.~Alkhalaf, and T.~Bultan.
 \newblock Patching vulnerabilities with sanitization synthesis.
 \newblock In {\em Proceedings of the 33rd International Conference on Software
-  Engineering}, pages 251--260. ACM, 2011.
+  Engineering(ICSE)}, pages 251--260. ACM, 2011.
 
 \bibitem{ref_94_zheng2013path}
 Y.~Zheng and X.~Zhang.

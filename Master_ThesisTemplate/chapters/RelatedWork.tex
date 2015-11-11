@@ -1,4 +1,4 @@
-\chapter{Related Works}
+\chapter{Related Work}
 
 There are many annotation languages proposed until now for
 extending the C type system \cite{ref_54_condit:dependent}, \cite{ref_53_evans:static,ref_51_microsoft:sal,ref_55_sun:lock,ref_56_torvalds:sparse} to be
@@ -109,7 +109,7 @@ usage of various markup contexts. A templating framework
 was proposed by Samuel et al. that uses type qualifiers
 to automate context-sensitive XSS sanitization \cite{ref_106_samuel2011context}.
 
-A good overview of static analysis approaches applied to security problems are provided in \cite{ref_81_chess2004static}. Simple lexical approaches employed by scanning tools such as ITS4 and RATS use a set of predefined patterns to identify potentially dangerous areas of a program \cite{ref_82_wilander2002comparison}. While a significant improvement on Unix grep, these tools, however, have no knowledge of how data propagates throughout the program and cannot be used to automatically and fully solve taint-style problems.
+A good overview of static analysis approaches applied to security problems are provided in \cite{ref_18_chess2004static}. Simple lexical approaches employed by scanning tools such as ITS4 and RATS use a set of predefined patterns to identify potentially dangerous areas of a program \cite{ref_82_wilander2002comparison}. While a significant improvement on Unix grep, these tools, however, have no knowledge of how data propagates throughout the program and cannot be used to automatically and fully solve taint-style problems.
 A few projects use path-sensitive analysis to find errors in C and C++ programs \cite{ref_83_bush2000static,ref_84_hallem2002system,ref_85_livshits2003tracking}. While capable of addressing taint-style problems, these tools rely on an unsound approach to pointers and may therefore miss some errors. The WebSSARI project uses combined unsound static and dynamic analysis in the context of analyzing PHP programs \cite{ref_75_huang2004securing}. WebSSARI has successfully been applied to find many SQL injection and cross-site scripting vulnerabilities in PHP code.
 
  The studies rely on manually
@@ -134,7 +134,7 @@ which can be perceived to be a high burden in some scenarios.
 
  Heldal et al. \cite{ref_25_heldal:bridging,ref_23_heldal:supporting} introduced an
 UML profile that incorporates a decentralized label model into the UML. It allows the annotation of UML artifacts with
-Jif \cite{ref_24_myers:descentrelized} labels in order to generate Jif code from the UML
+Jif \cite{ref_48_chong:jif} labels in order to generate Jif code from the UML
 model automatically. However, the Jif-style annotation already
 proved to be non-trivial on the code level \cite{ref_22_preibusch2011information}, while \cite{ref_23_heldal:supporting}
 notes that the actual automatic Jif code generation is still a future
