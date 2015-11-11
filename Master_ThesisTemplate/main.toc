@@ -34,15 +34,14 @@
 \contentsline {section}{\numberline {5.4}Checkers in Static Analysis Engine}{49}{section.5.4}
 \contentsline {section}{\numberline {5.5}Error Trace in UML Sequence Diagram}{52}{section.5.5}
 \contentsline {chapter}{\numberline {6}Related Work}{55}{chapter.6}
-\contentsline {chapter}{\numberline {7}Limitations}{59}{chapter.7}
-\contentsline {chapter}{\numberline {8}Limitations, Conclusion and Future Work}{61}{chapter.8}
-\contentsline {section}{\numberline {8.1}Limitations}{61}{section.8.1}
-\contentsline {section}{\numberline {8.2}Conclusion}{62}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Work}{62}{section.8.3}
-\contentsline {part}{Appendix}{67}{part*.32}
-\contentsline {chapter}{\numberline {A}Appendix}{67}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix A: Source Code Editor with Annotation Language}{67}{section.A.1}
-\contentsline {section}{\numberline {A.2}Appendix B: C Code Generator (Part 1)}{73}{section.A.2}
-\contentsline {section}{\numberline {A.3}Appendix C: C Code Generator (Part 2)}{75}{section.A.3}
-\contentsline {section}{\numberline {A.4}Code Fragment}{78}{section.A.4}
-\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.33}
+\contentsline {chapter}{\numberline {7}Limitations, Conclusion and Future Work}{59}{chapter.7}
+\contentsline {section}{\numberline {7.1}Limitations}{59}{section.7.1}
+\contentsline {section}{\numberline {7.2}Conclusion}{60}{section.7.2}
+\contentsline {section}{\numberline {7.3}Future Work}{60}{section.7.3}
+\contentsline {part}{Appendix}{65}{part*.32}
+\contentsline {chapter}{\numberline {A}Appendix}{65}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix A: Source Code Editor with Annotation Language}{65}{section.A.1}
+\contentsline {section}{\numberline {A.2}Appendix B: C Code Generator (Part 1)}{71}{section.A.2}
+\contentsline {section}{\numberline {A.3}Appendix C: C Code Generator (Part 2)}{73}{section.A.3}
+\contentsline {section}{\numberline {A.4}Code Fragment}{76}{section.A.4}
+\contentsline {chapter}{\nonumberline Bibliography}{77}{chapter*.33}

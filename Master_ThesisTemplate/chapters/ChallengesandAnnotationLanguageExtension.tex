@@ -175,26 +175,28 @@ The Modeling Workflow Engine 2 (MWE2) is a rewritten backwards compatible implem
 
 Xtext ships with a default set of predefined, reasonable and often required terminal rules. The grammar for these common terminal rules are presented in listing \ref{lst:xtextCommonTerminalRules}.
 
-\begin{lstlisting}[caption={Singleline and Multiline Comments Rule in Xtext},label=lst:slMlRuleXtext]
-/**
-* @SL_COMMENT :all strings which follow // | || | } will be a single line comment
-*/ 
-terminal SL_COMMENT 	: '//'!('@')  !('\n'|'\r')* ('\n'|'\r')*
-// '}' can be used optional to disable the method bodyes together with multiline line {} comment 
-//     | '}'         !('\n'|'\r')* ('\n'|'\r')*               
-;	
-/**
-* @ML_COMMENT :@/* multiline comment excluding @ from inside
-*            :{} multi line comment 
-*/ 
-terminal ML_COMMENT	: '/*' !('@') -> !('@')'*/'   !('\n'|'\r')* ('\n'|'\r')*   
-// '{' -> '}' can be used optional to disable the method bodies together with single line { comment 
-//      | '{' -> '}'                   ('\n'|'\r')?
-;   
-\end{lstlisting}
+ \lipsum[1-3]
+ \begin{lstlisting} [caption={Singleline and Multiline Comments Rule in Xtext},label=lst:slMlRuleXtext]
+
+ /** @SL_COMMENT :all strings which follow // | || | } will be a single line comment
+ */ 
+ terminal SL_COMMENT 	: '//'!('@')  !('\n'|'\r')* ('\n'|'\r')*
+ // '}' can be used optional to disable the method bodyes together with multiline line {} comment 
+ //     | '}'         !('\n'|'\r')* ('\n'|'\r')*               
+ ;	
+
+ /** @ML_COMMENT :@/* multiline comment excluding @ from inside
+ *            :{} multi line comment 
+ */ 
+ terminal ML_COMMENT	: '/*' !('@') -> !('@')'*/'   !('\n'|'\r')* ('\n'|'\r')*   
+ // '{' -> '}' can be used optional to disable the method bodies together with single line { comment 
+ //      | '{' -> '}'                   ('\n'|'\r')?
+ ;   
+ \end{lstlisting}
 
 In order to implement the annotation language grammar in this research it is required to extend the terminal rule ML\_COMMENT and SL\_COMMENT. The  rule ML\_COMMENT and SL\_COMMENT are presented in listing \ref{lst:slMlRuleXtext}.
  
+
 \begin{figure}[H]
 	\centering
 	\makebox[\textwidth]{\includegraphics[width=\textwidth,scale=.50]{styles/Lang_design_image.pdf}}
