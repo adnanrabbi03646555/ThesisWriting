@@ -1,17 +1,17 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
-I was expecting a `,' or a `}'---line 142 of file bibliography/literature.bib
+I was expecting a `,' or a `}'---line 144 of file bibliography/literature.bib
  :  
  :  year={ISBN-1-891562-35-5, 2014}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 716 of file bibliography/literature.bib
+I was expecting a `,' or a `}'---line 710 of file bibliography/literature.bib
  :  
  :  year = "1997"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 798 of file bibliography/literature.bib
+I was expecting a `,' or a `}'---line 792 of file bibliography/literature.bib
  :  
  :  volume={19},
 (Error may have been on previous line)
@@ -26,6 +26,7 @@ Warning--there's a number but no volume in ref_18_chess2004static
 Warning--can't use both volume and number fields in ref_67_cohen1977information
 Warning--empty year in ref_93_dahse2014simulation
 Warning--empty year in ref_14_denning1976lattice
+Warning--empty booktitle in ref_65_goguen1982security
 Warning--can't use both volume and number fields in ref_84_hallem2002system
 Warning--can't use both volume and number fields in ref_7_joshi2000semantic
 Warning--can't use both volume and number fields in ref_73_li2005downgrading

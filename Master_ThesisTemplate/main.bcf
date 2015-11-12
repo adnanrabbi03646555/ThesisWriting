@@ -2257,7 +2257,7 @@
     <bcf:citekey order="15">ref_6_cohen1978information</bcf:citekey>
     <bcf:citekey order="15">ref_8_giacobazzi2005adjoining</bcf:citekey>
     <bcf:citekey order="15">ref_7_joshi2000semantic</bcf:citekey>
-    <bcf:citekey order="16">ref_9_myers1997decentralized</bcf:citekey>
+    <bcf:citekey order="16">ref_24_myers:descentrelized</bcf:citekey>
     <bcf:citekey order="17">ref_10_myers1999jflow</bcf:citekey>
     <bcf:citekey order="18">ref_11_myers2001jif</bcf:citekey>
     <bcf:citekey order="19">ref_12_hicks2005declassification</bcf:citekey>
@@ -2328,7 +2328,7 @@
     <bcf:citekey order="74">ref_61_lintan:acomment</bcf:citekey>
     <bcf:citekey order="75">ref_61_lintan:acomment</bcf:citekey>
     <bcf:citekey order="76">ref_2_hicks2006trusted</bcf:citekey>
-    <bcf:citekey order="77">ref_63_yip2009improving</bcf:citekey>
+    <bcf:citekey order="77">ref_57_alex:improving</bcf:citekey>
     <bcf:citekey order="78">ref_33_juerjens:secure</bcf:citekey>
     <bcf:citekey order="79">ref_100_tripp2009taj</bcf:citekey>
     <bcf:citekey order="80">ref_70_darvas2005theorem</bcf:citekey>
@@ -2358,7 +2358,7 @@
     <bcf:citekey order="98">ref_79_jovanovic2010static</bcf:citekey>
     <bcf:citekey order="99">ref_105_weinberger2011systematic</bcf:citekey>
     <bcf:citekey order="100">ref_106_samuel2011context</bcf:citekey>
-    <bcf:citekey order="101">ref_81_chess2004static</bcf:citekey>
+    <bcf:citekey order="101">ref_18_chess2004static</bcf:citekey>
     <bcf:citekey order="102">ref_82_wilander2002comparison</bcf:citekey>
     <bcf:citekey order="103">ref_83_bush2000static</bcf:citekey>
     <bcf:citekey order="103">ref_84_hallem2002system</bcf:citekey>
@@ -2373,7 +2373,7 @@
     <bcf:citekey order="111">ref_26_kit:joana</bcf:citekey>
     <bcf:citekey order="112">ref_25_heldal:bridging</bcf:citekey>
     <bcf:citekey order="112">ref_23_heldal:supporting</bcf:citekey>
-    <bcf:citekey order="113">ref_24_myers:descentrelized</bcf:citekey>
+    <bcf:citekey order="113">ref_48_chong:jif</bcf:citekey>
     <bcf:citekey order="114">ref_22_preibusch2011information</bcf:citekey>
     <bcf:citekey order="115">ref_23_heldal:supporting</bcf:citekey>
   </bcf:section>

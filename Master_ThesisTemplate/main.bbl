@@ -25,7 +25,7 @@ F.~Alhumaidan et~al.
 \bibitem{ref_44_avgerinos:aeg}
 T.~Avgerinos, S.K. Cha, B.~L.~T. Hao, and D.~Brumley.
 \newblock {AEG: Automatic Exploit Generation}.
-\newblock {\em Proceedings of the Network and Distributed System Security
+\newblock {\em In Proceedings of the Network and Distributed System Security
   Symposium (NDSS 11)}, February 2011.
 
 \bibitem{ref_74_bacon2014information}
@@ -106,7 +106,8 @@ E.~S. Cohen.
 \bibitem{ref_54_condit:dependent}
 J.~Condit, M.~Harren, Z.~R. Anderson, D.~Gay, and G.~C. Necula.
 \newblock {Dependent types for low-level programming}.
-\newblock {\em ESOP}, 2007.
+\newblock {\em In Proceedings of the 16th European conference on Programming,
+  ESOP}, 2007.
 
 \bibitem{ref_93_dahse2014simulation}
 J.~Dahse and T.~Holz.
@@ -177,8 +178,8 @@ P.~Giambiagi and M.~Dam.
 
 \bibitem{ref_65_goguen1982security}
 J.~A. Goguen and J.~Meseguer.
-\newblock {\em Security policies and security models}.
-\newblock IEEE, 1982.
+\newblock Security policies and security models.
+\newblock IEEE Symposium on Security and Privacy, IEEE, 1982.
 
 \bibitem{ref_66_goguen1984unwinding}
 J.~A. Goguen and J.~Meseguer.
@@ -284,7 +285,7 @@ K.~Katkalov, K.~Stenzel, M.~Borek, and W.~Reif.
 KIT.
 \newblock {JOANA (Java Object-sensitive ANAlysis) - Information Flow Control
   Framework for Java }.
-\newblock {\em KIT}, [online] http://pp.ipd.kit.edu/projects/joana/.
+\newblock {\em KIT}, [Online], http://pp.ipd.kit.edu/projects/joana/.
 
 \bibitem{ref_34_leino:10years}
 K.~Leino and M.~Rustan.
@@ -397,7 +398,7 @@ S{\"o}ren Preibusch.
 
 \bibitem{ref_51_microsoft:sal}
 Microsoft Run-Time~Library Reference.
-\newblock {MSDN run-time library reference - SAL annotations},
+\newblock {MSDN run-time library reference - SAL annotations}, [Online],
   https://msdn.microsoft.com/en-us/library/vstudio/ms235402(v=vs.100).aspx.
 
 \bibitem{ref_59_rosenblum:towards}
@@ -470,7 +471,8 @@ V.~Simonet.
 \bibitem{ref_88_smith2007principles}
 G.~Smith.
 \newblock Principles of secure information flow analysis.
-\newblock In {\em Malware Detection}, pages 291--307. Springer, 2007.
+\newblock In {\em Malware Detection, ISBN 978-0-387-32720-4}, pages 291--307.
+  Springer, 2007.
 
 \bibitem{ref_45_nikhil:fine}
 N.~Swamy, J.~Chen, and R.~Chugh.
@@ -482,13 +484,15 @@ N.~Swamy, J.~Chen, and R.~Chugh.
 \bibitem{ref_47_swamy:fable}
 N.~Swamy, B.~J. Corcoran, and M.~Hicks.
 \newblock {Fable: A language for enforcing user-defined security policies }.
-\newblock {\em In S\&P}, 2008.
+\newblock {\em In Proceedings of the 2008 IEEE Symposium on Security and
+  Privacy, S\&P}, 2008.
 
 \bibitem{ref_61_lintan:acomment}
 L.~Tan, Y.~Zhou, and Y.~Padioleu.
 \newblock {aComment:Mining Annotations from Comments and Code to Detect
   Interrupt Related Concurency Bugs}.
-\newblock {\em ACM 978-1-4503-0445-0/11/05}, May 2011.
+\newblock {\em In Proceedings of the 33rd International Conference on Software
+  Engineering, ICSE '11}, May 2011.
 
 \bibitem{ref_56_torvalds:sparse}
 L.~Torvalds.
@@ -504,7 +508,7 @@ O.~Tripp, M.~Pistoia, S.~J. Fink, M.~Sridharan, and O.~Weisman.
 J.~Viega and G.~McGraw.
 \newblock {\em Building secure software: how to avoid security problems the
   right way}.
-\newblock Addison-Wesley Professional Computing Series), Addison-Wesley
+\newblock Addison-Wesley Professional Computing Series, Addison-Wesley
   Professional, ISBN-978-0321774958, 2001.
 
 \bibitem{ref_107_visual-paradigm:visual-paradigm}
@@ -561,13 +565,8 @@ Eclipse Xtext.
 \bibitem{ref_57_alex:improving}
 A.~Yip, X.~Wang, N.~Zeldovich, and M.~F. Kaashoek.
 \newblock {Improving Application Security with Data Flow Assertions}.
-\newblock {\em SOSP'09}, Oct. 2009.
-
-\bibitem{ref_63_yip2009improving}
-A.~Yip, Xi~Wang, N.~Zeldovich, and M.~F. Kaashoek.
-\newblock Improving application security with data flow assertions.
-\newblock In {\em Proceedings of the ACM SIGOPS 22nd symposium on Operating
-  systems principles}, pages 291--304. ACM, 2009.
+\newblock {\em In Proceedings of the ACM SIGOPS 22nd symposium on Operating
+  systems principles, SOSP'09}, Oct. 2009.
 
 \bibitem{ref_95_yu2010stranger}
 F.~Yu, M.~Alkhalaf, and T.~Bultan.
